@@ -39,9 +39,9 @@ if BEOL
 
     # Rule MT.2b: Space to wide Metal2 (length & width > 10um) is 0.5µm
     logger.info('Executing rule MT.2b')
-    wide_top_metal = top_metal.not_interacting(top_metal.edges.with_length(nil, 10.um))
+    wide_top_metal = top_metal.not_interacting(top_metal.edges.with_length(nil, 10.005.um))
     mt2b_l1 = top_metal.separation(wide_top_metal, 0.5.um, euclidian)
-    mt2b_l1.output('MT.2b', 'MT.2b : Space to wide Metal2 (length & width > 10um) : 0.5µm')
+    mt2b_l1.output('MT.2b', 'MT.2b : Space to wide MetalTop (length & width > 10um) : 0.5µm')
     mt2b_l1.forget
     wide_top_metal.forget
 
@@ -68,9 +68,9 @@ if BEOL
 
     # Rule MT.2b: Space to wide Metal2 (length & width > 10um) is 0.6µm
     logger.info('Executing rule MT.2b')
-    wide_top_metal = top_metal.not_interacting(top_metal.edges.with_length(nil, 10.um))
+    wide_top_metal = top_metal.not_interacting(top_metal.edges.with_length(nil, 10.005.um))
     mt2b_l1 = top_metal.separation(wide_top_metal, 0.6.um, euclidian)
-    mt2b_l1.output('MT.2b', 'MT.2b : Space to wide Metal2 (length & width > 10um) : 0.6µm')
+    mt2b_l1.output('MT.2b', 'MT.2b : Space to wide MetalTop (length & width > 10um) : 0.6µm')
     mt2b_l1.forget
     wide_top_metal.forget
 

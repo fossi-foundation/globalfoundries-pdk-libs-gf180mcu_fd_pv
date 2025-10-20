@@ -35,7 +35,7 @@ if BEOL && (METAL_LEVEL == '5LM' || METAL_LEVEL == '6LM')
 
   # Rule M4.2b: Space to wide Metal4 (length & width > 10um) is 0.3µm
   logger.info('Executing rule M4.2b')
-  wide_m4 = metal4.not_interacting(metal4.edges.with_length(nil, 10.um))
+  wide_m4 = metal4.not_interacting(metal4.edges.with_length(nil, 10.005.um))
   m42b_l1 = metal4.separation(wide_m4, 0.3.um, euclidian)
   m42b_l1.output('M4.2b', 'M4.2b : Space to wide Metal4 (length & width > 10um) : 0.3µm')
   m42b_l1.forget
