@@ -201,6 +201,27 @@ def get_top_cell_names(gds_path):
     return top_cells
 
 
+def get_cell_names(gds_path):
+    """
+    get_cell_names get the cell names from the GDS file.
+
+    Parameters
+    ----------
+    gds_path : string
+        Path to the target GDS file.
+
+    Returns
+    -------
+    List of string
+        Names of the cells in the layout.
+    """
+    layout = klayout.db.Layout()
+    layout.read(gds_path)
+    cells = [t.name for t in layout.each_cell()]
+
+    return cells
+
+
 def get_list_of_tables(drc_dir: str):
     """
     get_list_of_tables get the list of available tables in the drc
@@ -242,10 +263,18 @@ def get_run_top_cell_name(arguments, layout_path):
 
     """
 
-    if arguments["--topcell"]:
+    if arguments["--topcell"] and arguments["--topcell"] != "":
+        layout_cells = get_cell_names(layout_path)
         topcell = arguments["--topcell"]
+        if topcell not in layout_cells:
+            logging.error(
+                f"Topcell '{topcell}' not found in layout. "
+                f"Available topcells: {', '.join(layout_cells)}"
+            )
+            exit(1)
     else:
         layout_topcells = get_top_cell_names(layout_path)
+
         if len(layout_topcells) > 1:
             logging.error(
                 "## Layout has multiple topcells. Please use --topcell to determine which topcell you want to run on."
