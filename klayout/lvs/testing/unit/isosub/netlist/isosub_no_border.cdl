@@ -1,0 +1,6 @@
+.SUBCKT TOP sub isosub A
+R1 sub A rm1 W=0.23u L=0.23u m=1 r=90m
+R2 sub A rm1 W=0.23u L=0.23u m=1 r=90m
+R3 isosub A rm1 W=0.23u L=0.23u m=1 r=90m
+.ENDS
+

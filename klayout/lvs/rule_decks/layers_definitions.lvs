@@ -622,7 +622,54 @@ logger.info("border has #{count} polygons")
 polygons_count += count
 logger.info("Total no. of polygons in the design is #{polygons_count}")
 
-logger.info('Starting deriving base layers.')
+top_border_count = 0
+source.layout.top_cell.shapes(RBA::LayerInfo.new(63,0)).each do
+  top_border_count += 1
+end
 
-#=== BULK LAYER ===
-sub = polygon_layer
+
+if top_border_count == 0
+  warn("No border polygon defined for the top cell. Estimating default" +
+       " substrate area from bounding box upsized by two database units." +
+       " Upsizing is required so that the default substrate is guaranteed" +
+       " to connect regions that are separated by an isosub polygon spanning" +
+       " the default bounding box")
+  layout_border = polygon_layer.insert(extent.data.bbox).sized(source.layout.dbu*2)
+elsif top_border_count == 1
+  layout_border = polygon_layer
+  # Inserting shapes is not supported by DRCLayer. Ideally the following code
+  # should be upstreamed to klayout
+  # Iterate through shapes and insert them
+  source.layout.top_cell.shapes(RBA::LayerInfo.new(63,0)).each do |shape|
+    # Shape objects have type-specific accessors
+    if shape.is_polygon?
+      layout_border.insert(shape.polygon)
+    elsif shape.is_box?
+      layout_border.insert(shape.box)
+    elsif shape.is_simple_polygon?
+      layout_border.insert(shape.simple_polygon)
+    else
+      err("Cannot recognize border polygon. Is it really a polygon?")
+    end
+  end
+else
+  err("More than one Border polygon in top cell")
+end
+
+isosub = get_polygons(23, 5)
+
+# Ideally, no sizing should happen and the default_sub should not be
+# short polygons that touches it. However, raw mecanism work on layers and
+# not for specific shapes (we want touching isosub polygons to be shorted).
+# In order for the default_sub and isobsub polygons to
+# not be shorted, one can upsize the isosub by a db unit when calculating
+# isosub. This create the secondary effect that default_sub regions separated by
+# a strip of database unit width would not be considered as the same net.
+default_sub = layout_border - isosub.sized(source.layout.dbu)
+sub = isosub
+sub = sub + default_sub
+count = sub.count
+logger.info("sub has #{count} polygons")
+polygons_count += count
+
+logger.info("Total no. of polygons in the design is #{polygons_count}")
