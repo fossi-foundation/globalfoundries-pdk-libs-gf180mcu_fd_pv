@@ -46,7 +46,7 @@ import numpy as np
 from collections import defaultdict
 import shutil
 
-SUPPORTED_TC_EXT = "gds"
+SUPPORTED_TC_EXT = "gds.gz"
 SUPPORTED_SPICE_EXT = "cdl"
 SUPPORTED_SW_EXT = "yaml"
 
@@ -171,7 +171,7 @@ def build_tests_dataframe(unit_test_cases_dir, target_device_group):
 
     # Get test cases df from test cases
     tc_df = pd.DataFrame({"test_layout_path": all_unit_test_cases_layout , "test_netlist_path": all_unit_test_cases_netlist})
-    tc_df["device_name"] = tc_df["test_layout_path"].apply(lambda x: x.name.replace(".gds", ""))
+    tc_df["device_name"] = tc_df["test_layout_path"].apply(lambda x: x.name.replace(".gds.gz", ""))
     tc_df["device_group"] = tc_df["test_layout_path"].apply(lambda x: x.parent.parent.name.replace("_devices", "").upper())
 
     if target_device_group is not None:
@@ -251,7 +251,7 @@ def run_test_case(
     output_loc = os.path.join(run_dir, device_name)
     pattern_log = os.path.join(output_loc, f"{pattern_clean}_lvs.log")
     os.makedirs(output_loc, exist_ok=True)
-    layout_path_run = os.path.join(run_dir, device_name, f"{device_name}.gds")
+    layout_path_run = os.path.join(run_dir, device_name, f"{device_name}.gds.gz")
     netlist_path_run = os.path.join(run_dir, device_name, f"{device_name}.cdl")
     shutil.copyfile(layout_path, layout_path_run)
     shutil.copyfile(netlist_path, netlist_path_run)
@@ -521,7 +521,7 @@ if __name__ == "__main__":
     ## selected device
     allowed_devices = ["MOS", "BJT", "DIODE", "RES", "MIMCAP", "MOSCAP", "MOS_SAB", "EFUSE"]
     target_device_group = args["--device_name"]
-
+    print(target_device_group)
     if target_device_group and target_device_group not in allowed_devices:
         logging.error("Allowed devices are (MOS, BJT, DIODE, RES, MIMCAP, MOSCAP, MOS_SAB, EFUSE) only")
         exit(1)

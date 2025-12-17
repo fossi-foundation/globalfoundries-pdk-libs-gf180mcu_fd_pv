@@ -18,34 +18,27 @@
 # ---------------------------------- LVS ---------------------------------
 #=========================================================================
 
-SHELL        := /bin/bash
+.PHONY: all test-main test-switch
 
-.DEFAULT_GOAL := all
-
-all: test-LVS
-
-test-LVS: test-LVS-switch  test-LVS-main
+all: test-main
 
 #=================================
 # ----- test-LVS_regression ------
 #=================================
 
-.ONESHELL:
-test-LVS-main: test-LVS-MOS  test-LVS-BJT  test-LVS-DIODE  test-LVS-RES  test-LVS-MIMCAP  test-LVS-MOSCAP  test-LVS-MOS_SAB
+test-main: testcase-MOS  testcase-BJT  testcase-DIODE  testcase-RES  testcase-MIMCAP  testcase-MOSCAP  testcase-MOS_SAB
 
-.ONESHELL:
-test-LVS-%:
+testcase-%:
 	@echo "========== LVS-$* testing =========="
-	@ python3 run_regression.py --device_name=$*
+	python3 run_regression.py --device_name=$*
 
 #=================================
 # -------- test-LVS-switch -------
 #=================================
 
-.ONESHELL:
-test-LVS-switch:
+test-switch:
 	@echo "========== LVS-Switch testing =========="
-	@python3 ../run_lvs.py --layout=testcases/extraction_checking/sample_nfet_03v3.gds --netlist=testcases/extraction_checking/sample_nfet_03v3.spice --variant=A 
-	@python3 ../run_lvs.py --layout=testcases/extraction_checking/sample_nfet_03v3.gds --netlist=testcases/extraction_checking/sample_nfet_03v3.spice --variant=B
-	@python3 ../run_lvs.py --layout=testcases/extraction_checking/sample_nfet_03v3.gds --netlist=testcases/extraction_checking/sample_nfet_03v3.spice --variant=C
-	@python3 ../run_lvs.py --layout=testcases/extraction_checking/sample_nfet_03v3.gds --netlist=testcases/extraction_checking/sample_nfet_03v3.spice --variant=D
+	python3 ../run_lvs.py --layout=testcases/extraction_checking/sample_nfet_03v3.gds --netlist=testcases/extraction_checking/sample_nfet_03v3.spice --variant=A
+	python3 ../run_lvs.py --layout=testcases/extraction_checking/sample_nfet_03v3.gds --netlist=testcases/extraction_checking/sample_nfet_03v3.spice --variant=B
+	python3 ../run_lvs.py --layout=testcases/extraction_checking/sample_nfet_03v3.gds --netlist=testcases/extraction_checking/sample_nfet_03v3.spice --variant=C
+	python3 ../run_lvs.py --layout=testcases/extraction_checking/sample_nfet_03v3.gds --netlist=testcases/extraction_checking/sample_nfet_03v3.spice --variant=D
