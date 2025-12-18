@@ -1,0 +1,32 @@
+test_switches:
+  ppolyf_u_1k:
+    poly_res: "1k"
+  ppolyf_u_1k_6p0:
+    poly_res: "1k"
+  ppolyf_u_1k_6p0_dw:
+    poly_res: "1k"
+  ppolyf_u_2k:
+    poly_res: "2k"
+  ppolyf_u_2k_6p0:
+    poly_res: "2k"
+  ppolyf_u_2k_6p0_dw:
+    poly_res: "2k"
+  ppolyf_u_2k_dw:
+    poly_res: "2k"
+  ppolyf_u_3k:
+    poly_res: "3k"
+  ppolyf_u_3k_6p0:
+    poly_res: "3k"
+  ppolyf_u_3k_6p0_dw:
+    poly_res: "3k"
+  ppolyf_u_3k_dw:
+    poly_res: "3k"
+  tm11k:
+    metal_top: "11K"
+  tm30k:
+    metal_top: "30K"
+  tm6k:
+    metal_top: "6K"
+  tm9k:
+    metal_top: "9K"
+

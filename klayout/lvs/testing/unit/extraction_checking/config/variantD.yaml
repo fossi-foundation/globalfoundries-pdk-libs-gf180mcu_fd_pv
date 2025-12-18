@@ -1,0 +1,8 @@
+test_switches:
+  sample_nfet_03v3:
+    metal_top: "11K"
+    mim_option: "B"
+    metal_level: "5LM"
+    poly_res: "1k"
+    mim_cap: "2"
+

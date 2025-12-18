@@ -1,76 +1,118 @@
-# Globalfoundries 180nm MCU LVS Testing
+# LVS Testing Framework
 
-Explains how to test GF180nm LVS rule decks.
+Lightweight pytest-based framework for LVS testing with automatic test discovery and flexible configuration.
 
-## Folder Structure
-
-```text
-📁 testing
- ┣ 📜README.md                       This file to document the regression.
- ┣ 📜Makefile                        To make a full test for GF180nm LVS rule deck.
- ┣ 📜run_regression.py               Main regression script used for LVS testing.
- ┣ 📁testcases                       All testcases used in LVS regression.
- ```
-
-## **Prerequisites**
-You need the following set of tools installed to be able to run the regression:
-- Python 3.6+
-- KLayout 0.28.4+
-
-We have tested this using the following setup:
-- Python 3.9.12
-- KLayout 0.28.5
-
-## **Usage**
+## Quick Start
 
 ```bash
-    run_regression.py (--help| -h)
-    run_regression.py [--device_name=<device_name>] [--mp=<num>] [--run_name=<run_name>]
+# Install dependencies
+pip install pytest pytest-xdist # pytest-xdist is optional
+
+# Run all tests
+pytest tests/
+
+# Run with parallel execution
+pytest tests/ -n auto
 ```
 
-Example:
+## Directory Structure
+
+```
+project_root/
+├── tests/
+│   ├── conftest.py              # Pytest configuration
+│   ├── test_lvs_devices.py      # Test definitions
+│   └── lvs_runner.py            # Core logic
+├── unit/                        # Test data
+│   ├── bjt_devices/
+│   │   ├── layout/*.gds.gz
+│   │   └── netlist/*.cdl
+│   └── ...
+├── test_config.yaml             # Optional: device- or category- specific switches
+└── pytest.ini                   # Pytest settings
+```
+
+## Configuration
+
+### Test-Specific Switches
+
+`test_config.yaml` defines if special switches should be forwarded the lvs script.
+For example:
+
+```yaml
+# Test-specific switches (override category)
+test_switches:
+  cap_mim_1f0_m2m3_noshield:
+    mim_option: "A"
+  cap_mim_2f0_m2m3_noshield:
+    mim_option: "B"
+```
+
+If you would like to use a different config file than the toplevel one, you can
+specify like so:
+```bash
+pytest tests/ --test-config=my_custom_test_config.yaml
+```
+
+### Command-Line Options
 
 ```bash
-    python3 run_regression.py --device_name=MOS --run_name=mos_regression
+# Specify directories
+pytest tests/ --unit-dir=unit --lvs-script-dir=lvs --output-dir=results
+
+# Filter by category
+pytest tests/ --category=mimcap_devices
+
+# Filter by pattern
+pytest tests/ -k "cap_mim_"
+pytest tests/ -k "03v3"
+
+# Parallel execution
+pytest tests/ -n auto              # Use all CPUs
+pytest tests/ -n 4                 # Use 4 workers
 ```
 
-### Options
+## Usage Examples
 
-- `--help -h`                           Print this help message.
-
-- `--mp=<num>`                          The number of threads used in run.
-
-- `--run_name=<run_name>`               Select your run name.
-    
-- `--device_name=<device_name>`         Target specific device.
-
-
-To make a full test for GF180nm LVS rule deck, you could use the following command in testing directory:
-
+### Run All Tests
 ```bash
-make all
+pytest tests/ -n auto
 ```
 
-## **LVS Outputs**
+### Test Single Device
+```bash
+pytest tests/ -k "npn_00p54x02p00"
+```
 
-You could find the regression run results at your run directory if you previously specified it through `--run_name=<run_name>`. Default path of run directory is `unit_tests_<date>_<time>` in current directory.
+### Test Specific Category
+```bash
+pytest tests/ --category=bjt_devices -n 4
+```
 
-### Folder Structure of regression run results
+### Test with Custom Config
+```bash
+pytest tests/ --test-config=my_config.yaml --category=mimcap_devices
+```
 
-```text
-📁 unit_tests_<date>_<time>
- ┣ 📜 unit_tests_<date>_<time>.log
- ┣ 📜 all_test_cases_results.csv
- ┗ 📜 rule_deck_rules.csv
- ┗ 📁 <device_name>
-    ┣ 📜 <device_name>_lvs.log
-    ┣ 📜 <device_name>.gds
-    ┣ 📜 <device_name>.cdl
-    ┣ 📜 <device_name>_extracted.cir                     
-    ┣ 📜 <device_name>.lvsdb
- ```
+### Verbose Output
+```bash
+pytest tests/ -vv
+```
 
-The result is a database file for each device (`<device_name>.lvsdb`) contains LVS extractions and comparison results.
-You could view it on your file using: `klayout <device_name>.gds -mn <device_name>.lvsdb`, or you could view it on your gds file via marker browser option in tools menu using klayout GUI.
+### Stop on First Failure
+```bash
+pytest tests/ -x
+```
 
-You could also find the extracted netlist generated from your design at (`<device_name>.cir`) in your run directory.
+### Re-run Failed Tests
+```bash
+pytest tests/ --lf
+```
+
+## How It Works
+
+1. **Test Discovery**: Framework scans `unit/` directory and automatically creates a test for each layout/netlist pair
+2. **Configuration**: Loads test-specific switches from `test_config.yaml` (optional)
+3. **Execution**: Runs klayout with proper switches for each test
+4. **Validation**: Checks for "Congratulations! Netlists match" in output
+5. **Reporting**: Pytest provides detailed pass/fail status

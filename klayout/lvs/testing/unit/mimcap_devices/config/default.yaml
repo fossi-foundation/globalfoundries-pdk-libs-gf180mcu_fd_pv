@@ -1,0 +1,49 @@
+test_switches:
+  cap_mim_1f0_m2m3_noshield:
+    mim_option: "A"
+    metal_level: "3LM"
+    mim_cap: "1"
+  cap_mim_1f0_m3m4_noshield:
+    mim_option: "B"
+    metal_level: "4LM"
+    mim_cap: "1"
+  cap_mim_1f0_m4m5_noshield:
+    mim_option: "B"
+    metal_level: "5LM"
+    mim_cap: "1"
+  cap_mim_1f0_m5m6_noshield:
+    mim_option: "B"
+    metal_level: "6LM"
+    mim_cap: "1"
+  cap_mim_1f5_m2m3_noshield:
+    mim_option: "A"
+    metal_level: "3LM"
+    mim_cap: "1.5"
+  cap_mim_1f5_m3m4_noshield:
+    mim_option: "B"
+    metal_level: "4LM"
+    mim_cap: "1.5"
+  cap_mim_1f5_m4m5_noshield:
+    mim_option: "B"
+    metal_level: "5LM"
+    mim_cap: "1.5"
+  cap_mim_1f5_m5m6_noshield:
+    mim_option: "B"
+    metal_level: "6LM"
+    mim_cap: "1.5"
+  cap_mim_2f0_m2m3_noshield:
+    mim_option: "A"
+    metal_level: "3LM"
+    mim_cap: "2"
+  cap_mim_2f0_m3m4_noshield:
+    mim_option: "B"
+    metal_level: "4LM"
+    mim_cap: "2"
+  cap_mim_2f0_m4m5_noshield:
+    mim_option: "B"
+    metal_level: "5LM"
+    mim_cap: "2"
+  cap_mim_2f0_m5m6_noshield:
+    mim_option: "B"
+    metal_level: "6LM"
+    mim_cap: "2"
