@@ -1,6 +1,9 @@
 # LVS Testing Framework
 
 Lightweight pytest-based framework for LVS testing with automatic test discovery and flexible configuration.
+Note that there is no custom SPICE reader implemented at the moment. The LVS verification
+happen on netlists that have the expected LVS format and not from raw xschem exports, for example.
+
 
 ## Quick Start
 
