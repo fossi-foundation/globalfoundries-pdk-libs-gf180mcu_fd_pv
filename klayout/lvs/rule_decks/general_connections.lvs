@@ -94,7 +94,3 @@ logger.info('Starting GF180 LVS connectivity setup (Global)')
 # Global
 #connect_global(sub, substrate_name)
 
-logger.info('Starting GF180 LVS connectivity setup (Multifinger Devices)')
-
-# Multifinger Devices
-connect_implicit('*')

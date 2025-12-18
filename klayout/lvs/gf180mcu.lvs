@@ -132,6 +132,11 @@ PURGE_NETS = bool_check?($purge_nets)
 
 logger.info("Selected PURGE_NETS option: #{PURGE_NETS}")
 
+# IMPLICIT_CONNECT
+IMPLICIT_CONNECT = bool_check?($implicit_connect)
+
+logger.info("Selected IMPLICIT_CONNECT option: #{IMPLICIT_CONNECT}")
+
 #=== PRINT DETAILS ===
 logger.info("Verbose mode: #{$verbose}")
 if $verbose == 'true'
@@ -342,6 +347,9 @@ logger.info('Starting GF180 LVS DEVICES EXTRACTION')
 #================================================
 #------------- COMPARISON OPTIONS ---------------
 #================================================
+
+## IMPLICIT_CONNECT
+connect_implicit('*') if IMPLICIT_CONNECT
 
 #=== NETLIST OPTIONS ===
 netlist if NET_ONLY
