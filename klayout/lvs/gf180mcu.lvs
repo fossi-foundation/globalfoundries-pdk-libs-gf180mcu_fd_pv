@@ -102,10 +102,10 @@ device_scaling(1_000_000) if $DEV_SCALE
 
 logger.info("LVS device_scaling option: #{DEV_SCALE}")
 
-# SCH_SIMPLE
-SCH_SIMPLE = bool_check?($schematic_simplify)
+# SIMPLIFY
+SIMPLIFY = bool_check?($simplify)
 
-logger.info("Selected SCH_SIMPLE option: #{SCH_SIMPLE}")
+logger.info("Selected SIMPLIFY option: #{SIMPLIFY}")
 
 # NET_ONLY
 NET_ONLY = bool_check?($net_only)
@@ -131,15 +131,6 @@ logger.info("Selected PURGE option: #{PURGE}")
 PURGE_NETS = bool_check?($purge_nets)
 
 logger.info("Selected PURGE_NETS option: #{PURGE_NETS}")
-
-# SIMPLIFY
-SIMPLIFY = if NET_ONLY || TOP_LVL_PINS || COMBINE || PURGE || PURGE_NETS
-             false
-           else
-             true
-           end
-
-logger.info("Selected SIMPLIFY option: #{SIMPLIFY}")
 
 #=== PRINT DETAILS ===
 logger.info("Verbose mode: #{$verbose}")
@@ -352,27 +343,34 @@ logger.info('Starting GF180 LVS DEVICES EXTRACTION')
 #------------- COMPARISON OPTIONS ---------------
 #================================================
 
+#=== NETLIST OPTIONS ===
+netlist if NET_ONLY
+return if NET_ONLY
+
 logger.info('Starting GF180 LVS comparison section')
 
 #=== FLATTEN CELLS ===
 align
 
-#=== NETLIST EXTRACTION ===
-netlist.simplify if SIMPLIFY
-
-#=== NETLIST OPTIONS ===
-netlist if NET_ONLY
-
+## TOP_LVL_PINS
 netlist.make_top_level_pins if TOP_LVL_PINS
+schematic.make_top_level_pins if TOP_LVL_PINS
 
+## SIMPLIFY
+netlist.simplify if SIMPLIFY
+schematic.simplify if SIMPLIFY
+
+## COMBINE_DEVICE
 netlist.combine_devices if COMBINE
+schematic.combine_devices if COMBINE
 
-netlist.purge if PURGE
-
+## PURGE_NETS
 netlist.purge_nets if PURGE_NETS
+schematic.purge_nets if PURGE_NETS
 
-#=== SCHEMATIC OPTIONS ===
-schematic.simplify if SCH_SIMPLE
+## PURGE
+netlist.purge if PURGE
+schematic.purge if PURGE
 
 #=== IGNORE EXTREME VALUES ===
 max_res(1e7)
