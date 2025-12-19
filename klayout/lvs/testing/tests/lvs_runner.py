@@ -15,7 +15,6 @@ import yaml
 
 default_switches = {
     "combine": "true",
-    "schematic_simplify": "true",
     "top_lvl_pins": "true",
     "run_mode": "deep",
 }
