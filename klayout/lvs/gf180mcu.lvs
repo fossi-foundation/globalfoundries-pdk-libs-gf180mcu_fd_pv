@@ -53,7 +53,7 @@ else
   layout_dir = Pathname.new(RBA::CellView.active.filename).parent.realpath
   report_path = layout_dir.join("#{source.cell_name}.lvsdb").to_s
   logger.info("GF180MCU Klayout LVS runset output at default location: #{source.cell_name}.lvsdb")
-  report_lvs($report_path)
+  report_lvs(report_path)
 end
 
 #================================================
@@ -385,13 +385,13 @@ schematic.purge if PURGE
 max_res(1e7)
 min_caps(1e-16)
 
-compare
+result = compare
 
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
 logger.info(format('LVS Total Run time %f seconds', run_time))
 
-if !compare
+if !result
   logger.info('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
   logger.error("ERROR : Netlists don't match")
   logger.info('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
