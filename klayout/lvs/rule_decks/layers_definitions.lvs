@@ -306,6 +306,10 @@ count = comp_label.count
 logger.info("comp_label has #{count} polygons")
 polygons_count += count
 
+if comp_label != 0
+  warn("Comp labels are ignored, as comp is not defined as a valid conductive layer")
+end
+
 poly2_label = labels(30, 10)
 count = poly2_label.count
 logger.info("poly2_label has #{count} polygons")

@@ -84,7 +84,6 @@ connect(top_via, top_metal_con)
 connect(top_metal, top_metal_label)
 
 # Attaching labels
-connect(comp, comp_label)
 connect(poly2_con, poly2_label)
 connect(metal1_con, metal1_label)
 connect(metal2_con, metal2_label)
