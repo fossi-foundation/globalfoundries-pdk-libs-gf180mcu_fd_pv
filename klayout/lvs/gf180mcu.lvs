@@ -198,6 +198,7 @@ reader = RBA::NetlistSpiceReader.new(SubcircuitModelsReader.new)
 
 #=== GET NETLIST ===
 if $schematic
+  $schematic = File.expand_path($schematic)
   schematic($schematic, reader)
   logger.info("Netlist file: #{$schematic}")
 else
