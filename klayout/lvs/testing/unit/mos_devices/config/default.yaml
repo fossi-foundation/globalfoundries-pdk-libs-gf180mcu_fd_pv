@@ -4,12 +4,15 @@ test_switches:
   nfet_06v0:
     implicit_connect: true
   nfet_06v0_dn:
+    consider_dn_dw_features: true
     implicit_connect: true
   nfet_05v0_dn :
+    consider_dn_dw_features: true
     implicit_connect: true
   nfet_03v3:
     implicit_connect: true
   nfet_03v3_dn:
+    consider_dn_dw_features: true
     implicit_connect: true
   nfet_06v0_nvt:
     implicit_connect: true
@@ -19,7 +22,12 @@ test_switches:
     implicit_connect: true
   pfet_06v0:
     implicit_connect: true
+  pfet_06v0_dn:
+    consider_dn_dw_features: true
   pfet_03v3:
     implicit_connect: true
+  pfet_03v3_dn:
+    consider_dn_dw_features: true
   pfet_05v0_dn:
+    consider_dn_dw_features: true
     implicit_connect: true

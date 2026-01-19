@@ -1,4 +1,12 @@
 test_switches:
+  diode_nd2ps_03v3_dn:
+    consider_dn_dw_features: true
+  diode_nd2ps_06v0_dn:
+    consider_dn_dw_features: true
+  diode_pd2nw_03v3_dn:
+    consider_dn_dw_features: true
+  diode_pd2nw_06v0_dn:
+    consider_dn_dw_features: true
   diode_pw2dw_06v0:
     implicit_connect: true
   diode_pw2dw_03v3:

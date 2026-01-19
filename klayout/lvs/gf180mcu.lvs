@@ -14,6 +14,48 @@
 # limitations under the License.
 ################################################################################################
 
+########################################################################################
+# GF180MCU LVS Runset Options
+###=====================================================###
+#--- ** Processing Options** ---
+# input: Full path to layout file (required)
+# topcell: Optional top cell name (defaults to active cell)
+# target_netlist: Output path to layout extracted netlist
+# schematic: Input schematic file path (.spice/.cdl)
+# report: Optional output report file path (defaults to layout directory, name
+#     of topcell
+###=====================================================###
+#--- **Netlist Options** ---
+# spice_net_names: Use net names instead of numbers (true/false, default: false)
+# spice_comments: Include detailed comments (true/false, default: false)
+# spice_translate: Use workaround spice translation. Tested to work from xschem
+#     spice (true/false, default: false)
+###=====================================================###
+#--- **LVS Options** ---
+# simplify: Simplify netlist (true/false, default: false)
+# net_only: Extract netlist only (true/false, default: false)
+# top_lvl_pins: Include top-level pins (true/false, default: false)
+# combine: Combine devices (true/false, default: false)
+# purge: Purge unused objects (true/false, default: false)
+# purge_nets: Purge unused nets (true/false, default: false)
+# implicit_connect: Use implicit connections (true/false, default: false)
+###=====================================================###
+#--- **Extraction Options** ---
+# lvs_sub: Name of default substrate name (default: gf180mcu_gnd)
+# scale: Enable device scaling (true/false, default: false)
+# run_mode: [tiling/deep/flat] (default: flat)
+# metal_top: Metal top layer (6K/9K/11K/30K, default: 9K)
+# metal_level: Metal stack level (3LM/4LM/5LM/6LM, default: 6LM)
+# poly_res: Poly resistor value (default: 1k)
+# mim_option: MIM option (A/B, default: B)
+# mim_cap: MIM capacitance (1/1.5/2, default: 2)
+# consider_dn_dw_features: Extract _dn and _dw device models (true/false, default: false)
+# verbose: Enable verbose mode (true/false, default: false)
+###=====================================================###
+# Example usage:
+#   klayout -b -r gf180mcu.lvs -rd input=design.gds -rd report=lvs_results.lyrdb
+#       -rd run_mode=deep
+########################################################################################
 #=======================================================================================================================
 #--------------------------------------------- GF 0.18um MCU LVS RULE DECK ---------------------------------------------
 #=======================================================================================================================
@@ -52,7 +94,7 @@ if $report
 else
   layout_dir = Pathname.new(RBA::CellView.active.filename).parent.realpath
   report_path = layout_dir.join("#{source.cell_name}.lvsdb").to_s
-  logger.info("GF180MCU Klayout LVS runset output at default location: #{source.cell_name}.lvsdb")
+  logger.info("GF180MCU Klayout LVS runset output at default location: #{report_path}")
   report_lvs(report_path)
 end
 
@@ -136,6 +178,11 @@ logger.info("Selected PURGE_NETS option: #{PURGE_NETS}")
 IMPLICIT_CONNECT = bool_check?($implicit_connect)
 
 logger.info("Selected IMPLICIT_CONNECT option: #{IMPLICIT_CONNECT}")
+
+# CONSIDER DN DW features
+CONSIDER_DN_DW_FEATURES = bool_check?($consider_dn_dw_features)
+
+logger.info("Selected CONSIDER_DN_DW_FEATURES option: #{CONSIDER_DN_DW_FEATURES}")
 
 #=== PRINT DETAILS ===
 logger.info("Verbose mode: #{$verbose}")

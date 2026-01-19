@@ -1,0 +1,10 @@
+test_switches:
+  cap_nmos_03v3_dn:
+    consider_dn_dw_features: true
+  cap_nmos_06v0_dn:
+    consider_dn_dw_features: true
+  cap_pmos_03v3_dn:
+    consider_dn_dw_features: true
+  cap_pmos_06v0_dn:
+    consider_dn_dw_features: true
+

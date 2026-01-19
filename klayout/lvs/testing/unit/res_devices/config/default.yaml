@@ -1,45 +1,58 @@
 test_switches:
   nplus_s_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   nplus_u_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   npolyf_s_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   npolyf_u_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   pplus_s:
     implicit_connect: true
   pplus_u:
     implicit_connect: true
   pplus_u_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   pplus_s_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   ppolyf_s_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   ppolyf_u_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
 
   ppolyf_u_1k:
     poly_res: "1k"
   ppolyf_u_1k_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   ppolyf_u_1k_6p0:
     poly_res: "1k"
   ppolyf_u_1k_6p0_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "1k"
   ppolyf_u_2k:
     poly_res: "2k"
   ppolyf_u_2k_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
   ppolyf_u_2k_6p0:
     implicit_connect: true
     poly_res: "2k"
   ppolyf_u_2k_6p0_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "2k"
   ppolyf_u_2k_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "2k"
   ppolyf_u_3k:
@@ -47,9 +60,11 @@ test_switches:
   ppolyf_u_3k_6p0:
     poly_res: "3k"
   ppolyf_u_3k_6p0_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "3k"
   ppolyf_u_3k_dw:
+    consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "3k"
   tm11k:
