@@ -22,14 +22,14 @@ logger.info('Starting MIMCAP EXTRACTION')
 
 case MIM_CAP
 when '1'
-  logger.info('Extracting cap_mim_1p0fF device')
-  extract_devices(capacitor('cap_mim_1p0fF', 1.0e-15, MIMCap), { 'P1' => mim_virtual, 'P2' => fuse_cap })
+  logger.info('Extracting cap_mim_1f0fF device')
+  extract_devices(capacitor('cap_mim_1f0fF', 1.0e-15, MIMCap), { 'P1' => mim_virtual, 'P2' => fuse_cap })
 
 when '1.5'
-  logger.info('Extracting cap_mim_1p5fF device')
-  extract_devices(capacitor('cap_mim_1p5fF', 1.5e-15, MIMCap), { 'P1' => mim_virtual, 'P2' => fuse_cap })
+  logger.info('Extracting cap_mim_1f5fF device')
+  extract_devices(capacitor('cap_mim_1f5fF', 1.5e-15, MIMCap), { 'P1' => mim_virtual, 'P2' => fuse_cap })
 
 when '2'
-  logger.info('Extracting cap_mim_2p0fF device')
-  extract_devices(capacitor('cap_mim_2p0fF', 2.0e-15, MIMCap), { 'P1' => mim_virtual, 'P2' => fuse_cap })
+  logger.info('Extracting cap_mim_2f0fF device')
+  extract_devices(capacitor('cap_mim_2f0fF', 2.0e-15, MIMCap), { 'P1' => mim_virtual, 'P2' => fuse_cap })
 end
