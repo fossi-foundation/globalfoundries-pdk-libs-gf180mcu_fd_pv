@@ -22,14 +22,15 @@
 # topcell: Optional top cell name (defaults to active cell)
 # target_netlist: Output path to layout extracted netlist
 # schematic: Input schematic file path (.spice/.cdl)
+# schematic_translate: Use workaround spice translation. Tested to work from xschem
+#     spice. Will generate xxx_translated.spice in the layout directory
+#     (true/false, default: false)
 # report: Optional output report file path (defaults to layout directory, name
 #     of topcell
 ###=====================================================###
 #--- **Netlist Options** ---
 # spice_net_names: Use net names instead of numbers (true/false, default: false)
 # spice_comments: Include detailed comments (true/false, default: false)
-# spice_translate: Use workaround spice translation. Tested to work from xschem
-#     spice (true/false, default: false)
 ###=====================================================###
 #--- **LVS Options** ---
 # simplify: Simplify netlist (true/false, default: false)
@@ -111,6 +112,12 @@ end
 substrate_name = $lvs_sub || 'gf180mcu_gnd'
 
 logger.info("Substrate name used: #{$lvs_sub}")
+
+#=== SCHEMATIC TRANSLCATE ===
+
+SCHEMATIC_TRANSLATE = bool_check?($schematic_translate)
+
+logger.info("schematic translate: #{SCHEMATIC_TRANSLATE}")
 
 #=== NET NAMES OPTION ===
 # true: use net names instead of numbers
@@ -246,19 +253,34 @@ reader = RBA::NetlistSpiceReader.new(SubcircuitModelsReader.new)
 #=== GET NETLIST ===
 if $schematic
   $schematic = File.expand_path($schematic)
-  schematic($schematic, reader)
-  logger.info("Netlist file: #{$schematic}")
 else
   exts = ["spice", "cdl"]
   candidates = exts.map{|ext| "#{source.cell_name}.#{ext}"}
   netlists = candidates.select{|f| File.exist?(f)}
   if netlists.empty?
     error("Netlist not found, tried: #{candidates}")
-  else
-    schematic(netlists[0], reader)
-    logger.info("Netlist file: #{netlists[0]}")
   end
 end
+
+logger.info("Input schematic file: #{$schematic}")
+
+if SCHEMATIC_TRANSLATE
+  python_script = File.join(File.dirname(__FILE__), 'gf180_xschem_klayout_spice_convert.py')
+  translated_schematic_filename = File.basename($schematic).sub(File.extname($schematic), '') + "_translated.spice"
+  translated_schematic_path = File.join(File.dirname(__FILE__), translated_schematic_filename)
+  cmd = "python3 #{python_script} #{$schematic} -o #{translated_schematic_path}"
+  puts "Running #{cmd}"
+  output = `#{cmd}`
+  exitstatus = $?.exitstatus
+  puts output
+
+  unless exitstatus == 0
+    raise "Script returned a non-zero exit status (#{exitstatus})"
+  end
+  $schematic = translated_schematic_path
+end
+
+schematic($schematic, reader)
 
 #================================================
 #------------- LAYERS DEFINITIONS ---------------
