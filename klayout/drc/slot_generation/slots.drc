@@ -1,0 +1,108 @@
+# frozen_string_literal: true
+
+################################################################################################
+# Copyright 2025 GlobalFoundries PDK Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+################################################################################################
+
+if $input
+  if $topcell
+    source($input, $topcell)
+  else
+    source($input)
+  end
+end
+
+pad = input(37, 0)
+metal_top = input(81, 0)
+FuseTop = input(75, 0)
+mim_bottom = input(46, 0)
+FuseWindow_D = input(96, 0)
+UBMPPeri = input(183, 0)
+UBMPArray = input(184, 0)
+UBMEPlate = input(185, 0)
+
+# Insert top cell for slots
+top_cell = source.cell_obj
+slots_top = source.layout.create_cell("SLOTS")
+top_cell.insert(RBA::CellInstArray::new(slots_top, RBA::Trans::new))
+
+output_cell(slots_top.name)
+
+slots_hash = [
+  {layer: 34, metal_datatype: 0, slot_datatype: 3, name: "Metal1_Slot", via_below_layer: 33, via_above_layer: 35},
+  {layer: 36, metal_datatype: 0, slot_datatype: 3, name: "Metal2_Slot", via_below_layer: 35, via_above_layer: 38},
+  {layer: 42, metal_datatype: 0, slot_datatype: 3, name: "Metal3_Slot", via_below_layer: 38, via_above_layer: 40},
+  {layer: 46, metal_datatype: 0, slot_datatype: 3, name: "Metal4_Slot", via_below_layer: 40, via_above_layer: 41},
+  {layer: 81, metal_datatype: 0, slot_datatype: 3, name: "Metal5_Slot", via_below_layer: 41, via_above_layer: nil}
+]
+
+slots_hash.each do |slots|
+  puts "slots: #{slots[:layer]}/#{slots[:slot_datatype]} #{slots[:name]}"
+  
+  metal_layer = input(slots[:layer], slots[:metal_datatype])
+  via_below = input(slots[:via_below_layer], 0)
+  via_above = slots[:via_above_layer] ? input(slots[:via_above_layer], 0) : polygon_layer
+  
+  # TODO remove existing slots before sizing
+  
+  # MSLOT.1: Maximum metal width without slotting: 30um
+  to_fill = metal_layer.sized(0, -15.um).sized(0, 15.um).sized(-15.um, 0).sized(15.um, 0)
+  
+  # MSLOT.8 and MSLOT.9
+  to_fill = to_fill \
+            - via_below.sized(0.2.um) \
+            - via_above.sized(0.2.um) \
+            - (metal_top & pad).sized(5.um) \
+            - (mim_bottom & FuseTop).sized(5.um) \
+            - (metal_top & FuseWindow_D).sized(5.um) \
+            - (metal_top & UBMPPeri).sized(5.um) \
+            - (metal_top & UBMPArray).sized(5.um) \
+            - (metal_top & UBMEPlate).sized(5.um)
+  
+  pattern = fill_pattern(slots[:name])
+  
+  # MSLOT.2: Min slot width: 2um
+  # MSLOT.3: Slot length: 10um to 250um
+  # MSLOT.4: Slot space: 10um to 30um
+  
+  slot_width = 2
+  slot_height = 10
+  slot_space = 10
+  
+  pattern.shape(slots[:layer], slots[:slot_datatype], box(0, 0, slot_width, slot_height))
+  pattern.dim(2, 10)
+  pattern.origin(0, 0)
+  
+  # MSLOT.5
+  # Minimum slot (slot mark layers) to metal edge spacing: 10um
+  pattern.margin(10.um, 10.um)
+  
+  row_step = hstep(slot_width + slot_space, slot_height/2)
+  column_step = vstep(0, slot_height + slot_space)
+  
+  # Try fill with different offset
+  to_fill = to_fill.fill_with_left(pattern, row_step, column_step, origin(0, 0))
+  to_fill = to_fill.fill_with_left(pattern, row_step, column_step, origin((slot_width + slot_space) / 8 * 1, (slot_height + slot_space) / 8 * 1))
+  to_fill = to_fill.fill_with_left(pattern, row_step, column_step, origin((slot_width + slot_space) / 8 * 2, (slot_height + slot_space) / 8 * 2))
+  to_fill = to_fill.fill_with_left(pattern, row_step, column_step, origin((slot_width + slot_space) / 8 * 3, (slot_height + slot_space) / 8 * 3))
+  to_fill = to_fill.fill_with_left(pattern, row_step, column_step, origin((slot_width + slot_space) / 8 * 4, (slot_height + slot_space) / 8 * 4))
+  to_fill = to_fill.fill_with_left(pattern, row_step, column_step, origin((slot_width + slot_space) / 8 * 5, (slot_height + slot_space) / 8 * 5))
+  to_fill = to_fill.fill_with_left(pattern, row_step, column_step, origin((slot_width + slot_space) / 8 * 6, (slot_height + slot_space) / 8 * 6))
+  to_fill.fill(pattern, row_step, column_step, origin((slot_width + slot_space) / 8 * 7, (slot_height + slot_space) / 4 * 7))
+end
+
+if $output
+  source.layout.write($output)
+end
