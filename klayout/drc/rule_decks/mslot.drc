@@ -1,0 +1,118 @@
+# frozen_string_literal: true
+
+################################################################################################
+# Copyright 2025 GlobalFoundries PDK Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+################################################################################################
+
+if BEOL
+  #================================================
+  #------------ Metal Slotting rules --------------
+  #================================================
+
+  slots_hash = [
+    {metal_name: "metal1", metal_drawn: metal1_drawn, metal_slot: metal1_slot, via_below: contact, via_above: via1},
+    {metal_name: "metal2", metal_drawn: metal2_drawn, metal_slot: metal2_slot, via_below: via1, via_above: via2},
+    {metal_name: "metal3", metal_drawn: metal3_drawn, metal_slot: metal3_slot, via_below: via2, via_above: via3},
+    {metal_name: "metal4", metal_drawn: metal4_drawn, metal_slot: metal4_slot, via_below: via3, via_above: via4},
+    {metal_name: "metal5", metal_drawn: metal5_drawn, metal_slot: metal5_slot, via_below: via4, via_above: polygon_layer},
+  ]
+
+  logger.info('Starting Metal Slotting rules derivations')
+  
+  top_metal_under_pad = (top_metal & pad).sized(5.um)
+  mim_bottom_under_fusetop = (metal4_drawn & fusetop).sized(5.um)
+  top_metal_under_fusewindow_d = (top_metal & fusewindow_d).sized(5.um)
+  top_metal_under_ubm = (top_metal & ubmpperi).sized(5.um) | (top_metal & ubmparray).sized(5.um) | (top_metal & ubmeplate).sized(5.um)
+
+  dont_slot = top_metal_under_pad | mim_bottom_under_fusetop | top_metal_under_fusewindow_d | top_metal_under_ubm
+
+  slots_hash.each do |slots|
+    metal_name = slots[:metal_name]
+    metal_drawn = slots[:metal_drawn]
+    metal_slot = slots[:metal_slot]
+    via_below = slots[:via_below]
+    via_above = slots[:via_above]
+
+    logger.info("Checking slots for: #{slots[:metal_name]}")
+
+    metal_slotted = metal_drawn - metal_slot - dont_slot - via_below.sized(0.2) - via_above.sized(0.2)
+    metal_slot_rectangles = metal_slot.rectangles
+    metal_slot_non_rectangles = metal_slot.non_rectangles
+    
+    # Implied rule
+    metal_slot_non_rectangles.output('MSLOT.0', 'MSLOT.0 : Slot is not a rectangle')
+
+    # Rule MSLOT.1: Maximum metal width without slotting: 30µm
+    logger.info('Executing rule MSLOT.1')
+    mslot1_l1 = metal_slotted.sized(0, -15.um).sized(-15.um, 0).sized(0, 15.um).sized(15.um, 0)
+    mslot1_l1.output('MSLOT.1', 'MSLOT.1 : Maximum metal width without slotting: 30µm')
+    mslot1_l1.forget
+
+    # Rule MSLOT.2: Minimum slot width (slot mark layers): 2µm
+    logger.info('Executing rule MSLOT.2')
+    mslot2_l1 = metal_slot_rectangles.drc(bbox_min < 2.um)
+    mslot2_l1.output('MSLOT.2', 'MSLOT.2 : Minimum slot width (slot mark layers): 2µm')
+    mslot2_l1.forget
+
+    # Rule MSLOT.3: Slot length (slot mark layers): min 10µm, max 250µm
+    logger.info('Executing rule MSLOT.3')
+    mslot3_l1 = metal_slot_rectangles.drc((bbox_max < 10.um) + (bbox_max > 250.um))
+    mslot3_l1.output('MSLOT.3', 'MSLOT.3 : Slot length (slot mark layers): min 10µm, max 250µm')
+    mslot3_l1.forget
+
+    # Rule MSLOT.4: Slot space (slot mark layers): min 10µm
+    logger.info('Executing rule MSLOT.4')
+    mslot4_l1 = metal_slot_rectangles.drc(space < 10.um)
+    mslot4_l1.output('MSLOT.4', 'MSLOT.4 : Slot space (slot mark layers): min 10µm')
+    mslot4_l1.forget
+
+    # Rule MSLOT.5: Minimum slot (slot mark layers) to metal edge spacing: 10µm
+    logger.info('Executing rule MSLOT.5')
+    mslot5_l1 = metal_slot_rectangles.drc(enclosed(metal_drawn) < 10.um)
+    mslot5_l1.output('MSLOT.5', 'MSLOT.5 : Minimum slot (slot mark layers) to metal edge spacing: 10µm')
+    mslot5_l1.forget
+
+    # Rule MSLOT.7: Minimum space from via-n to metal-n slot: 0.2µm
+    logger.info('Executing rule MSLOT.7')
+    mslot7_l1 = metal_slot_rectangles.drc(separation(via_above) < 0.2.um)
+    mslot7_l1.output('MSLOT.7', 'MSLOT.7 : Minimum space from via-n to metal-n slot: 0.2µm')
+    mslot7_l1.forget
+
+    # Rule MSLOT.8: Minimum space from via-(n-1) / contact to metal-n slot: 0.2µm
+    logger.info('Executing rule MSLOT.8')
+    mslot8_l1 = metal_slot_rectangles.drc(separation(via_below) < 0.2.um)
+    mslot8_l1.output('MSLOT.8', 'MSLOT.8 : Minimum space from via-(n-1) / contact to metal-n slot: 0.2µm')
+    mslot8_l1.forget
+
+    # Rule MSLOT.9: Minimum distance to these layers: 5µm
+    logger.info('Executing rule MSLOT.9')
+    mslot9_l1 = metal_slot_rectangles.drc(separation(dont_slot) < 5.um)
+    mslot9_l1.output('MSLOT.9', 'MSLOT.9 : Minimum distance to these layers: 5µm')
+    mslot9_l1.forget
+
+    metal_slotted.forget
+    metal_slot_rectangles.forget
+    metal_slot_non_rectangles.forget
+
+  end
+  
+  top_metal_under_pad.forget
+  mim_bottom_under_fusetop.forget
+  top_metal_under_fusewindow_d.forget
+  top_metal_under_ubm.forget
+
+  dont_slot.forget
+  
+end
