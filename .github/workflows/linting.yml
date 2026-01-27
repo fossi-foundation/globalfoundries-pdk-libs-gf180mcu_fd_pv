@@ -23,8 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          submodules: 'recursive'
+      - name: Install flake8
+        run: |
+          sudo apt update -qq -y
+          sudo apt install flake8
       - name: Lint with flake8
         run: |
           make lint_python
@@ -33,8 +35,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          submodules: 'recursive'
+      - name: Install rubocop
+        run: |
+          sudo apt update -qq -y
+          sudo apt install ruby
+          sudo gem install rubocop
       - name: Lint with rubocop
         run: |
           make lint_ruby

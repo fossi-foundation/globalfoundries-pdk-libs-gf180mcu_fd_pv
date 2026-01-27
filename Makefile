@@ -31,14 +31,12 @@ KLAYOUT_LVS_TESTS := klayout/lvs/testing/
 include third_party/make-env/conda.mk
 
 # Lint python code
-lint_python: | $(CONDA_ENV_PYTHON)
-	@$(IN_CONDA_ENV) flake8 .
+lint_python:
+	flake8 .
 
 # Lint ruby code
-lint_ruby:| $(CONDA_ENV_PYTHON)
-	@$(IN_CONDA_ENV) gem install rubocop
-	@ln -s $$CONDA_PREFIX/bin/ruby $$CONDA_PREFIX/share/rubygems/bin/ruby
-	@$(IN_CONDA_ENV) rubocop .
+lint_ruby:
+	rubocop .
 
 ################################################################################
 ## DRC Regression section
@@ -47,7 +45,7 @@ lint_ruby:| $(CONDA_ENV_PYTHON)
 # ----- test-DRC_regression ------
 #=================================
 .ONESHELL:
-test-DRC-main : | $(CONDA_ENV_PYTHON) 
+test-DRC-main : | $(CONDA_ENV_PYTHON)
 	@$(IN_CONDA_ENV) python3 $(KLAYOUT_DRC_TESTS)/run_regression.py
 
 .ONESHELL:
