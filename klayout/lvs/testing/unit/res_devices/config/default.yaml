@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Copyright 2026 GlobalFoundries PDK Authors
+# SPDX-License-Identifier: Apache License 2.0
 test_switches:
   nplus_s_dw:
     consider_dn_dw_features: true

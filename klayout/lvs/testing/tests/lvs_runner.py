@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Copyright 2026 GlobalFoundries PDK Authors
+# SPDX-License-Identifier: Apache License 2.0
 """
 Lightweight pytest-based LVS testing framework.
 
