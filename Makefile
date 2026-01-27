@@ -12,23 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# The top directory where environment will be created.
-TOP_DIR := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-
-# A pip `requirements.txt` file.
-# https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format
-REQUIREMENTS_FILE := requirements.txt
-
-# https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
-ENVIRONMENT_FILE := pdk_regression.yml
-
 # Path to regression
 KLAYOUT_DRC_TESTS := klayout/drc/testing/
 
 KLAYOUT_LVS_TESTS := klayout/lvs/testing/
-
-
-include third_party/make-env/conda.mk
 
 # Lint python code
 lint_python:
@@ -62,16 +49,14 @@ test-DRC-switch:
 #=================================
 # ----- test-LVS_regression ------
 #=================================
-.ONESHELL:
-test-LVS-main: | $(CONDA_ENV_PYTHON)
-	@$(IN_CONDA_ENV) cd $(KLAYOUT_LVS_TESTS) && make test-LVS-main
+test-LVS-main:
+	cd $(KLAYOUT_LVS_TESTS) && make test-LVS-main
 
-.ONESHELL:
 test-LVS-% : | $(CONDA_ENV_PYTHON)
-	@$(IN_CONDA_ENV) cd $(KLAYOUT_LVS_TESTS) && make test-LVS-$*
+	cd $(KLAYOUT_LVS_TESTS) && make test-LVS-$*
 
 #=================================
 # -------- test-LVS-switch -------
 #=================================
 test-LVS-switch: | $(CONDA_ENV_PYTHON)
-	@$(IN_CONDA_ENV) cd $(KLAYOUT_LVS_TESTS) && make test-LVS-switch
+	cd $(KLAYOUT_LVS_TESTS) && make test-LVS-switch
