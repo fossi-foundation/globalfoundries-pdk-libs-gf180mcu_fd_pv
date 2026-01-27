@@ -44,21 +44,17 @@ lint_ruby:
 #=================================
 # ----- test-DRC_regression ------
 #=================================
-.ONESHELL:
-test-DRC-main : | $(CONDA_ENV_PYTHON)
-	@$(IN_CONDA_ENV) python3 $(KLAYOUT_DRC_TESTS)/run_regression.py
+test-DRC-main:
+	python3 $(KLAYOUT_DRC_TESTS)/run_regression.py
 
-.ONESHELL:
-test-DRC-% : | $(CONDA_ENV_PYTHON)
-	@which python3
-	@$(IN_CONDA_ENV) python3 $(KLAYOUT_DRC_TESTS)/run_regression.py --table=$*
+test-DRC-%:
+	python3 $(KLAYOUT_DRC_TESTS)/run_regression.py --table=$*
 
 #=================================
 # -------- test-DRC-switch -------
 #=================================
-# LVS main testing
-test-DRC-switch: | $(CONDA_ENV_PYTHON)
-	@$(IN_CONDA_ENV) klayout -v
+test-DRC-switch:
+	klayout -v
 
 ################################################################################
 ## LVS Regression section

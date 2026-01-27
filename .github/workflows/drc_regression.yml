@@ -23,6 +23,8 @@ concurrency:
 on:
   push:
   pull_request:
+    paths:
+      - 'klayout/drc/**'
   workflow_dispatch:
 
 jobs:
@@ -54,8 +56,34 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: 💾 Restore KLayout .deb from cache
+        id: cache-klayout
+        uses: actions/cache@v4
         with:
-          submodules: 'recursive'
+          path: klayout_0.30.5-1_amd64.deb
+          key: klayout-deb-cache-ubuntu-0_30_5
+          restore-keys: |
+            klayout-deb-cache-
+
+      - name: 🔽 Download KLayout .deb if not cached
+        if: steps.cache-klayout.outputs.cache-hit != 'true'
+        run: |
+          echo "Downloading KLayout .deb..."
+          curl -L --retry 5 --retry-delay 5 --retry-all-errors \
+            -o klayout_0.30.5-1_amd64.deb https://www.klayout.org/downloads/Ubuntu-24/klayout_0.30.5-1_amd64.deb
+
+      - name: ⚙️ Install KLayout
+        run: |
+          sudo apt update -qq -y
+          sudo apt install ./klayout_0.30.5-1_amd64.deb
+          echo "✅ KLayout version:"
+          klayout -v
+
+      - name: Get dependencies
+        run: |
+          pip install -r requirements.txt
+
       - name: Testing ${{ matrix.part }} for ${{ matrix.test }}
         run: |
           make test-"$(python -c 'print("${{ matrix.part }}".upper())')"-${{ matrix.test }}
@@ -72,8 +100,34 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: 💾 Restore KLayout .deb from cache
+        id: cache-klayout
+        uses: actions/cache@v4
         with:
-          submodules: 'recursive'
+          path: klayout_0.30.5-1_amd64.deb
+          key: klayout-deb-cache-ubuntu-0_30_5
+          restore-keys: |
+            klayout-deb-cache-
+
+      - name: 🔽 Download KLayout .deb if not cached
+        if: steps.cache-klayout.outputs.cache-hit != 'true'
+        run: |
+          echo "Downloading KLayout .deb..."
+          curl -L --retry 5 --retry-delay 5 --retry-all-errors \
+            -o klayout_0.30.5-1_amd64.deb https://www.klayout.org/downloads/Ubuntu-24/klayout_0.30.5-1_amd64.deb
+
+      - name: ⚙️ Install KLayout
+        run: |
+          sudo apt update -qq -y
+          sudo apt install ./klayout_0.30.5-1_amd64.deb
+          echo "✅ KLayout version:"
+          klayout -v
+
+      - name: Get dependencies
+        run: |
+          pip install -r requirements.txt
+
       - name: Testing ${{ matrix.part }} for ${{ matrix.test }}
         run: |
           make test-"$(python -c 'print("${{ matrix.part }}".upper())')"-${{ matrix.test }}
