@@ -1,0 +1,4 @@
+.SUBCKT ppolyf_u_nwell MINUS PLUS SUB
+R1 MINUS PLUS SUB ppolyf_u l=272.9u w=0.8u
+.ENDS
+

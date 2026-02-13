@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: Copyright 2026 GlobalFoundries PDK Authors
+# SPDX-License-Identifier: Apache License 2.0
+test_switches:
+  diode_nd2ps_03v3_dn:
+    consider_dn_dw_features: true
+  diode_nd2ps_06v0_dn:
+    consider_dn_dw_features: true
+  diode_pd2nw_03v3_dn:
+    consider_dn_dw_features: true
+  diode_pd2nw_06v0_dn:
+    consider_dn_dw_features: true
+  diode_pw2dw_06v0:
+    implicit_connect: true
+  diode_pw2dw_03v3:
+    implicit_connect: true

@@ -14,6 +14,49 @@
 # limitations under the License.
 ################################################################################################
 
+########################################################################################
+# GF180MCU LVS Runset Options
+###=====================================================###
+#--- ** Processing Options** ---
+# input: Full path to layout file (required)
+# topcell: Optional top cell name (defaults to active cell)
+# target_netlist: Output path to layout extracted netlist
+# schematic: Input schematic file path (.spice/.cdl)
+# schematic_translate: Use workaround spice translation. Tested to work from xschem
+#     spice. Will generate xxx_translated.spice in the layout directory
+#     (true/false, default: false)
+# report: Optional output report file path (defaults to layout directory, name
+#     of topcell
+###=====================================================###
+#--- **Netlist Options** ---
+# spice_net_names: Use net names instead of numbers (true/false, default: false)
+# spice_comments: Include detailed comments (true/false, default: false)
+###=====================================================###
+#--- **LVS Options** ---
+# simplify: Simplify netlist (true/false, default: false)
+# net_only: Extract netlist only (true/false, default: false)
+# top_lvl_pins: Include top-level pins (true/false, default: false)
+# combine: Combine devices (true/false, default: false)
+# purge: Purge unused objects (true/false, default: false)
+# purge_nets: Purge unused nets (true/false, default: false)
+# implicit_connect: Use implicit connections (true/false, default: false)
+###=====================================================###
+#--- **Extraction Options** ---
+# lvs_sub: Name of default substrate name (default: gf180mcu_gnd)
+# scale: Enable device scaling (true/false, default: false)
+# run_mode: [tiling/deep/flat] (default: flat)
+# metal_top: Metal top layer (6K/9K/11K/30K, default: 9K)
+# metal_level: Metal stack level (3LM/4LM/5LM/6LM, default: 6LM)
+# poly_res: Poly resistor value (default: 1k)
+# mim_option: MIM option (A/B, default: B)
+# mim_cap: MIM capacitance (1/1.5/2, default: 2)
+# consider_dn_dw_features: Extract _dn and _dw device models (true/false, default: false)
+# verbose: Enable verbose mode (true/false, default: false)
+###=====================================================###
+# Example usage:
+#   klayout -b -r gf180mcu.lvs -rd input=design.gds -rd report=lvs_results.lyrdb
+#       -rd run_mode=deep
+########################################################################################
 #=======================================================================================================================
 #--------------------------------------------- GF 0.18um MCU LVS RULE DECK ---------------------------------------------
 #=======================================================================================================================
@@ -52,8 +95,8 @@ if $report
 else
   layout_dir = Pathname.new(RBA::CellView.active.filename).parent.realpath
   report_path = layout_dir.join("#{source.cell_name}.lvsdb").to_s
-  logger.info("GF180MCU Klayout LVS runset output at default location: #{source.cell_name}.lvsdb")
-  report_lvs($report_path)
+  logger.info("GF180MCU Klayout LVS runset output at default location: #{report_path}")
+  report_lvs(report_path)
 end
 
 #================================================
@@ -69,6 +112,12 @@ end
 substrate_name = $lvs_sub || 'gf180mcu_gnd'
 
 logger.info("Substrate name used: #{$lvs_sub}")
+
+#=== SCHEMATIC TRANSLCATE ===
+
+SCHEMATIC_TRANSLATE = bool_check?($schematic_translate)
+
+logger.info("schematic translate: #{SCHEMATIC_TRANSLATE}")
 
 #=== NET NAMES OPTION ===
 # true: use net names instead of numbers
@@ -102,10 +151,10 @@ device_scaling(1_000_000) if $DEV_SCALE
 
 logger.info("LVS device_scaling option: #{DEV_SCALE}")
 
-# SCH_SIMPLE
-SCH_SIMPLE = bool_check?($schematic_simplify)
+# SIMPLIFY
+SIMPLIFY = bool_check?($simplify)
 
-logger.info("Selected SCH_SIMPLE option: #{SCH_SIMPLE}")
+logger.info("Selected SIMPLIFY option: #{SIMPLIFY}")
 
 # NET_ONLY
 NET_ONLY = bool_check?($net_only)
@@ -132,14 +181,15 @@ PURGE_NETS = bool_check?($purge_nets)
 
 logger.info("Selected PURGE_NETS option: #{PURGE_NETS}")
 
-# SIMPLIFY
-SIMPLIFY = if NET_ONLY || TOP_LVL_PINS || COMBINE || PURGE || PURGE_NETS
-             false
-           else
-             true
-           end
+# IMPLICIT_CONNECT
+IMPLICIT_CONNECT = bool_check?($implicit_connect)
 
-logger.info("Selected SIMPLIFY option: #{SIMPLIFY}")
+logger.info("Selected IMPLICIT_CONNECT option: #{IMPLICIT_CONNECT}")
+
+# CONSIDER DN DW features
+CONSIDER_DN_DW_FEATURES = bool_check?($consider_dn_dw_features)
+
+logger.info("Selected CONSIDER_DN_DW_FEATURES option: #{CONSIDER_DN_DW_FEATURES}")
 
 #=== PRINT DETAILS ===
 logger.info("Verbose mode: #{$verbose}")
@@ -202,19 +252,35 @@ reader = RBA::NetlistSpiceReader.new(SubcircuitModelsReader.new)
 
 #=== GET NETLIST ===
 if $schematic
-  schematic($schematic, reader)
-  logger.info("Netlist file: #{$schematic}")
+  $schematic = File.expand_path($schematic)
 else
   exts = ["spice", "cdl"]
   candidates = exts.map{|ext| "#{source.cell_name}.#{ext}"}
   netlists = candidates.select{|f| File.exist?(f)}
   if netlists.empty?
     error("Netlist not found, tried: #{candidates}")
-  else
-    schematic(netlists[0], reader)
-    logger.info("Netlist file: #{netlists[0]}")
   end
 end
+
+logger.info("Input schematic file: #{$schematic}")
+
+if SCHEMATIC_TRANSLATE
+  python_script = File.join(File.dirname(__FILE__), 'gf180_xschem_klayout_spice_convert.py')
+  translated_schematic_filename = File.basename($schematic).sub(File.extname($schematic), '') + "_translated.spice"
+  translated_schematic_path = File.join(File.dirname(__FILE__), translated_schematic_filename)
+  cmd = "python3 #{python_script} #{$schematic} -o #{translated_schematic_path}"
+  puts "Running #{cmd}"
+  output = `#{cmd}`
+  exitstatus = $?.exitstatus
+  puts output
+
+  unless exitstatus == 0
+    raise "Script returned a non-zero exit status (#{exitstatus})"
+  end
+  $schematic = translated_schematic_path
+end
+
+schematic($schematic, reader)
 
 #================================================
 #------------- LAYERS DEFINITIONS ---------------
@@ -352,39 +418,49 @@ logger.info('Starting GF180 LVS DEVICES EXTRACTION')
 #------------- COMPARISON OPTIONS ---------------
 #================================================
 
+## IMPLICIT_CONNECT
+connect_implicit('*') if IMPLICIT_CONNECT
+
+#=== NETLIST OPTIONS ===
+netlist if NET_ONLY
+return if NET_ONLY
+
 logger.info('Starting GF180 LVS comparison section')
 
 #=== FLATTEN CELLS ===
 align
 
-#=== NETLIST EXTRACTION ===
-netlist.simplify if SIMPLIFY
-
-#=== NETLIST OPTIONS ===
-netlist if NET_ONLY
-
+## TOP_LVL_PINS
 netlist.make_top_level_pins if TOP_LVL_PINS
+schematic.make_top_level_pins if TOP_LVL_PINS
 
+## SIMPLIFY
+netlist.simplify if SIMPLIFY
+schematic.simplify if SIMPLIFY
+
+## COMBINE_DEVICE
 netlist.combine_devices if COMBINE
+schematic.combine_devices if COMBINE
 
-netlist.purge if PURGE
-
+## PURGE_NETS
 netlist.purge_nets if PURGE_NETS
+schematic.purge_nets if PURGE_NETS
 
-#=== SCHEMATIC OPTIONS ===
-schematic.simplify if SCH_SIMPLE
+## PURGE
+netlist.purge if PURGE
+schematic.purge if PURGE
 
 #=== IGNORE EXTREME VALUES ===
 max_res(1e7)
 min_caps(1e-16)
 
-compare
+result = compare
 
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
 logger.info(format('LVS Total Run time %f seconds', run_time))
 
-if !compare
+if !result
   logger.info('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
   logger.error("ERROR : Netlists don't match")
   logger.info('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
