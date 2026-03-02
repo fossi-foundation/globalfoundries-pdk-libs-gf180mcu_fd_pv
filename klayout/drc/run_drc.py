@@ -148,7 +148,6 @@ def generate_drc_run_template(drc_dir: str, run_dir: str, run_tables_list: list 
             and "density" not in f
             and "main" not in f
             and "layers_def" not in f
-            and "tail" not in f
         ]
         deck_name = "main"
     elif len(run_tables_list) == 1:
@@ -164,7 +163,6 @@ def generate_drc_run_template(drc_dir: str, run_dir: str, run_tables_list: list 
     logging.info(f"## Your run dir located at: {run_dir}")
 
     all_tables.insert(0, "main.drc")
-    all_tables.append("tail.drc")
 
     # Adding layers_def to run  dir to used in main rule deck
     lyrs_def_path = os.path.join(drc_dir, "rule_decks", "layers_def.drc")
@@ -236,12 +234,12 @@ def get_list_of_tables(drc_dir: str):
         return [
             os.path.basename(f).replace(".drc", "")
             for f in glob.glob(os.path.join(drc_dir, "rule_decks", "*.drc"))
-            if all(t not in f for t in ("antenna", "density", "main", "layers_def", "tail"))]
+            if all(t not in f for t in ("antenna", "density", "main", "layers_def"))]
     else:
         return [
             os.path.basename(f).replace(".drc", "")
             for f in glob.glob(os.path.join(drc_dir, "rule_decks", "*.drc"))
-            if all(t not in f for t in ("antenna", "density", "main", "layers_def", "split", "tail"))]
+            if all(t not in f for t in ("antenna", "density", "main", "layers_def", "split"))]
 
 
 def get_run_top_cell_name(arguments, layout_path):
