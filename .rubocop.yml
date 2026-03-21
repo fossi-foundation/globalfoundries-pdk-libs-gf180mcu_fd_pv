@@ -13,11 +13,12 @@ GlobalVars:
   Description: Do not introduce global variables.
   Enabled: false
 
-UselessAssignment:
-  Description: Useless assignment to variable.
-  Enabled: false
+Metrics/BlockLength:
+  AllowedMethods: ['register']
 
 AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
   Exclude:
     - 'env/**/*'
   Include:
