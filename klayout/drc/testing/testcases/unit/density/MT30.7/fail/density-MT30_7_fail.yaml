@@ -1,2 +1,3 @@
 density-MT30_7_fail:
-  --variant: "A"
+  variant: "A"
+  density: "true"
