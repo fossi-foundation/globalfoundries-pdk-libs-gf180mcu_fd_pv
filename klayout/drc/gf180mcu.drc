@@ -34,6 +34,8 @@
 #                             Options: dnwell, dnwell_split, nwell, nwell_split, lvpwell,
 #                                      lvpwell_split, nat, nat_split, ldnmos, ldnmos_split,
 #                                      ldpmos, ldpmos_split, main
+#   $variant                - PDK variant to use ('A', 'B', 'C', 'D', 'E', 'F').
+#                             Superseeded by metal_level, metal_top and mim_option
 #   $metal_level            - Metal stack configuration (default: '5LM')
 #                             Options: '3LM', '4LM', '5LM', '6LM'
 #   $metal_top              - Top metal thickness (default: '11K')
@@ -134,7 +136,6 @@ connectivity_rules = if conn_tables.include?(TABLE_NAME) && connectivity
                      end
 
 split_deep = bool_check?($split_deep)
-mim_option = $mim_option || 'B'
 offgrid = bool_check?($offgrid)
 feol = bool_check?($feol)
 beol = bool_check?($beol)
@@ -146,8 +147,38 @@ verbose = bool_check?($verbose)
 thr = $thr || Etc.nprocessors
 run_mode = $run_mode || 'deep'
 
-metal_top = $metal_top || '9K'
-metal_level = $metal_level || '5LM'
+variant = $variant || 'C'
+case variant
+when 'A'
+  metal_top = '30K'
+  mim_option = 'A'
+  metal_level = '3LM'
+when 'B'
+  metal_top = '11K'
+  mim_option = 'B'
+  metal_level = '4LM'
+when 'C'
+  metal_top = '9K'
+  mim_option = 'B'
+  metal_level = '5LM'
+when 'D'
+  metal_top = '11K'
+  mim_option = 'B'
+  metal_level = '5LM'
+when 'E'
+  metal_top = '9K'
+  mim_option = 'B'
+  metal_level = '6LM'
+when 'F'
+  metal_top = '9K'
+  mim_option = 'A'
+  metal_level = '6LM'
+end
+
+mim_option = $mim_option || mim_option
+metal_top = $metal_top || metal_top
+metal_level = $metal_level || metal_level
+
 case metal_level
 when '2LM'
   metal_level_numerical = 2
