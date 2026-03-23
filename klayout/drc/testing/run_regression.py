@@ -148,7 +148,7 @@ def get_switches(yaml_file, rule_name):
         except yaml.YAMLError as exc:
             print(exc)
 
-    return [f"{param}={value}" for param, value in yaml_dic[rule_name].items()]
+    return [f"-rd {param}={value}" for param, value in yaml_dic[rule_name].items()]
 
 
 def parse_results_db(results_database):
@@ -314,25 +314,23 @@ def run_test_case(
         Path(layout_path.parent).absolute(), f"{testcase_basename}.{SUPPORTED_SW_EXT}"
     )
 
+    switches = "-rd conn_drc=true -rd offgrid=true -rd feol=true -rd beol=true "
     if os.path.exists(sw_file):
-        switches = " ".join(get_switches(sw_file, testcase_basename))
+        switches += " ".join(get_switches(sw_file, testcase_basename))
     else:
-        switches = "--variant=C"  # default switch
-
-    # Adding switches for specific runsets
-    if "antenna" in str(layout_path):
-        switches += " --antenna_only"
-    elif "density" in str(layout_path):
-        switches += " --density_only"
+        switches += "-rd variant=C"  # default switch
 
     # Creating run folder structure
     pattern_clean = ".".join(os.path.basename(layout_path).split(".")[:-1])
     output_loc = f"{run_dir}/{table_name}"
     pattern_log = f"{output_loc}/{pattern_clean}_drc.log"
 
-    # command to run drc
-    call_str = f"python3 {drc_dir}/run_drc.py --path={layout_path} {switches} --table={table_name} --run_dir={output_loc} --run_mode=flat --thr=1  > {pattern_log} 2>&1"
+    report_path = os.path.join(output_loc, f"{pattern_clean}_{table_name}.lyrdb")
 
+    # command to run drc
+    call_str = f"klayout -b -r {drc_dir}/gf180mcu.drc -rd input={layout_path} {switches} -rd table_name={table_name} -rd report={report_path} -rd run_mode=flat  > {pattern_log} 2>&1"
+
+    print(f"Running DRC with command: {call_str}")
     # Starting klayout run
     os.makedirs(output_loc, exist_ok=True)
     try:
@@ -391,7 +389,7 @@ def run_test_case(
 
                 # dumping log into output to make CI have the log
                 if os.path.isfile(analysis_log):
-                    logging.info("# Dumping analysis run output log:")
+                    logging.info(f"# Dumping analysis run output log for : {analysis_log}")
                     with open(analysis_log, "r") as f:
                         for line in f:
                             line = line.strip()
@@ -530,10 +528,10 @@ def parse_existing_rules(rule_deck_path, output_path, target_table=None):
     """
 
     if target_table is None:
-        drc_files = glob.glob(os.path.join(rule_deck_path, "rule_decks", "*.drc"))
+        drc_files = glob.glob(os.path.join(rule_deck_path, "rule_decks", "*.rb"))
     else:
         table_rule_file = os.path.join(
-            rule_deck_path, "rule_decks", f"{target_table}.drc"
+            rule_deck_path, "rule_decks", f"{target_table}.rb"
         )
         if not os.path.isfile(table_rule_file):
             logging.error(f"Unknown {target_table} table name is selected, please recheck")
@@ -554,7 +552,7 @@ def parse_existing_rules(rule_deck_path, output_path, target_table=None):
                     line_list = line.split("'")
                     rule_info = dict()
                     rule_info["table_name"] = os.path.basename(runset).replace(
-                        ".drc", ""
+                        ".rb", ""
                     )
                     rule_info["rule_name"] = line_list[1]
                     rule_info["in_rule_deck"] = 1
