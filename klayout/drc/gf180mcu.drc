@@ -49,8 +49,6 @@
 #   $wedge                  - Enable wedge bonding rules (default: false)
 #   $ball                   - Enable ball bonding rules (default: false)
 #   $gold                   - Enable gold metallization rules (default: false)
-#   $dummy                  - Enable dummy fill rules (default: false)
-#   $dummy_no_sub_prev      - Disable dummy subtraction prevention (default: false)
 #   $slow_via               - Enable slow via rules (default: false)
 #
 # Example usage:
