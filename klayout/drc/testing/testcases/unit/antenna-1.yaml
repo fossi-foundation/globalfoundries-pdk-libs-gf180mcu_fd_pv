@@ -1,2 +1,3 @@
 antenna-1:
-  --variant: "E"
+  variant: "E"
+  antenna: "true"
