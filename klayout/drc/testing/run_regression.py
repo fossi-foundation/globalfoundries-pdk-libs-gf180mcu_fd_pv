@@ -328,7 +328,7 @@ def run_test_case(
     report_path = os.path.join(output_loc, f"{pattern_clean}_{table_name}.lyrdb")
 
     # command to run drc
-    call_str = f"klayout -b -r {drc_dir}/gf180mcu.drc -rd input={layout_path} {switches} -rd table_name={table_name} -rd report={report_path} -rd run_mode=flat  > {pattern_log} 2>&1"
+    call_str = f"klayout -b -r {drc_dir}/gf180mcu.drc -rd input={layout_path} {switches} -rd select_decks={table_name} -rd report={report_path} -rd run_mode=flat  > {pattern_log} 2>&1"
 
     print(f"Running DRC with command: {call_str}")
     # Starting klayout run

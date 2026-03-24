@@ -26,5 +26,21 @@ module GF180DRC
     def all
       @order.map { |id| @decks_by_id.fetch(id) }
     end
+
+    # include_tags: array; match if any tag overlaps
+    def select(include_tags: nil, raise_on_empty: true)
+      decks = all
+
+      decks = decks.select { |d| (d.tags & include_tags).any? } if include_tags && !include_tags.empty?
+
+      if raise_on_empty && decks.empty?
+        raise ArgumentError,
+              'Deck selection matched no decks. ' \
+              "Filters: include_tags=#{include_tags.inspect} " \
+              "Available tags : #{all.map(&:tag).join(', ')}"
+      end
+
+      decks
+    end
   end
 end

@@ -30,10 +30,7 @@
 #   $verbose                - Enable verbose output: 'true' or 'false' (default: false)
 #
 # Optional - Technology Options:
-#   $table_name             - Rule table name to run (default: 'main')
-#                             Options: dnwell, dnwell_split, nwell, nwell_split, lvpwell,
-#                                      lvpwell_split, nat, nat_split, ldnmos, ldnmos_split,
-#                                      ldpmos, ldpmos_split, main
+#   $select_decks           - Which deck table to run. If empty run all decks.
 #   $variant                - PDK variant to use ('A', 'B', 'C', 'D', 'E', 'F').
 #                             Superseeded by metal_level, metal_top and mim_option
 #   $metal_level            - Metal stack configuration (default: '5LM')
@@ -119,21 +116,9 @@ def bool_check?(obj)
   obj.to_s.downcase == 'true'
 end
 
-TABLE_NAME = $table_name || 'main'
-
-logger.info("table_name selected  #{TABLE_NAME}")
-
 # connectivity rules
 connectivity = bool_check?($conn_drc)
-
-conn_tables = %w[dnwell dnwell_split nwell nwell_split lvpwell
-                 lvpwell_split nat nat_split ldnmos ldnmos_split ldpmos ldpmos_split main]
-
-connectivity_rules = if conn_tables.include?(TABLE_NAME) && connectivity
-                       true
-                     else
-                       false
-                     end
+connectivity_rules = connectivity
 
 split_deep = bool_check?($split_deep)
 offgrid = bool_check?($offgrid)
@@ -392,7 +377,13 @@ Object.const_set(:GF180_DRC_REGISTRY, GF180DRC::Registry.new)
 deck_paths = Dir[File.join(__dir__, 'rule_decks', '*.{rb}')]
 deck_paths.each { |p| load p }
 
-selected_decks = GF180_DRC_REGISTRY.all
+if $select_decks
+  include_tags = $select_decks.split(',')
+  selected_decks = GF180_DRC_REGISTRY.select(include_tags: include_tags)
+else
+  selected_decks = GF180_DRC_REGISTRY.all
+end
+
 logger.info("Selected decks: #{selected_decks.map(&:id).join(', ')}")
 
 # ---- Execute decks ----
@@ -405,4 +396,4 @@ end
 
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
-logger.info("#{TABLE_NAME} DRC Total Run time #{run_time} seconds")
+logger.info("# DRC Total Run time #{run_time} seconds")
