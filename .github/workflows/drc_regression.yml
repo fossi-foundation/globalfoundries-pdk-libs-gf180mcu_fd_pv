@@ -37,8 +37,8 @@ jobs:
       - id: set-matrix
         run: |
           cd klayout/drc/rule_decks/
-          drc_table=`echo '[' ; find -iname '*.drc' -a ! -iname 'main.drc' -a ! -iname 'tail.drc' -a ! -iname 'layers_def.drc' ! -iname '*_split.drc' | tr '\n' ','|sed -e 's/^/\"/'| sed -e 's/,$/\"]/'|sed -e 's/,/\", \"/g'`
-          drc_table="${drc_table//'./'/}"; drc_table="${drc_table//'"", '/}"; drc_table="${drc_table//'.drc'/}";
+          drc_table=`echo '[' ; find -iname '*.rb' -a ! -iname '*_split.rb' | tr '\n' ','|sed -e 's/^/\"/'| sed -e 's/,$/\"]/'|sed -e 's/,/\", \"/g'`
+          drc_table="${drc_table//'./'/}"; drc_table="${drc_table//'"", '/}"; drc_table="${drc_table//'.rb'/}";
           drc_table=`echo $drc_table | jq -c .`
           echo $drc_table
           echo "drc_table=$drc_table" >>$GITHUB_OUTPUT
