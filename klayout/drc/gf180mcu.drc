@@ -64,11 +64,12 @@ require 'etc'
 # ---- framework ----
 require_relative 'registry'
 require_relative 'context'
-require_relative 'layers'
-require_relative 'derived_layers'
-require_relative 'deck_env'
+require_relative 'generic_layers'
+require_relative 'options'
 require_relative 'connectivity'
-puts "#{RUBY_ENGINE} #{RUBY_VERSION}p#{RUBY_PATCHLEVEL}"
+
+require_relative 'helper'
+
 exec_start_time = Time.now
 
 logger = Logger.new($stdout)
@@ -84,127 +85,51 @@ end
 logger.info("Starting running GF180MCU Klayout DRC runset on #{$input}")
 logger.info("Ruby Version for klayout: #{RUBY_VERSION}")
 
-unless $input
-  warn '$input is required.'
-  exit
-end
+# As klayout wraps the current code, it is not trivial to access variables from
+# the rule files. Hence we define a global here for the registry
+Object.const_set(:GF180_DRC_REGISTRY, GF180DRC::Registry.new)
 
-if $topcell
-  source($input, $topcell)
+deck_paths = Dir[File.join(__dir__, 'rule_decks', '*.{rb}')]
+deck_paths.each { |p| load p }
+
+raw_params = {
+  input: $input,
+  report: $report,
+  topcell: $topcell,
+  conn_drc: $conn_drc,
+  split_deep: $split_deep,
+  offgrid: $offgrid,
+  feol: $feol,
+  beol: $beol,
+  slow_via: $slow_via,
+  antenna: $antenna,
+  density: $density,
+  verbose: $verbose,
+  thr: $thr,
+  run_mode: $run_mode,
+  variant: $variant,
+  mim_option: $mim_option,
+  metal_top: $metal_top,
+  metal_level: $metal_level
+}
+opts = GF180DRC::Options.from_klayout_params(raw_params: raw_params, registry: GF180_DRC_REGISTRY)
+opts.log_to(logger)
+
+if opts.topcell
+  source(opts.input.to_s, opts.topcell)
 else
-  source($input)
+  source(opts.input.to_s)
 end
 
-logger.info('Loading database to memory is complete.')
-
-if $report
-  logger.info("GF180MCU Klayout DRC runset output at: #{$report}")
-  report('DRC Run Report at', $report)
-else
-  layout_dir = Pathname.new(RBA::CellView.active.filename).parent.realpath
-  report_path = layout_dir.join('gf180_drc.lyrdb').to_s
-  logger.info("GF180MCU Klayout DRC runset output at default location: #{report_path}")
-  report('DRC Run Report at', report_path)
-end
-
-#================================================
-#------------------ SWITCHES --------------------
-#================================================
-logger.info('Evaluate switches.')
-
-def bool_check?(obj)
-  obj.to_s.downcase == 'true'
-end
-
-# connectivity rules
-connectivity = bool_check?($conn_drc)
-connectivity_rules = connectivity
-
-split_deep = bool_check?($split_deep)
-offgrid = bool_check?($offgrid)
-feol = bool_check?($feol)
-beol = bool_check?($beol)
-slow_via = bool_check?($slow_via) # slow via is only used in one spot. Investigate?
-antenna = bool_check?($antenna)
-density = bool_check?($density)
-
-verbose = bool_check?($verbose)
-thr = $thr || Etc.nprocessors
-run_mode = $run_mode || 'deep'
-
-variant = $variant || 'C'
-case variant
-when 'A'
-  metal_top = '30K'
-  mim_option = 'A'
-  metal_level = '3LM'
-when 'B'
-  metal_top = '11K'
-  mim_option = 'B'
-  metal_level = '4LM'
-when 'C'
-  metal_top = '9K'
-  mim_option = 'B'
-  metal_level = '5LM'
-when 'D'
-  metal_top = '11K'
-  mim_option = 'B'
-  metal_level = '5LM'
-when 'E'
-  metal_top = '9K'
-  mim_option = 'B'
-  metal_level = '6LM'
-when 'F'
-  metal_top = '9K'
-  mim_option = 'A'
-  metal_level = '6LM'
-end
-
-mim_option = $mim_option || mim_option
-metal_top = $metal_top || metal_top
-metal_level = $metal_level || metal_level
-
-case metal_level
-when '2LM'
-  metal_level_numerical = 2
-when '3LM'
-  metal_level_numerical = 3
-when '4LM'
-  metal_level_numerical = 4
-when '5LM'
-  metal_level_numerical = 5
-when '6LM'
-  metal_level_numerical = 6
-else
-  warn("Metal level not recognized: #{metal_level}")
-  exit
-end
-
-logger.info("Connectivity enabled: #{connectivity}")
-logger.info("Connectivity rules: #{connectivity_rules}")
-logger.info("Split deep enabled: #{split_deep}")
-logger.info("MIM Option selected: #{mim_option}")
-logger.info("Offgrid enabled: #{offgrid}")
-logger.info("FEOL enabled: #{feol}")
-logger.info("BEOL enabled: #{beol}")
-logger.info("Slow via enabled: #{slow_via}")
-logger.info("antenna enabled: #{antenna}")
-logger.info("density enabled: #{density}")
-
-logger.info("Verbose enabled: #{verbose}")
-logger.info("Threads for DRC functions: #{thr}")
-logger.info("Run mode is: #{run_mode}")
-logger.info("metal_top selected is #{metal_top}")
-logger.info("metal_level selected is #{metal_level}")
+report('', opts.report.to_s)
 
 # threads
-threads(thr)
-
+threads(opts.thr)
 # verbose
-verbose(verbose)
+verbose(opts.verbose?)
 
 # === TILING MODE ===
-case run_mode
+case opts.run_mode
 when 'tiling'
   tiles(500.um)
   tile_borders(10.um)
@@ -213,42 +138,21 @@ when 'deep'
 when 'flat'
   flat
 else
-  warn("Could not recognized run_mode: #{run_mode}")
+  warn("Could not recognized run_mode: #{opts.run_mode}")
   exit
 end
 
 chip_area = extent.sized(0.0).area
 logger.info("Total area of the design is #{chip_area} um^2.")
 
-# ---- Build context ----
-options = {
-  metal_level: metal_level,
-  metal_level_numerical: metal_level_numerical,
-  metal_top: metal_top,
-  mim_option: mim_option,
-  feol: feol,
-  beol: beol,
-  offgrid: offgrid,
-  run_mode: run_mode,
-  connectivity: connectivity,
-  connectivity_rules: connectivity_rules,
-  verbose: verbose,
-  slow_via: slow_via,
-  split_deep: split_deep,
-  chip_area: chip_area,
-  antenna: antenna,
-  density: density
-}
-
-ctx = GF180DRC::Context.new(drc_engine: self, logger: logger, options: options)
+ctx = GF180DRC::Context.new(drc_engine: self, logger: logger, options: opts)
+ctx.extend(GF180DRC::OptionHelpers)
 
 #================================================
 #------------- LAYERS DEFINITIONS ---------------
 #================================================
 
-GF180DRC::Layers.extract(ctx)
-
-GF180DRC::DerivedLayers.build(ctx)
+GF180DRC::GenericLayers.generate_generic_layers(ctx)
 
 #================================================
 #------------- LAYERS CONNECTIONS ---------------
@@ -266,116 +170,10 @@ if ctx.connectivity?
 end
 
 #================================================
-#------------ PRE-DEFINED FUNCTIONS -------------
-#================================================
-
-def unconn_errors_check(net1, net2, unconnected_errors)
-  if !net1 || !net2
-    logger.error("Connectivity check encountered 2 nets that doesn't exist. Potential issue in klayout...")
-  elsif net1.circuit != net2.circuit || net1.cluster_id != net2.cluster_id
-    # unconnected
-    unconnected_errors.data.insert(ep)
-  end
-  unconnected_errors
-end
-
-def get_nets(_data, layer1, layer2, edge_pairs)
-  net1 = l2n_data.probe_net(layer1.data, edge_pairs.first.p1)
-  net2 = l2n_data.probe_net(layer2.data, edge_pairs.second.p1)
-  [net1, net2]
-end
-
-def conn_space_viol(layer, conn_val, mode)
-  connected_output = layer.space(conn_val.um, mode).polygons(0.001.um)
-  singularity_errors = layer.space(0.001.um, mode).polygons(0.001.um)
-  [connected_output, singularity_errors]
-end
-
-def conn_space_check(layer, not_conn_val, mode)
-  unconnected_errors_unfiltered = layer.space(not_conn_val.um, mode)
-  connected_output, singularity_errors = conn_space_viol(layer, conn_val, mode)
-  # Filter out the errors arising from the same net
-  unconnected_errors = DRC::DRCLayer.new(self, RBA::EdgePairs.new)
-  unconnected_errors_unfiltered.data.each do |ep|
-    net1, net2 = get_nets(l2n_data, layer, layer, ep)
-    unconnected_errors = unconn_errors_check(net1, net2, unconnected_errors)
-  end
-  unconnected_output = unconnected_errors.polygons.join(singularity_errors)
-  [connected_output, unconnected_output]
-end
-
-def conn_space_nets(layer, conn_val, not_conn_val, mode)
-  nets = layer.nets
-  connected_output = nets.space(conn_val.um, mode, props_eq).polygons(0.001.um)
-  singularity_errors = nets.space(0.001.um, mode).polygons(0.001.um)
-  unconnected_output = nets.space(not_conn_val.um, mode, props_ne).polygons(0.001.um).join(singularity_errors)
-  [connected_output, unconnected_output]
-end
-
-def conn_space(layer, conn_val, not_conn_val, mode)
-  if layer.respond_to?(:nets) # KLayout version (>=0.28.4) which supports "nets"
-    connected_output, unconnected_output = conn_space_nets(layer, conn_val, not_conn_val, mode)
-  else
-    raise 'ERROR : Wrong connectivity implementation' if conn_val > not_conn_val
-
-    connected_output, unconnected_output = conn_space_check(layer, not_conn_val, mode)
-  end
-  [connected_output, unconnected_output]
-end
-
-def sep_viol_nets(layer1, layer2, conn_val, not_conn_val, mode)
-  connected_output   = layer1.nets.separation(layer2.nets, conn_val.um,     mode, props_eq).polygons(0.001.um)
-  unconnected_output = layer1.nets.separation(layer2.nets, not_conn_val.um, mode, props_ne).polygons(0.001.um)
-  [connected_output, unconnected_output]
-end
-
-def unconn_separation_check(layer1, layer2, not_conn_val, mode)
-  unconnected_errors_unfiltered = layer1.separation(layer2, not_conn_val.um, mode)
-  # Filter out the errors arising from the same net
-  unconnected_errors = DRC::DRCLayer.new(self, RBA::EdgePairs.new)
-  unconnected_errors_unfiltered.data.each do |ep|
-    net1, net2 = get_nets(l2n_data, layer1, layer2, ep)
-    unconnected_errors = unconn_errors(net1, net2, unconnected_errors)
-  end
-  unconnected_errors
-end
-
-def conn_separation(layer1, layer2, conn_val, not_conn_val, mode)
-  if layer1.respond_to?(:nets) # KLayout version (>=0.28.4) which supports "nets"
-    connected_output, unconnected_output = sep_viol_nets(layer1, layer2, conn_val, not_conn_val, mode)
-  else
-    raise 'ERROR : Wrong connectivity implementation' if conn_val > not_conn_val
-
-    connected_output = layer1.separation(layer2, conn_val.um, mode).polygons(0.001.um)
-    unconnected_errors = unconn_separation_check(layer1, layer2, not_conn_val, mode)
-    unconnected_output = unconnected_errors.polygons(0.001.um)
-  end
-  [connected_output, unconnected_output]
-end
-
-def size_overunder_in_layers(large_layer, size_layer, size_value)
-  out_layer = DRC::DRCLayer.new(self, RBA::Region.new)
-  large_layer.data.each do |ep|
-    curr_large_layer = DRC::DRCLayer.new(self, RBA::Region.new(ep))
-    curr_large_layer = curr_large_layer.and(size_layer)
-    curr_large_layer = curr_large_layer.sized(size_value, 'square_limit').merged.sized(-size_value, 'square_limit')
-    out_layer.data.insert(curr_large_layer.data)
-  end
-  out_layer
-end
-
-#================================================
 #----------------- MAIN RUNSET ------------------
 #================================================
 
 logger.info('Starting GF180MCU DRC rules.')
-
-# As klayout wraps the current code, it is not trivial to access variables from
-# the rule files. Hence we define a global here for the registry
-Object.const_set(:GF180_DRC_REGISTRY, GF180DRC::Registry.new)
-
-deck_paths = Dir[File.join(__dir__, 'rule_decks', '*.{rb}')]
-deck_paths.each { |p| load p }
 
 if $select_decks
   include_tags = $select_decks.split(',')

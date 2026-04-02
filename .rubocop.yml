@@ -17,6 +17,12 @@ Style/GlobalVars:
 Metrics/BlockLength:
   AllowedMethods: ['register']
 
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 25
+
 AllCops:
   TargetRubyVersion: 3.0
   NewCops: enable

@@ -3,59 +3,64 @@
 module GF180DRC
   # Defines the context for DRC execution: the runtime options and generic layers
   class Context
-    attr_reader :logger, :options, :raw, :derived, :drc
+    attr_reader :logger, :options, :drc
 
     def initialize(drc_engine:, logger:, options:)
       @drc = drc_engine
       @logger = logger
       @options = options
-      @raw = {}
-      @derived = {}
+      @layers = {}
     end
 
-    # Common option helpers
-    def feol? = !!options[:feol]
-    def beol? = !!options[:beol]
-    def offgrid? = !!options[:offgrid]
-    def split_deep? = !!options[:split_deep]
-    def slow_via? = !!options[:slow_via]
-    def antenna? = !!options[:antenna]
-    def density? = !!options[:density]
-    def connectivity? = !!options[:connectivity]
-    def connectivity_rules = options[:connectivity_rules]
-    def metal_level = options[:metal_level]
-    def metal_top = options[:metal_top]
-    def mim_option = options[:mim_option]
-    def metal_level_numerical = options[:metal_level_numerical]
-    def chip_area = options[:chip_area]
-
-    # Extract polygons via KLayout DRC engine and store by symbol key
-    def extract!(name, layer, datatype, merge)
-      ps = @drc.polygons(layer, datatype)
-      ps = ps.merged if merge
-      raw[name.to_sym] = ps
-    end
-
-    # Derived layer memoization.
-    # Use ctx.derive(:foo) { ctx[:bar].and(ctx[:baz]) }
-    def derive(name, &block)
+    # Use ctx.register_layer(:foo) { ctx[:bar].and(ctx[:baz]) }
+    def register_layer(name, &block)
       key = name.to_sym
-      return derived[key] if derived.key?(key)
 
-      derived[key] = block.call
+      raise "Derived layer #{key} already defined" if @layers.key?(key)
+
+      @layers[key] = block.call
     end
 
-    # Unified accessor: derived overrides raw.
     def [](name)
       key = name.to_sym
-      return derived[key] if derived.key?(key)
 
-      raw.fetch(key)
+      @layers[key]
     end
 
     def key?(name)
       key = name.to_sym
-      derived.key?(key) || raw.key?(key)
+
+      @layers.key?(key)
+    end
+  end
+
+  # Provides access to the global drc function and generic layers without
+  # the need for accessors. It does not allow to add new entries to the layers,
+  # but the object that is return could be theoretically edited.
+  class DeckEnv
+    attr_reader :ctx
+
+    def initialize(ctx)
+      @ctx = ctx
+    end
+
+    def drc = ctx.drc
+
+    # Common “globals” from old style decks
+    def logger = @ctx.logger
+
+    def method_missing(name, *args, &block)
+      # First: layer access (only for zero-arg calls)
+      return ctx[name] if args.empty? && block.nil? && ctx.key?(name)
+
+      # Second: delegate to KLayout DRC engine (polygons, extent, connect, euclidian, ...)
+      return drc.public_send(name, *args, &block) if drc.respond_to?(name)
+
+      super
+    end
+
+    def respond_to_missing?(name, include_private = false)
+      ctx.key?(name) || drc.respond_to?(name) || super
     end
   end
 end
