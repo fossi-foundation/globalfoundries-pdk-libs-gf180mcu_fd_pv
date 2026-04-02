@@ -21,10 +21,12 @@ GF180_DRC_REGISTRY.register(
 ) do
   next unless ctx.density?
 
+  chip_area = extent.sized(0.0).area
+
   # Rule PL.8: Poly2 coverage over the entire die shall be 14%.
   ## Dummy poly2 lines must be added to meet the minimum poly2 density requirement.
   logger.info('Executing rule PL.8')
-  if (poly2.area / ctx.chip_area) * 100 < 14
+  if (poly2.area / chip_area) * 100 < 14
     poly2.output('PL.8',
                  'PL.8 : Poly2 coverage over the entire die shall be 14%.
                   Dummy poly2 lines must be added to meet the minimum poly2 density requirement. : 14%')
@@ -34,7 +36,7 @@ GF180_DRC_REGISTRY.register(
   ## (Refer to section 13.0 for Dummy Metal fill guidelines.
   ## Customer needs to ensure enough dummy metal to satisfy Metal1 coverage)
   logger.info('Executing rule M1.4')
-  if (metal1.area / ctx.chip_area) * 100 < 30
+  if (metal1.area / chip_area) * 100 < 30
     metal1.output('M1.4',
                   'M1.4 : Metal1 coverage over the entire die shall be >30%
                   (Refer to section 13.0 for Dummy Metal fill guidelines.
@@ -45,7 +47,7 @@ GF180_DRC_REGISTRY.register(
   ## (Refer to section 13.0 for Dummy Metal fill guidelines.
   ## Customer needs to ensure enough dummy metal to satisfy Metal2 coverage)
   logger.info('Executing rule M2.4')
-  if (metal2.area / ctx.chip_area) * 100 < 30
+  if (metal2.area / chip_area) * 100 < 30
     metal2.output('M2.4',
                   'M2.4 : Metal2 coverage over the entire die shall be >30%
                   (Refer to section 13.0 for Dummy Metal fill guidelines.
@@ -57,7 +59,7 @@ GF180_DRC_REGISTRY.register(
     ## (Refer to section 13.0 for Dummy Metal fill guidelines.
     ## Customer needs to ensure enough dummy metal to satisfy metal3 coverage)
     logger.info('Executing rule M3.4')
-    if (metal3.area / ctx.chip_area) * 100 < 30
+    if (metal3.area / chip_area) * 100 < 30
       metal3.output('M3.4',
                     'M3.4 : metal3 coverage over the entire die shall be >30%
                       (Refer to section 13.0 for Dummy Metal fill guidelines.
@@ -70,7 +72,7 @@ GF180_DRC_REGISTRY.register(
     ## (Refer to section 13.0 for Dummy Metal fill guidelines.
     ## Customer needs to ensure enough dummy metal to satisfy metal4 coverage)
     logger.info('Executing rule M4.4')
-    if (metal4.area / ctx.chip_area) * 100 < 30
+    if (metal4.area / chip_area) * 100 < 30
       metal4.output('M4.4',
                     'M4.4 : metal4 coverage over the entire die shall be >30%
                       (Refer to section 13.0 for Dummy Metal fill guidelines.
@@ -83,7 +85,7 @@ GF180_DRC_REGISTRY.register(
     ## (Refer to section 13.0 for Dummy Metal fill guidelines.
     ## Customer needs to ensure enough dummy metal to satisfy metal5 coverage)
     logger.info('Executing rule M5.4')
-    if (metal5.area / ctx.chip_area) * 100 < 30
+    if (metal5.area / chip_area) * 100 < 30
       metal5.output('M5.4',
                     'M5.4 : metal5 coverage over the entire die shall be >30%
                       (Refer to section 13.0 for Dummy Metal fill guidelines.
@@ -96,7 +98,7 @@ GF180_DRC_REGISTRY.register(
     ## (Refer to section 13.0 for Dummy Metal-fill guidelines.
     ## Customer needs to ensure enough dummy metal to satisfy Metaln coverage).
     logger.info('Executing rule MT30.7')
-    if (top_metal.area / ctx.chip_area) * 100 < 30
+    if (top_metal.area / chip_area) * 100 < 30
       top_metal.output('MT30.7',
                        'MT30.7 : Thick MetalTop coverage over the entire die shall be >30%
                                   (Refer to section 13.0 for Dummy Metal-fill guidelines.
@@ -107,7 +109,7 @@ GF180_DRC_REGISTRY.register(
     ## (Refer to section 10.3 for Dummy Metal-fill guidelines.
     ## Customer needs to ensure enough dummy metal to satisfy Metaln coverage)
     logger.info('Executing rule MT.3')
-    if (top_metal.area / ctx.chip_area) * 100 < 30
+    if (top_metal.area / chip_area) * 100 < 30
       top_metal.output('MT.3',
                        'MT.3 : MetalTop coverage over the entire die shall be >30%
                                   (Refer to section 10.3 for Dummy Metal-fill guidelines.
