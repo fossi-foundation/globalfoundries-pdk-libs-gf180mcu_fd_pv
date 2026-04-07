@@ -33,7 +33,7 @@ jobs:
     outputs:
       lvs_categories: ${{ steps.set-matrix.outputs.lvs_categories }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - id: set-matrix
         run: |
           cd klayout/lvs/testing/unit/
@@ -41,8 +41,26 @@ jobs:
           echo "lvs_categories=$lvs_categories" >> $GITHUB_OUTPUT
           echo "Found categories: $lvs_categories"
 
+  setup_klayout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 💾 Restore KLayout .deb from cache
+        id: cache-klayout
+        uses: actions/cache@v5
+        with:
+          path: klayout_0.30.5-1_amd64.deb
+          key: klayout-deb-cache-ubuntu-0_30_5
+
+      - name: Download KLayout .deb if not cached
+        if: steps.cache-klayout.outputs.cache-hit != 'true'
+        run: |
+          curl -L --retry 5 --retry-delay 5 --retry-all-errors \
+            -o klayout_0.30.5-1_amd64.deb \
+            https://www.klayout.org/downloads/Ubuntu-24/klayout_0.30.5-1_amd64.deb
+
+
   lvs_regression:
-    needs: build_lvs-matrix
+    needs: [build_lvs-matrix, setup_klayout]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -50,36 +68,22 @@ jobs:
         category: ${{ fromJson(needs.build_lvs-matrix.outputs.lvs_categories) }}
     name: LVS | ${{ matrix.category }}
     steps:
-        - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-        - name: 💾 Restore KLayout .deb from cache
-          id: cache-klayout
-          uses: actions/cache@v4
-          with:
-            path: klayout_0.30.5-1_amd64.deb
-            key: klayout-deb-cache-ubuntu-0_30_5
-            restore-keys: |
-              klayout-deb-cache-
+      - name: Restore KLayout .deb from cache
+        uses: actions/cache@v5
+        with:
+          path: klayout_0.30.5-1_amd64.deb
+          key: klayout-deb-cache-ubuntu-0_30_5
 
-        - name: 🔽 Download KLayout .deb if not cached
-          if: steps.cache-klayout.outputs.cache-hit != 'true'
-          run: |
-            echo "Downloading KLayout .deb..."
-            curl -L --retry 5 --retry-delay 5 --retry-all-errors \
-              -o klayout_0.30.5-1_amd64.deb https://www.klayout.org/downloads/Ubuntu-24/klayout_0.30.5-1_amd64.deb
+      - name: Install KLayout
+        run: sudo apt install ./klayout_0.30.5-1_amd64.deb
 
-        - name: ⚙️ Install KLayout
-          run: |
-            sudo apt update -qq -y
-            sudo apt install ./klayout_0.30.5-1_amd64.deb
-            echo "✅ KLayout version:"
-            klayout -v
+      - name: Get dependencies
+        run: |
+          pip install -r requirements.txt
 
-        - name: Get dependencies
-          run: |
-            pip install -r requirements.txt
-
-        - name: Testing LVS for ${{ matrix.category }}
-          run: |
-            cd klayout/lvs/testing/
-            pytest --category=${{ matrix.category }}
+      - name: Testing LVS for ${{ matrix.category }}
+        run: |
+          cd klayout/lvs/testing/
+          pytest --category=${{ matrix.category }}
