@@ -359,9 +359,9 @@ def generate_klayout_switches(arguments, layout_path):
         switches["offgrid"] = "true"
 
     if arguments["--no_connectivity"]:
-        switches["conn_drc"] = "false"
+        switches["connectivity"] = "false"
     else:
-        switches["conn_drc"] = "true"
+        switches["connectivity"] = "true"
 
     if arguments["--density"]:
         switches["density"] = "true"

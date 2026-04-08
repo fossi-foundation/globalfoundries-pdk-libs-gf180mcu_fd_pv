@@ -314,7 +314,7 @@ def run_test_case(
         Path(layout_path.parent).absolute(), f"{testcase_basename}.{SUPPORTED_SW_EXT}"
     )
 
-    switches = "-rd conn_drc=true -rd offgrid=true -rd feol=true -rd beol=true "
+    switches = "-rd connectivity=true -rd offgrid=true -rd feol=true -rd beol=true "
     if os.path.exists(sw_file):
         switches += " ".join(get_switches(sw_file, testcase_basename))
     else:
