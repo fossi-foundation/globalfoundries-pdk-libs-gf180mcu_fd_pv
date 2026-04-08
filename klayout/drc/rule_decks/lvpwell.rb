@@ -43,7 +43,7 @@ GF180_DRC_REGISTRY.register(
   lpw1_l1.forget
 
   unless ctx.split_deep?
-    if ctx.connectivity_rules
+    if ctx.connectivity?
       logger.info('CONNECTIVITY_RULES section')
 
       connected_lvpwell_3p3v, unconnected_lvpwell_3p3v = conn_space(lvpwell_dn, 0.86, 1.4, euclidian)

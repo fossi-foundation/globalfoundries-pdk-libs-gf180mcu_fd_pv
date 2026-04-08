@@ -26,7 +26,7 @@ GF180_DRC_REGISTRY.register(
   #================================================
   next unless ctx.feol? && ctx.split_deep?
 
-  if ctx.connectivity_rules
+  if ctx.connectivity?
     logger.info('CONNECTIVITY_RULES section')
     connected_mdn_2a, unconnected_mdn_2b = conn_space(mvsd, 1.um, 2.um, euclidian)
 
@@ -50,7 +50,7 @@ GF180_DRC_REGISTRY.register(
   mdn2b_l1.output('MDN.2b', 'MDN.2b : Min MVSD space [Diff Potential]. : 2µm')
   mdn2b_l1.forget # CONNECTIVITY_RULES
 
-  if ctx.connectivity_rules
+  if ctx.connectivity?
     logger.info('CONNECTIVITY_RULES section')
     connected_mdn_8a, unconnected_mdn_8b = conn_separation(mvsd, nwell, 1, 2, euclidian)
 

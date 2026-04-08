@@ -50,7 +50,7 @@ GF180_DRC_REGISTRY.register(
   mdn1_l1.forget
 
   unless ctx.split_deep?
-    if ctx.connectivity_rules
+    if ctx.connectivity?
       logger.info('CONNECTIVITY_RULES section')
       connected_mdn_2a, unconnected_mdn_2b = conn_space(mvsd, 1.um, 2.um, euclidian)
 
@@ -194,7 +194,7 @@ GF180_DRC_REGISTRY.register(
   mdn7a_l1.forget
 
   unless ctx.split_deep?
-    if ctx.connectivity_rules
+    if ctx.connectivity?
       logger.info('CONNECTIVITY_RULES section')
       connected_mdn_8a, unconnected_mdn_8b = conn_separation(mvsd, nwell, 1, 2, euclidian)
 

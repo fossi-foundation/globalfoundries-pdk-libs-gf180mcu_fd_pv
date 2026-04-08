@@ -29,9 +29,9 @@ GF180_DRC_REGISTRY.register(
     logger.info('Starting LVPWELL derivations')
     lvpwell_dn_mv = lvpwell_dn.interacting(dualgate)
 
-    if ctx.connectivity_rules
+    if ctx.connectivity?
 
-      logger.info('ctx.connectivity_rules section')
+      logger.info('ctx.connectivity? section')
 
       connected_lvpwell_3p3v, unconnected_lvpwell_3p3v = conn_space(lvpwell_dn, 0.86, 1.4, euclidian)
       connected_lvpwell_5p0v, unconnected_lvpwell_5p0v = conn_space(lvpwell_dn, 0.86, 1.7, euclidian)
@@ -63,7 +63,7 @@ GF180_DRC_REGISTRY.register(
       lpw2b_l1.forget
 
     else
-      logger.info('ctx.connectivity_rules disabled section')
+      logger.info('ctx.connectivity? disabled section')
 
       # Rule LPW.2a_LV: Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. is 1.4µm
       logger.info('Executing rule LPW.2a_LV')

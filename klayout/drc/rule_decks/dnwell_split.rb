@@ -26,7 +26,7 @@ GF180_DRC_REGISTRY.register(
   #================================================
   next unless ctx.feol? && ctx.split_deep?
 
-  if ctx.connectivity_rules
+  if ctx.connectivity?
     logger.info('CONNECTIVITY_RULES section')
 
     connected_dnwell, unconnected_dnwell = conn_space(dnwell, 2.5, 5.42, euclidian)

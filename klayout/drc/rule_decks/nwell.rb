@@ -64,8 +64,8 @@ GF180_DRC_REGISTRY.register(
   nw_1b_mv.forget
 
   unless ctx.split_deep?
-    if ctx.connectivity_rules
-      logger.info('ctx.connectivity_rules section')
+    if ctx.connectivity?
+      logger.info('ctx.connectivity? section')
 
       connected_nwell_3p3v, unconnected_nwell_3p3v = conn_space(nwell, 0.6, 1.4, euclidian)
       connected_nwell_5p0v, unconnected_nwell_5p0v = conn_space(nwell, 0.74, 1.7, euclidian)
@@ -99,7 +99,7 @@ GF180_DRC_REGISTRY.register(
       nw2b_l1 = unconnected_nwell_5p0v.overlapping(dualgate)
 
     else
-      logger.info('ctx.connectivity_rules disabled section')
+      logger.info('ctx.connectivity? disabled section')
 
       # Rule NW.2b_LV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.4µm.
       logger.info('Executing rule NW.2b_LV')
@@ -113,7 +113,7 @@ GF180_DRC_REGISTRY.register(
 
     end
     nw2b_l1.output('NW.2b_MV', 'NW.2b_MV : Min. Nwell Space (Outside DNWELL) [Different potential]: 1.7µm')
-    nw2b_l1.forget # ctx.connectivity_rules
+    nw2b_l1.forget # ctx.connectivity?
   end
 
   # Rule NW.3: Min. Nwell to DNWELL space is 3.1µm.

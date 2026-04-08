@@ -302,8 +302,8 @@ GF180_DRC_REGISTRY.register(
   mvpsd_mv.forget
 
   unless ctx.split_deep?
-    if ctx.connectivity_rules
-      logger.info('ctx.connectivity_rules section')
+    if ctx.connectivity?
+      logger.info('ctx.connectivity? section')
 
       connected_mdp_10b, unconnected_mdp_10a = conn_space(mvpsd, 1, 2, euclidian)
 
@@ -319,7 +319,7 @@ GF180_DRC_REGISTRY.register(
       mdp10b_l1.output('MDP.10b', 'MDP.10b : Min MVPSD space [same potential]. Merge if space less than 1um. : 1µm')
       mdp10b_l1.forget
     else
-      logger.info('ctx.connectivity_rules disabled section')
+      logger.info('ctx.connectivity? disabled section')
 
       # Rule MDP.10a: Min MVPSD space within LDMOS_XTOR marking [diff potential]. is 2µm
       logger.info('Executing rule MDP.10a')

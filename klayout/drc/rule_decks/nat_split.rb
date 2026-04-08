@@ -26,8 +26,8 @@ GF180_DRC_REGISTRY.register(
   #================================================
   next unless ctx.feol? && ctx.split_deep?
 
-  if ctx.connectivity_rules
-    logger.info('ctx.connectivity_rules section')
+  if ctx.connectivity?
+    logger.info('ctx.connectivity? section')
     _connected_nat, unconnected_nat = conn_space(natcomp, 10, 10, transparent)
 
     # Rule NAT.6: Two or more COMPs if connected to different potential
