@@ -9,9 +9,10 @@
 #
 # See https://docs.rubocop.org/rubocop/configuration
 
-GlobalVars:
+Style/GlobalVars:
   Description: Do not introduce global variables.
-  Enabled: false
+  Exclude:
+    - 'klayout/drc/gf180mcu.drc'
 
 Metrics/BlockLength:
   AllowedMethods: ['register']
