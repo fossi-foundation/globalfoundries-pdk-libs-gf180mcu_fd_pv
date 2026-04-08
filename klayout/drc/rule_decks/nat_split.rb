@@ -19,7 +19,7 @@
 GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
-  tags: %i[feol split_deep]
+  tags: %w[feol nat_split]
 ) do
   #================================================
   #-----------------NATIVE VT NMOS-----------------

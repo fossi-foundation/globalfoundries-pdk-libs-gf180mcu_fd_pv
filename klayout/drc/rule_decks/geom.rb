@@ -22,7 +22,7 @@
 GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
-  tags: [:offgrid]
+  tags: %w[offgrid geom]
 ) do
   next unless ctx.offgrid?
 

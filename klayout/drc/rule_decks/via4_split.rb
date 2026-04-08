@@ -19,7 +19,7 @@
 GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
-  tags: %i[beol split_deep]
+  tags: %w[beol via4_split]
 ) do
   next unless ctx.beol? && ctx.metal_level_numerical >= 5 && ctx.split_deep?
 

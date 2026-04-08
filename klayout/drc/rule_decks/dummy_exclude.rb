@@ -19,7 +19,7 @@
 GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
-  tags: []
+  tags: %w[beol dummy_exclude]
 ) do
   #================================================
   #--------------DUMMY EXCLUDE LAYERS--------------

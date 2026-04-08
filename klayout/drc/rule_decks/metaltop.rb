@@ -22,7 +22,7 @@
 GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
-  tags: [:beol]
+  tags: %w[beol metaltop]
 ) do
   next unless ctx.beol?
 

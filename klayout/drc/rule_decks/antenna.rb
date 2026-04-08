@@ -16,7 +16,7 @@
 GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
-  tags: [:antenna]
+  tags: %w[feol antenna]
 ) do
   next unless ctx.antenna?
 
