@@ -77,7 +77,7 @@ jobs:
           key: klayout-deb-cache-ubuntu-0_30_5
 
       - name: Install KLayout
-        run: sudo apt install ./klayout_0.30.5-1_amd64.deb
+        run: sudo apt-get update && sudo apt-get install ./klayout_0.30.5-1_amd64.deb
 
       - name: Get dependencies
         run: |
