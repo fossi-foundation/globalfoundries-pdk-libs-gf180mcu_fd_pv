@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module GF180DRC
+module RuleFramework
   # Defines the context for DRC execution: the runtime options and generic layers
   class Context
     attr_reader :logger, :options, :drc
@@ -61,6 +61,45 @@ module GF180DRC
 
     def respond_to_missing?(name, include_private = false)
       ctx.key?(name) || drc.respond_to?(name) || super
+    end
+  end
+
+  Deck = Struct.new(:id, :path, :tags, :code, keyword_init: true)
+
+  # Registers all available drc checks. Could be extended to provide filtering
+  class Registry
+    def initialize
+      @decks_by_id = {}
+      @order = []
+    end
+
+    def register(id:, path:, tags: [], &code)
+      raise ArgumentError, "register requires a block for deck '#{id}'" unless block_given?
+
+      raise ArgumentError, "Deck #{id} has already been defined" if @decks_by_id.key?(id)
+
+      @decks_by_id[id] = Deck.new(id: id, path: path, tags: tags, code: code)
+      @order << id
+    end
+
+    def all
+      @order.map { |id| @decks_by_id.fetch(id) }
+    end
+
+    # include_tags: array; match if any tag overlaps
+    def select(include_tags: nil, raise_on_empty: true)
+      decks = all
+
+      decks = decks.select { |d| (d.tags & include_tags).any? } if include_tags && !include_tags.empty?
+
+      if raise_on_empty && decks.empty?
+        raise ArgumentError,
+              'Deck selection matched no decks. ' \
+              "Filters: include_tags=#{include_tags.inspect} " \
+              "Available tags : #{all.map(&:tag).join(', ')}"
+      end
+
+      decks
     end
   end
 end

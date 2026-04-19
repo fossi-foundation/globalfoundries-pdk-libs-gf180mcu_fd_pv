@@ -62,12 +62,11 @@ require 'logger'
 require 'etc'
 
 # ---- framework ----
-require_relative 'registry'
-require_relative 'context'
+require_relative 'rule_framework'
+
 require_relative 'generic_layers'
 require_relative 'options'
 require_relative 'connectivity'
-
 require_relative 'helper'
 
 exec_start_time = Time.now
@@ -87,7 +86,7 @@ logger.info("Ruby Version for klayout: #{RUBY_VERSION}")
 
 # As klayout wraps the current code, it is not trivial to access variables from
 # the rule files. Hence we define a global here for the registry
-Object.const_set(:GF180_DRC_REGISTRY, GF180DRC::Registry.new)
+Object.const_set(:GF180_DRC_REGISTRY, RuleFramework::Registry.new)
 
 deck_paths = Dir[File.join(__dir__, 'rule_decks', '*.{rb}')]
 deck_paths.each { |p| load p }
@@ -145,7 +144,7 @@ end
 chip_area = extent.sized(0.0).area
 logger.info("Total area of the design is #{chip_area} um^2.")
 
-ctx = GF180DRC::Context.new(drc_engine: self, logger: logger, options: opts)
+ctx = RuleFramework::Context.new(drc_engine: self, logger: logger, options: opts)
 ctx.extend(GF180DRC::OptionHelpers)
 
 #================================================
@@ -188,8 +187,8 @@ logger.info("Selected decks: #{selected_decks.map(&:id).join(', ')}")
 logger.info('Starting GF180MCU DRC rules.')
 selected_decks.each do |deck|
   logger.info("Executing deck #{deck.id} from #{deck.path}")
-  env = GF180DRC::DeckEnv.new(ctx)
-  env.instance_exec(&deck.runner)
+  env = RuleFramework::DeckEnv.new(ctx)
+  env.instance_exec(&deck.code)
 end
 
 exec_end_time = Time.now
