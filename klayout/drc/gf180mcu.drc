@@ -509,16 +509,7 @@ rule_files =
     './rule_decks/via4_split.drc',
     './rule_decks/via5.drc',
     './rule_decks/ymtp_mk.drc',
-    './rule_decks/dummy_exclude.drc',
-    './rule_decks/dummy_comp.drc',
-    './rule_decks/dummy_poly2.drc',
-    './rule_decks/dummy_metal1.drc',
-    './rule_decks/dummy_metal2.drc',
-    './rule_decks/dummy_metal3.drc',
-    './rule_decks/dummy_metal4.drc',
-    './rule_decks/dummy_metal5.drc',
-    './rule_decks/guard_ring.drc',
-    './rule_decks/cup.drc'
+    './rule_decks/dummy_exclude.drc'
   ]
 
 rule_files_abs = []
@@ -526,10 +517,14 @@ rule_files.each do |element|
   rule_files_abs.push(File.join(File.dirname(__FILE__), element))
 end
 
+rule_files_abs = rule_files_abs.select { |str| str.include?(TABLE_NAME) } unless TABLE_NAME == 'main'
+
 rule_files_abs.each do |element|
-  load element
+  # rubocop:disable Security/Eval
+  eval(File.read(element), binding, element)
+  # rubocop:enable Security/Eval
 end
 
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
-logger.info("#{$table_name} DRC Total Run time #{run_time} seconds")
+logger.info("#{TABLE_NAME} DRC Total Run time #{run_time} seconds")
