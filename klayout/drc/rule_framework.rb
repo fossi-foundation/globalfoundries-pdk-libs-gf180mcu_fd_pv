@@ -102,4 +102,40 @@ module RuleFramework
       decks
     end
   end
+
+  module Runners
+    # Provides the base for the runners.
+    # Subclasses should implement #run(decks)
+    class Base
+      attr_reader :ctx
+
+      def initialize(ctx)
+        @ctx = ctx
+      end
+
+      def logger = ctx.logger
+    end
+
+    # Runs the deck one by one, single threaded.
+    # There is theoretically a possibility of one rule poisoning
+    # the environment of subsequent rules
+    class Sequential < Base
+      def run(decks)
+        logger.info("Starting DRC: executing #{decks.size} deck(s).")
+        decks.each do |deck|
+          run_deck(deck)
+        end
+      end
+
+      private
+
+      def run_deck(deck)
+        logger.info("Executing deck #{deck.id} from #{deck.path}")
+
+        # Maybe could be setup once as class variables for optimization?
+        env = RuleFramework::DeckEnv.new(ctx)
+        env.instance_exec(&deck.code)
+      end
+    end
+  end
 end

@@ -185,11 +185,9 @@ logger.info("Selected decks: #{selected_decks.map(&:id).join(', ')}")
 
 # ---- Execute decks ----
 logger.info('Starting GF180MCU DRC rules.')
-selected_decks.each do |deck|
-  logger.info("Executing deck #{deck.id} from #{deck.path}")
-  env = RuleFramework::DeckEnv.new(ctx)
-  env.instance_exec(&deck.code)
-end
+runner = RuleFramework::Runners::Sequential.new(ctx)
+
+runner.run(selected_decks)
 
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
