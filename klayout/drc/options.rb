@@ -6,7 +6,6 @@ module GF180DRC
   # Provides access functions to options. This is used in the Option class,
   # and is expected to be used to extend the Context.
   module OptionHelpers
-    def feol? = !!@options[:feol]
     def beol? = !!@options[:beol]
     def offgrid? = !!@options[:offgrid]
     def slow_via? = !!@options[:slow_via]
@@ -98,14 +97,14 @@ module GF180DRC
       input.to_s.downcase == 'true'
     end
 
-    BOOLEAN_PARAMS = %i[feol beol offgrid slow_via antenna density verbose connectivity].freeze
+    BOOLEAN_PARAMS = %i[beol offgrid slow_via antenna density verbose connectivity].freeze
 
     def resolved_booleans(base_params)
       BOOLEAN_PARAMS.to_h { |key| [key, bool?(base_params[key])] }
     end
 
     # Builds a normalized Options object from klayout `-rd` parameters.
-    # `raw_params` is a hash of raw strings/values (e.g. `$feol`, `$variant`, etc.).
+    # `raw_params` is a hash of raw strings/values (e.g. `$variant`, etc.).
     def from_klayout_params(raw_params:, registry:)
       base_params = merge_defaults_with_raw(raw_params)
       variant_config = resolve_variant_config(base_params[:variant])
@@ -142,7 +141,6 @@ module GF180DRC
 
       connectivity: 'false',
       offgrid: 'false',
-      feol: 'false',
       beol: 'false',
       slow_via: 'false',
       antenna: 'false',
@@ -196,7 +194,6 @@ module GF180DRC
         'Connectivity enabled' => connectivity?,
         'MIM Option selected' => mim_option,
         'Offgrid enabled' => offgrid?,
-        'FEOL enabled' => feol?,
         'BEOL enabled' => beol?,
         'Slow via enabled' => slow_via?,
         'antenna enabled' => antenna?,

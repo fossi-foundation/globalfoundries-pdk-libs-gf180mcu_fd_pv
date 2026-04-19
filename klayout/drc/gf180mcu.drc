@@ -40,7 +40,6 @@
 #                             Options: 'A' or 'B'
 #
 # Optional - Rule Enablement (true/false):
-#   $feol                   - Enable Front-End-Of-Line rules (default: false)
 #   $beol                   - Enable Back-End-Of-Line rules (default: false)
 #   $connectivity           - Enable connectivity-based DRC rules (default: false)
 #   $offgrid                - Enable off-grid checking (default: false)

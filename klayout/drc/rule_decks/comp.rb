@@ -20,8 +20,6 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: %w[feol comp]
 ) do
-  next unless ctx.feol?
-
   # Comp derivations
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   comp_56v = comp.overlapping(dualgate)

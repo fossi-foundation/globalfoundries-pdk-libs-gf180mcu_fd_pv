@@ -21,8 +21,6 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: %w[feol pres]
 ) do
-  next unless ctx.feol?
-
   #================================================
   #----------------P+ POLY RESISTOR----------------
   #================================================
