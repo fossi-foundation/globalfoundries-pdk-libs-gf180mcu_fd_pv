@@ -21,7 +21,7 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: %w[beol via5]
 ) do
-  next unless ctx.beol? && ctx.metal_level_numerical >= 6
+  next unless ctx.metal_level_numerical >= 6
 
   #================================================
   #----------------------via5----------------------

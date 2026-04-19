@@ -40,7 +40,6 @@
 #                             Options: 'A' or 'B'
 #
 # Optional - Rule Enablement (true/false):
-#   $beol                   - Enable Back-End-Of-Line rules (default: false)
 #   $connectivity           - Enable connectivity-based DRC rules (default: false)
 #   $offgrid                - Enable off-grid checking (default: false)
 #   $slow_via               - Enable slow via rules (default: false)
@@ -49,7 +48,7 @@
 #
 # Example usage:
 #   klayout -b -r gf180mcu_drc.rb -rd input=design.gds -rd report=drc_results.lyrdb \
-#           -rd metal_level=5LM -rd feol=true -rd beol=true -rd connectivity=true
+#           -rd metal_level=5LM -rd connectivity=true
 #
 ################################################################################################
 
@@ -95,8 +94,6 @@ raw_params = {
   topcell: $topcell,
   connectivity: $connectivity,
   offgrid: $offgrid,
-  feol: $feol,
-  beol: $beol,
   slow_via: $slow_via,
   antenna: $antenna,
   density: $density,

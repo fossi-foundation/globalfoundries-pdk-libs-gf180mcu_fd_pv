@@ -21,7 +21,7 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: %w[beol via3]
 ) do
-  next unless ctx.beol? && ctx.metal_level_numerical >= 4
+  next unless ctx.metal_level_numerical >= 4
 
   #================================================
   #----------------------via3----------------------

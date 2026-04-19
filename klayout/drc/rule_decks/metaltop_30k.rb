@@ -21,7 +21,7 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: %w[beol metaltop_30k]
 ) do
-  next unless ctx.beol? && ctx.metal_top == '30K'
+  next unless ctx.metal_top == '30K'
 
   #================================================
   #---------------- METALTOP 30K ------------------

@@ -6,7 +6,6 @@ module GF180DRC
   # Provides access functions to options. This is used in the Option class,
   # and is expected to be used to extend the Context.
   module OptionHelpers
-    def beol? = !!@options[:beol]
     def offgrid? = !!@options[:offgrid]
     def slow_via? = !!@options[:slow_via]
     def antenna? = !!@options[:antenna]
@@ -97,7 +96,7 @@ module GF180DRC
       input.to_s.downcase == 'true'
     end
 
-    BOOLEAN_PARAMS = %i[beol offgrid slow_via antenna density verbose connectivity].freeze
+    BOOLEAN_PARAMS = %i[offgrid slow_via antenna density verbose connectivity].freeze
 
     def resolved_booleans(base_params)
       BOOLEAN_PARAMS.to_h { |key| [key, bool?(base_params[key])] }
@@ -141,7 +140,6 @@ module GF180DRC
 
       connectivity: 'false',
       offgrid: 'false',
-      beol: 'false',
       slow_via: 'false',
       antenna: 'false',
       density: 'false',
@@ -194,7 +192,6 @@ module GF180DRC
         'Connectivity enabled' => connectivity?,
         'MIM Option selected' => mim_option,
         'Offgrid enabled' => offgrid?,
-        'BEOL enabled' => beol?,
         'Slow via enabled' => slow_via?,
         'antenna enabled' => antenna?,
         'density enabled' => density?,

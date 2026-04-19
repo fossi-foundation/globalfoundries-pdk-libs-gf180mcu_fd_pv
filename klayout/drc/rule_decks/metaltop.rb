@@ -24,8 +24,6 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: %w[beol metaltop]
 ) do
-  next unless ctx.beol?
-
   case ctx.metal_top
   when '6K'
     logger.info('MetalTop thickness 6k section')
