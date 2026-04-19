@@ -27,13 +27,11 @@ GF180_DRC_REGISTRY.register(
   #---------------------METAL1---------------------
   #================================================
 
-  unless ctx.split_deep?
-    # Rule M1.1: min. metal1 width is 0.23µm
-    logger.info('Executing rule M1.1')
-    m11_l1 = metal1.not(sramcore).width(0.23.um, euclidian)
-    m11_l1.output('M1.1', 'M1.1 : min. metal1 width : 0.23µm')
-    m11_l1.forget
-  end
+  # Rule M1.1: min. metal1 width is 0.23µm
+  logger.info('Executing rule M1.1')
+  m11_l1 = metal1.not(sramcore).width(0.23.um, euclidian)
+  m11_l1.output('M1.1', 'M1.1 : min. metal1 width : 0.23µm')
+  m11_l1.forget
 
   # Rule M1.2a: min. metal1 spacing is 0.23µm
   logger.info('Executing rule M1.2a')

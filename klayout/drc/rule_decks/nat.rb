@@ -69,21 +69,19 @@ GF180_DRC_REGISTRY.register(
   nat5_l1.forget
   poly_nat_mv.forget
 
-  unless ctx.split_deep?
-    if ctx.connectivity?
-      logger.info('ctx.connectivity? section')
-      _connected_nat, unconnected_nat = conn_space(natcomp, 10, 10, transparent)
+  if ctx.connectivity?
+    logger.info('ctx.connectivity? section')
+    _connected_nat, unconnected_nat = conn_space(natcomp, 10, 10, transparent)
 
-      # Rule NAT.6: Two or more COMPs if connected to different potential
-      ## are not allowed under same NAT layer.
-      logger.info('Executing rule NAT.6')
-      nat6_l1 = comp.and(nat).interacting(unconnected_nat.inside(nat.covering(comp, 2)).not(poly2))
-      nat6_l1.output('NAT.6', "NAT.6 : Two or more COMPs if connected to different potential
-                          are not allowed under same NAT layer.")
-      nat6_l1.forget
-    end
-    natcomp.forget
+    # Rule NAT.6: Two or more COMPs if connected to different potential
+    ## are not allowed under same NAT layer.
+    logger.info('Executing rule NAT.6')
+    nat6_l1 = comp.and(nat).interacting(unconnected_nat.inside(nat.covering(comp, 2)).not(poly2))
+    nat6_l1.output('NAT.6', "NAT.6 : Two or more COMPs if connected to different potential
+                        are not allowed under same NAT layer.")
+    nat6_l1.forget
   end
+  natcomp.forget
 
   # Rule NAT.7: Minimum NAT to NAT spacing. is 0.74µm
   logger.info('Executing rule NAT.7')

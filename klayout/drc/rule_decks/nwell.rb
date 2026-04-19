@@ -63,58 +63,56 @@ GF180_DRC_REGISTRY.register(
   nw1b_l1.forget
   nw_1b_mv.forget
 
-  unless ctx.split_deep?
-    if ctx.connectivity?
-      logger.info('ctx.connectivity? section')
+  if ctx.connectivity?
+    logger.info('ctx.connectivity? section')
 
-      connected_nwell_3p3v, unconnected_nwell_3p3v = conn_space(nwell, 0.6, 1.4, euclidian)
-      connected_nwell_5p0v, unconnected_nwell_5p0v = conn_space(nwell, 0.74, 1.7, euclidian)
+    connected_nwell_3p3v, unconnected_nwell_3p3v = conn_space(nwell, 0.6, 1.4, euclidian)
+    connected_nwell_5p0v, unconnected_nwell_5p0v = conn_space(nwell, 0.74, 1.7, euclidian)
 
-      # Rule NW.2a_LV: Min. Nwell Space (Outside DNWELL) [Equi-potential],
-      ## Merge if the space is less than is 0.6µm.
-      logger.info('Executing rule NW.2a_LV')
-      nw2a_l1 = connected_nwell_3p3v.not_inside(ymtp_mk).not_interacting(v5_xtor).not_interacting(dualgate)
-      nw2a_l1.output('NW.2a_LV',
-                     'NW.2a_LV : Min. Nwell Space (Outside DNWELL) [Equi-potential],
-                      Merge if the space is less than. : 0.6µm')
-      nw2a_l1.forget
+    # Rule NW.2a_LV: Min. Nwell Space (Outside DNWELL) [Equi-potential],
+    ## Merge if the space is less than is 0.6µm.
+    logger.info('Executing rule NW.2a_LV')
+    nw2a_l1 = connected_nwell_3p3v.not_inside(ymtp_mk).not_interacting(v5_xtor).not_interacting(dualgate)
+    nw2a_l1.output('NW.2a_LV',
+                   'NW.2a_LV : Min. Nwell Space (Outside DNWELL) [Equi-potential],
+                    Merge if the space is less than. : 0.6µm')
+    nw2a_l1.forget
 
-      # Rule NW.2a_MV: Min. Nwell Space (Outside DNWELL) [Equi-potential],
-      ## Merge if the space is less than is 0.74µm.
-      logger.info('Executing rule NW.2a_MV')
-      nw2a_l1 = connected_nwell_5p0v.not_inside(ymtp_mk).overlapping(dualgate)
-      nw2a_l1.output('NW.2a_MV',
-                     'NW.2a_MV : Min. Nwell Space (Outside DNWELL) [Equi-potential],
-                      Merge if the space is less than. : 0.74µm')
-      nw2a_l1.forget
+    # Rule NW.2a_MV: Min. Nwell Space (Outside DNWELL) [Equi-potential],
+    ## Merge if the space is less than is 0.74µm.
+    logger.info('Executing rule NW.2a_MV')
+    nw2a_l1 = connected_nwell_5p0v.not_inside(ymtp_mk).overlapping(dualgate)
+    nw2a_l1.output('NW.2a_MV',
+                   'NW.2a_MV : Min. Nwell Space (Outside DNWELL) [Equi-potential],
+                    Merge if the space is less than. : 0.74µm')
+    nw2a_l1.forget
 
-      # Rule NW.2b_LV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.4µm.
-      logger.info('Executing rule NW.2b_LV')
-      nw2b_l1 = unconnected_nwell_3p3v.not_interacting(v5_xtor).not_interacting(dualgate)
-      nw2b_l1.output('NW.2b_LV', 'NW.2b_LV : Min. Nwell Space (Outside DNWELL) [Different potential]: 1.4µm.')
-      nw2b_l1.forget
+    # Rule NW.2b_LV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.4µm.
+    logger.info('Executing rule NW.2b_LV')
+    nw2b_l1 = unconnected_nwell_3p3v.not_interacting(v5_xtor).not_interacting(dualgate)
+    nw2b_l1.output('NW.2b_LV', 'NW.2b_LV : Min. Nwell Space (Outside DNWELL) [Different potential]: 1.4µm.')
+    nw2b_l1.forget
 
-      # Rule NW.2b_MV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.7µm.
-      logger.info('Executing rule NW.2b_MV')
-      nw2b_l1 = unconnected_nwell_5p0v.overlapping(dualgate)
+    # Rule NW.2b_MV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.7µm.
+    logger.info('Executing rule NW.2b_MV')
+    nw2b_l1 = unconnected_nwell_5p0v.overlapping(dualgate)
 
-    else
-      logger.info('ctx.connectivity? disabled section')
+  else
+    logger.info('ctx.connectivity? disabled section')
 
-      # Rule NW.2b_LV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.4µm.
-      logger.info('Executing rule NW.2b_LV')
-      nw2b_l1 = nw_lv.isolated(1.4.um, euclidian)
-      nw2b_l1.output('NW.2b_LV', 'NW.2b_LV : Min. Nwell Space (Outside DNWELL) [Different potential]: 1.4µm')
-      nw2b_l1.forget
+    # Rule NW.2b_LV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.4µm.
+    logger.info('Executing rule NW.2b_LV')
+    nw2b_l1 = nw_lv.isolated(1.4.um, euclidian)
+    nw2b_l1.output('NW.2b_LV', 'NW.2b_LV : Min. Nwell Space (Outside DNWELL) [Different potential]: 1.4µm')
+    nw2b_l1.forget
 
-      # Rule NW.2b_MV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.7µm.
-      logger.info('Executing rule NW.2b_MV')
-      nw2b_l1 = nw_mv.isolated(1.7.um, euclidian)
+    # Rule NW.2b_MV: Min. Nwell Space (Outside DNWELL) [Different potential] is 1.7µm.
+    logger.info('Executing rule NW.2b_MV')
+    nw2b_l1 = nw_mv.isolated(1.7.um, euclidian)
 
-    end
-    nw2b_l1.output('NW.2b_MV', 'NW.2b_MV : Min. Nwell Space (Outside DNWELL) [Different potential]: 1.7µm')
-    nw2b_l1.forget # ctx.connectivity?
   end
+  nw2b_l1.output('NW.2b_MV', 'NW.2b_MV : Min. Nwell Space (Outside DNWELL) [Different potential]: 1.7µm')
+  nw2b_l1.forget
 
   # Rule NW.3: Min. Nwell to DNWELL space is 3.1µm.
   logger.info('Executing rule NW.3')

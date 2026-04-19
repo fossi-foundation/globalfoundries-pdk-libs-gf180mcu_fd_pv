@@ -103,59 +103,58 @@ GF180_DRC_REGISTRY.register(
   co_pcomp_check.forget
   co_5b_pcomp_butted.forget
 
-  unless ctx.split_deep?
-    # Rule CO.6: Metal1 overlap of contact >= 0.005 um.
-    logger.info('Executing rule CO.6')
-    co6_l1 = contact.enclosed(metal1, 0.005.um, euclidian).polygons(0.001.um)
-    co6_l2 = contact.not(metal1)
-    co6_l = co6_l1.or(co6_l2)
-    co6_l.output('CO.6', 'CO.6 : Metal1 overlap of contact >= 0.005 um')
-    co6_l1.forget
-    co6_l2.forget
-    co6_l.forget
+  # Rule CO.6: Metal1 overlap of contact >= 0.005 um.
+  logger.info('Executing rule CO.6')
+  co6_l1 = contact.enclosed(metal1, 0.005.um, euclidian).polygons(0.001.um)
+  co6_l2 = contact.not(metal1)
+  co6_l = co6_l1.or(co6_l2)
+  co6_l.output('CO.6', 'CO.6 : Metal1 overlap of contact >= 0.005 um')
+  co6_l1.forget
+  co6_l2.forget
+  co6_l.forget
 
-    # Rule CO.6a: (i) Metal1 (< 0.34um) end-of-line overlap. is 0.06µm.
-    ## (Applies to all < 0.34µm wide metal lines,
-    ## excluding metal branches shorter than 0.24µm.)
-    logger.info('Executing rule CO.6a')
-    cont_6a_cond = metal1.width(0.34.um + 1.dbu).with_length(0.24.um, nil, both)
-    cont_6a_cond_edge1 = cont_6a_cond.first_edges
-    cont_6a_cond_edge2 = cont_6a_cond.second_edges
-    cont_6a_eol = metal1_edges.with_length(nil, 0.34.um).interacting(cont_6a_cond_edge1).interacting(cont_6a_cond_edge2)
-                              .not(cont_6a_cond_edge1).not(cont_6a_cond_edge2)
-    cont_6a_l1 = contact_edges.enclosed(cont_6a_eol, 0.06.um, projection)
-    cont_6a_l1.output('CO.6a', 'CO.6a : (i) Metal1 (< 0.34um) end-of-line overlap contact
-                      (Applies to all < 0.34µm wide metal lines,
-                      excluding metal branches shorter than 0.24µm) : 0.06µm')
-    cont_6a_l1.forget
-    cont_6a_cond.forget
-    cont_6a_eol.forget
-    cont_6a_cond.forget
-    cont_6a_cond_edge1.forget
-    cont_6a_cond_edge2.forget
-    contact_edges.forget
+  # Rule CO.6a: (i) Metal1 (< 0.34um) end-of-line overlap. is 0.06µm.
+  ## (Applies to all < 0.34µm wide metal lines,
+  ## excluding metal branches shorter than 0.24µm.)
+  logger.info('Executing rule CO.6a')
+  cont_6a_cond = metal1.width(0.34.um + 1.dbu).with_length(0.24.um, nil, both)
+  cont_6a_cond_edge1 = cont_6a_cond.first_edges
+  cont_6a_cond_edge2 = cont_6a_cond.second_edges
+  cont_6a_eol = metal1_edges.with_length(nil, 0.34.um).interacting(cont_6a_cond_edge1).interacting(cont_6a_cond_edge2)
+                            .not(cont_6a_cond_edge1).not(cont_6a_cond_edge2)
+  cont_6a_l1 = contact_edges.enclosed(cont_6a_eol, 0.06.um, projection)
+  cont_6a_l1.output('CO.6a', 'CO.6a : (i) Metal1 (< 0.34um) end-of-line overlap contact
+                    (Applies to all < 0.34µm wide metal lines,
+                    excluding metal branches shorter than 0.24µm) : 0.06µm')
+  cont_6a_l1.forget
+  cont_6a_cond.forget
+  cont_6a_eol.forget
+  cont_6a_cond.forget
+  cont_6a_cond_edge1.forget
+  cont_6a_cond_edge2.forget
+  contact_edges.forget
 
-    # Rule CO.6b: (ii) If Metal1 overlaps contact by < 0.04um on one side,
-    ## adjacent metal1 edges overlap is 0.06µm
-    logger.info('Executing rule CO.6b')
-    cont_6b_cond_edges = main_contact_edges.not_outside(main_contact.enclosed(metal1, 0.04.um, projection).edges)
-    cont_6b_check_corner = cont_6b_cond_edges.extended_in(0.002.um)
-    cont_6b_check = main_contact_edges.interacting(cont_6b_check_corner).not(cont_6b_cond_edges)
-    cont_6b_cond_corner = cont_6b_cond_edges.width(0.002.um, angle_limit(135)).polygons(0.001.um)
-    cont_6b_l1 = cont_6b_check.enclosed(metal1_edges, 0.06.um, projection).polygons(0.001.um)
-    cont_6b_l2 = main_contact.interacting(cont_6b_cond_corner)
-    cont_6b_l = cont_6b_l1.or(cont_6b_l2)
-    cont_6b_l.output('CO.6b', 'CO.6b : (ii) If Metal1 overlaps contact by < 0.04um on one side,
-                        adjacent metal1 edges overlap : 0.06µm')
-    cont_6b_l2.forget
-    cont_6b_l1.forget
-    cont_6b_cond_corner.forget
-    cont_6b_check.forget
-    cont_6b_check_corner.forget
-    cont_6b_cond_edges.forget
-    metal1_edges.forget
-    main_contact_edges.forget
-  end
+  # Rule CO.6b: (ii) If Metal1 overlaps contact by < 0.04um on one side,
+  ## adjacent metal1 edges overlap is 0.06µm
+  logger.info('Executing rule CO.6b')
+  cont_6b_cond_edges = main_contact_edges.not_outside(main_contact.enclosed(metal1, 0.04.um, projection).edges)
+  cont_6b_check_corner = cont_6b_cond_edges.extended_in(0.002.um)
+  cont_6b_check = main_contact_edges.interacting(cont_6b_check_corner).not(cont_6b_cond_edges)
+  cont_6b_cond_corner = cont_6b_cond_edges.width(0.002.um, angle_limit(135)).polygons(0.001.um)
+  cont_6b_l1 = cont_6b_check.enclosed(metal1_edges, 0.06.um, projection).polygons(0.001.um)
+  cont_6b_l2 = main_contact.interacting(cont_6b_cond_corner)
+  cont_6b_l = cont_6b_l1.or(cont_6b_l2)
+  cont_6b_l.output('CO.6b', 'CO.6b : (ii) If Metal1 overlaps contact by < 0.04um on one side,
+                      adjacent metal1 edges overlap : 0.06µm')
+  cont_6b_l2.forget
+  cont_6b_l1.forget
+  cont_6b_cond_corner.forget
+  cont_6b_check.forget
+  cont_6b_check_corner.forget
+  cont_6b_cond_edges.forget
+  metal1_edges.forget
+  main_contact_edges.forget
+
   # Rule CO.6c is a guideline rule.
   ## Please refer to https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_07_13.html
 

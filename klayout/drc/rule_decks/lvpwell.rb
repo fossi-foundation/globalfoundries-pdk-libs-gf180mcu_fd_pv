@@ -42,56 +42,54 @@ GF180_DRC_REGISTRY.register(
   lpw1_l1.output('LPW.1_MV', 'LPW.1_MV : Min. LVPWELL Width. : 0.74µm')
   lpw1_l1.forget
 
-  unless ctx.split_deep?
-    if ctx.connectivity?
-      logger.info('CONNECTIVITY_RULES section')
+  if ctx.connectivity?
+    logger.info('CONNECTIVITY_RULES section')
 
-      connected_lvpwell_3p3v, unconnected_lvpwell_3p3v = conn_space(lvpwell_dn, 0.86, 1.4, euclidian)
-      connected_lvpwell_5p0v, unconnected_lvpwell_5p0v = conn_space(lvpwell_dn, 0.86, 1.7, euclidian)
+    connected_lvpwell_3p3v, unconnected_lvpwell_3p3v = conn_space(lvpwell_dn, 0.86, 1.4, euclidian)
+    connected_lvpwell_5p0v, unconnected_lvpwell_5p0v = conn_space(lvpwell_dn, 0.86, 1.7, euclidian)
 
-      # Rule LPW.2a_LV: Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. is 1.4µm
-      logger.info('Executing rule LPW.2a_LV')
-      lpw2a_l1 = unconnected_lvpwell_3p3v.not_interacting(v5_xtor).not_interacting(dualgate)
-      lpw2a_l1.output('LPW.2a_LV',
-                      'LPW.2a_LV : Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. : 1.4µm')
-      lpw2a_l1.forget
+    # Rule LPW.2a_LV: Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. is 1.4µm
+    logger.info('Executing rule LPW.2a_LV')
+    lpw2a_l1 = unconnected_lvpwell_3p3v.not_interacting(v5_xtor).not_interacting(dualgate)
+    lpw2a_l1.output('LPW.2a_LV',
+                    'LPW.2a_LV : Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. : 1.4µm')
+    lpw2a_l1.forget
 
-      # Rule LPW.2a_MV: Min. LVPWELL to LVPWELL Space (Inside DNWELL) [Different potential]. is 1.7µm
-      logger.info('Executing rule LPW.2a_MV')
-      lpw2a_l1 = unconnected_lvpwell_5p0v.overlapping(dualgate)
-      lpw2a_l1.output('LPW.2a_MV',
-                      'LPW.2a_MV : Min. LVPWELL to LVPWELL Space (Inside DNWELL) [Different potential]. : 1.7µm')
-      lpw2a_l1.forget
+    # Rule LPW.2a_MV: Min. LVPWELL to LVPWELL Space (Inside DNWELL) [Different potential]. is 1.7µm
+    logger.info('Executing rule LPW.2a_MV')
+    lpw2a_l1 = unconnected_lvpwell_5p0v.overlapping(dualgate)
+    lpw2a_l1.output('LPW.2a_MV',
+                    'LPW.2a_MV : Min. LVPWELL to LVPWELL Space (Inside DNWELL) [Different potential]. : 1.7µm')
+    lpw2a_l1.forget
 
-      # Rule LPW.2b_LV: Min. LVPWELL to LVPWELL Space [Equi potential]. is 0.86µm
-      logger.info('Executing rule LPW.2b_LV')
-      lpw2b_l1 = connected_lvpwell_3p3v.not_interacting(v5_xtor).not_interacting(dualgate)
-      lpw2b_l1.output('LPW.2b_LV', 'LPW.2b_LV : Min. LVPWELL to LVPWELL Space [Equi potential]. : 0.86µm')
-      lpw2b_l1.forget
+    # Rule LPW.2b_LV: Min. LVPWELL to LVPWELL Space [Equi potential]. is 0.86µm
+    logger.info('Executing rule LPW.2b_LV')
+    lpw2b_l1 = connected_lvpwell_3p3v.not_interacting(v5_xtor).not_interacting(dualgate)
+    lpw2b_l1.output('LPW.2b_LV', 'LPW.2b_LV : Min. LVPWELL to LVPWELL Space [Equi potential]. : 0.86µm')
+    lpw2b_l1.forget
 
-      # Rule LPW.2b_MV: Min. LVPWELL to LVPWELL Space [Equi potential]. is 0.86µm
-      logger.info('Executing rule LPW.2b_MV')
-      lpw2b_l1 = connected_lvpwell_5p0v.overlapping(dualgate)
-      lpw2b_l1.output('LPW.2b_MV', 'LPW.2b_MV : Min. LVPWELL to LVPWELL Space [Equi potential]. : 0.86µm')
-      lpw2b_l1.forget
+    # Rule LPW.2b_MV: Min. LVPWELL to LVPWELL Space [Equi potential]. is 0.86µm
+    logger.info('Executing rule LPW.2b_MV')
+    lpw2b_l1 = connected_lvpwell_5p0v.overlapping(dualgate)
+    lpw2b_l1.output('LPW.2b_MV', 'LPW.2b_MV : Min. LVPWELL to LVPWELL Space [Equi potential]. : 0.86µm')
+    lpw2b_l1.forget
 
-    else
-      logger.info('CONNECTIVITY_RULES disabled section')
+  else
+    logger.info('CONNECTIVITY_RULES disabled section')
 
-      # Rule LPW.2a_LV: Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. is 1.4µm
-      logger.info('Executing rule LPW.2a_LV')
-      lpw2a_l1 = lvpwell_dn.isolated(1.4.um, euclidian)
-      lpw2a_l1.output('LPW.2a_LV',
-                      'LPW.2a_LV : Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. : 1.4µm')
-      lpw2a_l1.forget
+    # Rule LPW.2a_LV: Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. is 1.4µm
+    logger.info('Executing rule LPW.2a_LV')
+    lpw2a_l1 = lvpwell_dn.isolated(1.4.um, euclidian)
+    lpw2a_l1.output('LPW.2a_LV',
+                    'LPW.2a_LV : Min. LVPWELL to LVWELL Space (Inside DNWELL) [Different potential]. : 1.4µm')
+    lpw2a_l1.forget
 
-      # Rule LPW.2a_MV: Min. LVPWELL to LVPWELL Space (Inside DNWELL) [Different potential]. is 1.7µm
-      logger.info('Executing rule LPW.2a_MV')
-      lpw2a_l1 = lvpwell_dn_mv.isolated(1.7.um, euclidian)
-      lpw2a_l1.output('LPW.2a_MV',
-                      'LPW.2a_MV : Min. LVPWELL to LVPWELL Space (Inside DNWELL) [Different potential]. : 1.7µm')
-      lpw2a_l1.forget
-    end
+    # Rule LPW.2a_MV: Min. LVPWELL to LVPWELL Space (Inside DNWELL) [Different potential]. is 1.7µm
+    logger.info('Executing rule LPW.2a_MV')
+    lpw2a_l1 = lvpwell_dn_mv.isolated(1.7.um, euclidian)
+    lpw2a_l1.output('LPW.2a_MV',
+                    'LPW.2a_MV : Min. LVPWELL to LVPWELL Space (Inside DNWELL) [Different potential]. : 1.7µm')
+    lpw2a_l1.forget
   end
 
   # Rule LPW.3: Min. DNWELL enclose LVPWELL. is 2.5µm

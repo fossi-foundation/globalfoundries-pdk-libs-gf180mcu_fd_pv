@@ -9,7 +9,6 @@ module GF180DRC
     def feol? = !!@options[:feol]
     def beol? = !!@options[:beol]
     def offgrid? = !!@options[:offgrid]
-    def split_deep? = !!@options[:split_deep]
     def slow_via? = !!@options[:slow_via]
     def antenna? = !!@options[:antenna]
     def density? = !!@options[:density]
@@ -99,7 +98,7 @@ module GF180DRC
       input.to_s.downcase == 'true'
     end
 
-    BOOLEAN_PARAMS = %i[feol beol offgrid split_deep slow_via antenna density verbose connectivity].freeze
+    BOOLEAN_PARAMS = %i[feol beol offgrid slow_via antenna density verbose connectivity].freeze
 
     def resolved_booleans(base_params)
       BOOLEAN_PARAMS.to_h { |key| [key, bool?(base_params[key])] }
@@ -142,7 +141,6 @@ module GF180DRC
       report: nil,
 
       connectivity: 'false',
-      split_deep: 'false',
       offgrid: 'false',
       feol: 'false',
       beol: 'false',
@@ -196,7 +194,6 @@ module GF180DRC
         'Input file' => input,
         'DRC Run Report' => report,
         'Connectivity enabled' => connectivity?,
-        'Split deep enabled' => split_deep?,
         'MIM Option selected' => mim_option,
         'Offgrid enabled' => offgrid?,
         'FEOL enabled' => feol?,
