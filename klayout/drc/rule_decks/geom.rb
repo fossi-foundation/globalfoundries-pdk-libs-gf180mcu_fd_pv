@@ -24,8 +24,6 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: %w[offgrid geom]
 ) do
-  next unless ctx.offgrid?
-
   logger.info('OFFGRID-ANGLES section')
 
   logger.info('Executing rule comp_OFFGRID')
