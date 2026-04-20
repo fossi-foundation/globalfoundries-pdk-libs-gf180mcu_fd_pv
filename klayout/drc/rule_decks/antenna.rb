@@ -18,8 +18,6 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: %w[feol antenna]
 ) do
-  next unless ctx.antenna?
-
   case ctx.metal_top
   when '6K'
     met_top_thick = 0.69.um

@@ -42,7 +42,6 @@
 # Optional - Rule Enablement (true/false):
 #   $connectivity           - Enable connectivity-based DRC rules (default: false)
 #   $slow_via               - Enable slow via rules (default: false)
-#   $antenna                - Enable antenna rules (default: false)
 #   $density                - Enable density rules (default: false)
 #
 # Example usage:
@@ -93,7 +92,6 @@ raw_params = {
   topcell: $topcell,
   connectivity: $connectivity,
   slow_via: $slow_via,
-  antenna: $antenna,
   density: $density,
   verbose: $verbose,
   thr: $thr,
@@ -149,7 +147,7 @@ GF180DRC::GenericLayers.generate_generic_layers(ctx)
 #------------- LAYERS CONNECTIONS ---------------
 #================================================
 
-if ctx.connectivity? || ctx.antenna?
+if ctx.connectivity?
   logger.info('Construct connectivity for the design.')
 
   GF180DRC::Connectivity.build(ctx, self)
