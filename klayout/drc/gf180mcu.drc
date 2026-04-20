@@ -42,7 +42,6 @@
 # Optional - Rule Enablement (true/false):
 #   $connectivity           - Enable connectivity-based DRC rules (default: false)
 #   $slow_via               - Enable slow via rules (default: false)
-#   $density                - Enable density rules (default: false)
 #
 # Example usage:
 #   klayout -b -r gf180mcu_drc.rb -rd input=design.gds -rd report=drc_results.lyrdb \
@@ -92,7 +91,6 @@ raw_params = {
   topcell: $topcell,
   connectivity: $connectivity,
   slow_via: $slow_via,
-  density: $density,
   verbose: $verbose,
   thr: $thr,
   run_mode: $run_mode,

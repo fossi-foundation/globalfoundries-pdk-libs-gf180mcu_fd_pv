@@ -19,8 +19,6 @@ GF180_DRC_REGISTRY.register(
   path: __FILE__,
   tags: ['density']
 ) do
-  next unless ctx.density?
-
   chip_area = extent.sized(0.0).area
 
   # Rule PL.8: Poly2 coverage over the entire die shall be 14%.

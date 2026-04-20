@@ -7,7 +7,6 @@ module GF180DRC
   # and is expected to be used to extend the Context.
   module OptionHelpers
     def slow_via? = !!@options[:slow_via]
-    def density? = !!@options[:density]
     def connectivity? = !!@options[:connectivity]
 
     def metal_level = @options[:metal_level]
@@ -94,7 +93,7 @@ module GF180DRC
       input.to_s.downcase == 'true'
     end
 
-    BOOLEAN_PARAMS = %i[slow_via density verbose connectivity].freeze
+    BOOLEAN_PARAMS = %i[slow_via verbose connectivity].freeze
 
     def resolved_booleans(base_params)
       BOOLEAN_PARAMS.to_h { |key| [key, bool?(base_params[key])] }
@@ -138,7 +137,6 @@ module GF180DRC
 
       connectivity: 'false',
       slow_via: 'false',
-      density: 'false',
       verbose: 'false',
 
       # run control
@@ -188,7 +186,6 @@ module GF180DRC
         'Connectivity enabled' => connectivity?,
         'MIM Option selected' => mim_option,
         'Slow via enabled' => slow_via?,
-        'density enabled' => density?,
         'Verbose enabled' => verbose?,
         'Threads for DRC functions' => thr,
         'Run mode' => run_mode,
