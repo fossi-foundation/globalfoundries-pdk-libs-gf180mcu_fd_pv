@@ -103,8 +103,6 @@ else
   source(opts.input.to_s)
 end
 
-report('', opts.report.to_s)
-
 # threads
 threads(opts.thr)
 # verbose
@@ -165,7 +163,7 @@ end
 
 # ---- Execute decks ----
 logger.info('Starting GF180MCU DRC rules.')
-runner = RuleFramework::Runners::Sequential.new(ctx)
+runner = RuleFramework::Runners::Parallel.new(ctx, num_workers: opts.thr)
 
 runner.run(opts.decks)
 
