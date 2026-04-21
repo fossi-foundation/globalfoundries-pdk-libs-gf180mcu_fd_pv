@@ -97,7 +97,8 @@ raw_params = {
   variant: $variant,
   mim_option: $mim_option,
   metal_top: $metal_top,
-  metal_level: $metal_level
+  metal_level: $metal_level,
+  select_decks: $select_decks
 }
 opts = GF180DRC::Options.from_klayout_params(raw_params: raw_params, registry: GF180_DRC_REGISTRY)
 opts.log_to(logger)
@@ -160,22 +161,11 @@ end
 #----------------- MAIN RUNSET ------------------
 #================================================
 
-logger.info('Starting GF180MCU DRC rules.')
-
-if $select_decks
-  include_tags = $select_decks.split(',')
-  selected_decks = GF180_DRC_REGISTRY.select(include_tags: include_tags)
-else
-  selected_decks = GF180_DRC_REGISTRY.all
-end
-
-logger.info("Selected decks: #{selected_decks.map(&:id).join(', ')}")
-
 # ---- Execute decks ----
 logger.info('Starting GF180MCU DRC rules.')
 runner = RuleFramework::Runners::Sequential.new(ctx)
 
-runner.run(selected_decks)
+runner.run(opts.decks)
 
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time

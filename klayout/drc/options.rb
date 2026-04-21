@@ -25,6 +25,34 @@ module GF180DRC
     def topcell = @options[:topcell]
   end
 
+  # Holds shared variables
+  module Config
+    VARIANTS = {
+      'A' => { metal_top: '30K', mim_option: 'A', metal_level: '3LM' },
+      'B' => { metal_top: '11K', mim_option: 'B', metal_level: '4LM' },
+      'C' => { metal_top: '9K',  mim_option: 'B', metal_level: '5LM' },
+      'D' => { metal_top: '11K', mim_option: 'B', metal_level: '5LM' },
+      'E' => { metal_top: '9K',  mim_option: 'B', metal_level: '6LM' },
+      'F' => { metal_top: '9K',  mim_option: 'A', metal_level: '6LM' }
+    }.freeze
+
+    METAL_LEVEL_MAP = {
+      '2LM' => 2,
+      '3LM' => 3,
+      '4LM' => 4,
+      '5LM' => 5,
+      '6LM' => 6
+    }.freeze
+
+    ALLOWED_VALUES = {
+      metal_level: METAL_LEVEL_MAP.keys,
+      metal_top: %w[9K 11K 30K],
+      mim_option: %w[A B],
+      variant: VARIANTS.keys,
+      run_mode: %w[deep flat tiling]
+    }.freeze
+  end
+
   # Handles resolution and validation of raw klayout parameters into
   # normalized values. Mixed into Options as private instance methods,
   # and also used as class methods via `extend`.
@@ -54,10 +82,15 @@ module GF180DRC
       end
     end
 
-    def resolve_variant_config(variant_key)
-      Options::VARIANTS.fetch(variant_key) do
-        raise ArgumentError,
-              "Unknown GF180 variant #{variant_key.inspect}. Supported: #{Options::VARIANTS.keys.join(', ')}"
+    def validate_allowed_params!(params)
+      GF180DRC::Config::ALLOWED_VALUES.each do |key, allowed|
+        value = params[key]
+        next if value.nil?
+
+        unless allowed.include?(value)
+          raise ArgumentError,
+                "Invalid #{key}: #{value.inspect}. Supported: #{allowed.join(', ')}"
+        end
       end
     end
 
@@ -71,19 +104,6 @@ module GF180DRC
 
     def calculate_threads(thr_param)
       (thr_param || Etc.nprocessors).to_i
-    end
-
-    def validate_metal_level(variant_level, override_level)
-      final_level = override_level || variant_level
-      metal_level_num = Options::METAL_LEVEL_MAP[final_level]
-
-      unless metal_level_num
-        raise ArgumentError,
-              "Metal level not recognized: #{final_level.inspect}. " \
-              "Supported: #{Options::METAL_LEVEL_MAP.keys.join(', ')}"
-      end
-
-      metal_level_num
     end
   end
 
@@ -99,27 +119,42 @@ module GF180DRC
       BOOLEAN_PARAMS.to_h { |key| [key, bool?(base_params[key])] }
     end
 
-    # Builds a normalized Options object from klayout `-rd` parameters.
-    # `raw_params` is a hash of raw strings/values (e.g. `$variant`, etc.).
     def from_klayout_params(raw_params:, registry:)
-      base_params = merge_defaults_with_raw(raw_params)
-      variant_config = resolve_variant_config(base_params[:variant])
+      base = merge_defaults_with_raw(raw_params)
+      validate_allowed_params!(base)
 
-      params = {
-        input: validate_and_normalize_input(base_params[:input]),
-        report: resolve_report_path(base_params[:report]),
-        variant: base_params[:variant],
-        topcell: base_params[:topcell],
-        run_mode: base_params[:run_mode],
-        metal_level: variant_config[:metal_level],
-        metal_top: variant_config[:metal_top],
-        mim_option: variant_config[:mim_option],
-        metal_level_numerical: validate_metal_level(variant_config[:metal_level], base_params[:metal_level]),
-        thr: calculate_threads(base_params[:thr]),
-        decks: select_decks(registry, base_params[:select_decks])
+      variant_config = variant_config_for(base[:variant])
+
+      params = build_params(base: base, registry: registry, variant_config: variant_config)
+      new(**params, **resolved_booleans(base)).freeze
+    end
+
+    def variant_config_for(variant)
+      GF180DRC::Config::VARIANTS.fetch(variant)
+    end
+
+    def build_params(base:, registry:, variant_config:)
+      metal_level = base[:metal_level] || variant_config[:metal_level]
+
+      {
+        input: validate_and_normalize_input(base[:input]),
+        report: resolve_report_path(base[:report]),
+        variant: base[:variant],
+        topcell: base[:topcell],
+        run_mode: base[:run_mode],
+
+        metal_level: metal_level,
+        metal_top: base[:metal_top] || variant_config[:metal_top],
+        mim_option: base[:mim_option] || variant_config[:mim_option],
+
+        metal_level_numerical: metal_level_numerical(metal_level),
+        thr: calculate_threads(base[:thr]),
+        decks: select_decks(registry, base[:select_decks])
       }
+    end
 
-      new(**params, **resolved_booleans(base_params)).freeze
+    def metal_level_numerical(metal_level)
+      GF180DRC::Config::METAL_LEVEL_MAP.fetch(metal_level)
     end
   end
 
@@ -152,23 +187,6 @@ module GF180DRC
       metal_level: nil,
 
       select_decks: nil
-    }.freeze
-
-    VARIANTS = {
-      'A' => { metal_top: '30K', mim_option: 'A', metal_level: '3LM' },
-      'B' => { metal_top: '11K', mim_option: 'B', metal_level: '4LM' },
-      'C' => { metal_top: '9K',  mim_option: 'B', metal_level: '5LM' },
-      'D' => { metal_top: '11K', mim_option: 'B', metal_level: '5LM' },
-      'E' => { metal_top: '9K',  mim_option: 'B', metal_level: '6LM' },
-      'F' => { metal_top: '9K',  mim_option: 'A', metal_level: '6LM' }
-    }.freeze
-
-    METAL_LEVEL_MAP = {
-      '2LM' => 2,
-      '3LM' => 3,
-      '4LM' => 4,
-      '5LM' => 5,
-      '6LM' => 6
     }.freeze
 
     def initialize(**options)

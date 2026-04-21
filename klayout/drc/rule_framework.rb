@@ -96,7 +96,7 @@ module RuleFramework
         raise ArgumentError,
               'Deck selection matched no decks. ' \
               "Filters: include_tags=#{include_tags.inspect} " \
-              "Available tags : #{all.map(&:tag).join(', ')}"
+              "Available tags : #{all.map(&:tags).join(', ')}"
       end
 
       decks
