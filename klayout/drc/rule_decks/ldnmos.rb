@@ -47,27 +47,18 @@ GF180_DRC_REGISTRY.register(
   mdn1_l1.output('MDN.1', 'MDN.1 : Min MVSD width (for litho purpose). : 1µm')
   mdn1_l1.forget
 
-  if ctx.connectivity?
-    logger.info('CONNECTIVITY_RULES section')
-    connected_mdn_2a, unconnected_mdn_2b = conn_space(mvsd, 1.um, 2.um, euclidian)
+  connected_mdn_2a, unconnected_mdn_2b = conn_space(mvsd, 1.um, 2.um, euclidian)
 
-    # Rule MDN.2a: Min MVSD space [Same Potential]. is 1µm
-    logger.info('Executing rule MDN.2a')
-    mdn2a_l1 = connected_mdn_2a
-    mdn2a_l1.output('MDN.2a', 'MDN.2a : Min MVSD space [Same Potential]. : 1µm')
-    mdn2a_l1.forget
+  # Rule MDN.2a: Min MVSD space [Same Potential]. is 1µm
+  logger.info('Executing rule MDN.2a')
+  mdn2a_l1 = connected_mdn_2a
+  mdn2a_l1.output('MDN.2a', 'MDN.2a : Min MVSD space [Same Potential]. : 1µm')
+  mdn2a_l1.forget
 
-    # Rule MDN.2b: Min MVSD space [Diff Potential]. is 2µm
-    logger.info('Executing rule MDN.2b')
-    mdn2b_l1 = unconnected_mdn_2b
+  # Rule MDN.2b: Min MVSD space [Diff Potential]. is 2µm
+  logger.info('Executing rule MDN.2b')
+  mdn2b_l1 = unconnected_mdn_2b
 
-  else
-    logger.info('CONNECTIVITY_RULES disabled section')
-    # Rule MDN.2b: Min MVSD space [Diff Potential]. is 2µm
-    logger.info('Executing rule MDN.2b')
-    mdn2b_l1 = mvsd.space(2.um, euclidian)
-
-  end
   mdn2b_l1.output('MDN.2b', 'MDN.2b : Min MVSD space [Diff Potential]. : 2µm')
   mdn2b_l1.forget # CONNECTIVITY_RULES
 
@@ -189,27 +180,18 @@ GF180_DRC_REGISTRY.register(
   mdn7a_l1.output('MDN.7a', 'MDN.7a : Min LDMOS_XTOR enclose Dualgate.: 0 um')
   mdn7a_l1.forget
 
-  if ctx.connectivity?
-    logger.info('CONNECTIVITY_RULES section')
-    connected_mdn_8a, unconnected_mdn_8b = conn_separation(mvsd, nwell, 1, 2, euclidian)
+  connected_mdn_8a, unconnected_mdn_8b = conn_separation(mvsd, nwell, 1, 2, euclidian)
 
-    # Rule MDN.8a: Min LDNMOS drain MVSD space to any other equal potential Nwell space.
-    logger.info('Executing rule MDN.8a')
-    mdn8a_l1 = connected_mdn_8a.join(mvsd.not_outside(nwell))
-    mdn8a_l1.output('MDN.8a', 'MDN.8a : Min LDNMOS drain MVSD space to any other equal potential Nwell space.')
-    mdn8a_l1.forget
+  # Rule MDN.8a: Min LDNMOS drain MVSD space to any other equal potential Nwell space.
+  logger.info('Executing rule MDN.8a')
+  mdn8a_l1 = connected_mdn_8a.join(mvsd.not_outside(nwell))
+  mdn8a_l1.output('MDN.8a', 'MDN.8a : Min LDNMOS drain MVSD space to any other equal potential Nwell space.')
+  mdn8a_l1.forget
 
-    # Rule MDN.8b: Min LDNMOS drain MVSD space to any other different potential Nwell space.
-    logger.info('Executing rule MDN.8b')
-    mdn8b_l1 = unconnected_mdn_8b.join(mvsd.not_outside(nwell))
+  # Rule MDN.8b: Min LDNMOS drain MVSD space to any other different potential Nwell space.
+  logger.info('Executing rule MDN.8b')
+  mdn8b_l1 = unconnected_mdn_8b.join(mvsd.not_outside(nwell))
 
-  else
-    logger.info('CONNECTIVITY_RULES disabled section')
-    # Rule MDN.8b: Min LDNMOS drain MVSD space to any other different potential Nwell space.
-    logger.info('Executing rule MDN.8b')
-    mdn8b_l1 = mvsd.separation(nwell, 2.um, euclidian).polygons(0.001.um).join(mvsd.not_outside(nwell))
-
-  end
   mdn8b_l1.output('MDN.8b', 'MDN.8b : Min LDNMOS drain MVSD space to any other different potential Nwell space.')
   mdn8b_l1.forget # CONNECTIVITY_RULES
 

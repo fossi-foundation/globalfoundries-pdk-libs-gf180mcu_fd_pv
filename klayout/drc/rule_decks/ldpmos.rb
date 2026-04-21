@@ -299,31 +299,19 @@ GF180_DRC_REGISTRY.register(
   mdp10_exclude.forget
   mvpsd_mv.forget
 
-  if ctx.connectivity?
-    logger.info('ctx.connectivity? section')
+  connected_mdp_10b, unconnected_mdp_10a = conn_space(mvpsd, 1, 2, euclidian)
 
-    connected_mdp_10b, unconnected_mdp_10a = conn_space(mvpsd, 1, 2, euclidian)
+  # Rule MDP.10a: Min MVPSD space within LDMOS_XTOR marking [diff potential]. is 2µm
+  logger.info('Executing rule MDP.10a')
+  mdp10a_l1 = unconnected_mdp_10a
+  mdp10a_l1.output('MDP.10a', 'MDP.10a : Min MVPSD space within LDMOS_XTOR marking [diff potential]. : 2µm')
+  mdp10a_l1.forget
 
-    # Rule MDP.10a: Min MVPSD space within LDMOS_XTOR marking [diff potential]. is 2µm
-    logger.info('Executing rule MDP.10a')
-    mdp10a_l1 = unconnected_mdp_10a
-    mdp10a_l1.output('MDP.10a', 'MDP.10a : Min MVPSD space within LDMOS_XTOR marking [diff potential]. : 2µm')
-    mdp10a_l1.forget
-
-    # Rule MDP.10b: Min MVPSD space [same potential]. Merge if space less than 1um. is 1µm
-    logger.info('Executing rule MDP.10b')
-    mdp10b_l1 = connected_mdp_10b
-    mdp10b_l1.output('MDP.10b', 'MDP.10b : Min MVPSD space [same potential]. Merge if space less than 1um. : 1µm')
-    mdp10b_l1.forget
-  else
-    logger.info('ctx.connectivity? disabled section')
-
-    # Rule MDP.10a: Min MVPSD space within LDMOS_XTOR marking [diff potential]. is 2µm
-    logger.info('Executing rule MDP.10a')
-    mdp10a_l1 = mvpsd.space(2.um, euclidian)
-    mdp10a_l1.output('MDP.10a', 'MDP.10a : Min MVPSD space within LDMOS_XTOR marking [diff potential]. : 2µm')
-    mdp10a_l1.forget
-  end
+  # Rule MDP.10b: Min MVPSD space [same potential]. Merge if space less than 1um. is 1µm
+  logger.info('Executing rule MDP.10b')
+  mdp10b_l1 = connected_mdp_10b
+  mdp10b_l1.output('MDP.10b', 'MDP.10b : Min MVPSD space [same potential]. Merge if space less than 1um. : 1µm')
+  mdp10b_l1.forget
 
   # Rule MDP.11: Min MVPSD enclosing PCOMP in the drain
   ## (MVPSD AND COMP NOT POLY2) direction and in the direction along the transistor width.

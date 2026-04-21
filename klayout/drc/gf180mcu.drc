@@ -39,12 +39,9 @@
 #   $mim_option             - MIM capacitor option (default: 'B')
 #                             Options: 'A' or 'B'
 #
-# Optional - Rule Enablement (true/false):
-#   $connectivity           - Enable connectivity-based DRC rules (default: false)
-#
 # Example usage:
 #   klayout -b -r gf180mcu_drc.rb -rd input=design.gds -rd report=drc_results.lyrdb \
-#           -rd metal_level=5LM -rd connectivity=true
+#           -rd metal_level=5LM
 #
 ################################################################################################
 
@@ -88,7 +85,6 @@ raw_params = {
   input: $input,
   report: $report,
   topcell: $topcell,
-  connectivity: $connectivity,
   verbose: $verbose,
   thr: $thr,
   run_mode: $run_mode,
@@ -143,16 +139,24 @@ GF180DRC::GenericLayers.generate_generic_layers(ctx)
 #================================================
 #------------- LAYERS CONNECTIONS ---------------
 #================================================
+CONNECTIVITY_RULES = %w[antenna dnwell ldnmos ldpmos lvpwell nat nwell].to_set.freeze
 
-if ctx.connectivity?
-  logger.info('Construct connectivity for the design.')
+connectivity_required =
+  opts.decks.any? do |deck|
+    deck.tags.any? do |t|
+      CONNECTIVITY_RULES.include?(t)
+    end
+  end
+
+if connectivity_required
+  logger.info('Rule requiring connectivity detected, constructing connectivity for the design.')
 
   GF180DRC::Connectivity.build(ctx, self)
-end
 
-if ctx.connectivity?
   logger.info('Connectivity rules enabled, Netlist object will be generated.')
   netlist
+else
+  logger.info('No rules requiring connectivity, skipping connectivity generation.')
 end
 
 #================================================

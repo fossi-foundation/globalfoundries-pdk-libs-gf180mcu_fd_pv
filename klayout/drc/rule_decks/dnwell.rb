@@ -31,28 +31,17 @@ GF180_DRC_REGISTRY.register(
   dn1_l1.output('DN.1', 'DN.1 : Min. DNWELL Width : 1.7µm')
   dn1_l1.forget
 
-  if ctx.connectivity?
-    logger.info('CONNECTIVITY_RULES section')
+  connected_dnwell, unconnected_dnwell = conn_space(dnwell, 2.5, 5.42, euclidian)
+  # Rule DN.2a: Min. DNWELL Space (Equi-potential), Merge if the space is less than is 2.5µm
+  logger.info('Executing rule DN.2a')
+  dn2a_l1 = connected_dnwell
+  dn2a_l1.output('DN.2a', 'DN.2a : Min. DNWELL Space (Equi-potential), Merge if the space is less than : 2.5µm')
+  dn2a_l1.forget
 
-    connected_dnwell, unconnected_dnwell = conn_space(dnwell, 2.5, 5.42, euclidian)
-    # Rule DN.2a: Min. DNWELL Space (Equi-potential), Merge if the space is less than is 2.5µm
-    logger.info('Executing rule DN.2a')
-    dn2a_l1 = connected_dnwell
-    dn2a_l1.output('DN.2a', 'DN.2a : Min. DNWELL Space (Equi-potential), Merge if the space is less than : 2.5µm')
-    dn2a_l1.forget
+  # Rule DN.2b: Min. DNWELL Space (Different potential) is 5.42µm
+  logger.info('Executing rule DN.2b')
+  dn2b_l1 = unconnected_dnwell
 
-    # Rule DN.2b: Min. DNWELL Space (Different potential) is 5.42µm
-    logger.info('Executing rule DN.2b')
-    dn2b_l1 = unconnected_dnwell
-
-  else
-    logger.info('CONNECTIVITY_RULES disabled section')
-
-    # Rule DN.2b_: Min. DNWELL Space (Different potential) is 5.42µm
-    logger.info('Executing rule DN.2b')
-    dn2b_l1 = dnwell.isolated(5.42.um, euclidian)
-
-  end
   dn2b_l1.output('DN.2b', 'DN.2b : Min. DNWELL Space (Different potential) : 5.42µm')
   dn2b_l1.forget # CONNECTIVITY_RULES
 

@@ -6,8 +6,6 @@ module GF180DRC
   # Provides access functions to options. This is used in the Option class,
   # and is expected to be used to extend the Context.
   module OptionHelpers
-    def connectivity? = !!@options[:connectivity]
-
     def metal_level = @options[:metal_level]
     def metal_top = @options[:metal_top]
     def mim_option = @options[:mim_option]
@@ -112,7 +110,7 @@ module GF180DRC
       input.to_s.downcase == 'true'
     end
 
-    BOOLEAN_PARAMS = %i[verbose connectivity].freeze
+    BOOLEAN_PARAMS = %i[verbose].freeze
 
     def resolved_booleans(base_params)
       BOOLEAN_PARAMS.to_h { |key| [key, bool?(base_params[key])] }
@@ -169,7 +167,6 @@ module GF180DRC
       input: nil,
       report: nil,
 
-      connectivity: 'false',
       verbose: 'false',
 
       # run control
@@ -199,7 +196,6 @@ module GF180DRC
       {
         'Input file' => input,
         'DRC Run Report' => report,
-        'Connectivity enabled' => connectivity?,
         'MIM Option selected' => mim_option,
         'Verbose enabled' => verbose?,
         'Threads for DRC functions' => thr,
