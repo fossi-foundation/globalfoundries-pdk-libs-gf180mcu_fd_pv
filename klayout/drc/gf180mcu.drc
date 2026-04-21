@@ -41,7 +41,6 @@
 #
 # Optional - Rule Enablement (true/false):
 #   $connectivity           - Enable connectivity-based DRC rules (default: false)
-#   $slow_via               - Enable exact check for MT30.8b, which can take a long time (default: false)
 #
 # Example usage:
 #   klayout -b -r gf180mcu_drc.rb -rd input=design.gds -rd report=drc_results.lyrdb \
@@ -90,7 +89,6 @@ raw_params = {
   report: $report,
   topcell: $topcell,
   connectivity: $connectivity,
-  slow_via: $slow_via,
   verbose: $verbose,
   thr: $thr,
   run_mode: $run_mode,

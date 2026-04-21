@@ -101,30 +101,33 @@ GF180_DRC_REGISTRY.register(
   mt308_l1 = metal_top_intersections.interacting(top_via_not_seal_ring, 1, 3)
   mt308_poss_l2 = metal_top_intersections.interacting(top_via_not_seal_ring, 4..nil)
   mt308_poss_via = top_via_not_seal_ring.interacting(mt308_poss_l2)
-  if ctx.slow_via?
-    # Rule MT30.8: There shall be minimum 2X2 array of vias
-    ## (top vias) at one location connecting to 3um thick top metal.
-    mt308_poss_via_over_under = size_overunder_in_layers(metal_top_intersections, mt308_poss_via, 1.0)
-    mt308_all = mt308_poss_via_over_under.with_bbox_min(mt308_egde_length..nil)
-    mt308_loc_exc = mt308_all.width(mt308_egde_length,
-                                    projection_limits(mt308_egde_length..(1000 * mt308_egde_length))).polygons
-    mt308_loc = mt308_all.not_interacting(mt308_loc_exc)
-    mt308_l2 = mt308_poss_l2.not_interacting(mt308_loc)
-    mt308_l3 = mt308_poss_via_over_under.non_rectangles
-    mt308_l = mt308_l1.join(mt308_l2).join(mt308_l3)
 
-  else
-    # Rule MT30.8: There shall be minimum 2X2 array of vias
-    ## (top vias) at one location connecting to 3um thick top metal.
-    mt308_poss_via_over_under = mt308_poss_via.sized(0.3, 'square_limit').merged.sized(-0.3,
-                                                                                       'square_limit')
-    mt308_all = mt308_poss_via_over_under.with_bbox_min(mt308_egde_length..nil)
-    mt308_loc_exc = mt308_all.width(mt308_egde_length,
-                                    projection_limits(mt308_egde_length..(1000 * mt308_egde_length))).polygons
-    mt308_loc = mt308_all.not_interacting(mt308_loc_exc)
-    mt308_l2 = mt308_poss_l2.not_interacting(mt308_loc)
-    mt308_l = mt308_l1.join(mt308_l2)
-  end
+  # Rule MT30.8: There shall be minimum 2X2 array of vias
+  ## (top vias) at one location connecting to 3um thick top metal.
+  mt308_poss_via_over_under = size_overunder_in_layers(metal_top_intersections, mt308_poss_via, 1.0)
+  mt308_all = mt308_poss_via_over_under.with_bbox_min(mt308_egde_length..nil)
+  mt308_loc_exc = mt308_all.width(mt308_egde_length,
+                                  projection_limits(mt308_egde_length..(1000 * mt308_egde_length))).polygons
+  mt308_loc = mt308_all.not_interacting(mt308_loc_exc)
+  mt308_l2 = mt308_poss_l2.not_interacting(mt308_loc)
+  mt308_l3 = mt308_poss_via_over_under.non_rectangles
+  mt308_l = mt308_l1.join(mt308_l2).join(mt308_l3)
+
+  # The code below is an imperfect implementation (heuristic) of MT30.8.
+  # It is much faster than the perfect implementation above.
+  # As 30K design is rarely used, and a dedicated switch was required to select
+  # the slow or fast implementation, it was decided to drop the heuristic.
+  # The code here is provided for historical purposes, if the 30K options becomes
+  # popular
+  # mt308_poss_via_over_under = mt308_poss_via.sized(0.3, 'square_limit').merged.sized(-0.3,
+  #                                                                                    'square_limit')
+  # mt308_all = mt308_poss_via_over_under.with_bbox_min(mt308_egde_length..nil)
+  # mt308_loc_exc = mt308_all.width(mt308_egde_length,
+  #                                 projection_limits(mt308_egde_length..(1000 * mt308_egde_length))).polygons
+  # mt308_loc = mt308_all.not_interacting(mt308_loc_exc)
+  # mt308_l2 = mt308_poss_l2.not_interacting(mt308_loc)
+  # mt308_l = mt308_l1.join(mt308_l2)
+
   mt308_l.output('MT30.8', 'MT30.8 : There shall be minimum 2X2 array of vias
                         (top vias) at one location connecting to 3um thick top metal.')
   top_via_not_seal_ring.forget
