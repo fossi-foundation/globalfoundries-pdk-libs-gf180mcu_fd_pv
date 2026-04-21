@@ -67,8 +67,6 @@ GF180_DRC_REGISTRY.register(
   #---------------- METAL1 ----------------
   #========================================
 
-  logger.info('Construct connectivity for METAL1')
-
   # Rule ANT.16_i_ANT.2: Diode filtering for ANT.2 [thin gate] , MF = 2
   # Rule ANT.16_i_ANT.2: Maximum ratio of Metal1 perimeter
   ## area to related thin gate oxide area is 400.
@@ -90,8 +88,6 @@ GF180_DRC_REGISTRY.register(
   #========================================
   #----------------- VIA1 -----------------
   #========================================
-
-  logger.info('Construct connectivity for VIA1')
 
   # Rule ANT.16_i_ANT.9: Diode filtering for ANT.9 [thin gate]
   # Rule ANT.16_i_ANT.9: Maximum ratio of Via1 area to related thin gate oxide area is 20.
@@ -284,9 +280,6 @@ GF180_DRC_REGISTRY.register(
     #---------------- METAL5 ----------------
     #========================================
 
-    logger.info('Construct connectivity for METAL5')
-    connect(via4, metal5)
-
     # Rule ANT.16_i_ANT.6: Diode filtering for ANT.6 [thin gate]
     # Rule ANT.16_i_ANT.6: Maximum ratio of Metal5 perimeter area to related thin gate oxide area is 400.
     logger.info('Executing rule ANT.16_i_ANT.6')
@@ -321,9 +314,6 @@ GF180_DRC_REGISTRY.register(
     #----------------- VIA5 -----------------
     #========================================
 
-    logger.info('Construct connectivity for VIA5')
-    connect(metal5, via5)
-
     # Rule ANT.16_i_ANT.13: Diode filtering for ANT.13 [thin gate]
     # Rule ANT.16_i_ANT.13: Maximum ratio of Via5 area to related thin gate oxide area is 20.
     logger.info('Executing rule ANT.16_i_ANT.13')
@@ -353,9 +343,6 @@ GF180_DRC_REGISTRY.register(
     #========================================
     #--------------- METALTOP ---------------
     #========================================
-
-    logger.info('Construct connectivity for METALTOP')
-    connect(via5, metaltop)
 
     # Rule ANT.16_i_ANT.7: Diode filtering for ANT.7 [thin gate]
     # Rule ANT.16_i_ANT.7: Maximum ratio of Metaltop perimeter area to related thin gate oxide area is 400.
