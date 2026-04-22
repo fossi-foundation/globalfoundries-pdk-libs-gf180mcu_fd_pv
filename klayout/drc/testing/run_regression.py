@@ -340,6 +340,12 @@ def run_test_case(
         if len(pattern_results) < 1:
             logging.error("%s generated an exception: %s" % (pattern_clean, e))
             traceback.print_exc()
+
+            if os.path.exists(pattern_log):
+                with open(pattern_log, "r") as f:
+                    print("---- KLayout log ----")
+                    print(f.read())
+
             raise Exception("Failed DRC run.")
 
     # dumping log into output to make CI have the log
