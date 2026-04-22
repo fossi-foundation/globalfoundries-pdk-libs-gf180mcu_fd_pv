@@ -68,7 +68,7 @@ module RuleFramework
     end
   end
 
-  Deck = Struct.new(:id, :path, :tags, :code, keyword_init: true)
+  Deck = Struct.new(:id, :path, :priority, :tags, :code, keyword_init: true)
 
   # Registers all available drc checks. Could be extended to provide filtering
   class Registry
@@ -77,17 +77,19 @@ module RuleFramework
       @order = []
     end
 
-    def register(id:, path:, tags: [], &code)
+    def register(id:, path:, priority:, tags: [], &code)
       raise ArgumentError, "register requires a block for deck '#{id}'" unless block_given?
 
       raise ArgumentError, "Deck #{id} has already been defined" if @decks_by_id.key?(id)
 
-      @decks_by_id[id] = Deck.new(id: id, path: path, tags: tags, code: code)
+      @decks_by_id[id] = Deck.new(id: id, path: path, priority: priority, tags: tags, code: code)
       @order << id
     end
 
     def all
-      @order.map { |id| @decks_by_id.fetch(id) }
+      @order
+        .map { |id| @decks_by_id.fetch(id) }
+        .sort_by { |d| [-(d.priority || 0), d.id.to_s] }
     end
 
     # include_tags: array; match if any tag overlaps

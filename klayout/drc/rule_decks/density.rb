@@ -17,6 +17,7 @@
 GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
+  priority: 0,
   tags: ['density']
 ) do
   chip_area = extent.sized(0.0).area
