@@ -180,8 +180,13 @@ module GF180DRC
 
     BOOLEAN_PARAMS = %i[verbose].freeze
 
+    INTEGER_PARAMS = %i[workers].freeze
+
     def resolved_booleans(base_params)
       BOOLEAN_PARAMS.to_h { |key| [key, bool?(base_params[key])] }
+    end
+    def resolved_integers(base_params)
+      INTEGER_PARAMS.to_h { |key| [key, base_params[key].to_i] }
     end
 
     def from_klayout_params(raw_params:, registry:)
@@ -196,7 +201,7 @@ module GF180DRC
       variant_config = variant_config_for(base[:variant])
 
       params = build_params(base: base, registry: registry, variant_config: variant_config)
-      new(**params, **resolved_booleans(base)).freeze
+      new(**params, **resolved_booleans(base), **resolved_integers(base)).freeze
     end
 
     def variant_config_for(variant)
@@ -218,7 +223,6 @@ module GF180DRC
         mim_option: base[:mim_option] || variant_config[:mim_option],
 
         metal_level_numerical: metal_level_numerical(metal_level),
-        workers: base[:workers],
         decks: registry.select(include_tags: base[:select_decks].split(',').map(&:strip))
       }
     end
@@ -244,7 +248,7 @@ module GF180DRC
       verbose: 'false',
 
       # run control
-      workers: 1,
+      workers: '1',
       run_mode: 'deep',
 
       # technology selection
