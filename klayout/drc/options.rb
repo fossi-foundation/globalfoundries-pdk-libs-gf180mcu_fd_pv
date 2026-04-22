@@ -50,6 +50,86 @@ module GF180DRC
     }.freeze
   end
 
+  # Builds and prints usage information derived from the canonical option
+  # definitions in Config and Options::DEFAULTS.
+  module Help
+    OPTION_DOCS = {
+      input: { required: true, desc: 'Path to the input GDS/OASIS layout file' },
+      report: { required: false, desc: 'Path for the DRC report output file (.lyrdb format)' },
+      topcell: { required: false, desc: 'Top cell name (default: auto-detect)' },
+      run_mode: { required: false, desc: 'Execution mode' },
+      verbose: { required: false, desc: 'Enable verbose output' },
+      workers: { required: false, desc: 'Number of parallel workers' },
+      variant: { required: false, desc: 'PDK variant; superseded by metal_level, metal_top, and mim_option' },
+      metal_level: { required: false, desc: 'Metal stack configuration (default: from variant)' },
+      metal_top: { required: false, desc: 'Top metal thickness (default: from variant)' },
+      mim_option: { required: false, desc: 'MIM capacitor option (default: from variant)' },
+      select_decks: { required: false, desc: 'Comma-separated list of decks to run (default: all)' },
+      help: { required: false, desc: 'Print this message and exit' }
+    }.freeze
+
+    def help_text
+      [header_lines, option_lines, variant_lines, example_lines].flatten.join("\n")
+    end
+
+    private
+
+    def header_lines
+      [
+        '',
+        'GF180MCU KLayout DRC Rule Deck',
+        '==============================',
+        '',
+        'Usage:',
+        '  klayout -b -r gf180mcu.drc -rd input=<file> -rd report=<file> [options...]',
+        '',
+        'Options (* = required):'
+      ]
+    end
+
+    def option_lines
+      col = OPTION_DOCS.keys.map(&:length).max + 2
+      OPTION_DOCS.map { |name, doc| format_option_line(name, doc, col) }
+    end
+
+    def format_option_line(name, doc, col)
+      marker = doc[:required] ? '*' : ' '
+      "  #{marker} #{name.to_s.ljust(col)}#{doc[:desc]}#{option_suffix(name, doc)}"
+    end
+
+    def option_suffix(name, doc)
+      allowed = Config::ALLOWED_VALUES[name]
+      default = Options::DEFAULTS[name]
+
+      detail = []
+      detail << "allowed: #{allowed.join(', ')}" if allowed
+      detail << "default: #{default}"            if !default.nil? && !doc[:required]
+      detail.empty? ? '' : "  (#{detail.join('; ')})"
+    end
+
+    def variant_lines
+      lines = ['', 'Variant presets:']
+      Config::VARIANTS.each do |v, cfg|
+        lines << "    #{v}  =>  metal_level: #{cfg[:metal_level].ljust(4)}  " \
+                 "metal_top: #{cfg[:metal_top].ljust(4)}  mim_option: #{cfg[:mim_option]}"
+      end
+      lines
+    end
+
+    def example_lines
+      [
+        '',
+        'Example:',
+        '  klayout -b -r gf180mcu.drc \\',
+        '    -rd input=design.gds \\',
+        '    -rd report=drc_results.lyrdb \\',
+        '    -rd metal_level=5LM \\',
+        '    -rd run_mode=deep',
+        ''
+      ]
+    end
+  end
+
   # Handles resolution and validation of raw klayout parameters into
   # normalized values. Mixed into Options as private instance methods,
   # and also used as class methods via `extend`.
@@ -98,7 +178,6 @@ module GF180DRC
         registry.all
       end
     end
-
   end
 
   # Class-level factory helpers for building an Options from raw params.
@@ -114,6 +193,11 @@ module GF180DRC
     end
 
     def from_klayout_params(raw_params:, registry:)
+      if bool?(raw_params[:help])
+        puts help_text
+        exit 0
+      end
+
       base = merge_defaults_with_raw(raw_params)
       validate_allowed_params!(base)
 
@@ -157,6 +241,7 @@ module GF180DRC
     include OptionHelpers
     extend  Construction
     extend  ParamResolution
+    extend  Help
 
     # Defaults that apply when input is nil (or missing).
     DEFAULTS = {

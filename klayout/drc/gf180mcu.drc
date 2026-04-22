@@ -20,28 +20,8 @@
 # INPUT OPTIONS
 ################################################################################################
 #
-# Required:
-#   $input                  - Path to the input GDS/OASIS layout file
-#   $report                 - Path for the DRC report output file (.lyrdb format)
-#
-# Optional - Processing Control:
-#   $topcell                - Name of the top cell to process (if not specified, uses top cell)
-#   $run_mode               - Execution mode: 'tiling', 'deep', or flat (default: flat)
-#   $verbose                - Enable verbose output: 'true' or 'false' (default: false)
-#
-# Optional - Technology Options:
-#   $select_decks           - Which deck table to run. If empty run all decks.
-#   $variant                - PDK variant to use ('A', 'B', 'C', 'D', 'E', 'F').
-#                             Superseeded by metal_level, metal_top and mim_option
-#   $metal_level            - Metal stack configuration (default: '5LM')
-#                             Options: '3LM', '4LM', '5LM', '6LM'
-#   $metal_top              - Top metal thickness (default: '11K')
-#   $mim_option             - MIM capacitor option (default: 'B')
-#                             Options: 'A' or 'B'
-#
-# Example usage:
-#   klayout -b -r gf180mcu_drc.rb -rd input=design.gds -rd report=drc_results.lyrdb \
-#           -rd metal_level=5LM
+# See help:
+#   klayout -b -r gf180mcu.drc -rd help=true
 #
 ################################################################################################
 
@@ -82,6 +62,7 @@ deck_paths = Dir[File.join(__dir__, 'rule_decks', '*.{rb}')]
 deck_paths.each { |p| load p }
 
 raw_params = {
+  help: $help,
   input: $input,
   report: $report,
   topcell: $topcell,
