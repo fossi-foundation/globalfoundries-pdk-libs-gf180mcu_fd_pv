@@ -314,11 +314,10 @@ def run_test_case(
         Path(layout_path.parent).absolute(), f"{testcase_basename}.{SUPPORTED_SW_EXT}"
     )
 
-    switches = "-rd connectivity=true -rd offgrid=true -rd feol=true -rd beol=true "
     if os.path.exists(sw_file):
-        switches += " ".join(get_switches(sw_file, testcase_basename))
+        switches = " ".join(get_switches(sw_file, testcase_basename))
     else:
-        switches += "-rd variant=C"  # default switch
+        switches = "-rd variant=C"  # default switch
 
     # Creating run folder structure
     pattern_clean = ".".join(os.path.basename(layout_path).split(".")[:-1])
