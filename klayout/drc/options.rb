@@ -170,14 +170,6 @@ module GF180DRC
         end
       end
     end
-
-    def select_decks(registry, select_decks_param)
-      if select_decks_param
-        registry.select(include_tags: select_decks_param.split(','))
-      else
-        registry.all
-      end
-    end
   end
 
   # Class-level factory helpers for building an Options from raw params.
@@ -227,7 +219,7 @@ module GF180DRC
 
         metal_level_numerical: metal_level_numerical(metal_level),
         workers: base[:workers],
-        decks: select_decks(registry, base[:select_decks])
+        decks: registry.select(include_tags: base[:select_decks].split(',').map(&:strip))
       }
     end
 
@@ -263,7 +255,7 @@ module GF180DRC
       metal_top: nil,
       metal_level: nil,
 
-      select_decks: nil
+      select_decks: ''
     }.freeze
 
     def initialize(**options)

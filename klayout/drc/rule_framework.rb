@@ -92,20 +92,38 @@ module RuleFramework
         .sort_by { |d| [-(d.priority || 0), d.id.to_s] }
     end
 
-    # include_tags: array; match if any tag overlaps
     def select(include_tags: nil, raise_on_empty: true)
-      decks = all
-
-      decks = decks.select { |d| (d.tags & include_tags).any? } if include_tags && !include_tags.empty?
-
-      if raise_on_empty && decks.empty?
-        raise ArgumentError,
-              'Deck selection matched no decks. ' \
-              "Filters: include_tags=#{include_tags.inspect} " \
-              "Available tags : #{all.map(&:tags).join(', ')}"
-      end
-
+      decks = filter_decks(include_tags)
+      validate_not_empty!(decks, include_tags) if raise_on_empty
       decks
+    end
+
+    private
+
+    def filter_decks(include_tags)
+      return all unless filtering?(include_tags)
+
+      warn_unknown_tags(include_tags)
+      all.select { |d| (d.tags & include_tags).any? }
+    end
+
+    def filtering?(include_tags)
+      include_tags && !include_tags.empty?
+    end
+
+    def warn_unknown_tags(include_tags)
+      available_tags = all.flat_map(&:tags).uniq
+      unknown_tags = include_tags - available_tags
+      warn "Warning: unknown tags: #{unknown_tags.join(', ')}" unless unknown_tags.empty?
+    end
+
+    def validate_not_empty!(decks, include_tags)
+      return unless decks.empty?
+
+      raise ArgumentError,
+            'Deck selection matched no decks. ' \
+            "Filters: include_tags=#{include_tags.inspect} " \
+            "Available tags : #{all.map(&:tags).join(', ')}"
     end
   end
 
