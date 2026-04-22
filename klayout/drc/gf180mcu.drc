@@ -68,6 +68,7 @@ raw_params = {
   topcell: $topcell,
   verbose: $verbose,
   workers: $workers,
+  threads: $threads,
   run_mode: $run_mode,
   variant: $variant,
   mim_option: $mim_option,
@@ -85,7 +86,7 @@ else
 end
 
 # threads use in klayout drc functions
-threads(Etc.nprocessors)
+threads(opts.threads)
 # verbose
 verbose(opts.verbose?)
 

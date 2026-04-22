@@ -13,6 +13,7 @@ module GF180DRC
 
     def verbose? = !!@options[:verbose]
     def workers = @options[:workers]
+    def threads = @options[:threads]
     def run_mode = @options[:run_mode]
     def variant = @options[:variant]
     def decks = @options[:decks]
@@ -59,7 +60,10 @@ module GF180DRC
       topcell: { required: false, desc: 'Top cell name (default: auto-detect)' },
       run_mode: { required: false, desc: 'Execution mode' },
       verbose: { required: false, desc: 'Enable verbose output' },
-      workers: { required: false, desc: 'Number of parallel workers' },
+      workers: { required: false, desc: 'Number of parallel workers. \'max\' for number of available cores' },
+      threads: { required: false,
+                 desc: 'Number of parallel threads to use in klayout DRC functions. ' \
+                       '\'max\' for number of available cores' },
       variant: { required: false, desc: 'PDK variant; superseded by metal_level, metal_top, and mim_option' },
       metal_level: { required: false, desc: 'Metal stack configuration (default: from variant)' },
       metal_top: { required: false, desc: 'Top metal thickness (default: from variant)' },
@@ -180,13 +184,25 @@ module GF180DRC
 
     BOOLEAN_PARAMS = %i[verbose].freeze
 
-    INTEGER_PARAMS = %i[workers].freeze
+    PARALLEL_PARAMS = %i[workers threads].freeze
 
     def resolved_booleans(base_params)
       BOOLEAN_PARAMS.to_h { |key| [key, bool?(base_params[key])] }
     end
-    def resolved_integers(base_params)
-      INTEGER_PARAMS.to_h { |key| [key, base_params[key].to_i] }
+
+    def resolved_parallel(base_params)
+      PARALLEL_PARAMS.to_h do |key|
+        value = base_params[key]
+
+        resolved =
+          if value.to_s == 'max'
+            Etc.nprocessors
+          else
+            value.to_i
+          end
+
+        [key, resolved]
+      end
     end
 
     def from_klayout_params(raw_params:, registry:)
@@ -201,7 +217,7 @@ module GF180DRC
       variant_config = variant_config_for(base[:variant])
 
       params = build_params(base: base, registry: registry, variant_config: variant_config)
-      new(**params, **resolved_booleans(base), **resolved_integers(base)).freeze
+      new(**params, **resolved_booleans(base), **resolved_parallel(base)).freeze
     end
 
     def variant_config_for(variant)
@@ -249,6 +265,7 @@ module GF180DRC
 
       # run control
       workers: '1',
+      threads: 'max',
       run_mode: 'deep',
 
       # technology selection
@@ -277,6 +294,7 @@ module GF180DRC
         'MIM Option selected' => mim_option,
         'Verbose enabled' => verbose?,
         'Number of parallel workers' => workers,
+        'Number of threads for DRC functions' => threads,
         'Run mode' => run_mode,
         'metal_top selected' => metal_top,
         'metal_level selected' => metal_level,
