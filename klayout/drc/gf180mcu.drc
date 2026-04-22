@@ -86,7 +86,7 @@ raw_params = {
   report: $report,
   topcell: $topcell,
   verbose: $verbose,
-  thr: $thr,
+  workers: $workers,
   run_mode: $run_mode,
   variant: $variant,
   mim_option: $mim_option,
@@ -103,8 +103,8 @@ else
   source(opts.input.to_s)
 end
 
-# threads
-threads(opts.thr)
+# threads use in klayout drc functions
+threads(Etc.nprocessors)
 # verbose
 verbose(opts.verbose?)
 
@@ -163,7 +163,7 @@ end
 
 # ---- Execute decks ----
 logger.info('Starting GF180MCU DRC rules.')
-runner = RuleFramework::Runners::Parallel.new(ctx, num_workers: opts.thr)
+runner = RuleFramework::Runners::Parallel.new(ctx, num_workers: opts.workers)
 
 runner.run(opts.decks)
 

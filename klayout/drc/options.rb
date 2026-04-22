@@ -12,7 +12,7 @@ module GF180DRC
     def metal_level_numerical = @options[:metal_level_numerical]
 
     def verbose? = !!@options[:verbose]
-    def thr = @options[:thr]
+    def workers = @options[:workers]
     def run_mode = @options[:run_mode]
     def variant = @options[:variant]
     def decks = @options[:decks]
@@ -99,9 +99,6 @@ module GF180DRC
       end
     end
 
-    def calculate_threads(thr_param)
-      (thr_param || Etc.nprocessors).to_i
-    end
   end
 
   # Class-level factory helpers for building an Options from raw params.
@@ -145,7 +142,7 @@ module GF180DRC
         mim_option: base[:mim_option] || variant_config[:mim_option],
 
         metal_level_numerical: metal_level_numerical(metal_level),
-        thr: calculate_threads(base[:thr]),
+        workers: base[:workers],
         decks: select_decks(registry, base[:select_decks])
       }
     end
@@ -170,7 +167,7 @@ module GF180DRC
       verbose: 'false',
 
       # run control
-      thr: nil,
+      workers: 1,
       run_mode: 'deep',
 
       # technology selection
@@ -198,7 +195,7 @@ module GF180DRC
         'DRC Run Report' => report,
         'MIM Option selected' => mim_option,
         'Verbose enabled' => verbose?,
-        'Threads for DRC functions' => thr,
+        'Number of parallel workers' => workers,
         'Run mode' => run_mode,
         'metal_top selected' => metal_top,
         'metal_level selected' => metal_level,
