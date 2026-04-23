@@ -68,7 +68,11 @@ module GF180DRC
       metal_level: { required: false, desc: 'Metal stack configuration (default: from variant)' },
       metal_top: { required: false, desc: 'Top metal thickness (default: from variant)' },
       mim_option: { required: false, desc: 'MIM capacitor option (default: from variant)' },
-      select_decks: { required: false, desc: 'Comma-separated list of decks to run (default: all)' },
+      select_decks: { required: false,
+                      desc: 'Comma-separated list of decks to run. ' \
+                            'A leading "-" means that matching decks should be excluded.  ' \
+                            'Example: "-rd select_decks=feol,-comp" means all feol decks, except comp.  ' \
+                            'If no non-negative tags are provided, all decks are included.' },
       help: { required: false, desc: 'Print this message and exit' }
     }.freeze
 
@@ -205,6 +209,14 @@ module GF180DRC
       end
     end
 
+    def resolve_decks(select_decks, registry)
+      tags = select_decks.split(',').map(&:strip)
+      include_tags, exclude_tags = tags.partition { |t| !t.start_with?('-') }
+      exclude_tags = exclude_tags.map { |t| t.sub(/^-/, '') }
+
+      registry.select(include_tags: include_tags, exclude_tags: exclude_tags)
+    end
+
     def from_klayout_params(raw_params:, registry:)
       if bool?(raw_params[:help])
         puts help_text
@@ -215,7 +227,6 @@ module GF180DRC
       validate_allowed_params!(base)
 
       variant_config = variant_config_for(base[:variant])
-
       params = build_params(base: base, registry: registry, variant_config: variant_config)
       new(**params, **resolved_booleans(base), **resolved_parallel(base)).freeze
     end
@@ -239,7 +250,7 @@ module GF180DRC
         mim_option: base[:mim_option] || variant_config[:mim_option],
 
         metal_level_numerical: metal_level_numerical(metal_level),
-        decks: registry.select(include_tags: base[:select_decks].split(',').map(&:strip))
+        decks: resolve_decks(base[:select_decks], registry)
       }
     end
 

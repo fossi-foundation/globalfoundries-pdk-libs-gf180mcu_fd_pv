@@ -92,19 +92,27 @@ module RuleFramework
         .sort_by { |d| [-(d.priority || 0), d.id.to_s] }
     end
 
-    def select(include_tags: nil, raise_on_empty: true)
-      decks = filter_decks(include_tags)
+    def select(include_tags: nil, exclude_tags: nil, raise_on_empty: true)
+      decks = include_decks(include_tags)
+      decks = exclude_decks(decks, exclude_tags)
       validate_not_empty!(decks, include_tags) if raise_on_empty
       decks
     end
 
     private
 
-    def filter_decks(include_tags)
+    def include_decks(include_tags)
       return all unless filtering?(include_tags)
 
       warn_unknown_tags(include_tags)
       all.select { |d| (d.tags & include_tags).any? }
+    end
+
+    def exclude_decks(decks, exclude_tags)
+      return decks unless filtering?(exclude_tags)
+
+      warn_unknown_tags(exclude_tags)
+      decks.reject { |d| (d.tags & exclude_tags).any? }
     end
 
     def filtering?(include_tags)
