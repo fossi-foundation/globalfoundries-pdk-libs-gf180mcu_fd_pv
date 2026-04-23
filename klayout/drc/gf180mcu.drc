@@ -143,6 +143,9 @@ end
 #================================================
 #----------------- MAIN RUNSET ------------------
 #================================================
+setup_end_time = Time.now
+run_time = setup_end_time - exec_start_time
+logger.info("# Setup took #{run_time} seconds")
 
 # ---- Execute decks ----
 logger.info('Starting GF180MCU DRC rules.')
