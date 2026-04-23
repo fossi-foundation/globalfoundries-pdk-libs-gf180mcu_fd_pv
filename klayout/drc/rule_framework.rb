@@ -270,20 +270,27 @@ module RuleFramework
 
       def execute_deck(id)
         logger.info("Executing deck : #{id}")
+        deck = find_deck!(id)
+        run_deck(id, deck)
+      end
+
+      def find_deck!(id)
+        ctx.options.decks.find { |d| d.id == id } or
+          raise ArgumentError, "No deck found for id #{id}"
+      end
+
+      def run_deck(id, deck)
         report_location = File.join(@tmpdir, "#{id}.lyrdb")
         rep = ctx.drc.report("Report for #{id}", report_location)
         env = RuleFramework::DeckEnv.new(ctx)
 
-        deck = ctx.options.decks.find { |d| d.id == id } or
-          raise ArgumentError, "No deck found for id #{id}"
+        env.instance_exec(&deck.code)
+        rep.rdb.save(report_location)
+        logger.info("Completed deck : #{id}")
 
-        begin
-          env.instance_exec(&deck.code)
-          rep.rdb.save(report_location)
-          { id: id, result: report_location, timestamp: Time.now.iso8601 }
-        rescue StandardError => e
-          { id: id, error: e.message, timestamp: Time.now.iso8601 }
-        end
+        { id: id, result: report_location, timestamp: Time.now.iso8601 }
+      rescue StandardError => e
+        { id: id, error: e.message, timestamp: Time.now.iso8601 }
       end
     end
   end
