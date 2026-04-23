@@ -28,6 +28,5 @@ def test_device_drc(drc_testcase, drc_runner):
         f"DRC output differs from golden for {drc_testcase}\n"
         f"Report : {result['report_path']}\n"
         f"Command: {result['command']}\n"
-        f"Differences:\n" + "\n".join(result["diffs"]) + "\n"
-        f"\nLog (last 1000 chars):\n{result['log'][-1000:]}"
+        f"Differences:\n" + "\n".join(result["diffs"])
     )

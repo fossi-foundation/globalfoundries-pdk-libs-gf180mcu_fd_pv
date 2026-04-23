@@ -63,8 +63,8 @@ class DRCTestCase:
         """
         return self.test_name.rsplit("-", 1)[0]
 
-    def get_switches_str(self) -> str:
-        return " ".join(f"-rd {k}={v}" for k, v in self.switches.items())
+    def get_switches_list(self) -> list[str]:
+        return [arg for k, v in self.switches.items() for arg in ("-rd", f"{k}={v}")]
 
 
 # ---------------------------------------------------------------------------
@@ -114,8 +114,8 @@ def _parse_lyrdb(lyrdb_path: str) -> LyrdbData:
     items_el = root.find("items")
     if items_el is not None:
         for item in items_el:
-            rule_el  = item.find("category")
-            cell_el  = item.find("cell")
+            rule_el = item.find("category")
+            cell_el = item.find("cell")
             values_el = item.find("values")
 
             if rule_el is None or rule_el.text is None:
@@ -132,7 +132,9 @@ def _parse_lyrdb(lyrdb_path: str) -> LyrdbData:
             if values_el is not None:
                 for value_el in values_el:
                     if value_el.text:
-                        polygons.append(value_el.text.strip())
+                        v = value_el.text.strip()
+                        if v.startswith(("polygon:", "edge-pair:", "edge:")):
+                            polygons.append(v)
 
             data[cell_name][rule_name].extend(polygons)
 
@@ -221,37 +223,47 @@ class DRCRunner:
         report_file = os.path.abspath(self.output_dir / f"{testcase.test_name}.lyrdb")
         log_file = self.output_dir / f"{testcase.test_name}.log"
 
-        call_str = (
-            f"klayout -b -r {self.drc_script_path} "
-            f"-rd input={testcase.layout_file} "
-            f"-rd report={report_file} "
-            f"-rd decks={testcase.deck_name} "
-            f"{testcase.get_switches_str()}"
-        )
-        logging.info("Running: %s", call_str)
+        cmd = [
+            "klayout",
+            "-b",
+            "-r", str(self.drc_script_path),
+            "-rd", f"input={testcase.layout_file}",
+            "-rd", f"report={report_file}",
+            "-rd", f"decks={testcase.deck_name}",
+        ] + testcase.get_switches_list()
+
+        logging.info("Running: %s", " ".join(cmd))
 
         result = {
             "passed": False,
             "diffs": [],
             "log": "",
             "report_path": report_file,
-            "command": call_str,
+            "command": " ".join(cmd),
         }
 
-        ret = subprocess.run(
-            call_str,
-            shell=True,
+        proc = subprocess.Popen(
+            cmd,
             text=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
         )
 
-        result["log"] = ret.stdout
-        log_file.write_text(ret.stdout)
+        log_lines = []
+        with open(log_file, "w") as f:
+            for line in proc.stdout:
+                print(line, end="")       # live to stdout
+                log_lines.append(line)
+                f.write(line)
 
-        if ret.returncode != 0:
-            logging.error("✗ %s — klayout returned exit code %d", testcase, ret.returncode)
-            result["diffs"] = [f"klayout exited with code {ret.returncode}"]
+        proc.wait()
+        retcode = proc.returncode
+
+        result["log"] = "".join(log_lines)
+
+        if retcode != 0:
+            logging.error("✗ %s — klayout returned exit code %d", testcase, retcode)
+            result["diffs"] = [f"klayout exited with code {retcode}"]
             return result
 
         if not os.path.exists(report_file):
@@ -333,7 +345,3 @@ class DRCTestCollector:
             )
 
         return testcases
-
-    def collect_by_pattern(self, pattern: str) -> List[DRCTestCase]:
-        from fnmatch import fnmatch
-        return [tc for tc in self.collect_all_tests() if fnmatch(tc.test_name, pattern)]

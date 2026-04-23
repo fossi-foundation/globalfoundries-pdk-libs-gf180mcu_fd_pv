@@ -31,21 +31,14 @@ def pytest_addoption(parser):
         default="test_output",
         help="Directory for test outputs (default: test_output)",
     )
-    parser.addoption(
-        "--test-pattern",
-        action="store",
-        default=None,
-        help="Run only tests matching a glob pattern (e.g. 'nwell*')",
-    )
 
 
 @pytest.fixture(scope="session")
 def drc_config(request):
     return {
         "drc_script_path": Path(request.config.getoption("--drc-script-path")),
-        "unit_dir":        Path(request.config.getoption("--unit-dir")),
-        "output_dir":      Path(request.config.getoption("--output-dir")),
-        "test_pattern":    request.config.getoption("--test-pattern"),
+        "unit_dir": Path(request.config.getoption("--unit-dir")),
+        "output_dir": Path(request.config.getoption("--output-dir")),
     }
 
 
@@ -61,18 +54,10 @@ def pytest_generate_tests(metafunc):
     if "drc_testcase" not in metafunc.fixturenames:
         return
 
-    unit_dir    = Path(metafunc.config.getoption("--unit-dir"))
-    test_pattern = metafunc.config.getoption("--test-pattern")
+    unit_dir = Path(metafunc.config.getoption("--unit-dir"))
 
     collector = DRCTestCollector(unit_test_dir=unit_dir)
-    testcases = (
-        collector.collect_by_pattern(test_pattern) if test_pattern
-        else collector.collect_all_tests()
-    )
-
-    if not testcases:
-        pytest.skip("No DRC test cases found")
-
+    testcases = collector.collect_all_tests()
     metafunc.parametrize(
         "drc_testcase",
         testcases,
