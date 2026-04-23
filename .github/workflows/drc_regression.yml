@@ -50,15 +50,15 @@ jobs:
         id: cache-klayout
         uses: actions/cache@v5
         with:
-          path: klayout_0.30.5-1_amd64.deb
-          key: klayout-deb-cache-ubuntu-0_30_5
+          path: klayout_0.30.8-1_amd64.deb
+          key: klayout-deb-cache-ubuntu-0.30.8
 
       - name: Download KLayout .deb if not cached
         if: steps.cache-klayout.outputs.cache-hit != 'true'
         run: |
           curl -L --retry 5 --retry-delay 5 --retry-all-errors \
-            -o klayout_0.30.5-1_amd64.deb \
-            https://www.klayout.org/downloads/Ubuntu-24/klayout_0.30.5-1_amd64.deb
+            -o klayout_0.30.8-1_amd64.deb \
+            https://www.klayout.org/downloads/Ubuntu-24/klayout_0.30.8-1_amd64.deb
 
   drc_regression:
     needs: [build_drc-matrix, setup_klayout]
@@ -75,11 +75,11 @@ jobs:
       - name: Restore KLayout .deb from cache
         uses: actions/cache@v5
         with:
-          path: klayout_0.30.5-1_amd64.deb
-          key: klayout-deb-cache-ubuntu-0_30_5
+          path: klayout_0.30.8-1_amd64.deb
+          key: klayout-deb-cache-ubuntu-0.30.8
 
       - name: Install KLayout
-        run: sudo apt-get update && sudo apt-get install ./klayout_0.30.5-1_amd64.deb
+        run: sudo apt-get update && sudo apt-get install ./klayout_0.30.8-1_amd64.deb
 
       - name: Get dependencies
         run: |
@@ -106,11 +106,11 @@ jobs:
       - name: Restore KLayout .deb from cache
         uses: actions/cache@v5
         with:
-          path: klayout_0.30.5-1_amd64.deb
-          key: klayout-deb-cache-ubuntu-0_30_5
+          path: klayout_0.30.8-1_amd64.deb
+          key: klayout-deb-cache-ubuntu-0.30.8
 
       - name: Install KLayout
-        run: sudo apt-get update && sudo apt-get install ./klayout_0.30.5-1_amd64.deb
+        run: sudo apt-get update && sudo apt-get install ./klayout_0.30.8-1_amd64.deb
 
       - name: Get dependencies
         run: |
