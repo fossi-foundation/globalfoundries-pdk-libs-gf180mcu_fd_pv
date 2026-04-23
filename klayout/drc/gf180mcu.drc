@@ -75,7 +75,7 @@ raw_params = {
   mim_option: $mim_option,
   metal_top: $metal_top,
   metal_level: $metal_level,
-  select_decks: $select_decks
+  decks: $decks
 }
 opts = GF180DRC::Options.from_klayout_params(raw_params: raw_params, registry: GF180_DRC_REGISTRY)
 opts.log_to(logger)

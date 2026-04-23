@@ -68,11 +68,11 @@ module GF180DRC
       metal_level: { required: false, desc: 'Metal stack configuration (default: from variant)' },
       metal_top: { required: false, desc: 'Top metal thickness (default: from variant)' },
       mim_option: { required: false, desc: 'MIM capacitor option (default: from variant)' },
-      select_decks: { required: false,
-                      desc: 'Comma-separated list of decks to run. ' \
-                            'A leading "-" means that matching decks should be excluded.  ' \
-                            'Example: "-rd select_decks=feol,-comp" means all feol decks, except comp.  ' \
-                            'If no non-negative tags are provided, all decks are included.' },
+      decks: { required: false,
+               desc: 'Comma-separated list of decks to run. ' \
+                     'A leading "-" means that matching decks should be excluded.  ' \
+                     'Example: "-rd decks=feol,-comp" means all feol decks, except comp.  ' \
+                     'If no non-negative tags are provided, all decks are included.' },
       help: { required: false, desc: 'Print this message and exit' }
     }.freeze
 
@@ -209,8 +209,9 @@ module GF180DRC
       end
     end
 
-    def resolve_decks(select_decks, registry)
-      tags = select_decks.split(',').map(&:strip)
+    def resolve_decks(decks, registry)
+      tags = decks.split(',').map(&:strip)
+      puts "#{tags}"
       include_tags, exclude_tags = tags.partition { |t| !t.start_with?('-') }
       exclude_tags = exclude_tags.map { |t| t.sub(/^-/, '') }
 
@@ -250,7 +251,7 @@ module GF180DRC
         mim_option: base[:mim_option] || variant_config[:mim_option],
 
         metal_level_numerical: metal_level_numerical(metal_level),
-        decks: resolve_decks(base[:select_decks], registry)
+        decks: resolve_decks(base[:decks], registry)
       }
     end
 
@@ -287,7 +288,7 @@ module GF180DRC
       metal_top: nil,
       metal_level: nil,
 
-      select_decks: ''
+      decks: ''
     }.freeze
 
     def initialize(**options)
