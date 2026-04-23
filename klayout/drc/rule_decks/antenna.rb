@@ -40,11 +40,6 @@ GF180_DRC_REGISTRY.register(
   #----------------- POLY -----------------
   #========================================
 
-  logger.info('Construct connectivity for POLY')
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-
   # Rule ANT.1: Maximum ratio of Poly2 perimeter area to related gate oxide area is 200.
   logger.info('Executing rule ANT.1')
   antenna_check(tgate, perimeter_only(poly2, 0.2.um), 200)
@@ -54,9 +49,6 @@ GF180_DRC_REGISTRY.register(
   #========================================
   #--------------- CONTACT ----------------
   #========================================
-
-  logger.info('Construct connectivity for CONTACT')
-  connect(poly2, contact)
 
   # Rule ANT.8: Maximum ratio of contact area to related gate oxide area is 10.
   logger.info('Executing rule ANT.8')

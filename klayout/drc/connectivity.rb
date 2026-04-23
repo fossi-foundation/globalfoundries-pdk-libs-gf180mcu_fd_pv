@@ -4,6 +4,10 @@ module GF180DRC
   # Connects electrically the appropriate layers
   module Connectivity
     BASE_CONNECTIONS = [
+      %i[tgate poly2],
+      %i[nom_gate poly2],
+      %i[thick_gate poly2],
+      %i[poly2 contact],
       %i[dnwell ncomp],
       %i[lvpwell_out pcomp],
       %i[lvpwell_dn pcomp],
