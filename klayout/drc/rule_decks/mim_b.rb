@@ -20,7 +20,7 @@ GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
   priority: 0,
-  tags: %w[mim mim_b]
+  tags: %w[all mim mim_b]
 ) do
   next unless ctx.mim_option == 'B'
 

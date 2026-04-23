@@ -35,7 +35,7 @@ GF180_DRC_REGISTRY.register(
   id: 'geom_base_1',
   path: __FILE__,
   priority: 10,
-  tags: %w[offgrid geom]
+  tags: %w[all offgrid geom]
 ) do
   logger.info('OFFGRID-ANGLES section (geom_base_1)')
 
@@ -78,7 +78,7 @@ GF180_DRC_REGISTRY.register(
   id: 'geom_base_2',
   path: __FILE__,
   priority: 10,
-  tags: %w[offgrid geom]
+  tags: %w[all offgrid geom]
 ) do
   logger.info('OFFGRID-ANGLES section (geom_base_2)')
 
@@ -115,7 +115,7 @@ GF180_DRC_REGISTRY.register(
   id: 'geom_m1m2',
   path: __FILE__,
   priority: 10,
-  tags: %w[offgrid geom]
+  tags: %w[all offgrid geom]
 ) do
   logger.info('OFFGRID-ANGLES section (geom_m1m2)')
 
@@ -140,7 +140,7 @@ GF180_DRC_REGISTRY.register(
   id: 'geom_m3',
   path: __FILE__,
   priority: 10,
-  tags: %w[offgrid geom]
+  tags: %w[all offgrid geom]
 ) do
   next unless ctx.metal_level_numerical >= 3
 
@@ -161,7 +161,7 @@ GF180_DRC_REGISTRY.register(
   id: 'geom_m4',
   path: __FILE__,
   priority: 10,
-  tags: %w[offgrid geom]
+  tags: %w[all offgrid geom]
 ) do
   next unless ctx.metal_level_numerical >= 4
 
@@ -182,7 +182,7 @@ GF180_DRC_REGISTRY.register(
   id: 'geom_m5',
   path: __FILE__,
   priority: 10,
-  tags: %w[offgrid geom]
+  tags: %w[all offgrid geom]
 ) do
   next unless ctx.metal_level_numerical >= 5
 
@@ -203,7 +203,7 @@ GF180_DRC_REGISTRY.register(
   id: 'geom_metaltop',
   path: __FILE__,
   priority: 10,
-  tags: %w[offgrid geom]
+  tags: %w[all offgrid geom]
 ) do
   next unless ctx.metal_level_numerical >= 6
 
@@ -224,7 +224,7 @@ GF180_DRC_REGISTRY.register(
   id: 'geom_topmarkers',
   path: __FILE__,
   priority: 10,
-  tags: %w[offgrid geom]
+  tags: %w[all offgrid geom]
 ) do
   logger.info('OFFGRID-ANGLES section (geom_topmarkers)')
 

@@ -20,7 +20,7 @@ GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
   priority: 0,
-  tags: %w[feol drc_bjt]
+  tags: %w[all feol drc_bjt]
 ) do
   #================================================
   #--------------------DRC_BJT---------------------

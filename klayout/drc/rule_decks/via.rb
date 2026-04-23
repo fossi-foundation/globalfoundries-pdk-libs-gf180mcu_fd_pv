@@ -140,39 +140,39 @@ end
 # VIA1 registrations
 # =========================================================
 
-GF180_DRC_REGISTRY.register(id: 'via1_v1_1', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_1', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.1')
   via_rule_1(via: via1, idx: 1, name: 'via1')
 end
-GF180_DRC_REGISTRY.register(id: 'via1_v1_2a', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_2a', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.2a')
   via_rule_2a(via: via1, idx: 1, name: 'via1')
 end
-GF180_DRC_REGISTRY.register(id: 'via1_v1_2b', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_2b', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.2b')
   via_rule_2b(via: via1, idx: 1, name: 'via1')
 end
-GF180_DRC_REGISTRY.register(id: 'via1_v1_3a', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_3a', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.3b')
   via_rule_3a(via: via1, idx: 1, name: 'via1', lower_metal: metal1)
 end
-GF180_DRC_REGISTRY.register(id: 'via1_v1_3c', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_3c', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.3c')
   via_rule_3c(via: via1, idx: 1, lower_metal: metal1)
 end
-GF180_DRC_REGISTRY.register(id: 'via1_v1_3d', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_3d', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.3d')
   via_rule_3d(via: via1, idx: 1, name: 'via1', lower_metal: metal1)
 end
-GF180_DRC_REGISTRY.register(id: 'via1_v1_4a', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_4a', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.4a')
   via_rule_4a(via: via1, idx: 1, name: 'via1', upper_metal: metal2)
 end
-GF180_DRC_REGISTRY.register(id: 'via1_v1_4b', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_4b', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.4b')
   via_rule_4b(via: via1, idx: 1, upper_metal: metal2)
 end
-GF180_DRC_REGISTRY.register(id: 'via1_v1_4c', path: __FILE__, priority: 15, tags: %w[beol via1]) do
+GF180_DRC_REGISTRY.register(id: 'via1_v1_4c', path: __FILE__, priority: 15, tags: %w[all beol via1]) do
   logger.info('Executing rule V1.4c')
   via_rule_4c(via: via1, idx: 1, name: 'via1', upper_metal: metal2)
 end
@@ -181,55 +181,55 @@ end
 # VIA2 registrations
 # =========================================================
 
-GF180_DRC_REGISTRY.register(id: 'via2_v2_1', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_1', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.1')
   via_rule_1(via: via2, idx: 2, name: 'via2')
 end
-GF180_DRC_REGISTRY.register(id: 'via2_v2_2a', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_2a', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.2a')
   via_rule_2a(via: via2, idx: 2, name: 'via2')
 end
-GF180_DRC_REGISTRY.register(id: 'via2_v2_2b', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_2b', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.2b')
   via_rule_2b(via: via2, idx: 2, name: 'via2')
 end
-GF180_DRC_REGISTRY.register(id: 'via2_v2_3b', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_3b', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.3b')
   via_rule_3b(via: via2, idx: 2, name: 'via2', lower_metal: metal2)
 end
-GF180_DRC_REGISTRY.register(id: 'via2_v2_3c', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_3c', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.3c')
   via_rule_3c(via: via2, idx: 2, lower_metal: metal2)
 end
-GF180_DRC_REGISTRY.register(id: 'via2_v2_3d', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_3d', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.3d')
   via_rule_3d(via: via2, idx: 2, name: 'via2', lower_metal: metal2)
 end
-GF180_DRC_REGISTRY.register(id: 'via2_v2_4a', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_4a', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.4a')
   via_rule_4a(via: via2, idx: 2, name: 'via2', upper_metal: metal3)
 end
-GF180_DRC_REGISTRY.register(id: 'via2_v2_4b', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_4b', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.4b')
   via_rule_4b(via: via2, idx: 2, upper_metal: metal3)
 end
-GF180_DRC_REGISTRY.register(id: 'via2_v2_4c', path: __FILE__, priority: 15, tags: %w[beol via2]) do
+GF180_DRC_REGISTRY.register(id: 'via2_v2_4c', path: __FILE__, priority: 15, tags: %w[all beol via2]) do
   next unless ctx.metal_level_numerical > 2
 
   logger.info('Executing rule V2.4c')
@@ -240,55 +240,55 @@ end
 # VIA3 registrations
 # =========================================================
 
-GF180_DRC_REGISTRY.register(id: 'via3_v3_1', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_1', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.1')
   via_rule_1(via: via3, idx: 3, name: 'via3')
 end
-GF180_DRC_REGISTRY.register(id: 'via3_v3_2a', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_2a', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.2a')
   via_rule_2a(via: via3, idx: 3, name: 'via3')
 end
-GF180_DRC_REGISTRY.register(id: 'via3_v3_2b', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_2b', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.2b')
   via_rule_2b(via: via3, idx: 3, name: 'via3')
 end
-GF180_DRC_REGISTRY.register(id: 'via3_v3_3b', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_3b', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.3b')
   via_rule_3b(via: via3, idx: 3, name: 'via3', lower_metal: metal3)
 end
-GF180_DRC_REGISTRY.register(id: 'via3_v3_3c', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_3c', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.3c')
   via_rule_3c(via: via3, idx: 3, lower_metal: metal3)
 end
-GF180_DRC_REGISTRY.register(id: 'via3_v3_3d', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_3d', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.3d')
   via_rule_3d(via: via3, idx: 3, name: 'via3', lower_metal: metal3)
 end
-GF180_DRC_REGISTRY.register(id: 'via3_v3_4a', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_4a', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.4a')
   via_rule_4a(via: via3, idx: 3, name: 'via3', upper_metal: metal4)
 end
-GF180_DRC_REGISTRY.register(id: 'via3_v3_4b', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_4b', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.4b')
   via_rule_4b(via: via3, idx: 3, upper_metal: metal4)
 end
-GF180_DRC_REGISTRY.register(id: 'via3_v3_4c', path: __FILE__, priority: 15, tags: %w[beol via3]) do
+GF180_DRC_REGISTRY.register(id: 'via3_v3_4c', path: __FILE__, priority: 15, tags: %w[all beol via3]) do
   next unless ctx.metal_level_numerical > 3
 
   logger.info('Executing rule V3.4c')
@@ -299,55 +299,55 @@ end
 # VIA4 registrations
 # =========================================================
 
-GF180_DRC_REGISTRY.register(id: 'via4_v4_1', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_1', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.1')
   via_rule_1(via: via4, idx: 4, name: 'via4')
 end
-GF180_DRC_REGISTRY.register(id: 'via4_v4_2a', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_2a', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.2a')
   via_rule_2a(via: via4, idx: 4, name: 'via4')
 end
-GF180_DRC_REGISTRY.register(id: 'via4_v4_2b', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_2b', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.2b')
   via_rule_2b(via: via4, idx: 4, name: 'via4')
 end
-GF180_DRC_REGISTRY.register(id: 'via4_v4_3b', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_3b', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.3b')
   via_rule_3b(via: via4, idx: 4, name: 'via4', lower_metal: metal4)
 end
-GF180_DRC_REGISTRY.register(id: 'via4_v4_3c', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_3c', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.3c')
   via_rule_3c(via: via4, idx: 4, lower_metal: metal4)
 end
-GF180_DRC_REGISTRY.register(id: 'via4_v4_3d', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_3d', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.3d')
   via_rule_3d(via: via4, idx: 4, name: 'via4', lower_metal: metal4)
 end
-GF180_DRC_REGISTRY.register(id: 'via4_v4_4a', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_4a', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.4a')
   via_rule_4a(via: via4, idx: 4, name: 'via4', upper_metal: metal5)
 end
-GF180_DRC_REGISTRY.register(id: 'via4_v4_4b', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_4b', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.4b')
   via_rule_4b(via: via4, idx: 4, upper_metal: metal5)
 end
-GF180_DRC_REGISTRY.register(id: 'via4_v4_4c', path: __FILE__, priority: 15, tags: %w[beol via4]) do
+GF180_DRC_REGISTRY.register(id: 'via4_v4_4c', path: __FILE__, priority: 15, tags: %w[all beol via4]) do
   next unless ctx.metal_level_numerical > 4
 
   logger.info('Executing rule V4.4c')
@@ -358,55 +358,55 @@ end
 # VIA5 registrations
 # =========================================================
 
-GF180_DRC_REGISTRY.register(id: 'via5_v5_1', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_1', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.1')
   via_rule_1(via: via5, idx: 5, name: 'via5')
 end
-GF180_DRC_REGISTRY.register(id: 'via5_v5_2a', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_2a', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.2a')
   via_rule_2a(via: via5, idx: 5, name: 'via5')
 end
-GF180_DRC_REGISTRY.register(id: 'via5_v5_2b', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_2b', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.2b')
   via_rule_2b(via: via5, idx: 5, name: 'via5')
 end
-GF180_DRC_REGISTRY.register(id: 'via5_v5_3b', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_3b', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.3b')
   via_rule_3b(via: via5, idx: 5, name: 'via5', lower_metal: metal5)
 end
-GF180_DRC_REGISTRY.register(id: 'via5_v5_3c', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_3c', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.3c')
   via_rule_3c(via: via5, idx: 5, lower_metal: metal5)
 end
-GF180_DRC_REGISTRY.register(id: 'via5_v5_3d', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_3d', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.3d')
   via_rule_3d(via: via5, idx: 5, name: 'via5', lower_metal: metal5)
 end
-GF180_DRC_REGISTRY.register(id: 'via5_v5_4a', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_4a', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.4a')
   via_rule_4a(via: via5, idx: 5, name: 'via5', upper_metal: metaltop)
 end
-GF180_DRC_REGISTRY.register(id: 'via5_v5_4b', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_4b', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.4b')
   via_rule_4b(via: via5, idx: 5, upper_metal: metaltop)
 end
-GF180_DRC_REGISTRY.register(id: 'via5_v5_4c', path: __FILE__, priority: 15, tags: %w[beol via5]) do
+GF180_DRC_REGISTRY.register(id: 'via5_v5_4c', path: __FILE__, priority: 15, tags: %w[all beol via5]) do
   next unless ctx.metal_level_numerical > 5
 
   logger.info('Executing rule V5.4c')

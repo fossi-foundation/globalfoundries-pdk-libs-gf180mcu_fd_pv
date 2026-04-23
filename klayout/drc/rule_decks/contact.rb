@@ -19,14 +19,14 @@
 #--------------------CONTACT---------------------
 #================================================
 
-GF180_DRC_REGISTRY.register(id: 'CO.1_min_max_contact_size', path: __FILE__, priority: 0, tags: %w[feol contact]) do
+GF180_DRC_REGISTRY.register(id: 'CO.1_min_max_contact_size', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.1')
   co1_l1 = contact.edges.without_length(0.22.um)
   co1_l1.output('CO.1', 'CO.1 : Min/max contact size. : 0.22µm')
   co1_l1.forget
 end
 
-GF180_DRC_REGISTRY.register(id: 'CO.2a_min_contact_spacing', path: __FILE__, priority: 0, tags: %w[feol contact]) do
+GF180_DRC_REGISTRY.register(id: 'CO.2a_min_contact_spacing', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.2a')
   co2a_l1 = contact.space(0.25.um, euclidian)
   co2a_l1.output('CO.2a', 'CO.2a : min. contact spacing : 0.25µm')
@@ -34,7 +34,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.2a_min_contact_spacing', path: __FILE__, pri
 end
 
 GF180_DRC_REGISTRY.register(id: 'CO.2b_contact_array_spacing', path: __FILE__, priority: 0,
-                            tags: %w[feol contact]) do
+                            tags: %w[all feol contact]) do
   logger.info('Executing rule CO.2b')
 
   co2b_egde_length = (0.22 * 3) + (3 * 0.28)
@@ -55,7 +55,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.2b_contact_array_spacing', path: __FILE__, p
   co2b_l1.output('CO.2b', 'CO.2b : Space in 4x4 or larger contact array. : 0.28µm')
 end
 
-GF180_DRC_REGISTRY.register(id: 'CO.3_poly2_overlap', path: __FILE__, priority: 0, tags: %w[feol contact]) do
+GF180_DRC_REGISTRY.register(id: 'CO.3_poly2_overlap', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.3')
 
   main_contact = contact.not(sramcore)
@@ -70,7 +70,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.3_poly2_overlap', path: __FILE__, priority: 
   co3_l2.forget
 end
 
-GF180_DRC_REGISTRY.register(id: 'CO.4_comp_overlap', path: __FILE__, priority: 0, tags: %w[feol contact]) do
+GF180_DRC_REGISTRY.register(id: 'CO.4_comp_overlap', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.4')
 
   main_contact = contact.not(sramcore)
@@ -86,7 +86,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.4_comp_overlap', path: __FILE__, priority: 0
 end
 
 GF180_DRC_REGISTRY.register(id: 'CO.5a_nplus_overlap_butted', path: __FILE__, priority: 0,
-                            tags: %w[feol contact]) do
+                            tags: %w[all feol contact]) do
   logger.info('Executing rule CO.5a')
 
   co_5a_ncomp_butted = ncomp.interacting(pcomp).not_overlapping(pcomp)
@@ -101,7 +101,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.5a_nplus_overlap_butted', path: __FILE__, pr
 end
 
 GF180_DRC_REGISTRY.register(id: 'CO.5b_pplus_overlap_butted', path: __FILE__, priority: 0,
-                            tags: %w[feol contact]) do
+                            tags: %w[all feol contact]) do
   logger.info('Executing rule CO.5b')
 
   co_5b_pcomp_butted = pcomp.interacting(ncomp).not_overlapping(ncomp)
@@ -115,7 +115,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.5b_pplus_overlap_butted', path: __FILE__, pr
   co_5b_pcomp_butted.forget
 end
 
-GF180_DRC_REGISTRY.register(id: 'CO.6_metal1_overlap', path: __FILE__, priority: 0, tags: %w[feol contact]) do
+GF180_DRC_REGISTRY.register(id: 'CO.6_metal1_overlap', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.6')
 
   co6_l1 = contact.enclosed(metal1, 0.005.um, euclidian).polygons(0.001.um)
@@ -129,7 +129,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.6_metal1_overlap', path: __FILE__, priority:
   co6_l.forget
 end
 
-GF180_DRC_REGISTRY.register(id: 'CO.6a_metal1_eol_overlap', path: __FILE__, priority: 0, tags: %w[feol contact]) do
+GF180_DRC_REGISTRY.register(id: 'CO.6a_metal1_eol_overlap', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.6a')
 
   cont_6a_cond = metal1.width(0.34.um + 1.dbu).with_length(0.24.um, nil, both)
@@ -152,7 +152,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.6a_metal1_eol_overlap', path: __FILE__, prio
 end
 
 GF180_DRC_REGISTRY.register(id: 'CO.6b_adjacent_edge_overlap', path: __FILE__, priority: 0,
-                            tags: %w[feol contact]) do
+                            tags: %w[all feol contact]) do
   logger.info('Executing rule CO.6b')
 
   main_contact = contact.not(sramcore)
@@ -185,7 +185,7 @@ end
 
 # CO.6c guideline (intentionally not implemented)
 
-GF180_DRC_REGISTRY.register(id: 'CO.7_comp_to_poly_spacing', path: __FILE__, priority: 0, tags: %w[feol contact]) do
+GF180_DRC_REGISTRY.register(id: 'CO.7_comp_to_poly_spacing', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.7')
 
   co7_l1 = contact.and(comp).not(otp_mk)
@@ -195,7 +195,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.7_comp_to_poly_spacing', path: __FILE__, pri
   co7_l1.forget
 end
 
-GF180_DRC_REGISTRY.register(id: 'CO.8_poly_to_comp_spacing', path: __FILE__, priority: 0, tags: %w[feol contact]) do
+GF180_DRC_REGISTRY.register(id: 'CO.8_poly_to_comp_spacing', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.8')
 
   co8_l1 = contact.and(poly2).separation(comp, 0.17.um, euclidian)
@@ -205,7 +205,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.8_poly_to_comp_spacing', path: __FILE__, pri
 end
 
 GF180_DRC_REGISTRY.register(id: 'CO.9_no_contact_on_butting_edge', path: __FILE__, priority: 0,
-                            tags: %w[feol contact]) do
+                            tags: %w[all feol contact]) do
   logger.info('Executing rule CO.9')
 
   co9_l1 = contact.interacting(ncomp.edges.and(pcomp.edges))
@@ -215,7 +215,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.9_no_contact_on_butting_edge', path: __FILE_
 end
 
 GF180_DRC_REGISTRY.register(id: 'CO.10_no_contact_on_poly_gate', path: __FILE__, priority: 0,
-                            tags: %w[feol contact]) do
+                            tags: %w[all feol contact]) do
   logger.info('Executing rule CO.10')
 
   co10_l1 = contact.and(tgate)
@@ -225,7 +225,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.10_no_contact_on_poly_gate', path: __FILE__,
 end
 
 GF180_DRC_REGISTRY.register(id: 'CO.11_no_contact_on_field_oxide', path: __FILE__, priority: 0,
-                            tags: %w[feol contact]) do
+                            tags: %w[all feol contact]) do
   logger.info('Executing rule CO.11')
 
   co11_l1 = contact.not(poly2).not(comp)

@@ -20,7 +20,7 @@ GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
   priority: 0,
-  tags: %w[beol metaltop_30k]
+  tags: %w[all beol metaltop_30k]
 ) do
   next unless ctx.metal_top == '30K'
 

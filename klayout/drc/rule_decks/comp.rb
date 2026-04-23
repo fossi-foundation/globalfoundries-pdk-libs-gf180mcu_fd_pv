@@ -21,7 +21,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_1a_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   logger.info('Executing rule DF.1a_LV')
@@ -36,7 +36,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_1a_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v = comp.overlapping(dualgate)
   logger.info('Executing rule DF.1a_MV')
@@ -57,7 +57,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_1c',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.1c')
   df1c_l1 = comp.and(mos_cap_mk).width(1.um, euclidian)
@@ -70,7 +70,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_2a_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   logger.info('Executing rule DF.2a_LV')
@@ -87,7 +87,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_2a_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v = comp.overlapping(dualgate)
   logger.info('Executing rule DF.2a_MV')
@@ -105,7 +105,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_2b',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.2b')
   df2b_l1 = comp.not(mos_cap_mk).sized(-50.um).sized(50.um)
@@ -120,7 +120,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_3a_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   logger.info('Executing rule DF.3a_LV')
@@ -137,7 +137,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_3a_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v = comp.overlapping(dualgate)
   logger.info('Executing rule DF.3a_MV')
@@ -155,7 +155,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_3b',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   ncomp_butted = ncomp.interacting(pcomp)
   logger.info('Executing rule DF.3b')
@@ -174,7 +174,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_3c_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   logger.info('Executing rule DF.3c_LV')
@@ -189,7 +189,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_3c_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v = comp.overlapping(dualgate)
   logger.info('Executing rule DF.3c_MV')
@@ -205,7 +205,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4a_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   ntap_dn3p3v = ntap_dn.and(dnwell_3p3v)
   logger.info('Executing rule DF.4a_LV')
@@ -220,7 +220,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4a_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   ntap_dn56v = ntap_dn.and(dnwell_56v)
   logger.info('Executing rule DF.4a_MV')
@@ -235,7 +235,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4b_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   ntap_dn3p3v = ntap_dn.and(dnwell_3p3v)
   logger.info('Executing rule DF.4b_LV')
@@ -250,7 +250,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4b_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   ntap_dn56v = ntap_dn.and(dnwell_56v)
   logger.info('Executing rule DF.4b_MV')
@@ -265,7 +265,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4c_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.4c_LV')
   nw_n_dn_n_srm = nwell_n_dn.not(sramcore)
@@ -284,7 +284,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4c_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.4c_MV')
   nw_n_dn_n_srm = nwell_n_dn.not(sramcore)
@@ -303,7 +303,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4d_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   ncomp_3p3v = nplus.and(comp_3p3v)
@@ -324,7 +324,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4d_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v = comp.overlapping(dualgate)
   ncomp_56v = nplus.and(comp_56v)
@@ -345,7 +345,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4e_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   pcomp_dn3p3v = pcomp.and(dnwell_3p3v)
   logger.info('Executing rule DF.4e_LV')
@@ -360,7 +360,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_4e_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   pcomp_dn56v = pcomp.and(dnwell_56v)
   logger.info('Executing rule DF.4e_MV')
@@ -375,7 +375,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_5_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.5_LV')
   df5_l1 = ptap.and(lvpwell_dn3p3v).enclosed(lvpwell_dn3p3v, 0.12.um, euclidian)
@@ -388,7 +388,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_5_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.5_MV')
   df5_l1 = ptap.and(lvpwell_dn56v).enclosed(lvpwell_dn56v, 0.16.um, euclidian)
@@ -401,7 +401,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_6_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   logger.info('Executing rule DF.6_LV')
@@ -422,7 +422,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_6_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v = comp.overlapping(dualgate)
   logger.info('Executing rule DF.6_MV')
@@ -443,7 +443,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_7_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   pcomp_dn3p3v = pcomp.and(dnwell_3p3v)
   logger.info('Executing rule DF.7_LV')
@@ -458,7 +458,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_7_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   pcomp_dn56v = pcomp.and(dnwell_56v)
   logger.info('Executing rule DF.7_MV')
@@ -473,7 +473,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_8_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.8_LV')
   ncomp_dn3p3v = ncomp.and(dnwell_3p3v)
@@ -488,7 +488,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_8_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.8_MV')
   ncomp_dn56v = ncomp.and(dnwell_56v)
@@ -503,7 +503,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_9',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.9')
   df9_l1 = comp.not(otp_mk).with_area(nil, 0.2025.um)
@@ -516,7 +516,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_10',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.10')
   df10_l1 = comp.holes.not(comp).with_area(nil, 0.26.um)
@@ -529,7 +529,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_11',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   ncomp_butted = ncomp.interacting(pcomp)
   logger.info('Executing rule DF.11')
@@ -544,7 +544,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_12',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.12')
   df12_l1 = comp.not_interacting(schottky_diode).not(nplus).not(pplus)
@@ -558,7 +558,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_13_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   # Size ntap by 20um, staying inside nwell, using octagon_limit to approximate a circle.
   # Use steps of 0.5, compatible with min space of nwell (0.6).
@@ -585,7 +585,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_13_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   # Size ntap by 15um, staying inside nwell, using octagon_limit to approximate a circle.
   # Use steps of 0.5, compatible with min space of nwell (0.6).
@@ -612,7 +612,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_14_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.14_LV')
   nactive_3p3v = nactive.not_interacting(v5_xtor).not_interacting(dualgate)
@@ -632,7 +632,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_14_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   logger.info('Executing rule DF.14_MV')
   nactive_56v = nactive.overlapping(dualgate)
@@ -664,7 +664,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_16_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v   = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   ncomp_3p3v  = nplus.and(comp_3p3v)
@@ -688,7 +688,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_16_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v        = comp.overlapping(dualgate)
   ncomp_56v       = nplus.and(comp_56v)
@@ -712,7 +712,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_17_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   pcomp_out_nw_dn = pcomp.not(nwell).not(dnwell)
@@ -734,7 +734,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_17_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v        = comp.overlapping(dualgate)
   pcomp_out_nw_dn = pcomp.not(nwell).not(dnwell)
@@ -756,7 +756,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_18',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   pcomp_out_nw_dn = pcomp.not(nwell).not(dnwell)
   logger.info('Executing rule DF.18')
@@ -771,7 +771,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_19_lv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_3p3v       = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   ncomp_3p3v      = nplus.and(comp_3p3v)
@@ -790,7 +790,7 @@ GF180_DRC_REGISTRY.register(
   id: 'df_19_mv',
   path: __FILE__,
   priority: 0,
-  tags: %w[feol comp]
+  tags: %w[all feol comp]
 ) do
   comp_56v        = comp.overlapping(dualgate)
   ncomp_56v       = nplus.and(comp_56v)

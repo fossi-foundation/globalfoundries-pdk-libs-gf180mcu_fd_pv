@@ -71,7 +71,7 @@ module GF180DRC
       decks: { required: false,
                desc: 'Comma-separated list of decks to run. ' \
                      'A leading "-" means that matching decks should be excluded.  ' \
-                     'Example: "-rd decks=feol,-comp" means all feol decks, except comp.  ' \
+                     'Example: "-rd decks=all,-beol,metal1" means all except feol, but including metal1 decks. ' \
                      'If no non-negative tags are provided, all decks are included.' },
       help: { required: false, desc: 'Print this message and exit' }
     }.freeze
@@ -210,12 +210,22 @@ module GF180DRC
     end
 
     def resolve_decks(decks, registry)
-      tags = decks.split(',').map(&:strip)
-      puts "#{tags}"
-      include_tags, exclude_tags = tags.partition { |t| !t.start_with?('-') }
-      exclude_tags = exclude_tags.map { |t| t.sub(/^-/, '') }
+      tokens = decks.split(',').map(&:strip)
+      result = []
 
-      registry.select(include_tags: include_tags, exclude_tags: exclude_tags)
+      tokens.each do |token|
+        if token.start_with?('-')
+          tag = token.delete_prefix('-')
+          warn_unknown_tag(tag, registry)
+          result.reject! { |d| d.tags.include?(tag) }
+        else
+          warn_unknown_tag(token, registry)
+          additions = registry.all.select { |d| d.tags.include?(token) }
+          result |= additions
+        end
+      end
+
+      result
     end
 
     def from_klayout_params(raw_params:, registry:)
@@ -258,6 +268,13 @@ module GF180DRC
     def metal_level_numerical(metal_level)
       GF180DRC::Config::METAL_LEVEL_MAP.fetch(metal_level)
     end
+
+    private
+
+    def warn_unknown_tag(tag, registry)
+      available_tags = registry.all.flat_map(&:tags).uniq
+      warn "Warning: unknown tag: #{tag}" unless available_tags.include?(tag)
+    end
   end
 
   # Provides parsing of the command line options, and storing of the results
@@ -288,7 +305,7 @@ module GF180DRC
       metal_top: nil,
       metal_level: nil,
 
-      decks: ''
+      decks: 'all'
     }.freeze
 
     def initialize(**options)

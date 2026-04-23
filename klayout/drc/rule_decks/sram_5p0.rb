@@ -20,7 +20,7 @@ GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
   priority: 0,
-  tags: %w[feol sram_5p0]
+  tags: %w[all feol sram_5p0]
 ) do
   #================================================
   #--------------------5V SRAM---------------------

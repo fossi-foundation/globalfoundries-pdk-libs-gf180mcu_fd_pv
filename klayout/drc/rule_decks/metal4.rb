@@ -20,7 +20,7 @@ GF180_DRC_REGISTRY.register(
   id: File.basename(__FILE__, File.extname(__FILE__)),
   path: __FILE__,
   priority: 0,
-  tags: %w[beol metal4]
+  tags: %w[all beol metal4]
 ) do
   next unless ctx.metal_level_numerical >= 5
 

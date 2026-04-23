@@ -31,7 +31,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_poly2',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   logger.info('Executing rule ANT.1')
   antenna_check(tgate, perimeter_only(poly2, 0.2.um), 200)
@@ -45,7 +45,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_contact',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   logger.info('Executing rule ANT.8')
   antenna_check(tgate, contact, 10)
@@ -59,7 +59,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_metal1',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   logger.info('Executing rule ANT.16_i_ANT.2')
   antenna_check(nom_gate, perimeter_only(metal1, 0.54.um), 400, [ncomp, 800])
@@ -77,7 +77,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_via1',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   logger.info('Executing rule ANT.16_i_ANT.9')
   antenna_check(nom_gate, via1, 20, [ncomp, 40])
@@ -95,7 +95,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_metal2',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   logger.info('Executing rule ANT.16_i_ANT.3')
   antenna_check(nom_gate, perimeter_only(metal2, 0.54.um), 400, [ncomp, 800])
@@ -113,7 +113,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_via2',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   next unless ctx.metal_level_numerical >= 3
 
@@ -139,7 +139,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_metal3',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   next unless ctx.metal_level_numerical >= 3
 
@@ -166,7 +166,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_via3',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   next unless ctx.metal_level_numerical >= 4
 
@@ -192,7 +192,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_metal4',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   next unless ctx.metal_level_numerical >= 4
 
@@ -219,7 +219,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_via4',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   next unless ctx.metal_level_numerical >= 5
 
@@ -245,7 +245,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_metal5',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   next unless ctx.metal_level_numerical >= 5
 
@@ -272,7 +272,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_via5',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   next unless ctx.metal_level_numerical >= 6
 
@@ -298,7 +298,7 @@ GF180_DRC_REGISTRY.register(
   id: 'antenna_metaltop',
   path: __FILE__,
   priority: 10,
-  tags: %w[feol antenna]
+  tags: %w[all feol antenna]
 ) do
   met_top_thick = antenna_met_top_thick(ctx)
   if ctx.metal_level_numerical >= 6
