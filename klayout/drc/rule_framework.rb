@@ -165,8 +165,8 @@ module RuleFramework
     end
 
     # Runs the decks in parallel in fully isolated environments
-    class Parallel < Base # rubocop:disable Metrics/ClassLength
-      def initialize(ctx, num_workers: 4)
+    class Parallel < Base
+      def initialize(ctx, num_workers: 1)
         super(ctx)
         @num_workers = num_workers
         timestamp = Time.now.strftime('drc_run_%Y_%m_%d_%H_%M_%S__')
@@ -174,108 +174,61 @@ module RuleFramework
       end
 
       def run(decks)
-        logger.info("Starting DRC in parallel: executing #{decks.size} deck(s).")
+        logger.info("Starting DRC in isolated parallel mode: executing #{decks.size} deck(s).")
         _run(decks)
       end
 
       private
 
       def _run(decks)
-        all_workers, active_puppets = spawn_workers
-        dispatch_queue(decks.dup, active_puppets)
-        results = collect_results(all_workers)
+        results = run_all(decks.dup)
         aggregate_results(results)
       ensure
         FileUtils.rm_rf(@tmpdir)
       end
 
-      def spawn_workers
-        all_workers = []
-        active_puppets = []
-        @num_workers.times do |i|
-          worker = spawn_worker(i)
-          all_workers << worker
-          active_puppets << worker
+      def run_all(queue)
+        in_flight = {} # pid => result_pipe
+        results = []
+
+        until queue.empty? && in_flight.empty?
+          # Spawn new workers up to the concurrency limit
+          while in_flight.size < @num_workers && !queue.empty?
+            deck = queue.shift
+            pid, pipe = fork_worker(deck.id)
+            in_flight[pid] = { pipe: pipe, id: deck.id }
+          end
+
+          # Wait for any one worker to finish
+          pid, _status = Process.wait2
+          worker = in_flight.delete(pid)
+          results << collect_result(worker)
         end
-        [all_workers, active_puppets]
+
+        results
       end
 
-      def spawn_worker(worker_idx)
+      def fork_worker(id)
         result_r, result_w = IO.pipe
-        master_to_puppet_r, master_to_puppet_w = IO.pipe
-        puppet_to_master_r, puppet_to_master_w = IO.pipe
 
         pid = fork do
           result_r.close
-          master_to_puppet_w.close
-          puppet_to_master_r.close
-          run_worker_loop(worker_idx, master_to_puppet_r, puppet_to_master_w, result_w)
+          result = execute_deck(id)
+          result_w.write(JSON.dump(result))
+          result_w.close
           exit
         end
 
         result_w.close
-        master_to_puppet_r.close
-        puppet_to_master_w.close
-
-        { pid: pid, to_puppet: master_to_puppet_w, from_puppet: puppet_to_master_r, result_pipe: result_r }
+        [pid, result_r]
       end
 
-      def run_worker_loop(worker_idx, input, output, result_w)
-        chunk_results = []
-        output.puts 'ready'
-
-        loop do
-          task = input.gets&.chomp
-          next sleep(0.01) if task.nil?
-          break if task == 'shutdown'
-
-          chunk_results << process_task(worker_idx, task)
-          output.puts 'ready'
-        end
-
-        logger.info("Worker #{worker_idx}: Shutting down")
-        result_w.write(JSON.dump(chunk_results))
-        result_w.close
-      end
-
-      def process_task(worker_idx, task)
-        logger.info("Worker #{worker_idx}: Processing deck #{task}")
-        result = execute_deck(task)
-        logger.info("Worker #{worker_idx}: Done processing #{task}")
+      def collect_result(worker)
+        result = JSON.parse(worker[:pipe].read, symbolize_names: true)
+        worker[:pipe].close
         result
       rescue StandardError => e
-        logger.info("Worker #{worker_idx}: Error processing #{task}: #{e.message}")
-        { id: task, error: err.message, timestamp: Time.now.iso8601 }
-      end
-
-      def dispatch_queue(queue, active_puppets)
-        while !queue.empty? || active_puppets.any?
-          ready_pipes = IO.select(active_puppets.map { |p| p[:from_puppet] }, nil, nil, 0.05)&.first || []
-          ready_pipes.each { |pipe| handle_ready_puppet(pipe, queue, active_puppets) }
-        end
-      end
-
-      def handle_ready_puppet(pipe, queue, active_puppets)
-        pipe.gets
-        puppet = active_puppets.find { |p| p[:from_puppet] == pipe }
-
-        if queue.empty?
-          puppet[:to_puppet].puts 'shutdown'
-          puppet[:to_puppet].flush
-          active_puppets.delete(puppet)
-        else
-          puppet[:to_puppet].puts queue.shift.id
-          puppet[:to_puppet].flush
-        end
-      end
-
-      def collect_results(all_workers)
-        all_workers.each_with_object([]) do |worker, results|
-          chunk_results = JSON.parse(worker[:result_pipe].read, symbolize_names: true)
-          results.concat(chunk_results)
-          worker[:result_pipe].close
-          Process.wait(worker[:pid])
-        end
+        { id: worker[:id], error: "Failed to read result: #{e.message}", timestamp: Time.now.iso8601 }
       end
 
       def aggregate_results(results)
@@ -308,6 +261,7 @@ module RuleFramework
       end
 
       def execute_deck(id)
+        logger.info("Executing deck : #{id}")
         report_location = File.join(@tmpdir, "#{id}.lyrdb")
         rep = ctx.drc.report("Report for #{id}", report_location)
         env = RuleFramework::DeckEnv.new(ctx)
