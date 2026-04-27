@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>Report for lvs_bjt</description>
+ <original-file/>
+ <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <top-cell>LVS_BJT</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>LVS_BJT.1</name>
+   <description>LVS_BJT.1 : Minimum LVS_BJT enclosure of NPN or PNP Emitter COMP layers: 0um</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>LVS_BJT</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'LVS_BJT.1'</category>
+   <cell>LVS_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-115.82,51.485;-115.82,52.775;-115.815,52.775;-115.815,51.485)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'LVS_BJT.1'</category>
+   <cell>LVS_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-44.05,51.485;-44.05,52.775;-44.045,52.775;-44.045,51.485)</value>
+   </values>
+  </item>
+ </items>
+</report-database>
