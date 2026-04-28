@@ -1,6 +1,6 @@
 ************************************************************************
 * auCdl Netlist:
-* 
+*
 * Library Name:  TCG_Library
 * Top Cell Name: npn_00p54x02p00
 * View Name:     schematic
@@ -8,7 +8,7 @@
 ************************************************************************
 
 *.BIPOLAR
-*.RESI = 2000 
+*.RESI = 2000
 *.RESVAL
 *.CAPVAL
 *.DIOPERI
@@ -26,8 +26,11 @@
 * View Name:    schematic
 ************************************************************************
 
-.SUBCKT npn_00p54x02p00 I1_default_B I1_default_C I1_default_E I1_default_S
-*.PININFO I1_default_B:I I1_default_C:I I1_default_E:I I1_default_S:I
-QI1_default I1_default_C I1_default_B I1_default_E I1_default_S npn_00p54x02p00 m=1
+.SUBCKT npn_00p54x02p00 I1_default_B I1_default_C I1_default_E I1_default_S C2 B2 E2
+*.PININFO I1_default_B:I I1_default_C:I I1_default_E:I I1_default_S:I C2:I B2:I E2:I
+QI1_default I1_default_C I1_default_B I1_default_E I1_default_S npn_00p54x02p00 NE=1
+QI1_default C2 B2 E2 I1_default_S npn_00p54x02p00 NE=2
 .ENDS
+
+
 
