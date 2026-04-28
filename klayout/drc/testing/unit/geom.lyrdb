@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for geom</description>
+ <description>Report for geom_base_1</description>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>geom_testcases</top-cell>
  <tags>
  </tags>
@@ -15,7 +15,7 @@
   </category>
   <category>
    <name>comp_angle</name>
-   <description>ACUTE :  non 45 degree angle comp</description>
+   <description>ACUTE : non 45 degree angle comp</description>
    <categories>
    </categories>
   </category>
@@ -27,7 +27,7 @@
   </category>
   <category>
    <name>dnwell_angle</name>
-   <description>ACUTE :  non 45 degree angle dnwell</description>
+   <description>ACUTE : non 45 degree angle dnwell</description>
    <categories>
    </categories>
   </category>
@@ -39,7 +39,7 @@
   </category>
   <category>
    <name>nwell_angle</name>
-   <description>ACUTE :  non 45 degree angle nwell</description>
+   <description>ACUTE : non 45 degree angle nwell</description>
    <categories>
    </categories>
   </category>
@@ -51,7 +51,7 @@
   </category>
   <category>
    <name>lvpwell_angle</name>
-   <description>ACUTE :  non 45 degree angle lvpwell</description>
+   <description>ACUTE : non 45 degree angle lvpwell</description>
    <categories>
    </categories>
   </category>
@@ -63,7 +63,7 @@
   </category>
   <category>
    <name>dualgate_angle</name>
-   <description>ACUTE :  non 45 degree angle dualgate</description>
+   <description>ACUTE : non 45 degree angle dualgate</description>
    <categories>
    </categories>
   </category>
@@ -75,7 +75,7 @@
   </category>
   <category>
    <name>poly2_angle</name>
-   <description>ACUTE :  non 45 degree angle poly2</description>
+   <description>ACUTE : non 45 degree angle poly2</description>
    <categories>
    </categories>
   </category>
@@ -87,7 +87,7 @@
   </category>
   <category>
    <name>nplus_angle</name>
-   <description>ACUTE :  non 45 degree angle nplus</description>
+   <description>ACUTE : non 45 degree angle nplus</description>
    <categories>
    </categories>
   </category>
@@ -99,7 +99,7 @@
   </category>
   <category>
    <name>pplus_angle</name>
-   <description>ACUTE :  non 45 degree angle pplus</description>
+   <description>ACUTE : non 45 degree angle pplus</description>
    <categories>
    </categories>
   </category>
@@ -135,7 +135,7 @@
   </category>
   <category>
    <name>resistor_angle</name>
-   <description>ACUTE :  non 45 degree angle resistor</description>
+   <description>ACUTE : non 45 degree angle resistor</description>
    <categories>
    </categories>
   </category>
@@ -147,7 +147,7 @@
   </category>
   <category>
    <name>fhres_angle</name>
-   <description>ACUTE :  non 45 degree angle fhres</description>
+   <description>ACUTE : non 45 degree angle fhres</description>
    <categories>
    </categories>
   </category>
@@ -159,7 +159,7 @@
   </category>
   <category>
    <name>fusetop_angle</name>
-   <description>ACUTE :  non 45 degree angle fusetop</description>
+   <description>ACUTE : non 45 degree angle fusetop</description>
    <categories>
    </categories>
   </category>
@@ -183,7 +183,7 @@
   </category>
   <category>
    <name>polyfuse_angle</name>
-   <description>ACUTE :  non 45 degree angle polyfuse</description>
+   <description>ACUTE : non 45 degree angle polyfuse</description>
    <categories>
    </categories>
   </category>
@@ -195,7 +195,7 @@
   </category>
   <category>
    <name>mvsd_angle</name>
-   <description>ACUTE :  non 45 degree angle mvsd</description>
+   <description>ACUTE : non 45 degree angle mvsd</description>
    <categories>
    </categories>
   </category>
@@ -207,7 +207,7 @@
   </category>
   <category>
    <name>mvpsd_angle</name>
-   <description>ACUTE :  non 45 degree angle mvpsd</description>
+   <description>ACUTE : non 45 degree angle mvpsd</description>
    <categories>
    </categories>
   </category>
@@ -267,7 +267,7 @@
   </category>
   <category>
    <name>zener_angle</name>
-   <description>ACUTE :  non 45 degree angle zener</description>
+   <description>ACUTE : non 45 degree angle zener</description>
    <categories>
    </categories>
   </category>
@@ -279,7 +279,7 @@
   </category>
   <category>
    <name>res_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle res_mk</description>
+   <description>ACUTE : non 45 degree angle res_mk</description>
    <categories>
    </categories>
   </category>
@@ -291,7 +291,7 @@
   </category>
   <category>
    <name>opc_drc_angle</name>
-   <description>ACUTE :  non 45 degree angle opc_drc</description>
+   <description>ACUTE : non 45 degree angle opc_drc</description>
    <categories>
    </categories>
   </category>
@@ -303,7 +303,7 @@
   </category>
   <category>
    <name>ndmy_angle</name>
-   <description>ACUTE :  non 45 degree angle ndmy</description>
+   <description>ACUTE : non 45 degree angle ndmy</description>
    <categories>
    </categories>
   </category>
@@ -315,7 +315,7 @@
   </category>
   <category>
    <name>pmndmy_angle</name>
-   <description>ACUTE :  non 45 degree angle pmndmy</description>
+   <description>ACUTE : non 45 degree angle pmndmy</description>
    <categories>
    </categories>
   </category>
@@ -327,7 +327,7 @@
   </category>
   <category>
    <name>v5_xtor_angle</name>
-   <description>ACUTE :  non 45 degree angle v5_xtor</description>
+   <description>ACUTE : non 45 degree angle v5_xtor</description>
    <categories>
    </categories>
   </category>
@@ -339,7 +339,7 @@
   </category>
   <category>
    <name>cap_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle cap_mk</description>
+   <description>ACUTE : non 45 degree angle cap_mk</description>
    <categories>
    </categories>
   </category>
@@ -363,7 +363,7 @@
   </category>
   <category>
    <name>ind_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle ind_mk</description>
+   <description>ACUTE : non 45 degree angle ind_mk</description>
    <categories>
    </categories>
   </category>
@@ -375,7 +375,7 @@
   </category>
   <category>
    <name>diode_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle diode_mk</description>
+   <description>ACUTE : non 45 degree angle diode_mk</description>
    <categories>
    </categories>
   </category>
@@ -387,7 +387,7 @@
   </category>
   <category>
    <name>drc_bjt_angle</name>
-   <description>ACUTE :  non 45 degree angle drc_bjt</description>
+   <description>ACUTE : non 45 degree angle drc_bjt</description>
    <categories>
    </categories>
   </category>
@@ -399,7 +399,7 @@
   </category>
   <category>
    <name>lvs_bjt_angle</name>
-   <description>ACUTE :  non 45 degree angle lvs_bjt</description>
+   <description>ACUTE : non 45 degree angle lvs_bjt</description>
    <categories>
    </categories>
   </category>
@@ -411,7 +411,7 @@
   </category>
   <category>
    <name>mim_l_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle mim_l_mk</description>
+   <description>ACUTE : non 45 degree angle mim_l_mk</description>
    <categories>
    </categories>
   </category>
@@ -447,7 +447,7 @@
   </category>
   <category>
    <name>otp_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle otp_mk</description>
+   <description>ACUTE : non 45 degree angle otp_mk</description>
    <categories>
    </categories>
   </category>
@@ -459,7 +459,7 @@
   </category>
   <category>
    <name>mtpmark_angle</name>
-   <description>ACUTE :  non 45 degree angle mtpmark</description>
+   <description>ACUTE : non 45 degree angle mtpmark</description>
    <categories>
    </categories>
   </category>
@@ -471,7 +471,7 @@
   </category>
   <category>
    <name>neo_ee_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle neo_ee_mk</description>
+   <description>ACUTE : non 45 degree angle neo_ee_mk</description>
    <categories>
    </categories>
   </category>
@@ -483,7 +483,7 @@
   </category>
   <category>
    <name>sramcore_angle</name>
-   <description>ACUTE :  non 45 degree angle sramcore</description>
+   <description>ACUTE : non 45 degree angle sramcore</description>
    <categories>
    </categories>
   </category>
@@ -495,7 +495,7 @@
   </category>
   <category>
    <name>lvs_rf_angle</name>
-   <description>ACUTE :  non 45 degree angle lvs_rf</description>
+   <description>ACUTE : non 45 degree angle lvs_rf</description>
    <categories>
    </categories>
   </category>
@@ -507,7 +507,7 @@
   </category>
   <category>
    <name>lvs_drain_angle</name>
-   <description>ACUTE :  non 45 degree angle lvs_drain</description>
+   <description>ACUTE : non 45 degree angle lvs_drain</description>
    <categories>
    </categories>
   </category>
@@ -519,7 +519,7 @@
   </category>
   <category>
    <name>hvpolyrs_angle</name>
-   <description>ACUTE :  non 45 degree angle hvpolyrs</description>
+   <description>ACUTE : non 45 degree angle hvpolyrs</description>
    <categories>
    </categories>
   </category>
@@ -531,7 +531,7 @@
   </category>
   <category>
    <name>lvs_io_angle</name>
-   <description>ACUTE :  non 45 degree angle lvs_io</description>
+   <description>ACUTE : non 45 degree angle lvs_io</description>
    <categories>
    </categories>
   </category>
@@ -543,7 +543,7 @@
   </category>
   <category>
    <name>probe_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle probe_mk</description>
+   <description>ACUTE : non 45 degree angle probe_mk</description>
    <categories>
    </categories>
   </category>
@@ -555,7 +555,7 @@
   </category>
   <category>
    <name>esd_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle esd_mk</description>
+   <description>ACUTE : non 45 degree angle esd_mk</description>
    <categories>
    </categories>
   </category>
@@ -603,7 +603,7 @@
   </category>
   <category>
    <name>plfuse_angle</name>
-   <description>ACUTE :  non 45 degree angle plfuse</description>
+   <description>ACUTE : non 45 degree angle plfuse</description>
    <categories>
    </categories>
   </category>
@@ -615,7 +615,7 @@
   </category>
   <category>
    <name>efuse_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle efuse_mk</description>
+   <description>ACUTE : non 45 degree angle efuse_mk</description>
    <categories>
    </categories>
   </category>
@@ -639,7 +639,7 @@
   </category>
   <category>
    <name>ymtp_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle ymtp_mk</description>
+   <description>ACUTE : non 45 degree angle ymtp_mk</description>
    <categories>
    </categories>
   </category>
@@ -651,7 +651,7 @@
   </category>
   <category>
    <name>dev_wf_mk_angle</name>
-   <description>ACUTE :  non 45 degree angle dev_wf_mk</description>
+   <description>ACUTE : non 45 degree angle dev_wf_mk</description>
    <categories>
    </categories>
   </category>
@@ -687,7 +687,7 @@
   </category>
   <category>
    <name>mdiode_angle</name>
-   <description>ACUTE :  non 45 degree angle mdiode</description>
+   <description>ACUTE : non 45 degree angle mdiode</description>
    <categories>
    </categories>
   </category>
@@ -699,7 +699,7 @@
   </category>
   <category>
    <name>contact_angle</name>
-   <description>ACUTE :  non 45 degree angle contact</description>
+   <description>ACUTE : non 45 degree angle contact</description>
    <categories>
    </categories>
   </category>
@@ -711,7 +711,7 @@
   </category>
   <category>
    <name>metal1_angle</name>
-   <description>ACUTE :  non 45 degree angle metal1</description>
+   <description>ACUTE : non 45 degree angle metal1</description>
    <categories>
    </categories>
   </category>
@@ -771,7 +771,7 @@
   </category>
   <category>
    <name>via1_angle</name>
-   <description>ACUTE :  non 45 degree angle via1</description>
+   <description>ACUTE : non 45 degree angle via1</description>
    <categories>
    </categories>
   </category>
@@ -783,7 +783,7 @@
   </category>
   <category>
    <name>metal2_angle</name>
-   <description>ACUTE :  non 45 degree angle metal2</description>
+   <description>ACUTE : non 45 degree angle metal2</description>
    <categories>
    </categories>
   </category>
@@ -843,7 +843,7 @@
   </category>
   <category>
    <name>via2_angle</name>
-   <description>ACUTE :  non 45 degree angle via2</description>
+   <description>ACUTE : non 45 degree angle via2</description>
    <categories>
    </categories>
   </category>
@@ -855,7 +855,7 @@
   </category>
   <category>
    <name>metal3_angle</name>
-   <description>ACUTE :  non 45 degree angle metal3</description>
+   <description>ACUTE : non 45 degree angle metal3</description>
    <categories>
    </categories>
   </category>
@@ -915,7 +915,7 @@
   </category>
   <category>
    <name>via3_angle</name>
-   <description>ACUTE :  non 45 degree angle via3</description>
+   <description>ACUTE : non 45 degree angle via3</description>
    <categories>
    </categories>
   </category>
@@ -1107,7 +1107,7 @@
   </category>
   <category>
    <name>metaltop_blk_angle</name>
-   <description>ACUTE : non 45 degree angle metaltop_blk_angle</description>
+   <description>ACUTE : non 45 degree angle metaltop_blk</description>
    <categories>
    </categories>
   </category>
@@ -1143,7 +1143,7 @@
   </category>
   <category>
    <name>ubmpperi_angle</name>
-   <description>ACUTE :  non 45 degree angle ubmpperi</description>
+   <description>ACUTE : non 45 degree angle ubmpperi</description>
    <categories>
    </categories>
   </category>
@@ -1155,7 +1155,7 @@
   </category>
   <category>
    <name>ubmparray_angle</name>
-   <description>ACUTE :  non 45 degree angle ubmparray</description>
+   <description>ACUTE : non 45 degree angle ubmparray</description>
    <categories>
    </categories>
   </category>
@@ -1167,7 +1167,7 @@
   </category>
   <category>
    <name>ubmeplate_angle</name>
-   <description>ACUTE :  non 45 degree angle ubmeplate</description>
+   <description>ACUTE : non 45 degree angle ubmeplate</description>
    <categories>
    </categories>
   </category>
@@ -24460,858 +24460,6 @@
    <image/>
    <values>
     <value>edge: (567.2,484.324;566.327,434.332)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1080.882,310.38;1080.882,310.38)/(1080.882,310.38;1080.882,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1080.882,310.388;1080.882,310.388)/(1080.882,310.388;1080.882,310.388)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1080.89,310.388;1080.89,310.388)/(1080.89,310.388;1080.89,310.388)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1051.374,310.38;1051.374,310.38)/(1051.374,310.38;1051.374,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1051.374,310.884;1051.374,310.884)/(1051.374,310.884;1051.374,310.884)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1053.878,310.884;1053.878,310.884)/(1053.878,310.884;1053.878,310.884)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1053.878,310.38;1053.878,310.38)/(1053.878,310.38;1053.878,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1027.864,310.38;1027.864,310.38)/(1027.864,310.38;1027.864,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1027.864,311.38;1027.864,311.38)/(1027.864,311.38;1027.864,311.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1039.87,312.884;1039.87,312.884)/(1039.87,312.884;1039.87,312.884)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1040.374,312.884;1040.374,312.884)/(1040.374,312.884;1040.374,312.884)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1040.374,310.38;1040.374,310.38)/(1040.374,310.38;1040.374,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1064.878,310.38;1064.878,310.38)/(1064.878,310.38;1064.878,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1064.878,315.384;1064.878,315.384)/(1064.878,315.384;1064.878,315.384)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1069.882,315.384;1069.882,315.384)/(1069.882,315.384;1069.882,315.384)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1069.882,310.38;1069.882,310.38)/(1069.882,310.38;1069.882,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1157.636,310.38;1157.636,310.38)/(1157.636,310.38;1157.636,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1155.9,320.228;1155.9,320.228)/(1155.9,320.228;1155.9,320.228)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1206.876,319.062;1206.876,319.062)/(1206.876,319.062;1206.876,319.062)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1220.464,310.38;1220.464,310.38)/(1220.464,310.38;1220.464,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1217.876,320.039;1217.876,320.039)/(1217.876,320.039;1217.876,320.039)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1266.172,332.98;1266.172,332.98)/(1266.172,332.98;1266.172,332.98)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (1268.76,323.321;1268.76,323.321)/(1268.76,323.321;1268.76,323.321)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (137.452,372.356;137.452,372.356)/(137.452,372.356;137.452,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (137.452,382.356;137.452,382.356)/(137.452,382.356;137.452,382.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (187.452,382.356;187.452,382.356)/(187.452,382.356;187.452,382.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (187.452,372.356;187.452,372.356)/(187.452,372.356;187.452,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (76.46,372.356;76.46,372.356)/(76.46,372.356;76.46,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (76.286,382.355;76.286,382.355)/(76.286,382.355;76.286,382.355)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (126.278,383.228;126.278,383.228)/(126.278,383.228;126.278,383.228)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (126.452,373.229;126.452,373.229)/(126.452,373.229;126.452,373.229)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (7.447,372.356;7.447,372.356)/(7.447,372.356;7.447,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (0.5,379.549;0.5,379.549)/(0.5,379.549;0.5,379.549)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (36.467,414.282;36.467,414.282)/(36.467,414.282;36.467,414.282)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (43.414,407.089;43.414,407.089)/(43.414,407.089;43.414,407.089)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (226.523,372.356;226.523,372.356)/(226.523,372.356;226.523,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (219.452,379.427;219.452,379.427)/(219.452,379.427;219.452,379.427)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (254.807,414.782;254.807,414.782)/(254.807,414.782;254.807,414.782)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (261.878,407.711;261.878,407.711)/(261.878,407.711;261.878,407.711)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (308.233,372.356;308.233,372.356)/(308.233,372.356;308.233,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (272.878,407.711;272.878,407.711)/(272.878,407.711;272.878,407.711)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (279.949,414.782;279.949,414.782)/(279.949,414.782;279.949,414.782)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (315.304,379.427;315.304,379.427)/(315.304,379.427;315.304,379.427)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (198.452,372.356;198.452,372.356)/(198.452,372.356;198.452,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (198.452,422.356;198.452,422.356)/(198.452,422.356;198.452,422.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (208.452,422.356;208.452,422.356)/(208.452,422.356;208.452,422.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (208.452,372.356;208.452,372.356)/(208.452,372.356;208.452,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (64.413,372.356;64.413,372.356)/(64.413,372.356;64.413,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (54.414,372.53;54.414,372.53)/(54.414,372.53;54.414,372.53)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (55.287,422.522;55.287,422.522)/(55.287,422.522;55.287,422.522)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_OFFGRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (65.286,422.348;65.286,422.348)/(65.286,422.348;65.286,422.348)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (1157.636,310.38;1155.9,320.228)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (1155.9,320.228;1205.14,328.91)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (1205.14,328.91;1206.876,319.062)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (1206.876,319.062;1157.636,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (1220.464,310.38;1217.876,320.039)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (1217.876,320.039;1266.172,332.98)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (1266.172,332.98;1268.76,323.321)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (1268.76,323.321;1220.464,310.38)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (76.46,372.356;76.286,382.355)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (76.286,382.355;126.278,383.228)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (126.278,383.228;126.452,373.229)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (126.452,373.229;76.46,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (7.447,372.356;0.5,379.549)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (0.5,379.549;36.467,414.282)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (36.467,414.282;43.414,407.089)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (43.414,407.089;7.447,372.356)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (64.413,372.356;54.414,372.53)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (54.414,372.53;55.287,422.522)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (55.287,422.522;65.286,422.348)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>ind_mk_angle</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge: (65.286,422.348;64.413,372.356)</value>
    </values>
   </item>
   <item>
