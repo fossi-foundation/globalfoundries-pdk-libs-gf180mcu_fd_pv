@@ -486,6 +486,7 @@ def build_default_pipeline() -> Pipeline:
         ConditionalLeadingXReplaceRule("nfet", "M"),
         ConditionalLeadingXReplaceRule("pfet", "M"),
         SpicePrefixSuperflousRemovalRule(),
+        GenericDeviceParamRenameRule("Q", {"m": "NE"}),
         GenericDeviceParamRenameRule("R", {"r_width": "W", "r_length": "L"}),
         GenericDeviceParamRenameRule("D", {"area": "A", "pj": "P"}),
         GenericDeviceParamRenameRule("C", {"c_width": "W", "c_length": "L"}),
