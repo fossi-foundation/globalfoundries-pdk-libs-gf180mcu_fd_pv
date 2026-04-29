@@ -219,10 +219,10 @@ module GF180DRC
       tokens.each do |token|
         if token.start_with?('-')
           tag = token.delete_prefix('-')
-          warn_unknown_tag(tag, registry)
+          raise_unknown_tag(tag, registry)
           result.reject! { |d| d.tags.include?(tag) }
         else
-          warn_unknown_tag(token, registry)
+          raise_unknown_tag(token, registry)
           additions = registry.all.select { |d| d.tags.include?(token) }
           result |= additions
         end
@@ -274,9 +274,9 @@ module GF180DRC
 
     private
 
-    def warn_unknown_tag(tag, registry)
+    def raise_unknown_tag(tag, registry)
       available_tags = registry.all.flat_map(&:tags).uniq
-      warn "Warning: unknown tag: #{tag}" unless available_tags.include?(tag)
+      raise ArgumentError "Unknown tag: #{tag}" unless available_tags.include?(tag)
     end
   end
 

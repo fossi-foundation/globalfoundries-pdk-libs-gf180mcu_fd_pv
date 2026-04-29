@@ -107,14 +107,14 @@ module RuleFramework
     def include_decks(include_tags)
       return all unless filtering?(include_tags)
 
-      warn_unknown_tags(include_tags)
+      raise_unknown_tags(include_tags)
       all.select { |d| (d.tags & include_tags).any? }
     end
 
     def exclude_decks(decks, exclude_tags)
       return decks unless filtering?(exclude_tags)
 
-      warn_unknown_tags(exclude_tags)
+      raise_unknown_tags(exclude_tags)
       decks.reject { |d| (d.tags & exclude_tags).any? }
     end
 
@@ -122,10 +122,10 @@ module RuleFramework
       include_tags && !include_tags.empty?
     end
 
-    def warn_unknown_tags(include_tags)
+    def raise_unknown_tags(include_tags)
       available_tags = all.flat_map(&:tags).uniq
       unknown_tags = include_tags - available_tags
-      warn "Warning: unknown tags: #{unknown_tags.join(', ')}" unless unknown_tags.empty?
+      raise ArgumentError "Unknown tags: #{unknown_tags.join(', ')}" unless unknown_tags.empty?
     end
 
     def validate_not_empty!(decks, include_tags)
