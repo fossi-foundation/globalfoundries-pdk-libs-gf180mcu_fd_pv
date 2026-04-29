@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# SPDX-FileCopyrightText: Copyright 2026 GlobalFoundries PDK Authors
+# SPDX-License-Identifier: Apache License 2.0
+
 # GF180-specific option parsing/normalization.
 
 module GF180DRC

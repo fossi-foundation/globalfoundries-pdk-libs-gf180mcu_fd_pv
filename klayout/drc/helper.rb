@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# SPDX-FileCopyrightText: Copyright 2026 GlobalFoundries PDK Authors
+# SPDX-License-Identifier: Apache License 2.0
+
 def unconn_errors_check(net1, net2, unconnected_errors)
   if !net1 || !net2
     logger.error("Connectivity check encountered 2 nets that doesn't exist. Potential issue in klayout...")
