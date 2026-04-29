@@ -80,6 +80,15 @@ raw_params = {
 opts = GF180DRC::Options.from_klayout_params(raw_params: raw_params, registry: GF180_DRC_REGISTRY)
 opts.log_to(logger)
 
+required_parallel = [0, 30, 9]
+current = RBA::Application.instance.version.split('.').map(&:to_i)
+
+if (current <=> required_parallel).negative? && (opts.workers > 1)
+  warn('Running parallel workers with klayout smaller than 0.30.8 is likely to fail due ' /
+       'to https://github.com/KLayout/klayout/issues/2339 . ' /
+       'Continuing execution, but you have been warned.')
+end
+
 if opts.topcell
   source(opts.input.to_s, opts.topcell)
 else
@@ -149,7 +158,12 @@ logger.info("# Setup took #{run_time} seconds")
 
 # ---- Execute decks ----
 logger.info('Starting GF180MCU DRC rules.')
-runner = RuleFramework::Runners::Parallel.new(ctx, num_workers: opts.workers)
+
+runner = if opts.workers > 1
+           RuleFramework::Runners::Parallel.new(ctx, num_workers: opts.workers)
+         else
+           RuleFramework::Runners::Sequential.new(ctx)
+         end
 
 runner.run(opts.decks)
 
