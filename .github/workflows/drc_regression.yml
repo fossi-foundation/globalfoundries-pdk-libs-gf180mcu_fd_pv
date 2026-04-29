@@ -36,10 +36,11 @@ jobs:
       - uses: actions/checkout@v6
       - id: set-matrix
         run: |
-          cd klayout/drc/rule_decks/
-          drc_table=`echo '[' ; find -iname '*.rb' -a ! -iname '*_split.rb' | tr '\n' ','|sed -e 's/^/\"/'| sed -e 's/,$/\"]/'|sed -e 's/,/\", \"/g'`
-          drc_table="${drc_table//'./'/}"; drc_table="${drc_table//'"", '/}"; drc_table="${drc_table//'.rb'/}";
-          drc_table=`echo $drc_table | jq -c .`
+          cd klayout/drc/testing/unit/
+          drc_table=$(find . \( -iname '*.gds' -o -iname '*.gds.gz' \) \
+            | sed 's|^\./||; s|\.gds\.gz$||; s|\.gds$||' \
+            | sort \
+            | jq -R . | jq -sc .)
           echo $drc_table
           echo "drc_table=$drc_table" >>$GITHUB_OUTPUT
 
