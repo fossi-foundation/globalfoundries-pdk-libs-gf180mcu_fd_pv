@@ -87,7 +87,8 @@ jobs:
 
       - name: Testing ${{ matrix.part }} for ${{ matrix.test }}
         run: |
-          make test-"$(python -c 'print("${{ matrix.part }}".upper())')"-${{ matrix.test }}
+          part="${{ matrix.part }}"
+          make test-"${part^^}"-${{ matrix.test }}
 
   drc_switch:
     needs: setup_klayout
@@ -118,4 +119,5 @@ jobs:
 
       - name: Testing ${{ matrix.part }} for ${{ matrix.test }}
         run: |
-          make test-"$(python -c 'print("${{ matrix.part }}".upper())')"-${{ matrix.test }}
+          part="${{ matrix.part }}"
+          make test-"${part^^}"-${{ matrix.test }}
