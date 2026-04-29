@@ -49,5 +49,5 @@ test-DRC-switch:
 #=================================
 # ----- test-LVS_regression ------
 #=================================
-test-LVS: | $(CONDA_ENV_PYTHON)
+test-LVS:
 	cd $(KLAYOUT_LVS_TESTS) && pytest
