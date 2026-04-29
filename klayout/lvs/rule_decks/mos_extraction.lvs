@@ -119,9 +119,15 @@ else
 end
 
 # 5V NMOS transistor inside DNWELL
-logger.info('5V NMOS transistor inside DNWELL')
-extract_devices(mos4('nfet_05v0_dn'),
-                { 'SD' => nsd, 'G' => ngate_5v_dw, 'tS' => nsd, 'tD' => nsd, 'tG' => poly2_con, 'W' => lvpwell_con })
+if CONSIDER_DN_DW_FEATURES
+    logger.info('5V NMOS transistor inside DNWELL')
+    extract_devices(mos4('nfet_05v0_dn'),
+                    { 'SD' => nsd, 'G' => ngate_5v_dw, 'tS' => nsd, 'tD' => nsd, 'tG' => poly2_con, 'W' => lvpwell_con })
+else
+    logger.info('5V NMOS transistor inside DNWELL as regular, non dw device')
+    extract_devices(mos4('nfet_05v0'),
+                    { 'SD' => nsd, 'G' => ngate_5v_dw, 'tS' => nsd, 'tD' => nsd, 'tG' => poly2_con, 'W' => lvpwell_con })
+end
 
 # 6V NMOS transistor inside DNWELL
 if CONSIDER_DN_DW_FEATURES
