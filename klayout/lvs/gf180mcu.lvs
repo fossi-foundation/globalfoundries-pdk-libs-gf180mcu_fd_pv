@@ -63,6 +63,7 @@
 require 'time'
 require 'logger'
 require 'etc'
+require 'tmpdir'
 
 exec_start_time = Time.now
 
@@ -267,12 +268,12 @@ logger.info("Input schematic file: #{$schematic}")
 if SCHEMATIC_TRANSLATE
   python_script = File.join(File.dirname(__FILE__), 'gf180_xschem_klayout_spice_convert.py')
   translated_schematic_filename = File.basename($schematic).sub(File.extname($schematic), '') + "_translated.spice"
-  translated_schematic_path = File.join(File.dirname(__FILE__), translated_schematic_filename)
+  translated_schematic_path = File.join(Dir.mktmpdir, translated_schematic_filename)
   cmd = "python3 #{python_script} #{$schematic} -o #{translated_schematic_path}"
-  puts "Running #{cmd}"
+  logger.info("Running #{cmd}")
   output = `#{cmd}`
   exitstatus = $?.exitstatus
-  puts output
+  logger.info(output) unless output.empty?
 
   unless exitstatus == 0
     raise "Script returned a non-zero exit status (#{exitstatus})"
