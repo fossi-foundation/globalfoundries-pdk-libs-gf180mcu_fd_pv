@@ -59,7 +59,7 @@ module GF180DRC
   module Help
     OPTION_DOCS = {
       input: { required: true, desc: 'Path to the input GDS/OASIS layout file' },
-      report: { required: false, desc: 'Path for the DRC report output file (.lyrdb format)' },
+      report: { required: true, desc: 'Path for the DRC report output file (.lyrdb format).' },
       topcell: { required: false, desc: 'Top cell name (default: auto-detect)' },
       run_mode: { required: false, desc: 'Execution mode' },
       verbose: { required: false, desc: 'Enable verbose output' },
@@ -162,12 +162,7 @@ module GF180DRC
     end
 
     def resolve_report_path(report_param)
-      if report_param
-        Pathname.new(report_param)
-      else
-        layout_dir = Pathname.new(RBA::CellView.active.filename).parent.realpath
-        layout_dir.join('gf180_drc.lyrdb').expand_path
-      end
+      Pathname.new(report_param)
     end
 
     def validate_allowed_params!(params)
