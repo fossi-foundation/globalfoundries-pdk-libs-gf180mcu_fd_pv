@@ -125,7 +125,7 @@ module RuleFramework
     def raise_unknown_tags(include_tags)
       available_tags = all.flat_map(&:tags).uniq
       unknown_tags = include_tags - available_tags
-      raise ArgumentError "Unknown tags: #{unknown_tags.join(', ')}" unless unknown_tags.empty?
+      raise ArgumentError, "Unknown tags: #{unknown_tags.join(', ')}" unless unknown_tags.empty?
     end
 
     def validate_not_empty!(decks, include_tags)

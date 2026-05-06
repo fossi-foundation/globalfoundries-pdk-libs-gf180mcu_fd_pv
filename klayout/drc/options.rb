@@ -271,7 +271,7 @@ module GF180DRC
 
     def raise_unknown_tag(tag, registry)
       available_tags = registry.all.flat_map(&:tags).uniq
-      raise ArgumentError "Unknown tag: #{tag}" unless available_tags.include?(tag)
+      raise ArgumentError, "Unknown tag: #{tag}" unless available_tags.include?(tag)
     end
   end
 
