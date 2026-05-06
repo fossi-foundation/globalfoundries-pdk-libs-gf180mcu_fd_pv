@@ -167,6 +167,11 @@ runner = if opts.workers > 1
 
 runner.run(opts.decks)
 
+status = RuleFramework::ReportStatus.new(ctx)
+status.parse_report
+status.log_status
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
 logger.info("# DRC Total Run time #{run_time} seconds")
+
+exit(status.success? ? 0 : 1)

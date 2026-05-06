@@ -300,4 +300,78 @@ module RuleFramework
       end
     end
   end
+
+  # Loads a completed DRC report (.lyrdb) and prints a human-readable summary
+  # of violated rules and violation counts to standard output.
+  #
+  class ReportStatus
+    attr_reader :ctx
+
+    def initialize(ctx)
+      @ctx = ctx
+      @rdb = nil
+    end
+
+    def logger = ctx.logger
+    def report_file = ctx.options.report
+
+    # Loads and parses the RDB report file
+    def parse_report
+      raise ArgumentError, "Report file not found at #{report_file}" unless File.exist?(report_file)
+
+      @rdb = RBA::ReportDatabase.new
+      @rdb.load(report_file)
+    end
+
+    # Prints the DRC status and violation breakdown to the logger
+    def log_status
+      ensure_parsed!
+      logger.info('')
+      return logger.info('DRC RESULT: SUCCESS (0 violations)') if success?
+
+      logger.error("DRC RESULT: FAILURE (#{@rdb.num_items} violation(s))")
+      logger.error('Violated Rules:')
+      print_violated_rules
+    end
+
+    # Returns true if the design is DRC-clean, false otherwise
+    def success?
+      ensure_parsed!
+      @rdb.num_items.zero?
+    end
+
+    private
+
+    def ensure_parsed!
+      raise 'Report not loaded. Call #parse_report before inspecting results.' unless @rdb
+    end
+
+    def print_violated_rules
+      violations = traverse_leaf_categories(@rdb)
+      violations_sorted = violations.sort_by { |path, _count| path }
+      violations_sorted.each do |path, count|
+        logger.error("  #{path.ljust(20)} : #{count.to_s.rjust(5)} violation(s)")
+      end
+    end
+
+    # Collects violation counts only from leaf categories (actual DRC rules)
+    # to avoid double-counting items that live in parent groups.
+    def traverse_leaf_categories(rdb)
+      violations = []
+      queue = rdb.each_category.to_a
+
+      until queue.empty?
+        cat = queue.shift
+        children = cat.each_sub_category.to_a
+
+        if children.empty?
+          violations << [cat.path, cat.num_items] if cat.num_items.positive?
+        else
+          queue.concat(children)
+        end
+      end
+
+      violations
+    end
+  end
 end
