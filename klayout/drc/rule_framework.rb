@@ -156,12 +156,15 @@ module RuleFramework
     # the environment of subsequent rules
     class Sequential < Base
       def run(decks)
-        ctx.drc.report('', ctx.options.report.to_s)
+        report = ctx.drc.report('', ctx.options.report.to_s)
 
         logger.info("Starting DRC: executing #{decks.size} deck(s).")
         decks.each do |deck|
           run_deck(deck)
         end
+        report.rdb.save(ctx.options.report)
+
+        report
       end
 
       private
