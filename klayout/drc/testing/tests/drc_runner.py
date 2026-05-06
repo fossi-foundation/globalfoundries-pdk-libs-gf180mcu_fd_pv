@@ -252,19 +252,16 @@ class DRCRunner:
         log_lines = []
         with open(log_file, "w") as f:
             for line in proc.stdout:
-                print(line, end="")       # live to stdout
+                print(line, end="")
                 log_lines.append(line)
                 f.write(line)
 
         proc.wait()
-        retcode = proc.returncode
 
         result["log"] = "".join(log_lines)
 
-        if retcode != 0:
-            logging.error("✗ %s — klayout returned exit code %d", testcase, retcode)
-            result["diffs"] = [f"klayout exited with code {retcode}"]
-            return result
+        # No need to check proc.retcode, as it will be 1 if not DRC clean: this does
+        # not mean the test will fail
 
         if not os.path.exists(report_file):
             logging.error("✗ %s — no .lyrdb produced", testcase)
