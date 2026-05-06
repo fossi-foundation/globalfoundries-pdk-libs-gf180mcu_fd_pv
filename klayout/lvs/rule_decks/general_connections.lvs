@@ -21,7 +21,6 @@
 logger.info('Starting GF180 LVS connectivity setup (Inter-layer)')
 
 # Inter-layer
-connect(sub, ptap)
 connect(lvpwell_con, ptap)
 connect(lvpwell_con, ptap_dw)
 connect(dnwell, ntap_dw)
