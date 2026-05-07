@@ -32,10 +32,10 @@ lint_ruby:
 # ----- test-DRC_regression ------
 #=================================
 test-DRC-main:
-	python3 $(KLAYOUT_DRC_TESTS)/run_regression.py
+	cd $(KLAYOUT_DRC_TESTS) && pytest
 
 test-DRC-%:
-	python3 $(KLAYOUT_DRC_TESTS)/run_regression.py --table=$*
+	cd $(KLAYOUT_DRC_TESTS) && pytest -k "test_device_drc[$*]"
 
 #=================================
 # -------- test-DRC-switch -------
@@ -49,5 +49,5 @@ test-DRC-switch:
 #=================================
 # ----- test-LVS_regression ------
 #=================================
-test-LVS: | $(CONDA_ENV_PYTHON)
+test-LVS:
 	cd $(KLAYOUT_LVS_TESTS) && pytest

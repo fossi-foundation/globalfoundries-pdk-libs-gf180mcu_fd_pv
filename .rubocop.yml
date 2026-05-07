@@ -9,15 +9,23 @@
 #
 # See https://docs.rubocop.org/rubocop/configuration
 
-GlobalVars:
+Style/GlobalVars:
   Description: Do not introduce global variables.
-  Enabled: false
+  Exclude:
+    - 'klayout/drc/gf180mcu.drc'
 
-UselessAssignment:
-  Description: Useless assignment to variable.
-  Enabled: false
+Metrics/BlockLength:
+  AllowedMethods: ['register']
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 25
 
 AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
   Exclude:
     - 'env/**/*'
   Include:

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>Report for drc_bjt</description>
+ <original-file/>
+ <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <top-cell>DRC_BJT</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>BJT.1</name>
+   <description>BJT.1 : Min. DRC_BJT overlap of DNWELL for NPN BJT: 0um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>BJT.2</name>
+   <description>BJT.2 : Min. DRC_BJT overlap of PCOM in Psub: 0um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>BJT.3</name>
+   <description>BJT.3 : Minimum space of DRC_BJT layer to unrelated COMP. : 0.1µm</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>DRC_BJT</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'BJT.1'</category>
+   <cell>DRC_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-158.754,-10.553;-158.754,6.247;-141.954,6.247;-141.954,-10.553)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BJT.2'</category>
+   <cell>DRC_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-88.926,7.05;-88.926,16.09;-68.361,16.09;-68.361,7.05)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BJT.2'</category>
+   <cell>DRC_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-48.382,7.05;-48.382,16.09;-27.817,16.09;-27.817,7.05)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BJT.2'</category>
+   <cell>DRC_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-48.382,31.27;-48.382,40.31;-27.827,40.31;-27.827,31.27)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BJT.3'</category>
+   <cell>DRC_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-27.722,14.995;-27.722,15.75)/(-27.817,15.781;-27.817,14.964)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BJT.3'</category>
+   <cell>DRC_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-68.266,14.995;-68.266,15.75)/(-68.361,15.781;-68.361,14.964)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'BJT.3'</category>
+   <cell>DRC_BJT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-68.266,39.215;-68.266,39.97)/(-68.361,40.001;-68.361,39.184)</value>
+   </values>
+  </item>
+ </items>
+</report-database>

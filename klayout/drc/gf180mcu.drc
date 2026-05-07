@@ -20,51 +20,25 @@
 # INPUT OPTIONS
 ################################################################################################
 #
-# Required:
-#   $input                  - Path to the input GDS/OASIS layout file
-#   $report                 - Path for the DRC report output file (.lyrdb format)
-#
-# Optional - Processing Control:
-#   $topcell                - Name of the top cell to process (if not specified, uses top cell)
-#   $run_mode               - Execution mode: 'tiling', 'deep', or flat (default: flat)
-#   $verbose                - Enable verbose output: 'true' or 'false' (default: false)
-#
-# Optional - Technology Options:
-#   $table_name             - Rule table name to run (default: 'main')
-#                             Options: dnwell, dnwell_split, nwell, nwell_split, lvpwell,
-#                                      lvpwell_split, nat, nat_split, ldnmos, ldnmos_split,
-#                                      ldpmos, ldpmos_split, main
-#   $metal_level            - Metal stack configuration (default: '5LM')
-#                             Options: '3LM', '4LM', '5LM', '6LM'
-#   $metal_top              - Top metal thickness (default: '11K')
-#   $mim_option             - MIM capacitor option (default: 'B')
-#                             Options: 'A' or 'B'
-#
-# Optional - Rule Enablement (true/false):
-#   $feol                   - Enable Front-End-Of-Line rules (default: false)
-#   $beol                   - Enable Back-End-Of-Line rules (default: false)
-#   $conn_drc               - Enable connectivity-based DRC rules (default: false)
-#   $split_deep             - Enable split deep rules (default: false)
-#   $offgrid                - Enable off-grid checking (default: false)
-#   $wedge                  - Enable wedge bonding rules (default: false)
-#   $ball                   - Enable ball bonding rules (default: false)
-#   $gold                   - Enable gold metallization rules (default: false)
-#   $dummy                  - Enable dummy fill rules (default: false)
-#   $dummy_no_sub_prev      - Disable dummy subtraction prevention (default: false)
-#   $slow_via               - Enable slow via rules (default: false)
-#
-# Example usage:
-#   klayout -b -r gf180mcu_drc.rb -rd input=design.gds -rd report=drc_results.lyrdb \
-#           -rd metal_level=5LM -rd feol=true -rd beol=true -rd conn_drc=true
+# See help:
+#   klayout -b -r gf180mcu.drc -rd help=true
 #
 ################################################################################################
 
 #=======================================================================================================================
 #--------------------------------------------- GF 0.18um MCU DRC RULE DECK ---------------------------------------------
 #=======================================================================================================================
-require 'time'
 require 'logger'
 require 'etc'
+require 'set'
+
+# ---- framework ----
+require_relative 'rule_framework'
+
+require_relative 'generic_layers'
+require_relative 'options'
+require_relative 'connectivity'
+require_relative 'helper'
 
 exec_start_time = Time.now
 
@@ -81,450 +55,123 @@ end
 logger.info("Starting running GF180MCU Klayout DRC runset on #{$input}")
 logger.info("Ruby Version for klayout: #{RUBY_VERSION}")
 
-if $input
-  if $topcell
-    source($input, $topcell)
-  else
-    source($input)
-  end
+# As klayout wraps the current code, it is not trivial to access variables from
+# the rule files. Hence we define a global here for the registry
+Object.const_set(:GF180_DRC_REGISTRY, RuleFramework::Registry.new)
+
+deck_paths = Dir[File.join(__dir__, 'rule_decks', '*.{rb}')]
+deck_paths.each { |p| load p }
+
+raw_params = {
+  help: $help,
+  input: $input,
+  report: $report,
+  topcell: $topcell,
+  verbose: $verbose,
+  workers: $workers,
+  threads: $threads,
+  run_mode: $run_mode,
+  variant: $variant,
+  mim_option: $mim_option,
+  metal_top: $metal_top,
+  metal_level: $metal_level,
+  decks: $decks
+}
+opts = GF180DRC::Options.from_klayout_params(raw_params: raw_params, registry: GF180_DRC_REGISTRY)
+opts.log_to(logger)
+
+required_parallel = [0, 30, 9]
+current = RBA::Application.instance.version.split('.').map(&:to_i)
+
+if (current <=> required_parallel).negative? && (opts.workers > 1)
+  warn('Running parallel workers with klayout version prior than 0.30.9 is likely to fail due ' \
+       'to https://github.com/KLayout/klayout/issues/2339 . ' \
+       'Continuing execution, but you have been warned.')
 end
 
-logger.info('Loading database to memory is complete.')
-
-if $report
-  logger.info("GF180MCU Klayout DRC runset output at: #{$report}")
-  report('DRC Run Report at', $report)
+if opts.topcell
+  source(opts.input.to_s, opts.topcell)
 else
-  layout_dir = Pathname.new(RBA::CellView.active.filename).parent.realpath
-  report_path = layout_dir.join('gf180_drc.lyrdb').to_s
-  logger.info("GF180MCU Klayout DRC runset output at default location: #{report_path}")
-  report('DRC Run Report at', report_path)
+  source(opts.input.to_s)
 end
 
-#================================================
-#------------------ SWITCHES --------------------
-#================================================
-logger.info('Evaluate switches.')
-
-def bool_check?(obj)
-  obj.to_s.downcase == 'true'
-end
-
-TABLE_NAME = $table_name || 'main'
-
-logger.info("table_name selected  #{TABLE_NAME}")
-
-# connectivity rules
-CONNECTIVITY_EN = bool_check?($conn_drc)
-
-conn_tables = %w[dnwell dnwell_split nwell nwell_split lvpwell
-                 lvpwell_split nat nat_split ldnmos ldnmos_split ldpmos ldpmos_split main]
-
-CONNECTIVITY_RULES = if conn_tables.include?(TABLE_NAME) && CONNECTIVITY_EN
-                       true
-                     else
-                       false
-                     end
-
-logger.info("CONNECTIVITY_RULES enabled: #{CONNECTIVITY_RULES}")
-
-# split deep rules
-SPLIT_DEEP = bool_check?($split_deep)
-
-# WEDGE
-WEDGE = bool_check?($wedge)
-
-logger.info("Wedge enabled: #{WEDGE}")
-
-# BALL
-BALL = bool_check?($ball)
-
-logger.info("Ball enabled: #{BALL}")
-
-# GOLD
-GOLD = bool_check?($gold)
-
-logger.info("Gold enabled: #{GOLD}")
-
-# MIM
-MIM_OPTION = $mim_option || 'B'
-
-logger.info("MIM Option selected: #{MIM_OPTION}")
-
-# OFFGRID
-OFFGRID = $offgrid != 'false'
-
-logger.info("Offgrid enabled:  #{OFFGRID}")
-
-# threads
-if $thr
-  threads($thr)
-else
-  thr ||= Etc.nprocessors
-  threads(thr)
-end
-
-logger.info("Number of threads to use #{$thr}")
-
-#=== PRINT DETAILS ===
-
-verbose(bool_check?($verbose))
-
-logger.info("Verbose mode: #{$verbose}")
+# threads use in klayout drc functions
+threads(opts.threads)
+# verbose
+verbose(opts.verbose?)
 
 # === TILING MODE ===
-case $run_mode
-## Tiling mode is for testing purpose only [Not used in run_drc.py]
+case opts.run_mode
 when 'tiling'
   tiles(500.um)
   tile_borders(10.um)
-  logger.info('Tiling  mode is enabled.')
-
 when 'deep'
-  #=== HIER MODE ===
   deep
-  logger.info("deep  mode is enabled for #{TABLE_NAME} table")
-else
-  #=== FLAT MODE ===
+when 'flat'
   flat
-  logger.info("flat  mode is enabled for #{TABLE_NAME} table")
+else
+  warn("Could not recognized run_mode: #{opts.run_mode}")
+  exit
 end
 
-# METAL_TOP
-METAL_TOP = $metal_top || '9K'
+chip_area = extent.sized(0.0).area
+logger.info("Total area of the design is #{chip_area} um^2.")
 
-logger.info("METAL_TOP Selected is #{METAL_TOP}")
-
-# METAL_LEVEL
-METAL_LEVEL = $metal_level || '5LM'
-
-logger.info("METAL_STACK Selected is #{METAL_LEVEL}")
-
-# FEOL
-FEOL = bool_check?($feol)
-
-logger.info("FEOL enabled: #{FEOL}")
-
-# BEOL
-BEOL = bool_check?($beol)
-
-logger.info("BEOL enabled: #{BEOL}")
-
-## SLOW_VIA
-SLOW_VIA = bool_check?($slow_via)
-
-logger.info("SLOW_VIA enabled: #{SLOW_VIA}")
+ctx = RuleFramework::Context.new(drc_engine: self, logger: logger, options: opts)
+ctx.extend(GF180DRC::OptionHelpers)
 
 #================================================
 #------------- LAYERS DEFINITIONS ---------------
 #================================================
 
-# %include rule_decks/layers_def.drc
-
-#=====================================================
-#------------- BASE LAYERS DERIVATIONS ---------------
-#=====================================================
-
-dnwell_n        = dnwell.not(lvpwell)
-dnwell_p        = dnwell.and(lvpwell)
-
-all_nwell       = dnwell_n.join(nwell)
-
-ncomp           = comp.and(nplus)
-pcomp           = comp.and(pplus)
-tgate           = poly2.and(comp).not(res_mk)
-
-nactive         = ncomp.not(all_nwell)
-ngate           = nactive.and(tgate)
-nsd             = nactive.interacting(ngate).not(ngate).not(res_mk)
-ptap            = pcomp.not(all_nwell).not(res_mk)
-
-pactive         = pcomp.and(all_nwell)
-pgate           = pactive.and(tgate)
-psd             = pactive.interacting(pgate).not(pgate).not(res_mk)
-ntap            = ncomp.and(all_nwell).not(res_mk)
-
-ngate_dn        = ngate.and(dnwell_p)
-ptap_dn         = ptap.and(dnwell_p).outside(well_diode_mk)
-
-pgate_dn        = pgate.and(dnwell_n)
-ntap_dn         = ntap.and(dnwell_n)
-
-psd_dn          = pcomp.and(dnwell_n).interacting(pgate_dn).not(pgate_dn).not(res_mk)
-nsd_dn          = ncomp.and(dnwell_p).interacting(ngate_dn).not(ngate_dn).not(res_mk)
-
-natcomp        	= nat.and(comp)
-
-# Gate
-nom_gate = tgate.not(dualgate)
-thick_gate = tgate.and(dualgate)
-
-ngate_56v = ngate.and(dualgate)
-pgate_56v = pgate.and(dualgate)
-
-ngate_5v = ngate_56v.and(v5_xtor)
-pgate_5v = pgate_56v.and(v5_xtor)
-
-ngate_6v = ngate_56v.not(v5_xtor)
-pgate_6v = pgate_56v.not(v5_xtor)
-
-# DNWELL
-dnwell_3p3v = dnwell.not_interacting(v5_xtor).not_interacting(dualgate)
-dnwell_56v = dnwell.overlapping(dualgate)
-
-# LVPWELL
-lvpwell_dn = lvpwell.interacting(dnwell)
-lvpwell_out = lvpwell.not_interacting(dnwell)
-
-lvpwell_dn3p3v = lvpwell.and(dnwell_3p3v)
-lvpwell_dn56v = lvpwell.and(dnwell_56v)
-
-# NWELL
-nwell_dn = nwell.interacting(dnwell)
-nwell_n_dn = nwell.not_interacting(dnwell)
+GF180DRC::GenericLayers.generate_generic_layers(ctx)
 
 #================================================
 #------------- LAYERS CONNECTIONS ---------------
 #================================================
+CONNECTIVITY_RULES = %w[antenna dnwell ldnmos ldpmos lvpwell nat nwell].to_set.freeze
 
-if CONNECTIVITY_RULES
-  logger.info('Construct connectivity for the design.')
-
-  connect(dnwell, ncomp)
-  connect(lvpwell_out, pcomp)
-  connect(lvpwell_dn, pcomp)
-  connect(nwell, ncomp)
-  connect(mvsd, ncomp)
-  connect(mvpsd, pcomp)
-
-  if contact_tables.include?(TABLE_NAME)
-    connect(ncomp,  contact)
-    connect(pcomp,  contact)
-    connect(natcomp, contact)
-    connect(contact, metal1)
-  end
-
-  if via1_tables.include?(TABLE_NAME)
-    connect(metal1,  via1)
-    connect(via1,    metal2)
-  end
-
-  case METAL_LEVEL
-  when '3LM', '4LM', '5LM', '6LM'
-    if via2_tables.include?(TABLE_NAME)
-      connect(metal2,  via2)
-      connect(via2,    metal3)
+connectivity_required =
+  opts.decks.any? do |deck|
+    deck.tags.any? do |t|
+      CONNECTIVITY_RULES.include?(t)
     end
   end
-  case METAL_LEVEL
-  when '4LM', '5LM', '6LM'
-    connect(metal3,  via3)
-    connect(via3,    metal4)
-  end
-  case METAL_LEVEL
-  when '5LM', '6LM'
-    connect(metal4,  via4)
-    connect(via4,    metal5)
-  end
-  case METAL_LEVEL
-  when '6LM'
-    connect(metal5,  via5)
-    connect(via5,    metaltop)
-  end
-end
 
-#================================================
-#------------ PRE-DEFINED FUNCTIONS -------------
-#================================================
+if connectivity_required
+  logger.info('Rule requiring connectivity detected, constructing connectivity for the design.')
 
-def unconn_errors_check(net1, net2, unconnected_errors)
-  if !net1 || !net2
-    logger.error("Connectivity check encountered 2 nets that doesn't exist. Potential issue in klayout...")
-  elsif net1.circuit != net2.circuit || net1.cluster_id != net2.cluster_id
-    # unconnected
-    unconnected_errors.data.insert(ep)
-  end
-  unconnected_errors
-end
+  GF180DRC::Connectivity.build(ctx, self)
 
-def get_nets(_data, layer1, layer2, edge_pairs)
-  net1 = l2n_data.probe_net(layer1.data, edge_pairs.first.p1)
-  net2 = l2n_data.probe_net(layer2.data, edge_pairs.second.p1)
-  [net1, net2]
-end
-
-def conn_space_viol(layer, conn_val, mode)
-  connected_output = layer.space(conn_val.um, mode).polygons(0.001.um)
-  singularity_errors = layer.space(0.001.um, mode).polygons(0.001.um)
-  [connected_output, singularity_errors]
-end
-
-def conn_space_check(layer, not_conn_val, mode)
-  unconnected_errors_unfiltered = layer.space(not_conn_val.um, mode)
-  connected_output, singularity_errors = conn_space_viol(layer, conn_val, mode)
-  # Filter out the errors arising from the same net
-  unconnected_errors = DRC::DRCLayer.new(self, RBA::EdgePairs.new)
-  unconnected_errors_unfiltered.data.each do |ep|
-    net1, net2 = get_nets(l2n_data, layer, layer, ep)
-    unconnected_errors = unconn_errors_check(net1, net2, unconnected_errors)
-  end
-  unconnected_output = unconnected_errors.polygons.join(singularity_errors)
-  [connected_output, unconnected_output]
-end
-
-def conn_space_nets(layer, conn_val, not_conn_val, mode)
-  nets = layer.nets
-  connected_output = nets.space(conn_val.um, mode, props_eq).polygons(0.001.um)
-  singularity_errors = nets.space(0.001.um, mode).polygons(0.001.um)
-  unconnected_output = nets.space(not_conn_val.um, mode, props_ne).polygons(0.001.um).join(singularity_errors)
-  [connected_output, unconnected_output]
-end
-
-def conn_space(layer, conn_val, not_conn_val, mode)
-  if layer.respond_to?(:nets) # KLayout version (>=0.28.4) which supports "nets"
-    connected_output, unconnected_output = conn_space_nets(layer, conn_val, not_conn_val, mode)
-  else
-    raise 'ERROR : Wrong connectivity implementation' if conn_val > not_conn_val
-
-    connected_output, unconnected_output = conn_space_check(layer, not_conn_val, mode)
-  end
-  [connected_output, unconnected_output]
-end
-
-def sep_viol_nets(layer1, layer2, conn_val, not_conn_val, mode)
-  connected_output   = layer1.nets.separation(layer2.nets, conn_val.um,     mode, props_eq).polygons(0.001.um)
-  unconnected_output = layer1.nets.separation(layer2.nets, not_conn_val.um, mode, props_ne).polygons(0.001.um)
-  [connected_output, unconnected_output]
-end
-
-def unconn_separation_check(layer1, layer2, not_conn_val, mode)
-  unconnected_errors_unfiltered = layer1.separation(layer2, not_conn_val.um, mode)
-  # Filter out the errors arising from the same net
-  unconnected_errors = DRC::DRCLayer.new(self, RBA::EdgePairs.new)
-  unconnected_errors_unfiltered.data.each do |ep|
-    net1, net2 = get_nets(l2n_data, layer1, layer2, ep)
-    unconnected_errors = unconn_errors(net1, net2, unconnected_errors)
-  end
-  unconnected_errors
-end
-
-def conn_separation(layer1, layer2, conn_val, not_conn_val, mode)
-  if layer1.respond_to?(:nets) # KLayout version (>=0.28.4) which supports "nets"
-    connected_output, unconnected_output = sep_viol_nets(layer1, layer2, conn_val, not_conn_val, mode)
-  else
-    raise 'ERROR : Wrong connectivity implementation' if conn_val > not_conn_val
-
-    connected_output = layer1.separation(layer2, conn_val.um, mode).polygons(0.001.um)
-    unconnected_errors = unconn_separation_check(layer1, layer2, not_conn_val, mode)
-    unconnected_output = unconnected_errors.polygons(0.001.um)
-  end
-  [connected_output, unconnected_output]
-end
-
-def size_overunder_in_layers(large_layer, size_layer, size_value)
-  out_layer = DRC::DRCLayer.new(self, RBA::Region.new)
-  large_layer.data.each do |ep|
-    curr_large_layer = DRC::DRCLayer.new(self, RBA::Region.new(ep))
-    curr_large_layer = curr_large_layer.and(size_layer)
-    curr_large_layer = curr_large_layer.sized(size_value, 'square_limit').merged.sized(-size_value, 'square_limit')
-    out_layer.data.insert(curr_large_layer.data)
-  end
-  out_layer
-end
-
-# === IMPLICIT EXTRACTION ===
-if CONNECTIVITY_RULES
   logger.info('Connectivity rules enabled, Netlist object will be generated.')
   netlist
+else
+  logger.info('No rules requiring connectivity, skipping connectivity generation.')
 end
-
-# === LAYOUT EXTENT ===
-CHIP = extent.sized(0.0)
-logger.info("Total area of the design is #{CHIP.area} um^2.")
 
 #================================================
 #----------------- MAIN RUNSET ------------------
 #================================================
+setup_end_time = Time.now
+run_time = setup_end_time - exec_start_time
+logger.info("# Setup took #{run_time} seconds")
 
+# ---- Execute decks ----
 logger.info('Starting GF180MCU DRC rules.')
-logger.info('Running all FEOL rules') if FEOL
 
-logger.info('Running all BEOL rules') if BEOL
+runner = if opts.workers > 1
+           RuleFramework::Runners::Parallel.new(ctx, num_workers: opts.workers)
+         else
+           RuleFramework::Runners::Sequential.new(ctx)
+         end
 
-# NOTE: once the antenna and density checks are adapted to be regular rules,
-# instead of standalone ones, it would make sense to remove rule_decks/main.drc,
-# and to grab the files via globbing. The `run_drc.py` should also be updated
-# or deprecated to allow this.
-rule_files =
-  [
-    './rule_decks/comp.drc',
-    './rule_decks/contact.drc',
-    './rule_decks/contact_split.drc',
-    './rule_decks/dnwell.drc',
-    './rule_decks/dnwell_split.drc',
-    './rule_decks/drc_bjt.drc',
-    './rule_decks/dualgate.drc',
-    './rule_decks/efuse.drc',
-    './rule_decks/esd.drc',
-    './rule_decks/geom.drc',
-    './rule_decks/hres.drc',
-    './rule_decks/ldnmos.drc',
-    './rule_decks/ldnmos_split.drc',
-    './rule_decks/ldpmos.drc',
-    './rule_decks/ldpmos_split.drc',
-    './rule_decks/lres.drc',
-    './rule_decks/lvpwell.drc',
-    './rule_decks/lvpwell_split.drc',
-    './rule_decks/lvs_bjt.drc',
-    './rule_decks/mcell.drc',
-    './rule_decks/metal1.drc',
-    './rule_decks/metal1_split.drc',
-    './rule_decks/metal2.drc',
-    './rule_decks/metal3.drc',
-    './rule_decks/metal4.drc',
-    './rule_decks/metal5.drc',
-    './rule_decks/metaltop_30k.drc',
-    './rule_decks/metaltop.drc',
-    './rule_decks/mim_a.drc',
-    './rule_decks/mim_b.drc',
-    './rule_decks/nat.drc',
-    './rule_decks/nat_split.drc',
-    './rule_decks/nplus.drc',
-    './rule_decks/nwell.drc',
-    './rule_decks/nwell_split.drc',
-    './rule_decks/otp_mk.drc',
-    './rule_decks/poly2.drc',
-    './rule_decks/pplus.drc',
-    './rule_decks/pres.drc',
-    './rule_decks/sab.drc',
-    './rule_decks/sram_3p3.drc',
-    './rule_decks/sram_5p0.drc',
-    './rule_decks/via1.drc',
-    './rule_decks/via1_split.drc',
-    './rule_decks/via2.drc',
-    './rule_decks/via2_split.drc',
-    './rule_decks/via3.drc',
-    './rule_decks/via3_split.drc',
-    './rule_decks/via4.drc',
-    './rule_decks/via4_split.drc',
-    './rule_decks/via5.drc',
-    './rule_decks/ymtp_mk.drc',
-    './rule_decks/dummy_exclude.drc'
-  ]
+runner.run(opts.decks)
 
-rule_files_abs = []
-rule_files.each do |element|
-  rule_files_abs.push(File.join(File.dirname(__FILE__), element))
-end
-
-rule_files_abs = rule_files_abs.select { |str| str.include?(TABLE_NAME) } unless TABLE_NAME == 'main'
-
-rule_files_abs.each do |element|
-  # rubocop:disable Security/Eval
-  eval(File.read(element), binding, element)
-  # rubocop:enable Security/Eval
-end
-
+status = RuleFramework::ReportStatus.new(ctx)
+status.parse_report
+status.log_status
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
-logger.info("#{TABLE_NAME} DRC Total Run time #{run_time} seconds")
+logger.info("# DRC Total Run time #{run_time} seconds")
+
+exit(status.success? ? 0 : 1)

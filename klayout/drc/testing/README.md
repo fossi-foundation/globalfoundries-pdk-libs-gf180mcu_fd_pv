@@ -1,72 +1,81 @@
-# Globalfoundries 180nm MCU DRC Testing
+# DRC Testing Framework
 
-Explains how to test GF180nm DRC rule decks.
+Lightweight pytest-based framework for DRC testing with automatic test discovery and flexible configuration.
 
-## Folder Structure
+The tests are autodetected from the `unit` directory. Each file found there is DRC checked, running the file deck specified by its filename, before the first `-` (e.g: `antenna-1` -> run `antenna` tag)
+The resulting `.lyrdb` file is then compared to its "golden" file, also stored in the `unit` directory.
+The comparison happens on xml level, and checks that each rule success or violation happen in both files using the geometric marker (`polygon`, `edge`, ...)
+The `.yaml` files defines extra configuration option to pass to `gf180mcu.drc` for this test.
 
-```text
-📁 testing
- ┣ 📜README.md                       This file to document the regression.
- ┣ 📜run_regression.py               Main regression script used for DRC testing.
- ┣ 📁testcases                       All testcases used in regression.
- ```
-
-## **Prerequisites**
-You need the following set of tools installed to be able to run the regression:
-- Python 3.6+
-- KLayout 0.28.4+
-
-We have tested this using the following setup:
-- Python 3.9.12
-- KLayout 0.28.5
-
-## **Usage**
+## Quick Start
 
 ```bash
-    run_regression.py (--help| -h)
-    run_regression.py [--mp=<num>] [--run_name=<run_name>] [--table_name=<table_name>]
+# Install dependencies
+pip install pytest pytest-xdist # pytest-xdist is optional
+
+# Run all tests
+pytest
+
+# Run with parallel execution
+pytest -n auto
 ```
 
-Example:
+## Directory Structure
+
+```
+project_root/
+├── tests/
+│   ├── conftest.py              # Pytest configuration
+│   ├── test_drc_designs.py      # Test definitions
+│   └── drc_runner.py            # Core logic
+├── unit/                        # Test data
+│   │ 
+│   ├── antenna-1.gds.gz
+│   ├── antenna-1.lyrdb
+│   ├── antenna-1.yaml
+│   └── ...
+└── pytest.ini                   # Pytest settings
+```
+
+## Configuration
+
+### Command-Line Options
 
 ```bash
-    python3 run_regression.py --table=dualgate --run_name=dualgate_regression
+# Specify directories
+pytest --unit-dir=unit --drc-script-path=myfile.drc --output-dir=results
+
+# Filter by pattern
+pytest -k "well" # All tests containing the "nwell" substring
+
+# Parallel execution
+pytest -n auto              # Use all CPUs
+pytest -n 4                 # Use 4 workers
 ```
 
-### Options
+## Usage Examples
 
-- `--help -h`                           Print this help message.
+### Run All Tests
+```bash
+pytest -n auto
+```
 
-- `--mp=<num>`                          The number of threads used in run.
+### Test Single Device
+```bash
+pytest -k "npn_00p54x02p00"
+```
 
-- `--run_name=<run_name>`               Select your run name.
-    
-- `--table_name=<table_name>`           Target specific table.
+### Verbose Output
+```bash
+pytest tests/ -vv
+```
 
-## **DRC Outputs**
+### Stop on First Failure
+```bash
+pytest -x
+```
 
-You could find the regression run results at your run directory if you previously specified it through `--run_name=<run_name>`. Default path of run directory is `unit_tests_<date>_<time>` in current directory.
-
-### Folder Structure of regression run results
-
-```text
-📁 unit_tests_<date>_<time>
- ┣ 📜 unit_tests_<date>_<time>.log
- ┣ 📜 all_test_cases_results.csv
- ┗ 📜 rule_deck_rules.csv
- ┗ 📁 <table_name>
-    ┣ 📜 drc_run_<date>_<time>.log  
-    ┣ 📜 <table_name>_drc.log
-    ┣ 📜 <table_name>_main_markers_merged_analysis.log
-    ┣ 📜 <table_name>.drc                     
-    ┣ 📜 <table_name>_main_analysis.drc  
-    ┣ 📜 <table_name>_main.lyrdb        
-    ┣ 📜 <table_name>_main_markers_merged_final.lyrdb
-    ┣ 📜 <table_name>_main_markers.gds  
-    ┣ 📜 <table_name>_main_markers_merged.gds
- ```
-
-The result is a database file (`<table_name>_main_markers_merged_final.lyrdb`) contains all violations. 
-You could view it on your file using: `klayout <table_name>_main_markers_merged.gds -m <table_name>_main_markers_merged_final.lyrdb`, or you could view it on your gds file via marker browser option in tools menu using klayout GUI as shown below.
-
-![image](https://user-images.githubusercontent.com/91015308/219004873-be7c1e81-7085-4e82-8cd4-8303bc021e13.png)
+### Re-run Failed Tests
+```bash
+pytest --lf
+```
