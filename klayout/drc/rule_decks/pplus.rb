@@ -179,7 +179,7 @@ GF180_DRC_REGISTRY.register(
   # Rule PP.5di: Extension beyond COMP: For Outside DNWELL
   ## (i) For Pplus to NWELL space >= 0.43um for Pfield or LVPWELL tap. is 0.02µm
   logger.info('Executing rule PP.5di')
-  pp_5d_background = pplus.outside(dnwell).edges
+  pp_5d_background = pplus.not_interacting(guard_ring_mk).outside(dnwell).edges
   pp_5d_pcomp = pcomp.outside(dnwell).edges
   pp_5di_foreground = pp_5d_pcomp.not(nplus_edges).not(nwell_n_dn_sized_out)
   pp5di_l1 = pp_5d_background.enclosing(pp_5di_foreground, 0.02.um, projection)
