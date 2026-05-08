@@ -34,7 +34,13 @@ module GF180DRC
       'C' => { metal_top: '9K',  mim_option: 'B', metal_level: '5LM' },
       'D' => { metal_top: '11K', mim_option: 'B', metal_level: '5LM' },
       'E' => { metal_top: '9K',  mim_option: 'B', metal_level: '6LM' },
-      'F' => { metal_top: '9K',  mim_option: 'A', metal_level: '6LM' }
+      'F' => { metal_top: '9K',  mim_option: 'A', metal_level: '6LM' },
+      'gf180mcuA' => { metal_top: '30K', mim_option: 'A', metal_level: '3LM' },
+      'gf180mcuB' => { metal_top: '11K', mim_option: 'B', metal_level: '4LM' },
+      'gf180mcuC' => { metal_top: '9K',  mim_option: 'B', metal_level: '5LM' },
+      'gf180mcuD' => { metal_top: '11K', mim_option: 'B', metal_level: '5LM' },
+      'gf180mcuE' => { metal_top: '9K',  mim_option: 'B', metal_level: '6LM' },
+      'gf180mcuF' => { metal_top: '9K',  mim_option: 'A', metal_level: '6LM' }
     }.freeze
 
     METAL_LEVEL_MAP = {
@@ -296,7 +302,7 @@ module GF180DRC
       run_mode: 'deep',
 
       # technology selection
-      variant: 'C',
+      variant: 'gf180mcuD',
 
       # Optional explicit overrides; nil means "use variant-provided default"
       mim_option: nil,
