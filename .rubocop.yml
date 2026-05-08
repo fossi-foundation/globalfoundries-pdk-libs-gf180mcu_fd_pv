@@ -32,3 +32,4 @@ AllCops:
   Include:
     - '**/*.rb'
     - '**/*.drc'
+    - '**/*.lvs'
