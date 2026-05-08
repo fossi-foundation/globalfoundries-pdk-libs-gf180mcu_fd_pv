@@ -15,6 +15,10 @@ Style/GlobalVars:
     - 'klayout/drc/gf180mcu.drc'
     - 'klayout/lvs/gf180mcu.lvs'
 
+Lint/UselessAssignment:
+  Exclude:
+    - 'klayout/lvs/rule_decks/**'
+
 Metrics/BlockLength:
   AllowedMethods: ['register']
 

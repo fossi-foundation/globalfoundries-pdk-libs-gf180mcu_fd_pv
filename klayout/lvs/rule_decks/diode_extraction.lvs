@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ################################################################################################
 # Copyright 2023 GlobalFoundries PDK Authors
 #
@@ -26,11 +28,11 @@ extract_devices(diode('diode_nd2ps_03v3'), { 'N' => diode_nd2ps_03v3_terminal_n,
 
 # diode_nd2ps_03v3_dn diode
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting diode_nd2ps_03v3_dn diode')
-    extract_devices(diode('diode_nd2ps_03v3_dn'), { 'N' => diode_nd2ps_03v3_dn_terminal_n, 'P' => lvpwell_con })
+  logger.info('Extracting diode_nd2ps_03v3_dn diode')
+  extract_devices(diode('diode_nd2ps_03v3_dn'), { 'N' => diode_nd2ps_03v3_dn_terminal_n, 'P' => lvpwell_con })
 else
-    logger.info('Extracting diode_nd2ps_03v3_dn diode as diode_nd2ps_03v3')
-    extract_devices(diode('diode_nd2ps_03v3'), { 'N' => diode_nd2ps_03v3_dn_terminal_n, 'P' => lvpwell_con })
+  logger.info('Extracting diode_nd2ps_03v3_dn diode as diode_nd2ps_03v3')
+  extract_devices(diode('diode_nd2ps_03v3'), { 'N' => diode_nd2ps_03v3_dn_terminal_n, 'P' => lvpwell_con })
 end
 
 # diode_nd2ps_06v0 diode
@@ -39,11 +41,11 @@ extract_devices(diode('diode_nd2ps_06v0'), { 'N' => diode_nd2ps_06v0_terminal_n,
 
 # diode_nd2ps_06v0_dn diode
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting diode_nd2ps_06v0_dn diode')
-    extract_devices(diode('diode_nd2ps_06v0_dn'), { 'N' => diode_nd2ps_06v0_dn_terminal_n, 'P' => lvpwell_con })
+  logger.info('Extracting diode_nd2ps_06v0_dn diode')
+  extract_devices(diode('diode_nd2ps_06v0_dn'), { 'N' => diode_nd2ps_06v0_dn_terminal_n, 'P' => lvpwell_con })
 else
-    logger.info('Extracting diode_nd2ps_06v0_dn diode as diode_nd2ps_06v0')
-    extract_devices(diode('diode_nd2ps_06v0'), { 'N' => diode_nd2ps_06v0_dn_terminal_n, 'P' => lvpwell_con })
+  logger.info('Extracting diode_nd2ps_06v0_dn diode as diode_nd2ps_06v0')
+  extract_devices(diode('diode_nd2ps_06v0'), { 'N' => diode_nd2ps_06v0_dn_terminal_n, 'P' => lvpwell_con })
 end
 
 # diode_pd2nw_03v3 diode
@@ -52,13 +54,13 @@ extract_devices(diode('diode_pd2nw_03v3'), { 'N' => diode_pd2nw_03v3_terminal_n,
 
 # diode_pd2nw_03v3_dn diode
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting diode_pd2nw_03v3_dn diode')
-    extract_devices(diode('diode_pd2nw_03v3_dn'),
-                    { 'N' => diode_pd2nw_03v3_dn_terminal_n, 'P' => diode_pd2nw_03v3_dn_terminal_p })
+  logger.info('Extracting diode_pd2nw_03v3_dn diode')
+  extract_devices(diode('diode_pd2nw_03v3_dn'),
+                  { 'N' => diode_pd2nw_03v3_dn_terminal_n, 'P' => diode_pd2nw_03v3_dn_terminal_p })
 else
-    logger.info('Extracting diode_pd2nw_03v3_dn diode as diode_pd2nw_03v3')
-    extract_devices(diode('diode_pd2nw_03v3'),
-                    { 'N' => diode_pd2nw_03v3_dn_terminal_n, 'P' => diode_pd2nw_03v3_dn_terminal_p })
+  logger.info('Extracting diode_pd2nw_03v3_dn diode as diode_pd2nw_03v3')
+  extract_devices(diode('diode_pd2nw_03v3'),
+                  { 'N' => diode_pd2nw_03v3_dn_terminal_n, 'P' => diode_pd2nw_03v3_dn_terminal_p })
 end
 
 # diode_pd2nw_06v0 diode
@@ -67,13 +69,13 @@ extract_devices(diode('diode_pd2nw_06v0'), { 'N' => diode_pd2nw_06v0_terminal_n,
 
 # diode_pd2nw_06v0_dn diode
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting diode_pd2nw_06v0_dn diode')
-    extract_devices(diode('diode_pd2nw_06v0_dn'),
-                    { 'N' => diode_pd2nw_06v0_dn_terminal_n, 'P' => diode_pd2nw_06v0_dn_terminal_p })
+  logger.info('Extracting diode_pd2nw_06v0_dn diode')
+  extract_devices(diode('diode_pd2nw_06v0_dn'),
+                  { 'N' => diode_pd2nw_06v0_dn_terminal_n, 'P' => diode_pd2nw_06v0_dn_terminal_p })
 else
-    logger.info('Extracting diode_pd2nw_06v0_dn diode as diode_pd2nw_06v0')
-    extract_devices(diode('diode_pd2nw_06v0'),
-                    { 'N' => diode_pd2nw_06v0_dn_terminal_n, 'P' => diode_pd2nw_06v0_dn_terminal_p })
+  logger.info('Extracting diode_pd2nw_06v0_dn diode as diode_pd2nw_06v0')
+  extract_devices(diode('diode_pd2nw_06v0'),
+                  { 'N' => diode_pd2nw_06v0_dn_terminal_n, 'P' => diode_pd2nw_06v0_dn_terminal_p })
 end
 
 # diode_nw2ps_03v3 diode

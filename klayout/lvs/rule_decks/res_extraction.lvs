@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ################################################################################################
 # Copyright 2023 GlobalFoundries PDK Authors
 #
@@ -30,13 +32,13 @@ extract_devices(resistor_with_bulk('nplus_u', 60, BResistor), { 'R' => nplus_u_l
 
 # NPLUS_U_DW
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting NPLUS_U_DW device')
-    extract_devices(resistor_with_bulk('nplus_u_dw', 60, BResistor),
-                    { 'R' => nplus_u_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
+  logger.info('Extracting NPLUS_U_DW device')
+  extract_devices(resistor_with_bulk('nplus_u_dw', 60, BResistor),
+                  { 'R' => nplus_u_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
 else
-    logger.info('Extracting NPLUS_U_DW device as NPLUS_U')
-    extract_devices(resistor_with_bulk('nplus_u', 60, BResistor),
-                    { 'R' => nplus_u_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
+  logger.info('Extracting NPLUS_U_DW device as NPLUS_U')
+  extract_devices(resistor_with_bulk('nplus_u', 60, BResistor),
+                  { 'R' => nplus_u_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
 end
 
 # PPLUS_U
@@ -46,13 +48,13 @@ extract_devices(resistor_with_bulk('pplus_u', 185, BResistor),
 
 # PPLUS_U_DW
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting PPLUS_U_DW device')
-    extract_devices(resistor_with_bulk('pplus_u_dw', 185, BResistor),
-                    { 'R' => pplus_u_dw_layer, 'C' => pplus_dw_cont, 'W' => dnwell })
+  logger.info('Extracting PPLUS_U_DW device')
+  extract_devices(resistor_with_bulk('pplus_u_dw', 185, BResistor),
+                  { 'R' => pplus_u_dw_layer, 'C' => pplus_dw_cont, 'W' => dnwell })
 else
-    logger.info('Extracting PPLUS_U_DW device as PPLUS_U')
-    extract_devices(resistor_with_bulk('pplus_u', 185, BResistor),
-                    { 'R' => pplus_u_dw_layer, 'C' => pplus_dw_cont, 'W' => dnwell })
+  logger.info('Extracting PPLUS_U_DW device as PPLUS_U')
+  extract_devices(resistor_with_bulk('pplus_u', 185, BResistor),
+                  { 'R' => pplus_u_dw_layer, 'C' => pplus_dw_cont, 'W' => dnwell })
 end
 
 # NPLUS_S
@@ -61,13 +63,13 @@ extract_devices(resistor_with_bulk('nplus_s', 6.3, BResistor), { 'R' => nplus_s_
 
 # NPLUS_S_DW
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting NPLUS_S_DW device')
-    extract_devices(resistor_with_bulk('nplus_s_dw', 6.3, BResistor),
-                    { 'R' => nplus_s_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
+  logger.info('Extracting NPLUS_S_DW device')
+  extract_devices(resistor_with_bulk('nplus_s_dw', 6.3, BResistor),
+                  { 'R' => nplus_s_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
 else
-    logger.info('Extracting NPLUS_S_DW device NPLUS_S')
-    extract_devices(resistor_with_bulk('nplus_s', 6.3, BResistor),
-                    { 'R' => nplus_s_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
+  logger.info('Extracting NPLUS_S_DW device NPLUS_S')
+  extract_devices(resistor_with_bulk('nplus_s', 6.3, BResistor),
+                  { 'R' => nplus_s_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
 end
 
 # PPLUS_S
@@ -77,13 +79,13 @@ extract_devices(resistor_with_bulk('pplus_s', 7, BResistor),
 
 # PPLUS_S_DW
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting PPLUS_S_DW device')
-    extract_devices(resistor_with_bulk('pplus_s_dw', 7, BResistor),
-                    { 'R' => pplus_s_dw_layer, 'C' => pplus_dw_cont, 'W' => dnwell })
+  logger.info('Extracting PPLUS_S_DW device')
+  extract_devices(resistor_with_bulk('pplus_s_dw', 7, BResistor),
+                  { 'R' => pplus_s_dw_layer, 'C' => pplus_dw_cont, 'W' => dnwell })
 else
-    logger.info('Extracting PPLUS_S_DW device as PPLUS_S')
-    extract_devices(resistor_with_bulk('pplus_s_dw', 7, BResistor),
-                    { 'R' => pplus_s_dw_layer, 'C' => pplus_dw_cont, 'W' => dnwell })
+  logger.info('Extracting PPLUS_S_DW device as PPLUS_S')
+  extract_devices(resistor_with_bulk('pplus_s', 7, BResistor),
+                  { 'R' => pplus_s_dw_layer, 'C' => pplus_dw_cont, 'W' => dnwell })
 end
 
 # NWELL
@@ -100,78 +102,86 @@ extract_devices(resistor_with_bulk('pwell', 1000, BResistor), { 'R' => pwell_res
 
 # NPOLYF_U SUB
 logger.info('Extracting NPOLYF_U SUB device')
-extract_devices(resistor_with_bulk('npolyf_u', 310, BResistor), { 'R' => npolyf_u_sub_layer, 'C' => poly2_con, 'W' => sub })
+extract_devices(resistor_with_bulk('npolyf_u', 310, BResistor),
+                { 'R' => npolyf_u_sub_layer, 'C' => poly2_con, 'W' => sub })
 
 # NPOLYF_U NWELL
 logger.info('Extracting NPOLYF_U LVPWELL device')
-extract_devices(resistor_with_bulk('npolyf_u', 310, BResistor), { 'R' => npolyf_u_nwell_layer, 'C' => poly2_con, 'W' => nwell_con })
+extract_devices(resistor_with_bulk('npolyf_u', 310, BResistor),
+                { 'R' => npolyf_u_nwell_layer, 'C' => poly2_con, 'W' => nwell_con })
 
 # NPOLYF_U_DW
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting NPOLYF_U_DW device')
-    extract_devices(resistor_with_bulk('npolyf_u_dw', 310, BResistor),
-                    { 'R' => npolyf_u_dw_layer, 'C' => poly2_con, 'W' => dnwell })
+  logger.info('Extracting NPOLYF_U_DW device')
+  extract_devices(resistor_with_bulk('npolyf_u_dw', 310, BResistor),
+                  { 'R' => npolyf_u_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 else
-    logger.info('Extracting NPOLYF_U_DW device NPOLYF_U')
-    extract_devices(resistor_with_bulk('npolyf_u', 310, BResistor),
-                    { 'R' => npolyf_u_dw_layer, 'C' => poly2_con, 'W' => dnwell })
+  logger.info('Extracting NPOLYF_U_DW device NPOLYF_U')
+  extract_devices(resistor_with_bulk('npolyf_u', 310, BResistor),
+                  { 'R' => npolyf_u_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 end
 
 # PPOLYF_U SUB
 logger.info('Extracting PPOLYF_U SUB device')
-extract_devices(resistor_with_bulk('ppolyf_u', 350, BResistor), { 'R' => ppolyf_u_sub_layer, 'C' => poly2_con, 'W' => sub })
+extract_devices(resistor_with_bulk('ppolyf_u', 350, BResistor),
+                { 'R' => ppolyf_u_sub_layer, 'C' => poly2_con, 'W' => sub })
 
 # PPOLYF_U NWELL
 logger.info('Extracting PPOLYF_U NWELL device')
-extract_devices(resistor_with_bulk('ppolyf_u', 350, BResistor), { 'R' => ppolyf_u_nwell_layer, 'C' => poly2_con, 'W' => nwell_con })
+extract_devices(resistor_with_bulk('ppolyf_u', 350, BResistor),
+                { 'R' => ppolyf_u_nwell_layer, 'C' => poly2_con, 'W' => nwell_con })
 
 # PPOLYF_U_DW
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting PPOLYF_U_DW device')
-    extract_devices(resistor_with_bulk('ppolyf_u_dw', 350, BResistor),
-                    { 'R' => ppolyf_u_dw_layer, 'C' => poly2_con, 'W' => dnwell })
+  logger.info('Extracting PPOLYF_U_DW device')
+  extract_devices(resistor_with_bulk('ppolyf_u_dw', 350, BResistor),
+                  { 'R' => ppolyf_u_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 else
-    logger.info('Extracting PPOLYF_U_DW device as PPOLYF_U')
-    extract_devices(resistor_with_bulk('ppolyf_u', 350, BResistor),
-                    { 'R' => ppolyf_u_dw_layer, 'C' => poly2_con, 'W' => dnwell })
+  logger.info('Extracting PPOLYF_U_DW device as PPOLYF_U')
+  extract_devices(resistor_with_bulk('ppolyf_u', 350, BResistor),
+                  { 'R' => ppolyf_u_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 end
 
 # NPOLYF_S SUB
 logger.info('Extracting NPOLYF_S SUB device')
-extract_devices(resistor_with_bulk('npolyf_s', 6.8, BResistor), { 'R' => npolyf_s_sub_layer, 'C' => poly2_con, 'W' => sub })
+extract_devices(resistor_with_bulk('npolyf_s', 6.8, BResistor),
+                { 'R' => npolyf_s_sub_layer, 'C' => poly2_con, 'W' => sub })
 
 # NPOLYF_S NWELL
 logger.info('Extracting NPOLYF_S NWELL device')
-extract_devices(resistor_with_bulk('npolyf_s', 6.8, BResistor), { 'R' => npolyf_s_nwell_layer, 'C' => poly2_con, 'W' => nwell_con })
+extract_devices(resistor_with_bulk('npolyf_s', 6.8, BResistor),
+                { 'R' => npolyf_s_nwell_layer, 'C' => poly2_con, 'W' => nwell_con })
 
 # NPOLYF_S_DW
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting NPOLYF_S_DW device')
-    extract_devices(resistor_with_bulk('npolyf_s_dw', 6.8, BResistor),
-                    { 'R' => npolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
+  logger.info('Extracting NPOLYF_S_DW device')
+  extract_devices(resistor_with_bulk('npolyf_s_dw', 6.8, BResistor),
+                  { 'R' => npolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 else
-    logger.info('Extracting NPOLYF_S_DW device as NPOLYF_S')
-    extract_devices(resistor_with_bulk('npolyf_s', 6.8, BResistor),
-                    { 'R' => npolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
+  logger.info('Extracting NPOLYF_S_DW device as NPOLYF_S')
+  extract_devices(resistor_with_bulk('npolyf_s', 6.8, BResistor),
+                  { 'R' => npolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 end
 
 # PPOLYF_S SUB
 logger.info('Extracting PPOLYF_S SUB device')
-extract_devices(resistor_with_bulk('ppolyf_s', 7.3, BResistor), { 'R' => ppolyf_s_sub_layer, 'C' => poly2_con, 'W' => sub })
+extract_devices(resistor_with_bulk('ppolyf_s', 7.3, BResistor),
+                { 'R' => ppolyf_s_sub_layer, 'C' => poly2_con, 'W' => sub })
 
 # PPOLYF_S NWELL
 logger.info('Extracting PPOLYF_S NWELL device')
-extract_devices(resistor_with_bulk('ppolyf_s', 7.3, BResistor), { 'R' => ppolyf_s_nwell_layer, 'C' => poly2_con, 'W' => nwell_con })
+extract_devices(resistor_with_bulk('ppolyf_s', 7.3, BResistor),
+                { 'R' => ppolyf_s_nwell_layer, 'C' => poly2_con, 'W' => nwell_con })
 
 # PPOLYF_S_DW
 if CONSIDER_DN_DW_FEATURES
-    logger.info('Extracting PPOLYF_S_DW device')
-    extract_devices(resistor_with_bulk('ppolyf_s_dw', 7.3, BResistor),
-                    { 'R' => ppolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
+  logger.info('Extracting PPOLYF_S_DW device')
+  extract_devices(resistor_with_bulk('ppolyf_s_dw', 7.3, BResistor),
+                  { 'R' => ppolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 else
-    logger.info('Extracting PPOLYF_S_DW device as PPOLYF_S')
-    extract_devices(resistor_with_bulk('ppolyf_s', 7.3, BResistor),
-                    { 'R' => ppolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
+  logger.info('Extracting PPOLYF_S_DW device as PPOLYF_S')
+  extract_devices(resistor_with_bulk('ppolyf_s', 7.3, BResistor),
+                  { 'R' => ppolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 end
 
 # ==============
@@ -196,7 +206,7 @@ when '1k'
     logger.info('Extracting PPOLYF_U_1K_DW device')
     extract_devices(resistor_with_bulk('ppolyf_u_1k_dw', 1000, BResistor),
                     { 'R' => ppolyf_u_dw_h, 'C' => poly2_con, 'W' => dnwell })
-   else
+  else
     logger.info('Extracting PPOLYF_U_1K_DW device as PPOLYF_U_1K')
     extract_devices(resistor_with_bulk('ppolyf_u_1k', 1000, BResistor),
                     { 'R' => ppolyf_u_dw_h, 'C' => poly2_con, 'W' => dnwell })

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ################################################################################################
 # Copyright 2023 GlobalFoundries PDK Authors
 #
@@ -296,9 +298,7 @@ count = comp_label.count
 logger.info("comp_label has #{count} polygons")
 polygons_count += count
 
-if comp_label != 0
-  warn("Comp labels are ignored, as comp is not defined as a valid conductive layer")
-end
+warn('Comp labels are ignored, as comp is not defined as a valid conductive layer') if comp_label != 0
 
 poly2_label = labels(30, 10)
 count = poly2_label.count
@@ -617,10 +617,8 @@ polygons_count += count
 
 # Workaround for hierarchical layer creation, see
 # https://github.com/KLayout/klayout/issues/2345
-
-if $run_mode == 'tiling' or $run_mode == 'flat'
-  deep
-end
+# rubocop:disable Style/GlobalVars
+deep if ($run_mode == 'tiling') || ($run_mode == 'flat')
 
 # Any layer would do, as long as they are hierarchical
 tmp = polygons(23, 5)
@@ -634,6 +632,7 @@ when 'tiling'
 when 'flat'
   flat
 end
+# rubocop:enable Style/GlobalVars
 
 isosub = polygons(23, 5)
 count = isosub.count
