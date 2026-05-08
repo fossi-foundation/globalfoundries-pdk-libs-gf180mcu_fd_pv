@@ -121,6 +121,23 @@ ctx = RuleFramework::Context.new(drc_engine: self, logger: logger, options: opts
 ctx.extend(GF180DRC::OptionHelpers)
 
 #================================================
+#----------- VARIABLES DEFINITIONS --------------
+#================================================
+
+def met_top_thick(ctx)
+  case ctx.metal_top
+  when '6K'  then 0.69.um
+  when '9K'  then 0.99.um
+  when '11K' then 1.19.um
+  when '30K' then 3.035.um
+  else
+    raise ArgumentError, 'metal_top not recognized'
+  end
+end
+
+ctx.register_layer('metal_top_thickness') { met_top_thick(ctx) }
+
+#================================================
 #------------- LAYERS DEFINITIONS ---------------
 #================================================
 
@@ -129,7 +146,7 @@ GF180DRC::GenericLayers.generate_generic_layers(ctx)
 #================================================
 #------------- LAYERS CONNECTIONS ---------------
 #================================================
-CONNECTIVITY_RULES = %w[antenna dnwell ldnmos ldpmos lvpwell nat nwell].to_set.freeze
+CONNECTIVITY_RULES = %w[dnwell ldnmos ldpmos lvpwell nat nwell].to_set.freeze
 
 connectivity_required =
   opts.decks.any? do |deck|

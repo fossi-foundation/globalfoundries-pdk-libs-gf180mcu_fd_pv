@@ -158,7 +158,7 @@ module GF180DRC
 
     STATIC_LAYERS = [
       # --- Wells & Taps ---
-      { name: :dnwell_n, calc: ->(ctx) { ctx[:dnwell].not(ctx[:lvpwell]) } },
+      { name: :dnwell_n,        calc: ->(ctx) { ctx[:dnwell].not(ctx[:lvpwell]) } },
       { name: :dnwell_p,        calc: ->(ctx) { ctx[:dnwell].and(ctx[:lvpwell]) } },
       { name: :all_nwell,       calc: ->(ctx) { ctx[:dnwell_n].join(ctx[:nwell]) } },
 
