@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for pplus</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>7_11_Pplus</top-cell>
  <tags>
  </tags>
@@ -10725,30 +10725,6 @@
    <image/>
    <values>
     <value>edge: (-474.617,186.635;-474.617,186.512)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PP.12'</category>
-   <cell>7_11_Pplus</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-472.424,929.506;-472.424,930.089;-471.767,930.089;-471.767,929.506)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PP.12'</category>
-   <cell>7_11_Pplus</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-322.417,929.506;-322.417,930.089;-321.76,930.089;-321.76,929.506)</value>
    </values>
   </item>
   <item>

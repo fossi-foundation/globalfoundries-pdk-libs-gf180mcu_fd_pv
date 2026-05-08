@@ -267,8 +267,7 @@ GF180_DRC_REGISTRY.register(
   # Rule NP.12: Overlap with P-channel poly2 gate extension is forbidden
   ## within 0.32um of P-channel gate.
   logger.info('Executing rule NP.12')
-  np12_l1 = nplus.interacting(nplus_edges.separation(pgate.edges.and(pcomp_edges), 0.32.um,
-                                                     euclidian).polygons(0.001.um))
+  np12_l1 = nplus.interacting(pgate.sized(0.32.um - 1.dbu, size_inside(poly2), steps(3)))
   np12_l1.output('NP.12', 'NP.12 : Overlap with P-channel poly2 gate extension is forbidden
                   within 0.32um of P-channel gate.')
   np12_l1.forget
