@@ -222,7 +222,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PP.8b: Minimum area enclosed by Pplus (um2). is 0.35µm²
   logger.info('Executing rule PP.8b')
-  pp8b_l1 = pplus.holes.with_area(nil, 0.35.um)
+  pp8b_l1 = pplus.holes.raw.with_area(nil, 0.35.um)
   pp8b_l1.output('PP.8b', 'PP.8b : Minimum area enclosed by Pplus (um2). : 0.35µm²')
   pp8b_l1.forget
 

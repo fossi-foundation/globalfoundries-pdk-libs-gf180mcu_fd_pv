@@ -224,7 +224,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule NP.8b: Minimum area enclosed by Nplus (um2). is 0.35µm²
   logger.info('Executing rule NP.8b')
-  np8b_l1 = nplus.holes.with_area(nil, 0.35.um)
+  np8b_l1 = nplus.holes.raw.with_area(nil, 0.35.um)
   np8b_l1.output('NP.8b', 'NP.8b : Minimum area enclosed by Nplus (um2). : 0.35µm²')
   np8b_l1.forget
 
