@@ -13,6 +13,7 @@ Style/GlobalVars:
   Description: Do not introduce global variables.
   Exclude:
     - 'klayout/drc/gf180mcu.drc'
+    - 'klayout/lvs/gf180mcu.lvs'
 
 Metrics/BlockLength:
   AllowedMethods: ['register']
