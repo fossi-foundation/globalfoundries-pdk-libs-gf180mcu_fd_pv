@@ -29,8 +29,8 @@
 #     of topcell
 ###=====================================================###
 #--- **Netlist Options** ---
-# spice_net_names: Use net names instead of numbers (true/false, default: false)
-# spice_comments: Include detailed comments (true/false, default: false)
+# spice_net_names: Use net names instead of numbers (true/false, default: true)
+# spice_comments: Include detailed comments (true/false, default: true)
 ###=====================================================###
 #--- **LVS Options** ---
 # simplify: Simplify netlist (true/false, default: false)
@@ -42,8 +42,6 @@
 # implicit_connect: Use implicit connections (true/false, default: false)
 ###=====================================================###
 #--- **Extraction Options** ---
-# lvs_sub: Name of default substrate name (default: gf180mcu_gnd)
-# scale: Enable device scaling (true/false, default: false)
 # run_mode: [tiling/deep/flat] (default: flat)
 # metal_top: Metal top layer (6K/9K/11K/30K, default: 9K)
 # metal_level: Metal stack level (3LM/4LM/5LM/6LM, default: 6LM)
@@ -105,14 +103,10 @@ end
 #================================================
 logger.info('Evaluate switches.')
 
-def bool_check?(obj)
+def bool_check?(obj, default: false)
+  return default if obj.nil?
   obj.to_s.downcase == 'true'
 end
-
-#=== GET SUBSTRATE NAME ===
-substrate_name = $lvs_sub || 'gf180mcu_gnd'
-
-logger.info("Substrate name used: #{$lvs_sub}")
 
 #=== SCHEMATIC TRANSLCATE ===
 
@@ -123,14 +117,14 @@ logger.info("schematic translate: #{SCHEMATIC_TRANSLATE}")
 #=== NET NAMES OPTION ===
 # true: use net names instead of numbers
 # false: use numbers for nets
-SPICE_WITH_NET_NAMES = bool_check?($spice_net_names)
+SPICE_WITH_NET_NAMES = bool_check?($spice_net_names, true)
 
 logger.info("Extracted netlist with net names: #{SPICE_WITH_NET_NAMES}")
 
 #=== COMMENTS OPTION ===
 # true: put in comments with details
 # false: no comments
-SPICE_WITH_COMMENTS = bool_check?($spice_comments)
+SPICE_WITH_COMMENTS = bool_check?($spice_comments, true)
 
 logger.info("Extracted netlist with comments in details: #{SPICE_WITH_COMMENTS}")
 
@@ -144,13 +138,6 @@ else
   target_netlist("#{netlist_path}", write_spice(SPICE_WITH_NET_NAMES, SPICE_WITH_COMMENTS),  "Extracted by KLayout with GF180MCU LVS runset on : #{Time.now.strftime("%d/%m/%Y %H:%M")}")
   logger.info("GF180MCU Klayout LVS extracted netlist file at: #{source.cell_name}_extracted.cir")
 end
-
-#=== EXTRACTION SCALE ===
-DEV_SCALE = bool_check?($scale)
-
-device_scaling(1_000_000) if $DEV_SCALE
-
-logger.info("LVS device_scaling option: #{DEV_SCALE}")
 
 # SIMPLIFY
 SIMPLIFY = bool_check?($simplify)
