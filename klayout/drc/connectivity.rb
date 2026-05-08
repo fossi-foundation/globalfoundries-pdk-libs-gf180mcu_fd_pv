@@ -20,16 +20,16 @@ module GF180DRC
       %i[ncomp contact],
       %i[pcomp contact],
       %i[natcomp contact],
-      %i[contact metal1],
-      %i[metal1 via1],
-      %i[via1 metal2]
+      %i[contact metal1_drawn],
+      %i[metal1_drawn via1],
+      %i[via1 metal2_drawn]
     ].freeze
 
     METAL_STACK = [
-      [3, :metal2, :via2, :metal3],
-      [4, :metal3, :via3, :metal4],
-      [5, :metal4, :via4, :metal5],
-      [6, :metal5, :via5, :metaltop]
+      [3, :metal2_drawn, :via2, :metal3_drawn],
+      [4, :metal3_drawn, :via3, :metal4_drawn],
+      [5, :metal4_drawn, :via4, :metal5_drawn],
+      [6, :metal5_drawn, :via5, :metaltop_drawn]
     ].freeze
 
     def self.build(ctx, drc)
@@ -43,7 +43,7 @@ module GF180DRC
         drc.connect(ctx[to], ctx[:fusetop]) if ctx.mim_option == 'A'
       end
 
-      drc.connect(ctx[:top_metal], ctx[:fusetop]) if ctx.mim_option == 'B'
+      drc.connect(ctx[:top_metal_drawn], ctx[:fusetop]) if ctx.mim_option == 'B'
     end
   end
 end
