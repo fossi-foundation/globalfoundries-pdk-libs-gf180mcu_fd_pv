@@ -16,8 +16,9 @@
 # limitations under the License.
 ################################################################################################
 
-def metal_rules(idx:)
+# rubocop:disable Metrics/AbcSize
 
+def metal_rules(idx:)
   #================================================
   #---------------------METAL5---------------------
   #================================================
@@ -73,3 +74,5 @@ METAL_MAP_METAL = {
     metal_rules(idx: lvl)
   end
 end
+
+# rubocop:enable Metrics/AbcSize

@@ -201,7 +201,7 @@ module GF180DRC
         ctx[:ncomp].and(ctx[:dnwell_p]).interacting(ctx[:ngate_dn]).not(ctx[:ngate_dn]).not(ctx[:res_mk])
       } },
 
-      { name: :natcomp,         calc: ->(ctx) { ctx[:nat].and(ctx[:comp]) } },
+      { name: :natcomp, calc: ->(ctx) { ctx[:nat].and(ctx[:comp]) } },
       { name: :natcomp_not_poly2, calc: ->(ctx) { ctx[:natcomp].not(ctx[:poly2]) } },
 
       # --- Gate Voltage Classes ---
@@ -232,11 +232,16 @@ module GF180DRC
     ].freeze
 
     METAL_STACK_MAP = {
-      2 => { top_via: :via1, topmin1_via: :contact, top_metal: :metal2, top_metal_drawn: :metal2_drawn, topmin1_metal: :metal1 },
-      3 => { top_via: :via2, topmin1_via: :via1,   top_metal: :metal3, top_metal_drawn: :metal3_drawn, topmin1_metal: :metal2 },
-      4 => { top_via: :via3, topmin1_via: :via2,   top_metal: :metal4, top_metal_drawn: :metal4_drawn, topmin1_metal: :metal3 },
-      5 => { top_via: :via4, topmin1_via: :via3,   top_metal: :metal5, top_metal_drawn: :metal5_drawn, topmin1_metal: :metal4 },
-      6 => { top_via: :via5, topmin1_via: :via4,   top_metal: :metaltop, top_metal_drawn: :metaltop_drawn, topmin1_metal: :metal5 }
+      2 => { top_via: :via1, topmin1_via: :contact, top_metal: :metal2, top_metal_drawn: :metal2_drawn,
+             topmin1_metal: :metal1 },
+      3 => { top_via: :via2, topmin1_via: :via1,   top_metal: :metal3, top_metal_drawn: :metal3_drawn,
+             topmin1_metal: :metal2 },
+      4 => { top_via: :via3, topmin1_via: :via2,   top_metal: :metal4, top_metal_drawn: :metal4_drawn,
+             topmin1_metal: :metal3 },
+      5 => { top_via: :via4, topmin1_via: :via3,   top_metal: :metal5, top_metal_drawn: :metal5_drawn,
+             topmin1_metal: :metal4 },
+      6 => { top_via: :via5, topmin1_via: :via4,   top_metal: :metaltop, top_metal_drawn: :metaltop_drawn,
+             topmin1_metal: :metal5 }
     }.freeze
 
     METAL_NAMES = {
