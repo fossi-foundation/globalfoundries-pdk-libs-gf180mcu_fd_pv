@@ -11,15 +11,15 @@ module GF180DRC
       %i[nom_gate poly2],
       %i[thick_gate poly2],
       %i[poly2 contact],
-      %i[dnwell ncomp],
-      %i[lvpwell_out pcomp],
+      %i[dnwell ncomp], # ncomp_not_poly2
+      %i[lvpwell_out pcomp], # pcomp_not_poly2
       %i[lvpwell_dn pcomp],
       %i[nwell ncomp],
       %i[mvsd ncomp],
       %i[mvpsd pcomp],
       %i[ncomp contact],
       %i[pcomp contact],
-      %i[natcomp contact],
+      %i[natcomp contact], # natcomp_not_poly2
       %i[contact metal1_drawn],
       %i[metal1_drawn via1],
       %i[via1 metal2_drawn]

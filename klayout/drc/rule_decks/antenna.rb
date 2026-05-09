@@ -214,6 +214,11 @@ GF180_DRC_REGISTRY.register(
   connect(via1, metal2_drawn)
   connect(metal2_drawn, via2)
 
+  # MIM A is between Metal2 and Metal3
+  if ctx.mim_option == 'A'
+    connect(via2, fusetop)
+  end
+
   logger.info('Executing rule ANT.16_i_ANT.10')
   antenna_check_gf180mcu_area(nom_gate, via2, 20, n_diode, p_diode, nwell,  2)
     .output('ANT.16_i_ANT.10',
@@ -222,11 +227,11 @@ GF180_DRC_REGISTRY.register(
   antenna_check_gf180mcu_area(thick_gate, via2, 20, n_diode, p_diode, nwell,  15)
     .output('ANT.16_ii_ANT.10',
             'ANT.16_ii_ANT.10: Maximum ratio of Via2 area to related thick gate oxide area: 20')
-  if ctx.mim_option == 'A' # TODO
+  if ctx.mim_option == 'A'
     logger.info('Executing rule ANT.16_iii_ANT.15_V2_MIMA')
-      antenna_check_gf180mcu_area(thick_gate, via2, 20, n_diode, p_diode, nwell,  15)
+      antenna_check_gf180mcu_area(fusetop, via2, 20, n_diode, p_diode, nwell,  15)
       .output('ANT.16_iii_ANT.15_V2_MIMA',
-              'ANT.16_iii_ANT.15_V2_MIMA: Maximum ratio of each of Via2 area to related MIM area is 20')
+              'ANT.16_iii_ANT.15_V2_MIMA: Maximum ratio of Via2 area to related MIM area is 20')
   end
 end
 # =========================================================
@@ -257,6 +262,14 @@ GF180_DRC_REGISTRY.register(
   connect(via1, metal2_drawn)
   connect(metal2_drawn, via2)
   connect(via2, metal3_drawn)
+  
+  # MIM A is between Metal2 and Metal3
+  if ctx.mim_option == 'A'
+    connect(via2, fusetop)
+  end
+  
+  # Is this the topmost metal layer?
+  met_thick = ctx.metal_level_numerical == 3 ? antenna_met_top_thick(ctx) : 0.54
 
   # MIM A is between Metal2 and Metal3
   connect(via2, fusetop) if ctx.mim_option == 'A'
@@ -265,11 +278,11 @@ GF180_DRC_REGISTRY.register(
   met_thick = ctx.metal_level_numerical == 3 ? metal_top_thickness : 0.54
 
   logger.info('Executing rule ANT.16_i_ANT.4')
-  antenna_check_gf180mcu(nom_gate, metal3_drawn, 0.54, 400, n_diode, p_diode, nwell,  2)
+  antenna_check_gf180mcu(nom_gate, metal3_drawn, met_thick, 400, n_diode, p_diode, nwell,  2)
     .output('ANT.16_i_ANT.4',
             'ANT.16_i_ANT.4: Maximum ratio of Metal3 perimeter area to related thin gate oxide area: 400')
   logger.info('Executing rule ANT.16_ii_ANT.4')
-  antenna_check_gf180mcu(thick_gate, metal3_drawn, 0.54, 400, n_diode, p_diode, nwell,  15)
+  antenna_check_gf180mcu(thick_gate, metal3_drawn, met_thick, 400, n_diode, p_diode, nwell,  15)
     .output('ANT.16_ii_ANT.4',
             'ANT.16_ii_ANT.4: Maximum ratio of Metal3 perimeter area to related thick gate oxide area: 400')
   if ctx.mim_option == 'A'
@@ -309,6 +322,16 @@ GF180_DRC_REGISTRY.register(
   connect(via2, metal3_drawn)
   connect(metal3_drawn, via3)
 
+  # MIM A is between Metal2 and Metal3
+  if ctx.mim_option == 'A'
+    connect(via2, fusetop)
+  end
+
+  # MIM B is between TopMetal-1 and TopMetal
+  if ctx.mim_option == 'B'
+    connect(via3, fusetop)
+  end
+
   logger.info('Executing rule ANT.16_i_ANT.11')
   antenna_check_gf180mcu_area(nom_gate, via3, 20, n_diode, p_diode, nwell,  2)
     .output('ANT.16_i_ANT.11',
@@ -317,11 +340,11 @@ GF180_DRC_REGISTRY.register(
   antenna_check_gf180mcu_area(thick_gate, via3, 20, n_diode, p_diode, nwell,  15)
     .output('ANT.16_ii_ANT.11',
             'ANT.16_ii_ANT.11: Maximum ratio of Via3 area to related thick gate oxide area: 20')
-  if ctx.mim_option == 'A' # TODO
-    logger.info('Executing rule ANT.16_iii_ANT.15_V3_MIMA')
-    antenna_check(fusetop, via3, 20, [ncomp, 300])
-      .output('ANT.16_iii_ANT.15_V3_MIMA',
-              'ANT.16_iii_ANT.15_V3_MIMA: Maximum ratio of each of Via3 area to related MIM area: 20')
+  if ctx.mim_option == 'A' || ctx.mim_option == 'A'
+    logger.info("Executing rule ANT.16_iii_ANT.15_V3_MIM#{ctx.mim_option}")
+      antenna_check_gf180mcu_area(fusetop, via3, 20, n_diode, p_diode, nwell,  15)
+      .output("ANT.16_iii_ANT.15_V3_MIM#{ctx.mim_option}",
+              "ANT.16_iii_ANT.15_V3_MIM#{ctx.mim_option}: Maximum ratio of Via3 area to related MIM area is 20")
   end
 end
 # =========================================================
@@ -365,11 +388,11 @@ GF180_DRC_REGISTRY.register(
   met_thick = ctx.metal_level_numerical == 4 ? metal_top_thickness : 0.54
 
   logger.info('Executing rule ANT.16_i_ANT.5')
-  antenna_check_gf180mcu(nom_gate, metal4_drawn, 0.54, 400, n_diode, p_diode, nwell,  2)
+  antenna_check_gf180mcu(nom_gate, metal4_drawn, met_thick, 400, n_diode, p_diode, nwell,  2)
     .output('ANT.16_i_ANT.5',
             'ANT.16_i_ANT.5: Maximum ratio of Metal4 perimeter area to related gate oxide area: 400')
   logger.info('Executing rule ANT.16_ii_ANT.5')
-  antenna_check_gf180mcu(thick_gate, metal4_drawn, 0.54, 400, n_diode, p_diode, nwell,  15)
+  antenna_check_gf180mcu(thick_gate, metal4_drawn, met_thick, 400, n_diode, p_diode, nwell,  15)
     .output('ANT.16_ii_ANT.5',
             'ANT.16_ii_ANT.5: Maximum ratio of Metal4 perimeter area to related gate oxide area: 400')
   if %w[A B].include? ctx.mim_option
@@ -410,6 +433,16 @@ GF180_DRC_REGISTRY.register(
   connect(metal3_drawn, via3)
   connect(via3, metal4_drawn)
   connect(metal4_drawn, via4)
+
+  # MIM A is between Metal2 and Metal3
+  if ctx.mim_option == 'A'
+    connect(via2, fusetop)
+  end
+
+  # MIM B is between TopMetal-1 and TopMetal
+  if ctx.mim_option == 'B'
+    connect(via4, fusetop)
+  end
 
   logger.info('Executing rule ANT.16_i_ANT.12')
   antenna_check_gf180mcu_area(nom_gate, via4, 20, n_diode, p_diode, nwell,  2)
@@ -469,11 +502,11 @@ GF180_DRC_REGISTRY.register(
   met_thick = ctx.metal_level_numerical == 5 ? metal_top_thickness : 0.54
 
   logger.info('Executing rule ANT.16_i_ANT.6')
-  antenna_check_gf180mcu(nom_gate, metal5_drawn, 0.54, 400, n_diode, p_diode, nwell,  2)
+  antenna_check_gf180mcu(nom_gate, metal5_drawn, met_thick, 400, n_diode, p_diode, nwell,  2)
     .output('ANT.16_i_ANT.6',
             'ANT.16_i_ANT.6: Maximum ratio of Metal5 perimeter area to related thin gate oxide area: 400')
   logger.info('Executing rule ANT.16_ii_ANT.6')
-  antenna_check_gf180mcu(thick_gate, metal5_drawn, 0.54, 400, n_diode, p_diode, nwell,  15)
+  antenna_check_gf180mcu(thick_gate, metal5_drawn, met_thick, 400, n_diode, p_diode, nwell,  15)
     .output('ANT.16_ii_ANT.6',
             'ANT.16_ii_ANT.6: Maximum ratio of Metal5 perimeter area to related thick gate oxide area 400')
   if %w[A B].include? ctx.mim_option
@@ -517,6 +550,16 @@ GF180_DRC_REGISTRY.register(
   connect(via4, metal5_drawn)
   connect(metal5_drawn, via5)
 
+  # MIM A is between Metal2 and Metal3
+  if ctx.mim_option == 'A'
+    connect(via2, fusetop)
+  end
+
+  # MIM B is between TopMetal-1 and TopMetal
+  if ctx.mim_option == 'B'
+    connect(via5, fusetop)
+  end
+
   logger.info('Executing rule ANT.16_i_ANT.13')
   antenna_check_gf180mcu_area(nom_gate, via5, 20, n_diode, p_diode, nwell,  2)
     .output('ANT.16_i_ANT.13',
@@ -525,11 +568,11 @@ GF180_DRC_REGISTRY.register(
   antenna_check_gf180mcu_area(thick_gate, via5, 20, n_diode, p_diode, nwell,  15)
     .output('ANT.16_ii_ANT.13',
             'ANT.16_ii_ANT.13: Maximum ratio of Via5 area to related thick gate oxide area: 20')
-  if ctx.mim_option == 'A' # TODO
-    logger.info('Executing rule ANT.16_iii_ANT.15_V5_MIMA')
-    antenna_check(fusetop, via5, 20, [ncomp, 300])
-      .output('ANT.16_iii_ANT.15_V5_MIMA',
-              'ANT.16_iii_ANT.15_V5_MIMA: Maximum ratio of each of Via5 area to related MIM area: 20')
+  if ctx.mim_option == 'A' || ctx.mim_option == 'A'
+    logger.info("Executing rule ANT.16_iii_ANT.15_V5_MIM#{ctx.mim_option}")
+      antenna_check_gf180mcu_area(fusetop, via5, 20, n_diode, p_diode, nwell,  15)
+      .output("ANT.16_iii_ANT.15_V5_MIM#{ctx.mim_option}",
+              "ANT.16_iii_ANT.15_V5_MIM#{ctx.mim_option}: Maximum ratio of Via5 area to related MIM area is 20")
   end
 end
 # =========================================================
@@ -541,6 +584,7 @@ GF180_DRC_REGISTRY.register(
   priority: 10,
   tags: %w[all feol antenna]
 ) do
+  next unless ctx.metal_level_numerical >= 6
 
   # Clear all connections so far
   clear_connections
@@ -558,11 +602,11 @@ GF180_DRC_REGISTRY.register(
   connect(metal1_drawn, via1)
   connect(via1, metal2_drawn)
   connect(metal2_drawn, via2)
-  connect(via2, metal3_drawn) # TODO
+  connect(via2, metal3_drawn)
   connect(metal3_drawn, via3)
-  connect(via3, metal4_drawn) # TODO
+  connect(via3, metal4_drawn)
   connect(metal4_drawn, via4)
-  connect(via4, metal5_drawn) # TODO
+  connect(via4, metal5_drawn)
   connect(metal5_drawn, via5)
   connect(via5, metaltop_drawn)
 
