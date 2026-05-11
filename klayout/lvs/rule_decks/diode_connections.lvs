@@ -50,11 +50,11 @@ connect(diode_pd2nw_06v0_dn_terminal_n, ntap)
 
 # diode_nw2ps_03v3 diode
 connect(diode_nw2ps_03v3_terminal_p, contact)
-connect(diode_nw2ps_03v3_terminal_n, nwell)
+connect(diode_nw2ps_03v3_terminal_n, nwell_con)
 
 # diode_nw2ps_06v0 diode
 connect(diode_nw2ps_06v0_terminal_p, contact)
-connect(diode_nw2ps_06v0_terminal_n, nwell)
+connect(diode_nw2ps_06v0_terminal_n, nwell_con)
 
 # diode_pw2dw_03v3 diode
 connect(diode_pw2dw_03v3_terminal_p, contact)
