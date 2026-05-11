@@ -415,6 +415,8 @@ logger.info('Starting GF180 LVS DEVICES EXTRACTION')
 
 # %include rule_decks/efuse_extraction.lvs
 
+# %include rule_decks/substrate_connections.lvs
+
 #================================================
 #------------- COMPARISON OPTIONS ---------------
 #================================================
