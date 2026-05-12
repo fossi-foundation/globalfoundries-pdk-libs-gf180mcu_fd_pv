@@ -79,3 +79,8 @@ pytest -x
 ```bash
 pytest --lf
 ```
+
+### Show Available Tests
+```
+pytest --collect-only
+```
