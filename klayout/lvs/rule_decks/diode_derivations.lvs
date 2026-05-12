@@ -118,4 +118,4 @@ sc_diode_exclude = dualgate.join(pplus).join(diode_mk)
                            .join(esd_mk).join(lvs_source).join(diode_exclude)
 
 sc_diode_terminal_n = ncomp.and(dnwell).and(schottky_diode).not(sc_diode_exclude)
-sc_diode_terminal_p = metal1.and(dnwell).not_interacting(sc_diode_terminal_n).not(sc_diode_exclude)
+sc_diode_terminal_p = metal1_con.and(dnwell).not_interacting(sc_diode_terminal_n).not(sc_diode_exclude)
