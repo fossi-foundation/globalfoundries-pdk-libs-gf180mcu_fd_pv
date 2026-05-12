@@ -95,6 +95,8 @@ GF180_DRC_REGISTRY.register(
   dpf11_l1.forget
 
   # TODO: make this configurable
+  # For now this is disabled since wafer.space
+  # moves all fill shapes to active metal layers.
   # if DUMMY_SUB_PREV
   #
   #  # Rule DPF.12: Space of dummy poly2 fill to active circuit metal1: 2

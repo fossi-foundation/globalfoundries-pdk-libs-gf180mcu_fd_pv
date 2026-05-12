@@ -96,7 +96,7 @@ GF180_DRC_REGISTRY.register(
 end
 
 GF180_DRC_REGISTRY.register(
-  id: File.basename(__FILE__, File.extname(__FILE__)),
+  id: "#{File.basename(__FILE__, File.extname(__FILE__))}_wedge",
   path: __FILE__,
   priority: 0,
   tags: %w[all beol guard_ring wedge]
