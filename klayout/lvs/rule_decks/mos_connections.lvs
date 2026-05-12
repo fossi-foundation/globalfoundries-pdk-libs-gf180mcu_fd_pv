@@ -19,8 +19,6 @@
 #================================
 logger.info('Starting LVS MOSFET CONNECTIONS')
 
-connect(psd_dw, contact)
-
 connect(nd_ldmos, contact)
 connect(ns_ldmos, contact)
 
