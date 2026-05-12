@@ -269,12 +269,6 @@ GF180_DRC_REGISTRY.register(
   connect(via2, fusetop) if ctx.mim_option == 'A'
 
   # Is this the topmost metal layer?
-  met_thick = ctx.metal_level_numerical == 3 ? antenna_met_top_thick(ctx) : 0.54
-
-  # MIM A is between Metal2 and Metal3
-  connect(via2, fusetop) if ctx.mim_option == 'A'
-
-  # Is this the topmost metal layer?
   met_thick = ctx.metal_level_numerical == 3 ? metal_top_thickness : 0.54
 
   logger.info('Executing rule ANT.16_i_ANT.4')
