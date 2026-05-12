@@ -92,14 +92,23 @@ GF180_DRC_REGISTRY.register(
   gr6_l1.output('GR.6', 'GR.6 : Min PCOMP width: 16')
   gr6_l1.forget
 
-  # TODO: make this optional
-  # if WEDGE
+  guard_ring_comp.forget
+end
+
+GF180_DRC_REGISTRY.register(
+  id: File.basename(__FILE__, File.extname(__FILE__)),
+  path: __FILE__,
+  priority: 0,
+  tags: %w[all beol guard_ring wedge]
+) do
+  #================================================
+  #------------ Guard Ring / Seal Ring ------------
+  #------------      Wedge bonding     -----------
+  #================================================
+
   # Rule GR.11: Pad opening on top of GUARD_RING_MK layer
   logger.info('Executing rule GR.11')
   gr11_l1 = guard_ring_mk.not_interacting(pad)
   gr11_l1.output('GR.11', 'GR.11 : Pad opening on top of GUARD_RING_MK layer')
   gr11_l1.forget
-  # end
-
-  guard_ring_comp.forget
 end
