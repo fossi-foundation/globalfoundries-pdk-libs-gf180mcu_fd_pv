@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for nat</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>10_5_NAT</top-cell>
  <tags>
  </tags>
@@ -128,18 +128,6 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (10.045,235.096;9.075,235.096)/(9.13,234.801;9.99,234.801)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.2'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
     <value>edge-pair: (15.89,235.096;14.92,235.096)/(14.975,234.801;15.835,234.801)</value>
    </values>
   </item>
@@ -152,7 +140,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (28.476,235.096;27.506,235.096)/(27.561,234.801;28.421,234.801)</value>
+    <value>edge-pair: (10.045,235.096;9.075,235.096)/(9.13,234.801;9.99,234.801)</value>
    </values>
   </item>
   <item>
@@ -165,6 +153,18 @@
    <image/>
    <values>
     <value>edge-pair: (34.321,235.096;33.351,235.096)/(33.406,234.801;34.266,234.801)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NAT.2'</category>
+   <cell>10_5_NAT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (28.476,235.096;27.506,235.096)/(27.561,234.801;28.421,234.801)</value>
    </values>
   </item>
   <item>
@@ -428,6 +428,54 @@
    <comment/>
    <image/>
    <values>
+    <value>polygon: (63.64,111.051;63.64,167.511;104.14,167.511;104.14,111.051/64.09,111.501;103.69,111.501;103.69,167.061;64.09,167.061)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NAT.6'</category>
+   <cell>10_5_NAT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (22.03,187.141;22.03,188.141;23.99,188.141;23.99,187.141)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NAT.6'</category>
+   <cell>10_5_NAT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (26.255,187.141;26.255,188.141;28.215,188.141;28.215,187.141)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NAT.6'</category>
+   <cell>10_5_NAT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (44.56,187.141;44.56,188.141;46.52,188.141;46.52,187.141)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NAT.6'</category>
+   <cell>10_5_NAT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
     <value>polygon: (66.39,113.801;66.39,164.761;101.39,164.761;101.39,113.801)</value>
    </values>
   </item>
@@ -440,7 +488,7 @@
    <comment/>
    <image/>
    <values>
-    <value>polygon: (63.64,111.051;63.64,167.511;104.14,167.511;104.14,111.051/64.09,111.501;103.69,111.501;103.69,167.061;64.09,167.061)</value>
+    <value>polygon: (48.785,187.141;48.785,188.141;50.745,188.141;50.745,187.141)</value>
    </values>
   </item>
   <item>

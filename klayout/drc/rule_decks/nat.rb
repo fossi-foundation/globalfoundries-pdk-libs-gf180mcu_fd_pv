@@ -68,7 +68,7 @@ GF180_DRC_REGISTRY.register(
   nat5_l1.forget
   poly_nat_mv.forget
 
-  _connected_nat, unconnected_nat = conn_space(natcomp, 10, 10, transparent)
+  _connected_nat, unconnected_nat = conn_space(natcomp_con, 10, 10, transparent)
 
   # Rule NAT.6: Two or more COMPs if connected to different potential
   ## are not allowed under same NAT layer.

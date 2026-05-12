@@ -165,13 +165,13 @@ module GF180DRC
       # --- Comps & Gates ---
       { name: :ncomp,           calc: ->(ctx) { ctx[:comp].and(ctx[:nplus]) } },
       { name: :pcomp,           calc: ->(ctx) { ctx[:comp].and(ctx[:pplus]) } },
-      { name: :ncomp_not_poly2,  calc: ->(ctx) { ctx[:ncomp].not(ctx[:poly2]) } },
-      { name: :pcomp_not_poly2,  calc: ->(ctx) { ctx[:pcomp].not(ctx[:poly2]) } },
+      { name: :ncomp_con,       calc: ->(ctx) { ctx[:ncomp].not(ctx[:poly2]) } },
+      { name: :pcomp_con,       calc: ->(ctx) { ctx[:pcomp].not(ctx[:poly2]) } },
       { name: :tgate,           calc: ->(ctx) { ctx[:poly2].and(ctx[:comp]).not(ctx[:res_mk]) } },
 
       # --- N-Device Logic ---
       { name: :nactive,         calc: ->(ctx) { ctx[:ncomp].not(ctx[:all_nwell]) } },
-      { name: :n_diode,         calc: ->(ctx) { ctx[:ncomp_not_poly2].not(ctx[:nwell]) } }, # TODO
+      { name: :n_diode,         calc: ->(ctx) { ctx[:ncomp_con].not(ctx[:nwell]) } },
       { name: :ngate,           calc: ->(ctx) { ctx[:nactive].and(ctx[:tgate]) } },
       { name: :nsd,             calc: lambda { |ctx|
         ctx[:nactive].interacting(ctx[:ngate]).not(ctx[:ngate]).not(ctx[:res_mk])
@@ -180,7 +180,7 @@ module GF180DRC
 
       # --- P-Device Logic ---
       { name: :pactive,         calc: ->(ctx) { ctx[:pcomp].and(ctx[:all_nwell]) } },
-      { name: :p_diode,         calc: ->(ctx) { ctx[:pcomp_not_poly2].not(ctx[:nwell]) } }, # TODO
+      { name: :p_diode,         calc: ->(ctx) { ctx[:pcomp_con].and(ctx[:nwell]) } },
       { name: :pgate,           calc: ->(ctx) { ctx[:pactive].and(ctx[:tgate]) } },
       { name: :psd,             calc: lambda { |ctx|
         ctx[:pactive].interacting(ctx[:pgate]).not(ctx[:pgate]).not(ctx[:res_mk])
@@ -202,7 +202,7 @@ module GF180DRC
       } },
 
       { name: :natcomp, calc: ->(ctx) { ctx[:nat].and(ctx[:comp]) } },
-      { name: :natcomp_not_poly2, calc: ->(ctx) { ctx[:natcomp].not(ctx[:poly2]) } },
+      { name: :natcomp_con, calc: ->(ctx) { ctx[:natcomp].not(ctx[:poly2]) } },
 
       # --- Gate Voltage Classes ---
       { name: :nom_gate,        calc: ->(ctx) { ctx[:tgate].not(ctx[:dualgate]) } },
