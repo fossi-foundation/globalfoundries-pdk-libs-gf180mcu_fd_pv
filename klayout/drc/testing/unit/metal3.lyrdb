@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for metal3</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>metal3</top-cell>
  <tags>
  </tags>
@@ -2475,6 +2475,30 @@
    <comment/>
    <image/>
    <values>
+    <value>edge-pair: (-318.894,251.792;-318.894,251.992)/(-319.189,251.942;-319.189,251.737)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M3.2b'</category>
+   <cell>metal3</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-366.534,256.817;-366.534,257.022)/(-366.829,256.967;-366.829,256.762)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M3.2b'</category>
+   <cell>metal3</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
     <value>edge-pair: (-342.714,256.817;-342.714,257.017)/(-343.009,256.967;-343.009,256.762)</value>
    </values>
   </item>
@@ -2499,55 +2523,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-642.362,252.14;-642.389,252.14)/(-642.614,251.942;-642.587,251.942)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.2b'</category>
-   <cell>metal3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-472.442,251.902;-472.442,251.997)/(-472.737,251.942;-472.737,251.847)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.2b'</category>
-   <cell>metal3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-550.702,251.902;-550.702,251.997)/(-550.997,251.942;-550.997,251.847)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.2b'</category>
-   <cell>metal3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-445.374,251.902;-445.374,251.942)/(-445.669,251.942;-445.669,251.847)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.2b'</category>
-   <cell>metal3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-642.389,252.14;-642.389,252.167)/(-642.587,251.942;-642.587,251.915)</value>
+    <value>edge-pair: (-414.493,251.902;-414.493,251.942)/(-414.788,251.942;-414.788,251.847)</value>
    </values>
   </item>
   <item>
@@ -2571,7 +2547,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-682.902,242.073;-682.76,241.931)/(-682.597,242.165;-682.778,242.346)</value>
+    <value>edge-pair: (-445.374,251.902;-445.374,251.942)/(-445.669,251.942;-445.669,251.847)</value>
    </values>
   </item>
   <item>
@@ -2583,43 +2559,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-318.894,251.792;-318.894,251.992)/(-319.189,251.942;-319.189,251.737)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.2b'</category>
-   <cell>metal3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-664.319,251.992;-664.295,251.992)/(-664.024,252.121;-664.166,252.263)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.2b'</category>
-   <cell>metal3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-366.534,256.817;-366.534,257.022)/(-366.829,256.967;-366.829,256.762)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M3.2b'</category>
-   <cell>metal3</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-664.295,251.992;-664.295,251.968)/(-664.024,252.121;-664.166,252.263)</value>
+    <value>edge-pair: (-550.702,251.902;-550.702,251.997)/(-550.997,251.942;-550.997,251.847)</value>
    </values>
   </item>
   <item>
@@ -2643,7 +2583,31 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-414.493,251.902;-414.493,251.942)/(-414.788,251.942;-414.788,251.847)</value>
+    <value>edge-pair: (-642.389,252.14;-642.389,252.167)/(-642.587,251.942;-642.587,251.915)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M3.2b'</category>
+   <cell>metal3</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-472.442,251.902;-472.442,251.997)/(-472.737,251.942;-472.737,251.847)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M3.2b'</category>
+   <cell>metal3</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-642.362,252.14;-642.389,252.14)/(-642.614,251.942;-642.587,251.942)</value>
    </values>
   </item>
   <item>

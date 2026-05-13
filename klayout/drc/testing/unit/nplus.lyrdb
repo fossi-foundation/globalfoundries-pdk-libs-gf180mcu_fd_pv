@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for nplus</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>7_10_Nplus</top-cell>
  <tags>
  </tags>
@@ -3118,42 +3118,6 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-343.508,1205.751;-343.508,1205.961)|(-343.894,1205.856;-343.908,1205.842)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NP.2'</category>
-   <cell>7_10_Nplus</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-420.779,1064.779;-420.572,1064.779)|(-420.698,1064.942;-420.862,1064.942)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NP.2'</category>
-   <cell>7_10_Nplus</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-423.245,1205.751;-423.245,1205.972)|(-423.463,1205.754;-423.563,1205.654)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NP.2'</category>
-   <cell>7_10_Nplus</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
     <value>edge-pair: (-342.387,1206.453;-342.023,1206.453)|(-341.974,1206.85;-342.338,1206.85)</value>
    </values>
   </item>
@@ -3179,6 +3143,42 @@
    <image/>
    <values>
     <value>edge-pair: (-337.945,1064.009;-337.47,1064.009)|(-337.642,1064.274;-338.052,1064.274)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NP.2'</category>
+   <cell>7_10_Nplus</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-343.508,1205.751;-343.508,1205.961)|(-343.894,1205.856;-343.908,1205.842)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NP.2'</category>
+   <cell>7_10_Nplus</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-420.779,1064.779;-420.572,1064.779)|(-420.698,1064.942;-420.862,1064.942)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NP.2'</category>
+   <cell>7_10_Nplus</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-423.245,1205.751;-423.245,1205.972)|(-423.463,1205.754;-423.563,1205.654)</value>
    </values>
   </item>
   <item>
@@ -4282,7 +4282,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-380.182,25.923;-380.465,26.206)|(-380.748,26.489;-380.465,26.206)</value>
+    <value>edge-pair: (-345.978,237.72;-345.978,237.32)|(-345.978,237.72;-345.978,238.12)</value>
    </values>
   </item>
   <item>
@@ -4294,7 +4294,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-345.978,237.72;-345.978,237.32)|(-345.978,237.72;-345.978,238.12)</value>
+    <value>edge-pair: (-380.182,25.923;-380.465,26.206)|(-380.748,26.489;-380.465,26.206)</value>
    </values>
   </item>
   <item>
@@ -9706,7 +9706,7 @@
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-379.755,1033.195;-379.755,1034.195;-379.407,1034.195;-379.407,1033.195)</value>
+    <value>polygon: (-198.042,1180.198;-198.042,1181.198;-197.697,1181.198;-197.697,1180.198)</value>
    </values>
   </item>
   <item>
@@ -9718,7 +9718,7 @@
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-198.042,1180.198;-198.042,1181.198;-197.697,1181.198;-197.697,1180.198)</value>
+    <value>polygon: (-379.755,1033.195;-379.755,1034.195;-379.407,1034.195;-379.407,1033.195)</value>
    </values>
   </item>
   <item>
@@ -10115,30 +10115,6 @@
    <image/>
    <values>
     <value>edge: (-423.107,1169.739;-423.274,1169.739)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NP.12'</category>
-   <cell>7_10_Nplus</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-276.395,928.005;-276.395,928.588;-275.745,928.588;-275.745,928.005)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NP.12'</category>
-   <cell>7_10_Nplus</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-426.402,928.005;-426.402,928.588;-425.745,928.588;-425.745,928.005)</value>
    </values>
   </item>
   <item>

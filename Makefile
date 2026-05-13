@@ -25,6 +25,10 @@ lint_python:
 lint_ruby:
 	rubocop .
 
+# Autocorrect ruby code
+autocorrect_ruby:
+	rubocop -a .
+
 ################################################################################
 ## DRC Regression section
 ################################################################################

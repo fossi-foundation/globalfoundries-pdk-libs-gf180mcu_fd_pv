@@ -179,7 +179,7 @@ GF180_DRC_REGISTRY.register(
   # Rule PP.5di: Extension beyond COMP: For Outside DNWELL
   ## (i) For Pplus to NWELL space >= 0.43um for Pfield or LVPWELL tap. is 0.02µm
   logger.info('Executing rule PP.5di')
-  pp_5d_background = pplus.outside(dnwell).edges
+  pp_5d_background = pplus.not_interacting(guard_ring_mk).outside(dnwell).edges
   pp_5d_pcomp = pcomp.outside(dnwell).edges
   pp_5di_foreground = pp_5d_pcomp.not(nplus_edges).not(nwell_n_dn_sized_out)
   pp5di_l1 = pp_5d_background.enclosing(pp_5di_foreground, 0.02.um, projection)
@@ -222,7 +222,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PP.8b: Minimum area enclosed by Pplus (um2). is 0.35µm²
   logger.info('Executing rule PP.8b')
-  pp8b_l1 = pplus.holes.with_area(nil, 0.35.um)
+  pp8b_l1 = pplus.holes.raw.with_area(nil, 0.35.um)
   pp8b_l1.output('PP.8b', 'PP.8b : Minimum area enclosed by Pplus (um2). : 0.35µm²')
   pp8b_l1.forget
 
@@ -264,8 +264,7 @@ GF180_DRC_REGISTRY.register(
   # Rule PP.12: Overlap with N-channel Poly2 gate extension is forbidden
   ##  within 0.32um of N-channel gate.
   logger.info('Executing rule PP.12')
-  pp12_l1 = pplus.interacting(pplus_edges.separation(ngate.edges.and(ncomp_edges), 0.32.um,
-                                                     euclidian).polygons(0.001.um))
+  pp12_l1 = pplus.interacting(ngate.sized(0.32.um - 1.dbu, size_inside(poly2), steps(3)))
   pp12_l1.output('PP.12', "PP.12 : Overlap with N-channel Poly2 gate extension is forbidden
                     within 0.32um of N-channel gate.")
   pp12_l1.forget

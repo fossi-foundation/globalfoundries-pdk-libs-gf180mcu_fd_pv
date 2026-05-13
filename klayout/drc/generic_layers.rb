@@ -158,17 +158,20 @@ module GF180DRC
 
     STATIC_LAYERS = [
       # --- Wells & Taps ---
-      { name: :dnwell_n, calc: ->(ctx) { ctx[:dnwell].not(ctx[:lvpwell]) } },
+      { name: :dnwell_n,        calc: ->(ctx) { ctx[:dnwell].not(ctx[:lvpwell]) } },
       { name: :dnwell_p,        calc: ->(ctx) { ctx[:dnwell].and(ctx[:lvpwell]) } },
       { name: :all_nwell,       calc: ->(ctx) { ctx[:dnwell_n].join(ctx[:nwell]) } },
 
       # --- Comps & Gates ---
       { name: :ncomp,           calc: ->(ctx) { ctx[:comp].and(ctx[:nplus]) } },
       { name: :pcomp,           calc: ->(ctx) { ctx[:comp].and(ctx[:pplus]) } },
+      { name: :ncomp_con,       calc: ->(ctx) { ctx[:ncomp].not(ctx[:poly2]) } },
+      { name: :pcomp_con,       calc: ->(ctx) { ctx[:pcomp].not(ctx[:poly2]) } },
       { name: :tgate,           calc: ->(ctx) { ctx[:poly2].and(ctx[:comp]).not(ctx[:res_mk]) } },
 
       # --- N-Device Logic ---
       { name: :nactive,         calc: ->(ctx) { ctx[:ncomp].not(ctx[:all_nwell]) } },
+      { name: :n_diode,         calc: ->(ctx) { ctx[:ncomp_con].not(ctx[:nwell]) } },
       { name: :ngate,           calc: ->(ctx) { ctx[:nactive].and(ctx[:tgate]) } },
       { name: :nsd,             calc: lambda { |ctx|
         ctx[:nactive].interacting(ctx[:ngate]).not(ctx[:ngate]).not(ctx[:res_mk])
@@ -177,6 +180,7 @@ module GF180DRC
 
       # --- P-Device Logic ---
       { name: :pactive,         calc: ->(ctx) { ctx[:pcomp].and(ctx[:all_nwell]) } },
+      { name: :p_diode,         calc: ->(ctx) { ctx[:pcomp_con].and(ctx[:nwell]) } },
       { name: :pgate,           calc: ->(ctx) { ctx[:pactive].and(ctx[:tgate]) } },
       { name: :psd,             calc: lambda { |ctx|
         ctx[:pactive].interacting(ctx[:pgate]).not(ctx[:pgate]).not(ctx[:res_mk])
@@ -197,7 +201,8 @@ module GF180DRC
         ctx[:ncomp].and(ctx[:dnwell_p]).interacting(ctx[:ngate_dn]).not(ctx[:ngate_dn]).not(ctx[:res_mk])
       } },
 
-      { name: :natcomp,         calc: ->(ctx) { ctx[:nat].and(ctx[:comp]) } },
+      { name: :natcomp, calc: ->(ctx) { ctx[:nat].and(ctx[:comp]) } },
+      { name: :natcomp_con, calc: ->(ctx) { ctx[:natcomp].not(ctx[:poly2]) } },
 
       # --- Gate Voltage Classes ---
       { name: :nom_gate,        calc: ->(ctx) { ctx[:tgate].not(ctx[:dualgate]) } },
@@ -227,11 +232,16 @@ module GF180DRC
     ].freeze
 
     METAL_STACK_MAP = {
-      2 => { top_via: :via1, topmin1_via: :contact, top_metal: :metal2, topmin1_metal: :metal1 },
-      3 => { top_via: :via2, topmin1_via: :via1,   top_metal: :metal3, topmin1_metal: :metal2 },
-      4 => { top_via: :via3, topmin1_via: :via2,   top_metal: :metal4, topmin1_metal: :metal3 },
-      5 => { top_via: :via4, topmin1_via: :via3,   top_metal: :metal5, topmin1_metal: :metal4 },
-      6 => { top_via: :via5, topmin1_via: :via4,   top_metal: :metaltop, topmin1_metal: :metal5 }
+      2 => { top_via: :via1, topmin1_via: :contact, top_metal: :metal2, top_metal_drawn: :metal2_drawn,
+             topmin1_metal: :metal1 },
+      3 => { top_via: :via2, topmin1_via: :via1,   top_metal: :metal3, top_metal_drawn: :metal3_drawn,
+             topmin1_metal: :metal2 },
+      4 => { top_via: :via3, topmin1_via: :via2,   top_metal: :metal4, top_metal_drawn: :metal4_drawn,
+             topmin1_metal: :metal3 },
+      5 => { top_via: :via4, topmin1_via: :via3,   top_metal: :metal5, top_metal_drawn: :metal5_drawn,
+             topmin1_metal: :metal4 },
+      6 => { top_via: :via5, topmin1_via: :via4,   top_metal: :metaltop, top_metal_drawn: :metaltop_drawn,
+             topmin1_metal: :metal5 }
     }.freeze
 
     METAL_NAMES = {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for metal4</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>metal4</top-cell>
  <tags>
  </tags>
@@ -2475,115 +2475,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-342.714,358.827;-342.714,359.027)/(-343.009,358.977;-343.009,358.772)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-388.737,353.912;-388.737,353.952)/(-389.032,353.952;-389.032,353.857)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-642.362,354.15;-642.389,354.15)/(-642.614,353.952;-642.587,353.952)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-664.295,354.002;-664.295,353.978)/(-664.024,354.131;-664.166,354.273)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-498.038,353.912;-498.038,354.007)/(-498.333,353.952;-498.333,353.857)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-414.493,353.912;-414.493,353.952)/(-414.788,353.952;-414.788,353.857)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-550.702,353.912;-550.702,354.007)/(-550.997,353.952;-550.997,353.857)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-664.319,354.002;-664.295,354.002)/(-664.024,354.131;-664.166,354.273)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-525.106,353.912;-525.106,354.007)/(-525.401,353.952;-525.401,353.857)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M4.2b'</category>
-   <cell>metal4</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-472.442,353.912;-472.442,354.007)/(-472.737,353.952;-472.737,353.857)</value>
+    <value>edge-pair: (-366.534,358.827;-366.534,359.032)/(-366.829,358.977;-366.829,358.772)</value>
    </values>
   </item>
   <item>
@@ -2607,6 +2499,42 @@
    <comment/>
    <image/>
    <values>
+    <value>edge-pair: (-388.737,353.912;-388.737,353.952)/(-389.032,353.952;-389.032,353.857)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M4.2b'</category>
+   <cell>metal4</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-342.714,358.827;-342.714,359.027)/(-343.009,358.977;-343.009,358.772)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M4.2b'</category>
+   <cell>metal4</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-472.442,353.912;-472.442,354.007)/(-472.737,353.952;-472.737,353.857)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M4.2b'</category>
+   <cell>metal4</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
     <value>edge-pair: (-445.374,353.912;-445.374,353.952)/(-445.669,353.952;-445.669,353.857)</value>
    </values>
   </item>
@@ -2619,7 +2547,43 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-366.534,358.827;-366.534,359.032)/(-366.829,358.977;-366.829,358.772)</value>
+    <value>edge-pair: (-550.702,353.912;-550.702,354.007)/(-550.997,353.952;-550.997,353.857)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M4.2b'</category>
+   <cell>metal4</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-525.106,353.912;-525.106,354.007)/(-525.401,353.952;-525.401,353.857)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M4.2b'</category>
+   <cell>metal4</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-414.493,353.912;-414.493,353.952)/(-414.788,353.952;-414.788,353.857)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M4.2b'</category>
+   <cell>metal4</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-498.038,353.912;-498.038,354.007)/(-498.333,353.952;-498.333,353.857)</value>
    </values>
   </item>
   <item>
@@ -2643,7 +2607,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-682.902,344.083;-682.76,343.941)/(-682.597,344.175;-682.778,344.356)</value>
+    <value>edge-pair: (-642.362,354.15;-642.389,354.15)/(-642.614,353.952;-642.587,353.952)</value>
    </values>
   </item>
   <item>
