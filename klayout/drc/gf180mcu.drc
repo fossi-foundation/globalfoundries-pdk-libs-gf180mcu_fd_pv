@@ -44,6 +44,11 @@ exec_start_time = Time.now
 
 logger = Logger.new($stdout)
 
+# Don't buffer the output
+# This is to ensure that for long running DRC rules
+# always the correct one is displayed.
+$stdout.sync = true
+
 logger.formatter = proc do |_severity, datetime, _progname, msg|
   "#{datetime}: Memory Usage (" + `pmap #{Process.pid} | tail -1`[10, 40].strip + ") : #{msg}
 "
