@@ -89,6 +89,6 @@ connect(metal2_con, metal2_label)
 
 logger.info('Starting GF180 LVS connectivity setup (Global)')
 
-# Global
-#connect_global(sub, substrate_name)
+# Sub connections are made after device extraction, as it requires the sub output
+# terminal information
 

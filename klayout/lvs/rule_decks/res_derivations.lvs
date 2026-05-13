@@ -159,11 +159,25 @@ ppolyf_u_6p0_dw_h = poly2.and(res_mk).and(dnwell).and(resistor).not(v5_xtor).and
 # Metal1 resistor
 rm1_res = metal1.and(metal1_res)
 
-# Metal2 resistor
-rm2_res = metal2.and(metal2_res)
+unless METAL_LEVEL == '2LM'
+  # Metal2 resistor
+  rm2_res = metal2.and(metal2_res)
+end
 
-# Metal3 resistor
-rm3_res = metal3.and(metal3_res)
+unless METAL_LEVEL == '3LM' || METAL_LEVEL == '2LM'
+  # Metal3 resistor
+  rm3_res = metal3.and(metal3_res)
+end
+
+unless METAL_LEVEL == '4LM' || METAL_LEVEL == '3LM' || METAL_LEVEL == '2LM'
+  # Metal4 resistor
+  rm4_res = metal4.and(metal4_res)
+end
+
+unless METAL_LEVEL == '5LM' || METAL_LEVEL == '4LM' || METAL_LEVEL == '3LM' || METAL_LEVEL == '2LM'
+  # Metal5 resistor
+  rm5_res = metal5.and(metal5_res)
+end
 
 # Metaltop resistor
 tm_res = top_metal.and(top_metal_res)

@@ -66,7 +66,7 @@ if CONSIDER_DN_DW_FEATURES
                     { 'R' => nplus_s_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
 else
     logger.info('Extracting NPLUS_S_DW device NPLUS_S')
-    extract_devices(resistor_with_bulk('nplus_s_dw', 6.3, BResistor),
+    extract_devices(resistor_with_bulk('nplus_s', 6.3, BResistor),
                     { 'R' => nplus_s_dw_layer, 'C' => nplus_cont, 'W' => lvpwell_con })
 end
 
@@ -150,7 +150,7 @@ if CONSIDER_DN_DW_FEATURES
     extract_devices(resistor_with_bulk('npolyf_s_dw', 6.8, BResistor),
                     { 'R' => npolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 else
-    logger.info('Extracting NPOLYF_S_DW device as NPOLY_S')
+    logger.info('Extracting NPOLYF_S_DW device as NPOLYF_S')
     extract_devices(resistor_with_bulk('npolyf_s', 6.8, BResistor),
                     { 'R' => npolyf_s_dw_layer, 'C' => poly2_con, 'W' => dnwell })
 end
@@ -327,10 +327,22 @@ unless METAL_LEVEL == '2LM'
   extract_devices(resistor('rm2', 0.09, NResistor), { 'R' => rm2_res, 'C' => metal2_con })
 end
 
-unless METAL_LEVEL == '3LM'
+unless METAL_LEVEL == '3LM' || METAL_LEVEL == '2LM'
   # RM3
   logger.info('Extracting RM3 device')
   extract_devices(resistor('rm3', 0.09, NResistor), { 'R' => rm3_res, 'C' => metal3_con })
+end
+
+unless METAL_LEVEL == '4LM' || METAL_LEVEL == '3LM' || METAL_LEVEL == '2LM'
+  # RM4
+  logger.info('Extracting RM4 device')
+  extract_devices(resistor('rm4', 0.09, NResistor), { 'R' => rm4_res, 'C' => metal4_con })
+end
+
+unless METAL_LEVEL == '5LM' || METAL_LEVEL == '4LM' || METAL_LEVEL == '3LM' || METAL_LEVEL == '2LM'
+  # RM5
+  logger.info('Extracting RM5 device')
+  extract_devices(resistor('rm5', 0.09, NResistor), { 'R' => rm5_res, 'C' => metal5_con })
 end
 
 case METAL_TOP

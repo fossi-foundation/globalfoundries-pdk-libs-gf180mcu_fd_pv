@@ -231,11 +231,6 @@ count = lvs_drain.count
 logger.info("lvs_drain has #{count} polygons")
 polygons_count += count
 
-ind_mk = polygons(151, 5)
-count = ind_mk.count
-logger.info("ind_mk has #{count} polygons")
-polygons_count += count
-
 hvpolyrs = polygons(123, 5)
 count = hvpolyrs.count
 logger.info("hvpolyrs has #{count} polygons")
