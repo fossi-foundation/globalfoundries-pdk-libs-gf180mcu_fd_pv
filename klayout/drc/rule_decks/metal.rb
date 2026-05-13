@@ -17,20 +17,31 @@
 ################################################################################################
 
 # rubocop:disable Metrics/AbcSize
+# rubocop:disable Metrics/MethodLength
+# rubocop:disable Style/IdenticalConditionalBranches
 
 def metal_rules(idx:)
   #================================================
-  #---------------------METAL5---------------------
+  #---------------------METAL----------------------
   #================================================
 
   metal_drawn = ctx[METAL_MAP_METAL[idx][:metal_drawn]]
   min_width  = METAL_MAP_METAL[idx][:min_width]
   min_space  = METAL_MAP_METAL[idx][:min_space]
 
-  logger.info("Executing rule M#{idx}.1")
-  m1_l1 = metal_drawn.width(min_width.um, euclidian)
-  m1_l1.output("M#{idx}.1", "M#{idx}.1 : min. metal#{idx} width : #{min_width}µm")
-  m1_l1.forget
+  # For Metal1 the 3.3V SRAM is handled by S.M1.1_LV
+  if idx == 1
+    logger.info("Executing rule M#{idx}.1")
+    sram_lv = sramcore.not_interacting(v5_xtor).not_interacting(dualgate)
+    m1_l1 = metal_drawn.not(sram_lv).width(min_width.um, euclidian)
+    m1_l1.output("M#{idx}.1", "M#{idx}.1 : min. metal#{idx} width : #{min_width}µm")
+    m1_l1.forget
+  else
+    logger.info("Executing rule M#{idx}.1")
+    m1_l1 = metal_drawn.width(min_width.um, euclidian)
+    m1_l1.output("M#{idx}.1", "M#{idx}.1 : min. metal#{idx} width : #{min_width}µm")
+    m1_l1.forget
+  end
 
   logger.info("Executing rule M#{idx}.2a")
   m2a_l1 = metal_drawn.space(min_space.um, euclidian)
@@ -41,7 +52,9 @@ def metal_rules(idx:)
   # Get all edge pairs that are smaller than 10um
   # (we can't do (width >= 10.um) since there's no definition for "opposite edge")
   # Subtract this from metal1 to obtain the wide metal
-  wide_m = metal_drawn - metal_drawn.drc(width < 10.um).polygons
+  # wide_m = metal_drawn - metal_drawn.drc(width < 10.um).polygons
+  # For now use this rule since the other is too slow
+  wide_m = metal_drawn.sized(-5.um, 0.um).sized(0.um, -5.um).sized(5.um, 0.um).sized(0.um, 5.um).and(metal_drawn)
   m2b_l1 = metal_drawn.separation(wide_m, 0.3.um, euclidian, without_touching_edges)
   m2b_l1.output("M#{idx}.2b", "M#{idx}.2b : Space to wide Metal#{idx} (length & width > 10um) : 0.3µm")
   m2b_l1.forget
@@ -76,3 +89,5 @@ METAL_MAP_METAL = {
 end
 
 # rubocop:enable Metrics/AbcSize
+# rubocop:enable Metrics/MethodLength
+# rubocop:enable Style/IdenticalConditionalBranches

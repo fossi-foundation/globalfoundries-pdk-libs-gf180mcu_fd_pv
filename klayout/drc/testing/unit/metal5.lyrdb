@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for metal5</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>metal5</top-cell>
  <tags>
  </tags>
@@ -2475,6 +2475,18 @@
    <comment/>
    <image/>
    <values>
+    <value>edge-pair: (-318.894,455.812;-318.894,456.012)/(-319.189,455.962;-319.189,455.757)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'M5.2b'</category>
+   <cell>metal5</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
     <value>edge-pair: (-342.714,460.837;-342.714,461.037)/(-343.009,460.987;-343.009,460.782)</value>
    </values>
   </item>
@@ -2499,7 +2511,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-642.362,456.16;-642.389,456.16)/(-642.614,455.962;-642.587,455.962)</value>
+    <value>edge-pair: (-366.534,460.837;-366.534,461.042)/(-366.829,460.987;-366.829,460.782)</value>
    </values>
   </item>
   <item>
@@ -2511,7 +2523,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-642.389,456.16;-642.389,456.187)/(-642.587,455.962;-642.587,455.935)</value>
+    <value>edge-pair: (-414.493,455.922;-414.493,455.962)/(-414.788,455.962;-414.788,455.867)</value>
    </values>
   </item>
   <item>
@@ -2523,19 +2535,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-550.702,455.922;-550.702,456.017)/(-550.997,455.962;-550.997,455.867)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M5.2b'</category>
-   <cell>metal5</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-664.319,456.012;-664.295,456.012)/(-664.024,456.141;-664.166,456.283)</value>
+    <value>edge-pair: (-472.442,455.922;-472.442,456.017)/(-472.737,455.962;-472.737,455.867)</value>
    </values>
   </item>
   <item>
@@ -2571,42 +2571,6 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-472.442,455.922;-472.442,456.017)/(-472.737,455.962;-472.737,455.867)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M5.2b'</category>
-   <cell>metal5</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-318.894,455.812;-318.894,456.012)/(-319.189,455.962;-319.189,455.757)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M5.2b'</category>
-   <cell>metal5</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-366.534,460.837;-366.534,461.042)/(-366.829,460.987;-366.829,460.782)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M5.2b'</category>
-   <cell>metal5</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
     <value>edge-pair: (-498.038,455.922;-498.038,456.017)/(-498.333,455.962;-498.333,455.867)</value>
    </values>
   </item>
@@ -2619,7 +2583,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-664.295,456.012;-664.295,455.988)/(-664.024,456.141;-664.166,456.283)</value>
+    <value>edge-pair: (-550.702,455.922;-550.702,456.017)/(-550.997,455.962;-550.997,455.867)</value>
    </values>
   </item>
   <item>
@@ -2631,7 +2595,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-414.493,455.922;-414.493,455.962)/(-414.788,455.962;-414.788,455.867)</value>
+    <value>edge-pair: (-642.389,456.16;-642.389,456.187)/(-642.587,455.962;-642.587,455.935)</value>
    </values>
   </item>
   <item>
@@ -2643,7 +2607,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-682.902,446.093;-682.76,445.951)/(-682.597,446.185;-682.778,446.366)</value>
+    <value>edge-pair: (-642.362,456.16;-642.389,456.16)/(-642.614,455.962;-642.587,455.962)</value>
    </values>
   </item>
   <item>
