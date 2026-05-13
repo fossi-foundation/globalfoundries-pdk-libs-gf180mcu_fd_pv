@@ -13,6 +13,11 @@ Style/GlobalVars:
   Description: Do not introduce global variables.
   Exclude:
     - 'klayout/drc/gf180mcu.drc'
+    - 'klayout/lvs/gf180mcu.lvs'
+
+Lint/UselessAssignment:
+  Exclude:
+    - 'klayout/lvs/rule_decks/**'
 
 Metrics/BlockLength:
   AllowedMethods: ['register']
@@ -31,3 +36,4 @@ AllCops:
   Include:
     - '**/*.rb'
     - '**/*.drc'
+    - '**/*.lvs'

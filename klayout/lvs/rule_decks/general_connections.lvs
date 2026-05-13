@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ################################################################################################
 # Copyright 2023 GlobalFoundries PDK Authors
 #
@@ -91,4 +93,3 @@ logger.info('Starting GF180 LVS connectivity setup (Global)')
 
 # Sub connections are made after device extraction, as it requires the sub output
 # terminal information
-

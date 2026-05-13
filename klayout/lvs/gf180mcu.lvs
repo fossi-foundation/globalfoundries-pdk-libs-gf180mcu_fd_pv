@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ################################################################################################
 # Copyright 2023 GlobalFoundries PDK Authors
 #
@@ -29,8 +31,8 @@
 #     of topcell
 ###=====================================================###
 #--- **Netlist Options** ---
-# spice_net_names: Use net names instead of numbers (true/false, default: false)
-# spice_comments: Include detailed comments (true/false, default: false)
+# spice_net_names: Use net names instead of numbers (true/false, default: true)
+# spice_comments: Include detailed comments (true/false, default: true)
 ###=====================================================###
 #--- **LVS Options** ---
 # simplify: Simplify netlist (true/false, default: false)
@@ -42,8 +44,6 @@
 # implicit_connect: Use implicit connections (true/false, default: false)
 ###=====================================================###
 #--- **Extraction Options** ---
-# lvs_sub: Name of default substrate name (default: gf180mcu_gnd)
-# scale: Enable device scaling (true/false, default: false)
 # run_mode: [tiling/deep/flat] (default: flat)
 # metal_top: Metal top layer (6K/9K/11K/30K, default: 9K)
 # metal_level: Metal stack level (3LM/4LM/5LM/6LM, default: 6LM)
@@ -60,6 +60,7 @@
 #=======================================================================================================================
 #--------------------------------------------- GF 0.18um MCU LVS RULE DECK ---------------------------------------------
 #=======================================================================================================================
+require 'English'
 require 'time'
 require 'logger'
 require 'etc'
@@ -105,14 +106,11 @@ end
 #================================================
 logger.info('Evaluate switches.')
 
-def bool_check?(obj)
+def bool_check?(obj, default: false)
+  return default if obj.nil?
+
   obj.to_s.downcase == 'true'
 end
-
-#=== GET SUBSTRATE NAME ===
-substrate_name = $lvs_sub || 'gf180mcu_gnd'
-
-logger.info("Substrate name used: #{$lvs_sub}")
 
 #=== SCHEMATIC TRANSLCATE ===
 
@@ -123,34 +121,29 @@ logger.info("schematic translate: #{SCHEMATIC_TRANSLATE}")
 #=== NET NAMES OPTION ===
 # true: use net names instead of numbers
 # false: use numbers for nets
-SPICE_WITH_NET_NAMES = bool_check?($spice_net_names)
+SPICE_WITH_NET_NAMES = bool_check?($spice_net_names, default: true)
 
 logger.info("Extracted netlist with net names: #{SPICE_WITH_NET_NAMES}")
 
 #=== COMMENTS OPTION ===
 # true: put in comments with details
 # false: no comments
-SPICE_WITH_COMMENTS = bool_check?($spice_comments)
+SPICE_WITH_COMMENTS = bool_check?($spice_comments, default: true)
 
 logger.info("Extracted netlist with comments in details: #{SPICE_WITH_COMMENTS}")
 
 #=== TARGET NETLIST ===
 if $target_netlist
   logger.info("LVS extracted netlist at: #{$target_netlist}")
-  target_netlist($target_netlist, write_spice(SPICE_WITH_NET_NAMES, SPICE_WITH_COMMENTS), "Extracted by KLayout with GF180MCU LVS runset on : #{Time.now.strftime("%d/%m/%Y %H:%M")}")
+  target_netlist($target_netlist, write_spice(SPICE_WITH_NET_NAMES, SPICE_WITH_COMMENTS),
+                 "Extracted by KLayout with GF180MCU LVS runset on : #{Time.now.strftime('%d/%m/%Y %H:%M')}")
 else
   layout_dir = Pathname.new(RBA::CellView.active.filename).parent.realpath
   netlist_path = layout_dir.join("#{source.cell_name}_extracted.cir")
-  target_netlist("#{netlist_path}", write_spice(SPICE_WITH_NET_NAMES, SPICE_WITH_COMMENTS),  "Extracted by KLayout with GF180MCU LVS runset on : #{Time.now.strftime("%d/%m/%Y %H:%M")}")
+  target_netlist(netlist_path.to_s, write_spice(SPICE_WITH_NET_NAMES, SPICE_WITH_COMMENTS),
+                 "Extracted by KLayout with GF180MCU LVS runset on : #{Time.now.strftime('%d/%m/%Y %H:%M')}")
   logger.info("GF180MCU Klayout LVS extracted netlist file at: #{source.cell_name}_extracted.cir")
 end
-
-#=== EXTRACTION SCALE ===
-DEV_SCALE = bool_check?($scale)
-
-device_scaling(1_000_000) if $DEV_SCALE
-
-logger.info("LVS device_scaling option: #{DEV_SCALE}")
 
 # SIMPLIFY
 SIMPLIFY = bool_check?($simplify)
@@ -255,29 +248,26 @@ reader = RBA::NetlistSpiceReader.new(SubcircuitModelsReader.new)
 if $schematic
   $schematic = File.expand_path($schematic)
 else
-  exts = ["spice", "cdl"]
-  candidates = exts.map{|ext| "#{source.cell_name}.#{ext}"}
-  netlists = candidates.select{|f| File.exist?(f)}
-  if netlists.empty?
-    error("Netlist not found, tried: #{candidates}")
-  end
+  exts = %w[spice cdl]
+  candidates = exts.map { |ext| "#{source.cell_name}.#{ext}" }
+  netlists = candidates.select { |f| File.exist?(f) }
+  error("Netlist not found, tried: #{candidates}") if netlists.empty?
 end
 
 logger.info("Input schematic file: #{$schematic}")
 
 if SCHEMATIC_TRANSLATE
   python_script = File.join(File.dirname(__FILE__), 'gf180_xschem_klayout_spice_convert.py')
-  translated_schematic_filename = File.basename($schematic).sub(File.extname($schematic), '') + "_translated.spice"
+  translated_schematic_filename = "#{File.basename($schematic).sub(File.extname($schematic), '')}_translated.spice"
   translated_schematic_path = File.join(Dir.mktmpdir, translated_schematic_filename)
   cmd = "python3 #{python_script} #{$schematic} -o #{translated_schematic_path}"
   logger.info("Running #{cmd}")
   output = `#{cmd}`
-  exitstatus = $?.exitstatus
+  exitstatus = $CHILD_STATUS.exitstatus
   logger.info(output) unless output.empty?
 
-  unless exitstatus == 0
-    raise "Script returned a non-zero exit status (#{exitstatus})"
-  end
+  raise "Script returned a non-zero exit status (#{exitstatus})" unless exitstatus.zero?
+
   $schematic = translated_schematic_path
 end
 
@@ -463,12 +453,12 @@ exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
 logger.info(format('LVS Total Run time %f seconds', run_time))
 
-if !result
-  logger.info('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
-  logger.error("ERROR : Netlists don't match")
-  logger.info('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
-else
+if result
   logger.info('==========================================')
   logger.info('INFO : Congratulations! Netlists match.')
   logger.info('==========================================')
+else
+  logger.info('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+  logger.error("ERROR : Netlists don't match")
+  logger.info('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
 end

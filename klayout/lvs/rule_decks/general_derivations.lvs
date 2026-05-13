@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ################################################################################################
 # Copyright 2023 GlobalFoundries PDK Authors
 #
@@ -17,7 +19,6 @@
 #==================================
 # ------ GENERAL DERIVATIONS ------
 #==================================
-
 ncomp           = comp.and(nplus)
 pcomp           = comp.and(pplus)
 tgate           = poly2.and(comp).not(res_mk)
