@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>D25 View</description>
+ <version/>
+ <category>d25</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <priority>0</priority>
+ <shortcut/>
+ <show-in-menu>true</show-in-menu>
+ <group-name>D25 View</group-name>
+ <menu-path>submenu&gt;end("gf180mcu PDK").end</menu-path>
+ <interpreter>dsl</interpreter>
+ <dsl-interpreter-name>d25-dsl-xml</dsl-interpreter-name>
+ <text>
+
+Poly2 = input(30, 0) + input(30, 4)
+Contact = input(33, 0)
+Metal1 = input(34, 0) + input(34, 4)
+Via1 = input(35, 0)
+Metal2 = input(36, 0) + input(36, 4)
+Via2 = input(38, 0)
+Metal3 = input(42, 0) + input(42, 4)
+Via3 = input(40, 0)
+Metal4 = input(46, 0) + input(46, 4)
+Via4 = input(41, 0)
+Metal5 = input(81, 0) + input(81, 4)
+
+FuseTop = input(75, 0)
+
+z(Poly2, zstart: 0.nm, height: 200.nm, name: "Poly2")
+
+zz(name: "Contact", like: "33/0") do
+  contact_over_poly = Contact &amp; Poly2
+  contact_not_over_poly = Contact - contact_over_poly
+
+  z(contact_over_poly, zstart: 200.nm, height: 660.nm)
+  z(contact_not_over_poly, zstart: 0.nm, height: 860.nm)
+end
+
+z(Metal1, zstart: (860 + 550*0 + 600*0).nm, height: 550.nm, name: "Metal1")
+z(Via1,   zstart: (860 + 550*1 + 600*0).nm, height: 600.nm, name: "Via1")
+z(Metal2, zstart: (860 + 550*1 + 600*1).nm, height: 550.nm, name: "Metal2")
+z(Via2,   zstart: (860 + 550*2 + 600*1).nm, height: 600.nm, name: "Via2")
+z(Metal3, zstart: (860 + 550*2 + 600*2).nm, height: 550.nm, name: "Metal3")
+z(Via3,   zstart: (860 + 550*3 + 600*2).nm, height: 600.nm, name: "Via3")
+z(Metal4, zstart: (860 + 550*3 + 600*3).nm, height: 550.nm, name: "Metal4")
+
+# MIM Option B (between M4 and TM)
+# MIM gap: 42nm
+zz(name: "Via4", like: "41/0") do
+  via4_over_fusetop = Via4 &amp; FuseTop
+  via4_not_over_fusetop = Via4 - via4_over_fusetop
+  
+  z(via4_over_fusetop, zstart: (860 + 1150*3 + 550 + 42 + 295).nm, height: 563.nm)
+  z(via4_not_over_fusetop, zstart: (860 + 1150*3 + 550).nm, height: 900.nm)
+end
+z(FuseTop, zstart: (860 + 1150*3 + 550 + 42).nm, height: 295.nm, name: "FuseTop")
+
+z(Metal5, zstart: (860 + 1150*3 + 1450).nm, height: 1192.5.nm, name: "Metal5")
+
+</text>
+</klayout-macro>
