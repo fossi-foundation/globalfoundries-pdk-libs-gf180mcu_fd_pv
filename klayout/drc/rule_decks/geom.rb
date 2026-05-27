@@ -24,8 +24,9 @@
 def offgrid_angle_check(layer, name)
   logger.info("Executing rule #{name}_OFFGRID")
   layer.ongrid(0.005).output("#{name}_OFFGRID", "OFFGRID : OFFGRID vertex on #{name}")
+  logger.info("Executing rule #{name}_ACUTE")
   layer.edges.without_angle(0).without_angle(45).without_angle(90)
-       .without_angle(-45).output("#{name}_angle", "ACUTE : non 45 degree angle #{name}")
+       .without_angle(-45).output("#{name}_ACUTE", "ACUTE : non 45 degree angle #{name}")
 end
 
 # =========================================================
@@ -234,4 +235,19 @@ GF180_DRC_REGISTRY.register(
   offgrid_angle_check(ubmeplate, 'ubmeplate')
   offgrid_angle_check(pr_bndry, 'pr_bndry')
   offgrid_angle_check(border, 'border')
+end
+
+# =========================================================
+# Top-level/package markers
+# =========================================================
+GF180_DRC_REGISTRY.register(
+  id: 'geom_dbu',
+  path: __FILE__,
+  priority: 10,
+  tags: %w[all offgrid geom]
+) do
+  logger.info('Executing rule GRID')
+  # rubocop:disable Lint/FloatComparison
+  extent.output('GRID', 'GRID : The design grid must be an integer multiple of 0.005μm') if dbu != 0.005
+  # rubocop:enable Lint/FloatComparison
 end

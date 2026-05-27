@@ -166,6 +166,8 @@ GF180_DRC_REGISTRY.register(
                  'DF.3b : Min./Max. NCOMP Space to PCOMP in the same well for butted COMP
                   (MOSCAP butting is not allowed): 0 um')
   df3b_l1.forget
+  df_3b_same_well.forget
+  df_3b_moscap.forget
   ncomp_butted.forget
 end
 
@@ -274,8 +276,8 @@ GF180_DRC_REGISTRY.register(
   df4c_l1 = df4c_pcomp3p3v.enclosed(nw_n_dn_n_srm3p3v, 0.43.um, euclidian)
   df4c_l1.output('DF.4c_LV', 'DF.4c_LV : Min. (Nwell overlap of PCOMP) outside DNWELL. : 0.43µm')
   df4c_l1.forget
-  nw_n_dn_n_srm3p3v.forget
   df4c_pcomp3p3v.forget
+  nw_n_dn_n_srm3p3v.forget
   nw_n_dn_n_srm.forget
 end
 
@@ -293,9 +295,9 @@ GF180_DRC_REGISTRY.register(
   df4c_l1 = df4c_pcomp56v.enclosed(nw_n_dn_n_srm, 0.6.um, euclidian)
   df4c_l1.output('DF.4c_MV', 'DF.4c_MV : Min. (Nwell overlap of PCOMP) outside DNWELL. : 0.6µm')
   df4c_l1.forget
+  df4c_pcomp56v.forget
   nw_n_dn_n_srm56v.forget
   nw_n_dn_n_srm.forget
-  df4c_pcomp56v.forget
 end
 
 # Rule DF.4d_LV: Min. (Nwell overlap of NCOMP) outside DNWELL. is 0.12µm
@@ -411,9 +413,9 @@ GF180_DRC_REGISTRY.register(
   df6_l1 = comp_3p3v.and(df6_comp).enclosing(df6_poly, 0.24.um, euclidian)
   df6_l1.output('DF.6_LV', 'DF.6_LV : Min. COMP extend beyond gate (it also means source/drain overhang). : 0.24µm')
   df6_l1.forget
-  df6_exclude.forget
-  df6_comp.forget
   df6_poly.forget
+  df6_comp.forget
+  df6_exclude.forget
   comp_3p3v.forget
 end
 
@@ -432,9 +434,9 @@ GF180_DRC_REGISTRY.register(
   df6_l1 = comp_56v.and(df6_comp).enclosing(df6_poly, 0.4.um, euclidian)
   df6_l1.output('DF.6_MV', 'DF.6_MV : Min. COMP extend beyond gate (it also means source/drain overhang). : 0.4µm')
   df6_l1.forget
-  df6_exclude.forget
-  df6_comp.forget
   df6_poly.forget
+  df6_comp.forget
+  df6_exclude.forget
   comp_56v.forget
 end
 
@@ -578,6 +580,7 @@ GF180_DRC_REGISTRY.register(
   df13_l1.forget
   pactive_3p3v.forget
   df13_ntap_sized_by20.forget
+  df13_ntap_sized.forget
 end
 
 # Rule DF.13_MV: Max distance of Nwell tap (NCOMP inside Nwell) from (PCOMP inside Nwell) is 15um.
@@ -605,6 +608,7 @@ GF180_DRC_REGISTRY.register(
   df13_l1.forget
   pactive_56v.forget
   df13_ntap_sized_by15.forget
+  df13_ntap_sized.forget
 end
 
 # Rule DF.14_LV: Max distance of substrate tap (PCOMP outside Nwell) from (NCOMP outside Nwell) is 20um.
@@ -622,9 +626,9 @@ GF180_DRC_REGISTRY.register(
   df14_l1.output('DF.14_LV',
                  'DF.14_LV : Max distance of substrate tap (PCOMP outside Nwell) from (NCOMP outside Nwell): 20um')
   df14_l1.forget
-  nactive_3p3v.forget
-  df14_poss_bad_active.forget
   df14_good_active.forget
+  df14_poss_bad_active.forget
+  nactive_3p3v.forget
 end
 
 # Rule DF.14_MV: Max distance of substrate tap (PCOMP outside Nwell) from (NCOMP outside Nwell) is 15um.
@@ -642,9 +646,9 @@ GF180_DRC_REGISTRY.register(
   df14_l1.output('DF.14_MV',
                  'DF.14_MV : Max distance of substrate tap (PCOMP outside Nwell) from (NCOMP outside Nwell): 15um')
   df14_l1.forget
-  nactive_56v.forget
-  df14_poss_bad_active.forget
   df14_good_active.forget
+  df14_poss_bad_active.forget
+  nactive_56v.forget
 end
 
 # Rule DF.15a_LV is not a DRC check
@@ -677,9 +681,9 @@ GF180_DRC_REGISTRY.register(
   df16_l1.output('DF.16_LV',
                  'DF.16_LV : Min. space from (Nwell outside DNWELL) to (NCOMP outside Nwell and DNWELL). : 0.43µm')
   df16_l1.forget
+  nwell_n_dn3p3v.forget
   ncomp_out_nw_dn.forget
   ncomp_3p3v.forget
-  nwell_n_dn3p3v.forget
   comp_3p3v.forget
 end
 
@@ -701,9 +705,9 @@ GF180_DRC_REGISTRY.register(
   df16_l1.output('DF.16_MV',
                  'DF.16_MV : Min. space from (Nwell outside DNWELL) to (NCOMP outside Nwell and DNWELL). : 0.6µm')
   df16_l1.forget
+  nwell_n_dn56v.forget
   ncomp_out_nw_dn.forget
   ncomp_56v.forget
-  nwell_n_dn56v.forget
   comp_56v.forget
 end
 
@@ -723,8 +727,8 @@ GF180_DRC_REGISTRY.register(
   df17_l1.output('DF.17_LV',
                  'DF.17_LV : Min. space from (Nwell Outside DNWELL) to (PCOMP outside Nwell and DNWELL). : 0.12µm')
   df17_l1.forget
-  nwell_n_dn3p3v.forget
   pcomp_3p3v.forget
+  nwell_n_dn3p3v.forget
   pcomp_out_nw_dn.forget
   comp_3p3v.forget
 end
@@ -745,8 +749,8 @@ GF180_DRC_REGISTRY.register(
   df17_l1.output('DF.17_MV',
                  'DF.17_MV : Min. space from (Nwell Outside DNWELL) to (PCOMP outside Nwell and DNWELL). : 0.16µm')
   df17_l1.forget
-  nwell_n_dn56v.forget
   pcomp_56v.forget
+  nwell_n_dn56v.forget
   pcomp_out_nw_dn.forget
   comp_56v.forget
 end
@@ -780,8 +784,8 @@ GF180_DRC_REGISTRY.register(
   df19_l1 = ncomp_out_nw_dn.interacting(ncomp_3p3v).separation(dnwell, 3.2.um, euclidian)
   df19_l1.output('DF.19_LV', 'DF.19_LV : Min. DNWELL space to (NCOMP outside Nwell and DNWELL). : 3.2µm')
   df19_l1.forget
-  ncomp_3p3v.forget
   ncomp_out_nw_dn.forget
+  ncomp_3p3v.forget
   comp_3p3v.forget
 end
 

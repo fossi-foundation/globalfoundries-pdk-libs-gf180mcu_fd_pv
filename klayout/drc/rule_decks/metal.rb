@@ -36,6 +36,7 @@ def metal_rules(idx:)
     m1_l1 = metal_drawn.not(sram_lv).width(min_width.um, euclidian)
     m1_l1.output("M#{idx}.1", "M#{idx}.1 : min. metal#{idx} width : #{min_width}µm")
     m1_l1.forget
+    sram_lv.forget
   else
     logger.info("Executing rule M#{idx}.1")
     m1_l1 = metal_drawn.width(min_width.um, euclidian)
