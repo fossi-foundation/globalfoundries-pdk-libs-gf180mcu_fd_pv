@@ -181,6 +181,8 @@ GF180_DRC_REGISTRY.register(id: 'CO.6b_adjacent_edge_overlap', path: __FILE__, p
   check.forget
   check_corner.forget
   cond_edges.forget
+  main_contact.forget
+  main_contact_edges.forget
 end
 
 # CO.6c guideline (intentionally not implemented)

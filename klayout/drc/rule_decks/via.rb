@@ -22,6 +22,7 @@
 
 def via_rule_1(idx:)
   via = ctx[METAL_MAP[idx][:via]]
+
   l = via.edges.without_length(0.26.um)
   l.output("V#{idx}.1", "V#{idx}.1 : Min/max #{METAL_MAP[idx][:via]} size . : 0.26µm")
   l.forget
@@ -29,6 +30,7 @@ end
 
 def via_rule_2a(idx:)
   via = ctx[METAL_MAP[idx][:via]]
+
   l = via.space(0.26.um, euclidian)
   l.output("V#{idx}.2a", "V#{idx}.2a : min. #{METAL_MAP[idx][:via]} spacing : 0.26µm")
   l.forget

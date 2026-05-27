@@ -35,6 +35,11 @@ def mslot_rules(idx:)
 
   dont_slot = top_metal_under_pad | mim_bottom_under_fusetop | top_metal_under_fusewindow_d | top_metal_under_ubm
 
+  top_metal_under_pad.forget
+  mim_bottom_under_fusetop.forget
+  top_metal_under_fusewindow_d.forget
+  top_metal_under_ubm.forget
+
   metal_slot = ctx[METAL_MAP_MSLOT[idx][:metal_slot]]
   metal_drawn = ctx[METAL_MAP_MSLOT[idx][:metal_drawn]]
   via_below = ctx[METAL_MAP_MSLOT[idx][:via_below]]
@@ -42,18 +47,27 @@ def mslot_rules(idx:)
 
   logger.info("Checking slots for Metal#{idx}")
 
-  metal_slotted = metal_drawn - metal_slot - dont_slot - via_below.sized(0.2) - via_above.sized(0.2)
+  # first pre-select large features before subtracting the vias
+  metal_drawn_large = metal_drawn.sized(0, -15.um).sized(-15.um, 0).sized(0, 15.um).sized(15.um, 0)
+  metal_large_slotted = metal_drawn_large - metal_slot - dont_slot - via_below.sized(0.2) - via_above.sized(0.2)
+
+  metal_drawn_large.forget
+
   metal_slot_rectangles = metal_slot.rectangles
   metal_slot_non_rectangles = metal_slot.non_rectangles
 
   # Implied rule
   metal_slot_non_rectangles.output("MSLOT#{idx}.0", "MSLOT#{idx}.0 : Slot is not a rectangle")
 
+  metal_slot_non_rectangles.forget
+
   # Rule MSLOT.1: Maximum metal width without slotting: 30µm
   logger.info("Executing rule MSLOT#{idx}.1")
-  mslot1_l1 = metal_slotted.sized(0, -15.um).sized(-15.um, 0).sized(0, 15.um).sized(15.um, 0)
+  mslot1_l1 = metal_large_slotted.sized(0, -15.um).sized(-15.um, 0).sized(0, 15.um).sized(15.um, 0)
   mslot1_l1.output("MSLOT#{idx}.1", "MSLOT#{idx}.1 : Maximum metal width without slotting: 30µm")
   mslot1_l1.forget
+
+  metal_large_slotted.forget
 
   # Rule MSLOT.2: Minimum slot width (slot mark layers): 2µm
   logger.info("Executing rule MSLOT#{idx}.2")
@@ -97,14 +111,7 @@ def mslot_rules(idx:)
   mslot9_l1.output("MSLOT#{idx}.9", "MSLOT#{idx}.9 : Minimum distance to these layers: 5µm")
   mslot9_l1.forget
 
-  metal_slotted.forget
   metal_slot_rectangles.forget
-  metal_slot_non_rectangles.forget
-
-  top_metal_under_pad.forget
-  mim_bottom_under_fusetop.forget
-  top_metal_under_fusewindow_d.forget
-  top_metal_under_ubm.forget
 
   dont_slot.forget
 end
