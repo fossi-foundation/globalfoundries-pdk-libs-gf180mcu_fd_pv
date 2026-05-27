@@ -692,12 +692,6 @@
    </categories>
   </category>
   <category>
-   <name>GRID</name>
-   <description>GRID : The design grid must be an integer multiple of 0.005μm</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
    <name>contact_OFFGRID</name>
    <description>OFFGRID : OFFGRID vertex on contact</description>
    <categories>
@@ -29446,18 +29440,6 @@
    <image/>
    <values>
     <value>edge: (305.176,670.252;304.303,620.26)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>GRID</category>
-   <cell>geom_testcases</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (0,-729.4;0,2405.754;1843.442,2405.754;1843.442,-729.4)</value>
    </values>
   </item>
   <item>

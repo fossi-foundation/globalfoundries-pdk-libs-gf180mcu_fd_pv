@@ -238,16 +238,16 @@ GF180_DRC_REGISTRY.register(
 end
 
 # =========================================================
-# Top-level/package markers
+# Database unit
 # =========================================================
 GF180_DRC_REGISTRY.register(
   id: 'geom_dbu',
   path: __FILE__,
   priority: 10,
-  tags: %w[all offgrid geom]
+  tags: %w[all geom dbu]
 ) do
-  logger.info('Executing rule GRID')
+  logger.info('Executing rule DBU')
   # rubocop:disable Lint/FloatComparison
-  extent.output('GRID', 'GRID : The design grid must be an integer multiple of 0.005μm') if dbu != 0.005
+  extent.output('DBU', 'DBU : The design database unit must be 0.001') if dbu != 0.001
   # rubocop:enable Lint/FloatComparison
 end
