@@ -49,9 +49,10 @@ logger = Logger.new($stdout)
 # always the correct one is displayed.
 $stdout.sync = true
 
+# Custom formatter including timestamp and memory usage
 logger.formatter = proc do |_severity, datetime, _progname, msg|
-  "#{datetime}: Memory Usage (" + `pmap #{Process.pid} | tail -1`[10, 40].strip + ") : #{msg}
-"
+  memory_usage = "#{RBA::Timer.memory_size / 1024}K"
+  "#{datetime}: Memory Usage (#{memory_usage}) : #{msg}\n"
 end
 
 #================================================
