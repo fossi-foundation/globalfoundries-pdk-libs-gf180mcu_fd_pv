@@ -28,8 +28,8 @@ GF180_DRC_REGISTRY.register(
 
   logger.info('Starting POLY2 derivations')
 
-  poly2_lv = poly2.not_interacting(v5_xtor).not_interacting(dualgate)
-  poly2_mv = poly2.overlapping(dualgate)
+  poly2_lv = poly2_drawn.not_interacting(v5_xtor).not_interacting(dualgate)
+  poly2_mv = poly2_drawn.overlapping(dualgate)
   poly_pl_lv = poly2_lv.not(otp_mk).not(ymtp_mk).not(mvsd).not(mvpsd)
   poly_pl_mv = poly2_mv.not(otp_mk).not(ymtp_mk).not(mvsd).not(mvpsd)
 
@@ -83,7 +83,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PL.3a: Space on COMP/Field is 0.24µm.
   logger.info('Executing rule PL.3a')
-  pl3a_l1 = tgate.or(poly2.not(comp)).not(otp_mk).space(0.24.um, euclidian)
+  pl3a_l1 = tgate.or(poly2_drawn.not(comp)).not(otp_mk).space(0.24.um, euclidian)
   pl3a_l1.output('PL.3a', 'PL.3a : Space on COMP/Field: 0.24µm')
   pl3a_l1.forget
 
@@ -137,7 +137,8 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PL.6: 90 degree bends on the COMP are not allowed.
   logger.info('Executing rule PL.6')
-  pl6_l1 = poly2.corners(90.0).sized(0.1).or(poly2.corners(-90.0).sized(0.1)).not(ymtp_mk).inside(comp.not(ymtp_mk))
+  pl6_l1 = poly2_drawn.corners(90.0).sized(0.1).or(poly2_drawn.corners(-90.0).sized(0.1))
+                      .not(ymtp_mk).inside(comp.not(ymtp_mk))
   pl6_l1.output('PL.6', 'PL.6 : 90 degree bends on the COMP are not allowed.')
   pl6_l1.forget
 
@@ -168,7 +169,7 @@ GF180_DRC_REGISTRY.register(
   # Rule PL.9: Poly2 inter connect connecting 3.3V and 5V areas (area inside and outside Dualgate)
   ## are not allowed. They shall be done though metal lines only.
   logger.info('Executing rule PL.9')
-  pl9_l1 = poly2.interacting(poly2.not(v5_xtor).not(dualgate)).interacting(poly2.and(dualgate))
+  pl9_l1 = poly2_drawn.interacting(poly2_drawn.not(v5_xtor).not(dualgate)).interacting(poly2_drawn.and(dualgate))
   pl9_l1.output('PL.9',
                 'PL.9 : Poly2 inter connect connecting 3.3V and 5V areas (area inside and outside Dualgate)
                  are not allowed. They shall be done though metal lines only.')
@@ -188,7 +189,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PL.12: V5_Xtor enclose 5V Comp.
   logger.info('Executing rule PL.12')
-  pl12_comp = comp.interacting(poly2)
+  pl12_comp = comp.interacting(poly2_drawn)
   pl12_l1 = pl12_comp.interacting(v5_xtor).not(v5_xtor)
   pl12_l1.output('PL.12', 'PL.12 : V5_Xtor enclose 5V Comp.')
   pl12_l1.forget

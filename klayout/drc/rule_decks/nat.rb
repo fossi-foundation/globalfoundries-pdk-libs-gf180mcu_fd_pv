@@ -28,7 +28,7 @@ GF180_DRC_REGISTRY.register(
 
   logger.info('Starting NAT derivations')
 
-  poly_nat = poly2.and(nat)
+  poly_nat = poly2_drawn.and(nat)
   poly_nat_lv = poly_nat.not_interacting(v5_xtor).not_interacting(dualgate)
   poly_nat_mv = poly_nat.overlapping(dualgate)
 
@@ -73,7 +73,7 @@ GF180_DRC_REGISTRY.register(
   # Rule NAT.6: Two or more COMPs if connected to different potential
   ## are not allowed under same NAT layer.
   logger.info('Executing rule NAT.6')
-  nat6_l1 = comp.and(nat).interacting(unconnected_nat.inside(nat.covering(comp, 2)).not(poly2))
+  nat6_l1 = comp.and(nat).interacting(unconnected_nat.inside(nat.covering(comp, 2)).not(poly2_drawn))
   nat6_l1.output('NAT.6', "NAT.6 : Two or more COMPs if connected to different potential
                       are not allowed under same NAT layer.")
   nat6_l1.forget
@@ -94,8 +94,8 @@ GF180_DRC_REGISTRY.register(
   # Rule NAT.9: Poly interconnect under NAT layer is not allowed,
   ## minimum spacing of un-related poly from the NAT layer is 0.3um
   logger.info('Executing rule NAT.9')
-  nat9_a = poly2.and(nat).not(ncomp).interacting(ngate.and(nat), 2)
-  nat9_b = poly2.not(nat).separation(nat, 0.3.um, euclidian).polygons(0.001.um)
+  nat9_a = poly2_drawn.and(nat).not(ncomp).interacting(ngate.and(nat), 2)
+  nat9_b = poly2_drawn.not(nat).separation(nat, 0.3.um, euclidian).polygons(0.001.um)
   nat9_l1 = nat9_a.join(nat9_b)
   nat9_l1.output('NAT.9', "NAT.9 : Poly interconnect under NAT layer is not allowed,
                     minimum spacing of un-related poly from the NAT layer: 0.3um")
@@ -111,7 +111,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule NAT.11: NCOMP not intersecting to Poly2, is not allowed inside NAT layer.
   logger.info('Executing rule NAT.11')
-  nat11_l1 = ncomp.and(nat).not_interacting(poly2)
+  nat11_l1 = ncomp.and(nat).not_interacting(poly2_drawn)
   nat11_l1.output('NAT.11', 'NAT.11 : NCOMP not intersecting to Poly2, is not allowed inside NAT layer.')
   nat11_l1.forget
 

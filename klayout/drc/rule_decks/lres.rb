@@ -28,7 +28,7 @@ GF180_DRC_REGISTRY.register(
 
   logger.info('Starting LRES derivations')
 
-  poly_nplus = poly2.and(nplus)
+  poly_nplus = poly2_drawn.and(nplus)
   lres_poly = poly_nplus.interacting(sab).interacting(res_mk)
 
   # Rule LRES.1: Minimum width of Poly2 resistor is 0.8µm.
@@ -51,7 +51,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule LRES.4: Minimum space from Poly2 resistor to unrelated Poly2 is 0.6µm.
   logger.info('Executing rule LRES.4')
-  lres4_l1 = lres_poly.separation(poly2.not_interacting(sab), 0.6.um, euclidian)
+  lres4_l1 = lres_poly.separation(poly2_drawn.not_interacting(sab), 0.6.um, euclidian)
   lres4_l1.output('LRES.4', 'LRES.4 : Minimum space from Poly2 resistor to unrelated Poly2: 0.6µm')
   lres4_l1.forget
 
@@ -90,7 +90,7 @@ GF180_DRC_REGISTRY.register(
   ## RES_MK length shall be coincide with resistor length (Defined by SAB length)
   ## and width covering the width of Poly2.
   logger.info('Executing rule LRES.9a')
-  mk_lres9 = res_mk.edges.not(poly_nplus.and(sab).edges).inside_part(poly2)
+  mk_lres9 = res_mk.edges.not(poly_nplus.and(sab).edges).inside_part(poly2_drawn)
   lres9a_l1 = res_mk.interacting(lres_poly).interacting(mk_lres9)
   lres9a_l1.output('LRES.9a',
                    'LRES.9a : Nplus Poly2 resistor shall be covered by RES_MK marking.

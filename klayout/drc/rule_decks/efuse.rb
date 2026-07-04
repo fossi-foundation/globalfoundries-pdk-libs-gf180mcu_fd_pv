@@ -30,7 +30,7 @@ GF180_DRC_REGISTRY.register(
 
   efuse_mk_pplus = efuse_mk.and(pplus)
   plfuse_efuse = plfuse.and(efuse_mk)
-  poly_efuse = poly2.and(efuse_mk)
+  poly_efuse = poly2_drawn.and(efuse_mk)
   cathode = poly_efuse.not(lvs_source.join(plfuse))
   anode = poly_efuse.and(lvs_source)
   cathode_edges = cathode.edges
@@ -39,7 +39,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule EF.01: Min. (Poly2 butt PLFUSE) within EFUSE_MK and Pplus is 0um.
   logger.info('Executing rule EF.01')
-  ef01_l1 = poly2.join(plfuse).interacting(efuse_mk).not_inside(efuse_mk_pplus)
+  ef01_l1 = poly2_drawn.join(plfuse).interacting(efuse_mk).not_inside(efuse_mk_pplus)
   ef01_l1.output('EF.01', 'EF.01 : Min. (Poly2 butt PLFUSE) within EFUSE_MK and Pplus: 0um')
   ef01_l1.forget
 
@@ -51,7 +51,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule EF.03: Min. Max. PLFUSE length. is 1.26µm
   logger.info('Executing rule EF.03')
-  ef03_l1 = poly2.edges.and(plfuse_edges).centers(0, 0.95)
+  ef03_l1 = poly2_drawn.edges.and(plfuse_edges).centers(0, 0.95)
   ef03_l = plfuse_edges.interacting(ef03_l1).without_length(1.26.um)
   ef03_l.output('EF.03', 'EF.03 : Min. Max. PLFUSE length: 1.26µm')
   ef03_l.forget
@@ -60,9 +60,9 @@ GF180_DRC_REGISTRY.register(
   # Rule EF.04a: Min. Max. PLFUSE overlap Poly2
   ## (coinciding permitted) and touch cathode and anode.
   logger.info('Executing rule EF.04a')
-  ef04a_exclude = plfuse.interacting(poly2.not(plfuse), 2, 2)
+  ef04a_exclude = plfuse.interacting(poly2_drawn.not(plfuse), 2, 2)
   ef04a_l1 = plfuse.not_in(ef04a_exclude).inside(efuse_mk)
-  ef04a_l2 = plfuse.not(poly2).inside(efuse_mk)
+  ef04a_l2 = plfuse.not(poly2_drawn).inside(efuse_mk)
   ef04a_l = ef04a_l1.join(ef04a_l2)
   ef04a_l.output('EF.04a', 'EF.04a : Min. Max. PLFUSE overlap Poly2
                   (coinciding permitted) and touch cathode and anode.')
@@ -92,7 +92,7 @@ GF180_DRC_REGISTRY.register(
   # Rule EF.05: Min./Max. LVS_Source overlap Poly2 (at Anode) is 0um.
   logger.info('Executing rule EF.05')
   ef05_l1 = poly_efuse.not(plfuse).interacting(lvs_source).not(lvs_source)
-  ef05_l2 = lvs_source.not(poly2).and(efuse_mk)
+  ef05_l2 = lvs_source.not(poly2_drawn).and(efuse_mk)
   ef05_l = ef05_l1.join(ef05_l2)
   ef05_l.output('EF.05', 'EF.05 : Min./Max. LVS_Source overlap Poly2 (at Anode): 0um')
   ef05_l.forget
@@ -210,7 +210,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule EF.21: Min./Max. eFUSE Poly2 length. is 5.53µm
   logger.info('Executing rule EF.21')
-  ef_21_fuse    = poly2.interacting(plfuse).inside(efuse_mk_pplus).extents.edges
+  ef_21_fuse    = poly2_drawn.interacting(plfuse).inside(efuse_mk_pplus).extents.edges
   ef_21_anode   = anode_edges.not_interacting(anode_edges.interacting(plfuse))
   ef_21_cathode = cathode_edges.not_interacting(cathode_edges.interacting(plfuse))
   ef21_l1 = ef_21_fuse.not_interacting(ef_21_anode.join(ef_21_cathode).centers(0, 0.95)).without_length(5.53.um)

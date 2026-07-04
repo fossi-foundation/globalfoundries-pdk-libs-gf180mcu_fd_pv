@@ -83,7 +83,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule ESD.6: Extension perpendicular to Poly2 gate. is 0.45µm
   logger.info('Executing rule ESD.6')
-  esd6_l1 = esd_edges.enclosing(poly2.edges.interacting(tgate_edges), 0.45.um, projection)
+  esd6_l1 = esd_edges.enclosing(poly2_drawn.edges.interacting(tgate_edges), 0.45.um, projection)
   esd6_l1.output('ESD.6', 'ESD.6 : Extension perpendicular to Poly2 gate. : 0.45µm')
   esd6_l1.forget
   esd_edges.forget
@@ -102,7 +102,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule ESD.pl: Minimum gate length of 5V/6V gate NMOS. is 0.8µm
   logger.info('Executing rule ESD.pl')
-  esdpl_l1 = poly2.overlapping(dualgate).interacting(esd).edges.and(tgate_edges)
+  esdpl_l1 = poly2_drawn.overlapping(dualgate).interacting(esd).edges.and(tgate_edges)
   esdpl_l  = esdpl_l1.width(0.8.um, euclidian)
   esdpl_l.output('ESD.pl', 'ESD.pl : Minimum gate length of 5V/6V gate NMOS. : 0.8µm')
   esdpl_l1.forget

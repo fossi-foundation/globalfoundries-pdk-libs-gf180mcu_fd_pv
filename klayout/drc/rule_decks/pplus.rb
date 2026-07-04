@@ -120,7 +120,7 @@ GF180_DRC_REGISTRY.register(
   # Rule PP.4b: Within 0.32um of channel, space to N-channel gate
   ## extension perpendicular to the direction of Poly2.
   logger.info('Executing rule PP.4b')
-  pp_4b_poly = poly2.edges.interacting(ngate.edges.not(ncomp_edges)).centers(0, 0.99).and(ngate.sized(0.32.um))
+  pp_4b_poly = poly2_drawn.edges.interacting(ngate.edges.not(ncomp_edges)).centers(0, 0.99).and(ngate.sized(0.32.um))
   pp4b_l1 = pplus.interacting(pplus_edges.separation(pp_4b_poly, 0.22.um, projection).polygons(0.001.um))
   pp4b_l1.output('PP.4b', "PP.4b : Within 0.32um of channel, space to N-channel gate
                     extension perpendicular to the direction of Poly2.")
@@ -210,7 +210,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PP.7: Space to unrelated unsalicided Poly2. is 0.18µm
   logger.info('Executing rule PP.7')
-  pp7_l1 = pplus.separation(poly2.and(sab), 0.18.um, euclidian)
+  pp7_l1 = pplus.separation(poly2_drawn.and(sab), 0.18.um, euclidian)
   pp7_l1.output('PP.7', 'PP.7 : Space to unrelated unsalicided Poly2. : 0.18µm')
   pp7_l1.forget
 
@@ -228,8 +228,8 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PP.9: Overlap of unsalicided Poly2. is 0.18µm
   logger.info('Executing rule PP.9')
-  pp9_l1 = pplus.enclosing(poly2.not_interacting(resistor).and(sab), 0.18.um, euclidian).polygons(0.001.um)
-  pp9_l2 = poly2.not_interacting(resistor).and(sab).not_outside(pplus).not(pplus)
+  pp9_l1 = pplus.enclosing(poly2_drawn.not_interacting(resistor).and(sab), 0.18.um, euclidian).polygons(0.001.um)
+  pp9_l2 = poly2_drawn.not_interacting(resistor).and(sab).not_outside(pplus).not(pplus)
   pp9_l  = pp9_l1.or(pp9_l2)
   pp9_l.output('PP.9', 'PP.9 : Overlap of unsalicided Poly2. : 0.18µm')
   pp9_l1.forget
@@ -264,7 +264,7 @@ GF180_DRC_REGISTRY.register(
   # Rule PP.12: Overlap with N-channel Poly2 gate extension is forbidden
   ##  within 0.32um of N-channel gate.
   logger.info('Executing rule PP.12')
-  pp12_l1 = pplus.interacting(ngate.sized(0.32.um - 1.dbu, size_inside(poly2), steps(3)))
+  pp12_l1 = pplus.interacting(ngate.sized(0.32.um - 1.dbu, size_inside(poly2_drawn), steps(3)))
   pp12_l1.output('PP.12', "PP.12 : Overlap with N-channel Poly2 gate extension is forbidden
                     within 0.32um of N-channel gate.")
   pp12_l1.forget

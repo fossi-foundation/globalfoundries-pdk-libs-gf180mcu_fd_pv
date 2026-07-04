@@ -27,7 +27,7 @@ GF180_DRC_REGISTRY.register(
   #================================================
 
   logger.info('Starting HRES derivations')
-  hres1_poly = poly2.interacting(pplus).interacting(sab).interacting(res_mk)
+  hres1_poly = poly2_drawn.interacting(pplus).interacting(sab).interacting(res_mk)
   hres_poly = hres1_poly.interacting(resistor)
   hres_resistor = resistor.interacting(hres1_poly)
   hres_contact = contact.and(hres_poly)
@@ -62,7 +62,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule HRES.5: Minimum RESISTOR space to unrelated Poly2 is 0.3µm.
   logger.info('Executing rule HRES.5')
-  hres5_l1 = hres_resistor.separation(poly2.not_interacting(sab), 0.3.um, euclidian)
+  hres5_l1 = hres_resistor.separation(poly2_drawn.not_interacting(sab), 0.3.um, euclidian)
   hres5_l1.output('HRES.5', 'HRES.5 : Minimum RESISTOR space to unrelated Poly2: 0.3µm')
   hres5_l1.forget
 
@@ -132,7 +132,7 @@ GF180_DRC_REGISTRY.register(
   ## RES_MK length shall be coincide with resistor length (Defined by Pplus space)
   ## and width covering the width of Poly2.
   logger.info('Executing rule HRES.12a')
-  mk_hres12a = res_mk.edges.not(poly2.not(pplus).and(sab).edges).inside_part(poly2)
+  mk_hres12a = res_mk.edges.not(poly2_drawn.not(pplus).and(sab).edges).inside_part(poly2_drawn)
   hres12a_l1 = res_mk.interacting(resistor).interacting(mk_hres12a)
   hres12a_l1.output('HRES.12a',
                     'HRES.12a : P type Poly2 resistor (high sheet rho) shall be covered by RES_MK marking.

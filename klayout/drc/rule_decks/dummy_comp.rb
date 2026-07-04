@@ -44,7 +44,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule DCF.5: Space from dummy COMP to poly2: 1.5
   logger.info('Executing rule DCF.5')
-  dcf5_l1 = comp_dummy.separation(poly2, 1.5.um, euclidian)
+  dcf5_l1 = comp_dummy.separation(poly2_drawn, 1.5.um, euclidian)
   dcf5_l1.output('DCF.5', 'DCF.5 : Space from dummy COMP to poly2: 1.5')
   dcf5_l1.forget
 

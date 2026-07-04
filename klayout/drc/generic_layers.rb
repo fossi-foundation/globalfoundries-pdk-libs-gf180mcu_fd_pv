@@ -37,7 +37,7 @@ module GF180DRC
       extract_single_layer_from_design.call(:nwell, 21, 0)
       extract_single_layer_from_design.call(:lvpwell, 204, 0)
       extract_single_layer_from_design.call(:dualgate, 55, 0)
-      extract_single_layer_from_design.call(:poly2, 30, 0)
+      extract_single_layer_from_design.call(:poly2_drawn, 30, 0)
       extract_single_layer_from_design.call(:nplus, 32, 0)
       extract_single_layer_from_design.call(:pplus, 31, 0)
       extract_single_layer_from_design.call(:sab, 49, 0)
@@ -165,9 +165,9 @@ module GF180DRC
       # --- Comps & Gates ---
       { name: :ncomp,           calc: ->(ctx) { ctx[:comp].and(ctx[:nplus]) } },
       { name: :pcomp,           calc: ->(ctx) { ctx[:comp].and(ctx[:pplus]) } },
-      { name: :ncomp_con,       calc: ->(ctx) { ctx[:ncomp].not(ctx[:poly2]) } },
-      { name: :pcomp_con,       calc: ->(ctx) { ctx[:pcomp].not(ctx[:poly2]) } },
-      { name: :tgate,           calc: ->(ctx) { ctx[:poly2].and(ctx[:comp]).not(ctx[:res_mk]) } },
+      { name: :ncomp_con,       calc: ->(ctx) { ctx[:ncomp].not(ctx[:poly2_drawn]) } },
+      { name: :pcomp_con,       calc: ->(ctx) { ctx[:pcomp].not(ctx[:poly2_drawn]) } },
+      { name: :tgate,           calc: ->(ctx) { ctx[:poly2_drawn].and(ctx[:comp]).not(ctx[:res_mk]) } },
 
       # --- N-Device Logic ---
       { name: :nactive,         calc: ->(ctx) { ctx[:ncomp].not(ctx[:all_nwell]) } },
@@ -202,7 +202,7 @@ module GF180DRC
       } },
 
       { name: :natcomp, calc: ->(ctx) { ctx[:nat].and(ctx[:comp]) } },
-      { name: :natcomp_con, calc: ->(ctx) { ctx[:natcomp].not(ctx[:poly2]) } },
+      { name: :natcomp_con, calc: ->(ctx) { ctx[:natcomp].not(ctx[:poly2_drawn]) } },
 
       # --- Gate Voltage Classes ---
       { name: :nom_gate,        calc: ->(ctx) { ctx[:tgate].not(ctx[:dualgate]) } },
@@ -245,6 +245,7 @@ module GF180DRC
     }.freeze
 
     METAL_NAMES = {
+      0 => { metal_drawn: :poly2_drawn, metal_dummy: :poly2_dummy, metal_result: :poly2 },
       1 => { metal_drawn: :metal1_drawn, metal_dummy: :metal1_dummy, metal_result: :metal1 },
       2 => { metal_drawn: :metal2_drawn, metal_dummy: :metal2_dummy, metal_result: :metal2 },
       3 => { metal_drawn: :metal3_drawn, metal_dummy: :metal3_dummy, metal_result: :metal3 },
@@ -276,7 +277,7 @@ module GF180DRC
     end
 
     private_class_method def self.register_numbered_metal_layers(ctx, metal_level)
-      (1..metal_level).each do |level|
+      (0..metal_level).each do |level|
         names = METAL_NAMES[level]
         ctx.register_layer(names[:metal_result]) { ctx[names[:metal_drawn]] + ctx[names[:metal_dummy]] }
       end

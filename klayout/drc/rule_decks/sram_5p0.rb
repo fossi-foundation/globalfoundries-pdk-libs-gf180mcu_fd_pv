@@ -30,7 +30,7 @@ GF180_DRC_REGISTRY.register(
 
   sram_mv = sramcore.overlapping(v5_xtor)
   nw_n_dn_sram = nwell_n_dn.and(sram_mv)
-  poly_sram = poly2.and(sram_mv)
+  poly_sram = poly2_drawn.and(sram_mv)
   comp_sram = comp.and(sram_mv)
   contact_sram = contact.and(sram_mv)
   lvpwell_dn_sram = lvpwell_dn.and(sram_mv)

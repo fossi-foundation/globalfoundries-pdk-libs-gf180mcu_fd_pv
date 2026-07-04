@@ -85,7 +85,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule LPW.5: LVPWELL resistors must be enclosed by DNWELL.
   logger.info('Executing rule LPW.5')
-  well_exclude = poly2.join(dualgate).join(resistor).join(sab)
+  well_exclude = poly2_drawn.join(dualgate).join(resistor).join(sab)
   pwell_res = lvpwell.interacting(pcomp).and(res_mk).not(well_exclude)
   lpw5_l1 = pwell_res.not(dnwell)
   lpw5_l1.output('LPW.5', 'LPW.5 : LVPWELL resistors must be enclosed by DNWELL.')

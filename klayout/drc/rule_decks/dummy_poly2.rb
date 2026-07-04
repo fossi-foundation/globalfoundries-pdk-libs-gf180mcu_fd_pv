@@ -48,7 +48,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule DPF.5: Space of dummy poly2 to poly2: 5
   logger.info('Executing rule DPF.5')
-  dpf5_l1 = poly2_dummy.separation(poly2, 5.um, euclidian)
+  dpf5_l1 = poly2_dummy.separation(poly2_drawn, 5.um, euclidian)
   dpf5_l1.output('DPF.5', 'DPF.5 : Space of dummy poly2 to poly2: 5')
   dpf5_l1.forget
 

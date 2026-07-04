@@ -74,7 +74,7 @@ GF180_DRC_REGISTRY.register(
 ) do
   comp_3p3v = comp.not_interacting(v5_xtor).not_interacting(dualgate)
   logger.info('Executing rule DF.2a_LV')
-  df_2a_3p3v = comp_3p3v.not(poly2).edges.and(tgate.edges)
+  df_2a_3p3v = comp_3p3v.not(poly2_drawn).edges.and(tgate.edges)
   df2a_l1 = df_2a_3p3v.with_length(nil, 0.22.um)
   df2a_l1.output('DF.2a_LV', 'DF.2a_LV : Min Channel Width. : 0.22µm')
   df2a_l1.forget
@@ -91,7 +91,7 @@ GF180_DRC_REGISTRY.register(
 ) do
   comp_56v = comp.overlapping(dualgate)
   logger.info('Executing rule DF.2a_MV')
-  df_2a_56v = comp_56v.not(poly2).edges.and(tgate.edges)
+  df_2a_56v = comp_56v.not(poly2_drawn).edges.and(tgate.edges)
   df2a_l1 = df_2a_56v.with_length(nil, 0.3.um)
   df2a_l1.output('DF.2a_MV', 'DF.2a_MV : Min Channel Width. : nil,0.3µm')
   df2a_l1.forget
@@ -409,7 +409,7 @@ GF180_DRC_REGISTRY.register(
   logger.info('Executing rule DF.6_LV')
   df6_exclude = otp_mk.or(ymtp_mk).or(sramcore).or(mvsd).or(mvpsd)
   df6_comp = comp.interacting(tgate).not(df6_exclude)
-  df6_poly = poly2.not(df6_exclude)
+  df6_poly = poly2_drawn.not(df6_exclude)
   df6_l1 = comp_3p3v.and(df6_comp).enclosing(df6_poly, 0.24.um, euclidian)
   df6_l1.output('DF.6_LV', 'DF.6_LV : Min. COMP extend beyond gate (it also means source/drain overhang). : 0.24µm')
   df6_l1.forget
@@ -430,7 +430,7 @@ GF180_DRC_REGISTRY.register(
   logger.info('Executing rule DF.6_MV')
   df6_exclude = otp_mk.or(ymtp_mk).or(sramcore).or(mvsd).or(mvpsd)
   df6_comp = comp.interacting(tgate).not(df6_exclude)
-  df6_poly = poly2.not(df6_exclude)
+  df6_poly = poly2_drawn.not(df6_exclude)
   df6_l1 = comp_56v.and(df6_comp).enclosing(df6_poly, 0.4.um, euclidian)
   df6_l1.output('DF.6_MV', 'DF.6_MV : Min. COMP extend beyond gate (it also means source/drain overhang). : 0.4µm')
   df6_l1.forget

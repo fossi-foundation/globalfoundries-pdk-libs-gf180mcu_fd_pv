@@ -29,9 +29,9 @@ GF180_DRC_REGISTRY.register(
   logger.info('Starting sab derivations')
 
   sab_out_otp = sab.outside(otp_mk)
-  poly_sab = poly2.interacting(sab)
+  poly_sab = poly2_drawn.interacting(sab)
   comp_sab = comp.interacting(sab)
-  sab_poly = sab.and(poly2)
+  sab_poly = sab.and(poly2_drawn)
 
   # Rule SB.1: min. sab width is 0.42µm
   logger.info('Executing rule SB.1')
@@ -61,7 +61,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule SB.5a: Space from salicide block to unrelated Poly2 on field. is 0.3µm
   logger.info('Executing rule SB.5a')
-  sb5a_poly = poly2.not(comp).not_overlapping(sab)
+  sb5a_poly = poly2_drawn.not(comp).not_overlapping(sab)
   sb5a_l1 = sab_out_otp.separation(sb5a_poly, 0.3.um, euclidian)
   sb5a_l1.output('SB.5a', 'SB.5a : Space from salicide block to unrelated Poly2 on field. : 0.3µm')
   sb5a_l1.forget
@@ -69,7 +69,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule SB.5b: Space from salicide block to unrelated Poly2 on COMP. is 0.28µm
   logger.info('Executing rule SB.5b')
-  sb5b_l1 = sab_out_otp.separation(poly2.and(comp), 0.28.um, euclidian)
+  sb5b_l1 = sab_out_otp.separation(poly2_drawn.and(comp), 0.28.um, euclidian)
   sb5b_l1.output('SB.5b', 'SB.5b : Space from salicide block to unrelated Poly2 on COMP. : 0.28µm')
   sb5b_l1.forget
 
@@ -157,8 +157,8 @@ GF180_DRC_REGISTRY.register(
 
   # Rule SB.15b: Space from unsalicided Poly2 to unrelated Nplus/Pplus along Poly2 line is 0.32 um
   logger.info('Executing rule SB.15b')
-  sb15b_np = nplus.or(pplus).interacting(poly2.interacting(sab_out_otp))
-  sb15b_poly = poly2.overlapping(sb15b_np).and(sab_out_otp)
+  sb15b_np = nplus.or(pplus).interacting(poly2_drawn.interacting(sab_out_otp))
+  sb15b_poly = poly2_drawn.overlapping(sb15b_np).and(sab_out_otp)
   sb15b_l1 = sb15b_poly.separation(sb15b_np, 0.32.um, euclidian)
   sb15b_l1.output('SB.15b', 'SB.15b : Space from unsalicided Poly2 to unrelated Nplus/Pplus. : 0.32µm')
   sb15b_l1.forget

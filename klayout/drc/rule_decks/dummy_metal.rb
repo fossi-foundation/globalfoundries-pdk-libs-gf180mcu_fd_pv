@@ -49,7 +49,7 @@ def dummy_metal_rules(idx:)
   #
   #  # Rule DM.5_DM.7: Dummy Metal space (no overlap) to Previous Metal layer: 1
   #  logger.info("Executing rule DM#{idx}.5_DM#{idx}.7")
-  #  dm_5_dm_7_l1 = metal_dummy.separation(poly2, 1.um, euclidian)
+  #  dm_5_dm_7_l1 = metal_dummy.separation(poly2_drawn, 1.um, euclidian)
   #  dm_5_dm_7_l1.output("DM#{idx}.5_DM#{idx}.7", "DM#{idx}.5_DM#{idx}.7 : Dummy Metal space (no overlap) to Previous Metal layer: 1")
   #  dm_5_dm_7_l1.forget
   #
