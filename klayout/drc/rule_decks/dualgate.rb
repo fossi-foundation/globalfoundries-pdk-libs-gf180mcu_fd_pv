@@ -78,8 +78,8 @@ GF180_DRC_REGISTRY.register(
 
   # Rule DV.8: Min Dualgate enclose Poly2. is 0.4µm
   logger.info('Executing rule DV.8')
-  dv8_l1 = dualgate.enclosing(poly2, 0.4.um, euclidian).polygons(0.001.um)
-  dv8_l2 = poly2.not_outside(dualgate).not(dualgate)
+  dv8_l1 = dualgate.enclosing(poly2_drawn, 0.4.um, euclidian).polygons(0.001.um)
+  dv8_l2 = poly2_drawn.not_outside(dualgate).not(dualgate)
   dv8_l  = dv8_l1.or(dv8_l2)
   dv8_l.output('DV.8', 'DV.8 : Min Dualgate enclose Poly2. : 0.4µm')
   dv8_l1.forget

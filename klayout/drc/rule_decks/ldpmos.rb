@@ -25,8 +25,8 @@ GF180_DRC_REGISTRY.register(
   #-------------------10V LDPMOS-------------------
   #================================================
 
-  poly_mdp = poly2.and(pcomp).inside(ldmos_xtor).inside(dualgate)
-  mdp_source        = pcomp.interacting(poly_mdp.and(mvpsd)).not(poly2)
+  poly_mdp = poly2_drawn.and(pcomp).inside(ldmos_xtor).inside(dualgate)
+  mdp_source        = pcomp.interacting(poly_mdp.and(mvpsd)).not(poly2_drawn)
   ldpmos            = poly_mdp.not(mvpsd)
   ldpmos_edges      = ldpmos.edges
   ldpmos_gate_ends  = ldpmos_edges.outside_part(pcomp)   # defines the width
@@ -95,8 +95,8 @@ GF180_DRC_REGISTRY.register(
   logger.info('Executing rule MDP.3b')
   ncomp_mdp3b = ncomp.and(ldmos_xtor).and(dualgate)
   pcomp_mdp3b = pcomp.and(dnwell).and(ldmos_xtor).and(dualgate)
-  mdp3b_l1 = ncomp_mdp3b.not(poly2).not(mvpsd)
-  mdp3b_l2 = pcomp_mdp3b.not(poly2).not(mvpsd)
+  mdp3b_l1 = ncomp_mdp3b.not(poly2_drawn).not(mvpsd)
+  mdp3b_l2 = pcomp_mdp3b.not(poly2_drawn).not(mvpsd)
   mdp3b_l = mdp3b_l1.separation(mdp3b_l2, 0.4.um, euclidian)
   mdp3b_l.output('MDP.3b', 'MDP.3b : Min NCOMP (Nplus AND COMP) space to PCOMP in DNWELL
                   (Pplus AND COMP AND DNWELL). Use butted source and DNWELL contacts
@@ -165,7 +165,8 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDP.5: Each LDPMOS shall be covered by Dualgate layer.
   logger.info('Executing rule MDP.5')
-  mdp5_l1 = pcomp.not(poly2).not(mvpsd).join(pgate.not(mvpsd)).join(pcomp.and(mvpsd)).and(ldmos_xtor).not(dualgate)
+  mdp5_l1 = pcomp.not(poly2_drawn).not(mvpsd).join(pgate.not(mvpsd))
+                 .join(pcomp.and(mvpsd)).and(ldmos_xtor).not(dualgate)
   mdp5_l1.output('MDP.5', 'MDP.5 : Each LDPMOS shall be covered by Dualgate layer.')
   mdp5_l1.forget
 
@@ -207,15 +208,15 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDP.9a: Min LDPMOS POLY2 width. is 1.2µm
   logger.info('Executing rule MDP.9a')
-  mdp9a_l1 = poly2.inside(dnwell_mdp).width(1.2.um, euclidian)
+  mdp9a_l1 = poly2_drawn.inside(dnwell_mdp).width(1.2.um, euclidian)
   mdp9a_l1.output('MDP.9a', 'MDP.9a : Min LDPMOS POLY2 width. : 1.2µm')
   mdp9a_l1.forget
 
   # Rule MDP.9b: Min POLY2 extension beyond COMP in the width
   ## direction of the transistor (other than the LDMOS drain direction). is 0.4µm
   logger.info('Executing rule MDP.9b')
-  mdp9b_a = poly2.inside(dnwell_mdp).edges.interacting(mvpsd).not(mvpsd).enclosing(comp.edges, 0.4.um).edges
-  mdp9b_b = poly2.inside(dnwell_mdp).edges.interacting(mvpsd).not(mvpsd).interacting(pcomp)
+  mdp9b_a = poly2_drawn.inside(dnwell_mdp).edges.interacting(mvpsd).not(mvpsd).enclosing(comp.edges, 0.4.um).edges
+  mdp9b_b = poly2_drawn.inside(dnwell_mdp).edges.interacting(mvpsd).not(mvpsd).interacting(pcomp)
   mdp9b_l1 = mdp9b_a.join(mdp9b_b)
   mdp9b_l1.output('MDP.9b', 'MDP.9b : Min POLY2 extension beyond COMP in the width
                    direction of the transistor (other than the LDMOS drain direction). : 0.4µm')
@@ -226,8 +227,9 @@ GF180_DRC_REGISTRY.register(
   # Rule MDP.9c: Min/Max POLY2 extension beyond COMP on the field towards
   ## LDPMOS drain (MVPSD AND COMP AND Pplus NOT POLY2) direction.
   logger.info('Executing rule MDP.9c')
-  mdp9c_exclude = poly2.drc(enclosing(comp, projection) == 0.2.um)
-  mdp9c_l1 = poly2.edges.in(poly2.inside(dnwell_mdp).edges.inside_part(mvpsd)).not_interacting(mdp9c_exclude)
+  mdp9c_exclude = poly2_drawn.drc(enclosing(comp, projection) == 0.2.um)
+  mdp9c_l1 = poly2_drawn.edges.in(poly2_drawn.inside(dnwell_mdp)
+                        .edges.inside_part(mvpsd)).not_interacting(mdp9c_exclude)
   mdp9c_l1.output('MDP.9c', "MDP.9c : Min/Max POLY2 extension beyond COMP on the field towards
                      LDPMOS drain (MVPSD AND COMP AND Pplus NOT POLY2) direction.")
   mdp9c_l1.forget
@@ -236,9 +238,9 @@ GF180_DRC_REGISTRY.register(
   # Rule MDP.9d: Min/Max POLY2 on field to LDPMOS drain COMP
   ## (MVPSD AND COMP AND Pplus NOT POLY2) space.
   logger.info('Executing rule MDP.9d')
-  mdp9d_exclude = mvpsd.and(pcomp).not(poly2).sized(0.16.um)
-  mdp9d_l1 = poly2.and(dualgate).and(ldmos_xtor).overlapping(mdp9d_exclude)
-  mdp9d_l2 = poly2.and(dualgate).and(ldmos_xtor.interacting(mvpsd)).not_interacting(mdp9d_exclude)
+  mdp9d_exclude = mvpsd.and(pcomp).not(poly2_drawn).sized(0.16.um)
+  mdp9d_l1 = poly2_drawn.and(dualgate).and(ldmos_xtor).overlapping(mdp9d_exclude)
+  mdp9d_l2 = poly2_drawn.and(dualgate).and(ldmos_xtor.interacting(mvpsd)).not_interacting(mdp9d_exclude)
   mdp9d_l = mdp9d_l1.join(mdp9d_l2)
   mdp9d_l.output('MDP.9d', 'MDP.9d : Min/Max POLY2 on field to LDPMOS drain COMP
                   (MVPSD AND COMP AND Pplus NOT POLY2) space.')
@@ -249,7 +251,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDP.9ei: Min LDMPOS gate Poly2 space to Nplus guardring
   ## (source and body tap non-butted).
-  ldpmos_poly2_gate = poly2.interacting(pgate.and(dualgate).not(mvpsd))
+  ldpmos_poly2_gate = poly2_drawn.interacting(pgate.and(dualgate).not(mvpsd))
   ncomp_not_butted = ncomp.not(pplus).not_interacting(pcomp.not(nplus)).or(ncomp.overlapping(pcomp))
   mdp9ei_a = ldpmos_poly2_gate.inside(dualgate).inside(ldmos_xtor).separation(ncomp_not_butted,
                                                                               0.4.um).polygons(0.001.um)
@@ -281,7 +283,7 @@ GF180_DRC_REGISTRY.register(
   # Rule MDP.9f: Poly2 interconnect is not allowed in LDPMOS region
   ## (LDMOS_XTOR marked region)
   logger.info('Executing rule MDP.9f')
-  mdp9f_poly = poly2.and(dualgate).and(ldmos_xtor)
+  mdp9f_poly = poly2_drawn.and(dualgate).and(ldmos_xtor)
   mdp9f_l1 = mdp9f_poly.not(pplus).interacting(mdp9f_poly.and(pplus), 2)
   mdp9f_l1.output('MDP.9f', 'MDP.9f : Poly2 interconnect is not allowed in LDPMOS region
                   (LDMOS_XTOR marked region).')
@@ -292,7 +294,7 @@ GF180_DRC_REGISTRY.register(
   ## (LDMOS_XTOR AND COMP AND POLY2 AND Pplus) is 0.4um.
   logger.info('Executing rule MDP.10')
   mvpsd_mv = mvpsd.and(dualgate).and(ldmos_xtor)
-  mdp10_exclude = mvpsd.drc(overlap(ldmos_xtor.and(comp).and(poly2).and(pplus), projection) == 0.4.um)
+  mdp10_exclude = mvpsd.drc(overlap(ldmos_xtor.and(comp).and(poly2_drawn).and(pplus), projection) == 0.4.um)
   mdp10_l1 = mvpsd_mv.not_interacting(mdp10_exclude)
   mdp10_l1.output('MDP.10', 'MDP.10 : Min/Max MVPSD overlap onto the channel
                   (LDMOS_XTOR AND COMP AND POLY2 AND Pplus): 0.4 um')
@@ -342,7 +344,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDP.13a: Max single finger width. is 50µm
   logger.info('Executing rule MDP.13a')
-  mdp13a_l1 = poly2.and(pcomp).not(mvpsd).inside(dualgate).inside(ldmos_xtor).edges.with_length(50.001.um, nil)
+  mdp13a_l1 = poly2_drawn.and(pcomp).not(mvpsd).inside(dualgate).inside(ldmos_xtor).edges.with_length(50.001.um, nil)
   mdp13a_l1.output('MDP.13a', 'MDP.13a : Max single finger width. : 50µm')
   mdp13a_l1.forget
 
@@ -361,7 +363,8 @@ GF180_DRC_REGISTRY.register(
   mdp_13c_source_side1 = mdp_source.interacting(ldpmos, 2, 2)
   mdp_13c_source_side2 = mdp_source.interacting(ncomp.interacting(mdp_source, 2, 2))
   mdp_13c_source_side = ldpmos.interacting(mdp_13c_source_side1.join(mdp_13c_source_side2))
-  mdp13c_l1 = mvpsd.covering(pcomp.not_interacting(poly2)).interacting(pcomp, 2, 2).interacting(mdp_13c_source_side)
+  mdp13c_l1 = mvpsd.covering(pcomp.not_interacting(poly2_drawn)).interacting(pcomp, 2,
+                                                                             2).interacting(mdp_13c_source_side)
   mdp13c_l1.output('MDP.13c', 'MDP.13c : Both sides of the transistor shall be terminated by source.')
   mdp13c_l1.forget
   mdp_13c_source_side1.forget

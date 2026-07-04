@@ -29,7 +29,7 @@ GF180_DRC_REGISTRY.register(
   logger.info('Starting OTP_MK derivations')
 
   comp_otp = comp.and(otp_mk)
-  poly_otp = poly2.and(otp_mk)
+  poly_otp = poly2_drawn.and(otp_mk)
   sab_otp = sab.and(otp_mk)
   tgate_edges = tgate.edges
 
@@ -61,7 +61,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule O.PL.3a: Min. poly2 Space on COMP. is 0.18µm
   logger.info('Executing rule O.PL.3a')
-  opl3a_l1 = tgate.join(poly2.not(comp)).and(otp_mk).space(0.18.um, euclidian)
+  opl3a_l1 = tgate.join(poly2_drawn.not(comp)).and(otp_mk).space(0.18.um, euclidian)
   opl3a_l1.output('O.PL.3a', 'O.PL.3a : Min. poly2 Space on COMP. : 0.18µm')
   opl3a_l1.forget
 

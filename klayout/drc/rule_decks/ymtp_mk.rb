@@ -32,8 +32,8 @@ GF180_DRC_REGISTRY.register(
   ymtp_mk_mv = ymtp_mk.overlapping(dualgate)
   comp_ymtp_lv = comp.and(ymtp_mk_lv)
   comp_ymtp_mv = comp.and(ymtp_mk_mv)
-  poly_ymtp_lv = poly2.and(ymtp_mk_lv)
-  poly_ymtp_mv = poly2.and(ymtp_mk_mv)
+  poly_ymtp_lv = poly2_drawn.and(ymtp_mk_lv)
+  poly_ymtp_mv = poly2_drawn.and(ymtp_mk_mv)
 
   # Rule Y.NW.2b_LV: Min. Nwell Space
   ## (Outside DNWELL, Inside YMTP_MK) [Different potential]. is 1µm

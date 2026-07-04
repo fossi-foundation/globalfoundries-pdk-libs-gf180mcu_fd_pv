@@ -29,7 +29,7 @@ GF180_DRC_REGISTRY.register(
   # MDN derivations
   logger.info('Starting 10V LDNMOS derivations')
 
-  poly_ld = poly2.and(ldmos_xtor).and(dualgate)
+  poly_ld = poly2_drawn.and(ldmos_xtor).and(dualgate)
   poly_mdn = poly_ld.and(ncomp)
   ldnmos = poly_mdn.not(mvsd)
   ldnmos_edges = ldnmos.edges
@@ -38,7 +38,7 @@ GF180_DRC_REGISTRY.register(
   ncomp_ld  = ncomp.and(ldmos_xtor)
   ncomp_mdn  = ncomp_ld.and(dualgate)
   pcomp_mdn  = pcomp.and(ldmos_xtor).and(dualgate)
-  ldnmos_source = ncomp.interacting(poly2.and(dualgate).and(ldmos_xtor).and(mvsd)).not(poly2)
+  ldnmos_source = ncomp.interacting(poly2_drawn.and(dualgate).and(ldmos_xtor).and(mvsd)).not(poly2_drawn)
   mvsd_mdn = mvsd.and(dualgate).and(ldmos_xtor)
   pcomp_holes = pcomp.holes
 
@@ -154,7 +154,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDN.6: ALL LDNMOS shall be covered by Dualgate layer.
   logger.info('Executing rule MDN.6')
-  mdn6_l1 = ncomp.join(poly2).join(mvsd).and(ldmos_xtor).not(dualgate)
+  mdn6_l1 = ncomp.join(poly2_drawn).join(mvsd).and(ldmos_xtor).not(dualgate)
   mdn6_l1.output('MDN.6', 'MDN.6 : ALL LDNMOS shall be covered by Dualgate layer.')
   mdn6_l1.forget
 
@@ -166,7 +166,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDN.7: Each LDNMOS shall be covered by LDMOS_XTOR (GDS#226) mark layer.
   logger.info('Executing rule MDN.7')
-  mdn7_l1 = ncomp.interacting(mvsd).not(poly2).not(mvsd)
+  mdn7_l1 = ncomp.interacting(mvsd).not(poly2_drawn).not(mvsd)
   mdn7_l2 = ngate.interacting(mvsd).not(mvsd)
   mdn7_l3 = ncomp.and(mvsd)
   mdn7_l = mdn7_l1.join(mdn7_l2).join(mdn7_l3).and(dualgate).not(ldmos_xtor)
@@ -208,7 +208,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDN.10a: Min LDNMOS POLY2 width. is 1.2µm
   logger.info('Executing rule MDN.10a')
-  poly_mdn10 = poly2.and(dualgate).and(ldmos_xtor.interacting(mvsd))
+  poly_mdn10 = poly2_drawn.and(dualgate).and(ldmos_xtor.interacting(mvsd))
   mdn10a_l1  = poly_mdn10.width(1.2.um, euclidian)
   mdn10a_l1.output('MDN.10a', 'MDN.10a : Min LDNMOS POLY2 width. : 1.2µm')
   mdn10a_l1.forget
@@ -216,7 +216,7 @@ GF180_DRC_REGISTRY.register(
   # Rule MDN.10b: Min POLY2 extension beyond COMP in the width direction of the transistor
   ## (other than the LDNMOS drain direction). is 0.4µm
   logger.info('Executing rule MDN.10b')
-  mdn10b_l1 = ncomp.interacting(poly_mdn10).edges.interacting(ncomp.edges.not_interacting(poly2))
+  mdn10b_l1 = ncomp.interacting(poly_mdn10).edges.interacting(ncomp.edges.not_interacting(poly2_drawn))
   mdn10b_l = mdn10b_l1.enclosed(poly_mdn10.edges, 0.4.um, euclidian)
   mdn10b_l.output('MDN.10b', 'MDN.10b : Min POLY2 extension beyond COMP in the width direction of the transistor
                   (other than the LDNMOS drain direction). : 0.4µm')
@@ -227,7 +227,7 @@ GF180_DRC_REGISTRY.register(
   ## towards LDNMOS drain COMP direction. is 0.2 um.
   logger.info('Executing rule MDN.10c')
   mdn_10c_all_errors   = poly_mdn10.drc(enclosing(ncomp.interacting(poly_mdn10), euclidian) != 0.2.um)
-  mdn_10c_error_region = ncomp_mdn.sized(0.36.um).sized(-0.36.um).extents.and(mvsd).and(poly2)
+  mdn_10c_error_region = ncomp_mdn.sized(0.36.um).sized(-0.36.um).extents.and(mvsd).and(poly2_drawn)
   mdn10c_l1 = mdn_10c_all_errors.and(mdn_10c_error_region)
   mdn10c_l1.output('MDN.10c', 'MDN.10c : Min/Max POLY2 extension beyond COMP on the field
                    towards LDNMOS drain COMP direction.: 0.2 um')
@@ -237,12 +237,12 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDN.10d: Min/Max POLY2 on field space to LDNMOS drain COMP.
   logger.info('Executing rule MDN.10d')
-  mdn_10d_field   = ncomp.and(poly2).sized(1.um, 0).and(poly2)
+  mdn_10d_field   = ncomp.and(poly2_drawn).sized(1.um, 0).and(poly2_drawn)
   mdn_10d_not_max = ncomp_mdn.inside(mvsd).drc(separation(mdn_10d_field) <= 0.16.um)
   mdn_10d_ext     = ncomp.sized(0.36.um).sized(-0.36.um).extents
-  mdn_10d_max     = mdn_10d_ext.not(mdn_10d_not_max.polygons).not(ncomp).not(poly2).inside(mvsd)
+  mdn_10d_max     = mdn_10d_ext.not(mdn_10d_not_max.polygons).not(ncomp).not(poly2_drawn).inside(mvsd)
   mdn_10d_min     = ncomp_mdn.inside(mvsd).separation(mdn_10d_field, 0.16.um).polygons(0.001.um)
-  mdn_10d_overlap = ncomp_mdn.inside(mvsd).and(poly2)
+  mdn_10d_overlap = ncomp_mdn.inside(mvsd).and(poly2_drawn)
   mdn10d_l1 = mdn_10d_max.join(mdn_10d_min).join(mdn_10d_overlap)
   mdn10d_l1.output('MDN.10d', 'MDN.10d : Min/Max POLY2 on field space to LDNMOS drain COMP.')
   mdn10d_l1.forget
@@ -273,7 +273,7 @@ GF180_DRC_REGISTRY.register(
   ## Also, any Poly2 interconnect with poly2 to substrate potential greater than 6V is not allowed.
   logger.info('Executing rule MDN.10f')
   mdn10f_l1 = poly_mdn10.not(nplus).interacting(poly_mdn10.and(nplus), 2)
-  mdn10f_l2 = poly2.and(ldmos_xtor).interacting(poly2.not(ldmos_xtor))
+  mdn10f_l2 = poly2_drawn.and(ldmos_xtor).interacting(poly2_drawn.not(ldmos_xtor))
   mdn10f_l = mdn10f_l1.join(mdn10f_l2)
   mdn10f_l.output('MDN.10f', "MDN.10f : Poly2 interconnect in HV region (LDMOS_XTOR marked region) not allowed.
                      Also, any Poly2 interconnect with poly2 to substrate potential greater than 6V is not allowed.")
@@ -284,11 +284,11 @@ GF180_DRC_REGISTRY.register(
   # Rule MDN.11: Min/Max MVSD overlap channel COMP
   ##    ((((LDMOS_XTOR AND MVSD) AND COMP) AND POLY2) AND NPlus).
   logger.info('Executing rule MDN.11')
-  mdn_11_layer      = ldmos_xtor.and(mvsd).and(comp).and(poly2).and(nplus)
+  mdn_11_layer      = ldmos_xtor.and(mvsd).and(comp).and(poly2_drawn).and(nplus)
   mdn_11_max        = mdn_11_layer.not(mdn_11_layer.drc(width <= 0.4.um).polygons)
   mdn_11_min        = mdn_11_layer.width(0.4.um).polygons(0.001.um).not_interacting(mdn_11_max)
   mdn_11_no_channel_l1 = mvsd.covering(ncomp).outside(tgate).and(dualgate).and(ldmos_xtor)
-  mdn_11_no_channel_l2 = mvsd.not_covering(ncomp.not_interacting(poly2)).and(dualgate).and(ldmos_xtor)
+  mdn_11_no_channel_l2 = mvsd.not_covering(ncomp.not_interacting(poly2_drawn)).and(dualgate).and(ldmos_xtor)
   mdn_11_no_channel = mdn_11_no_channel_l1.join(mdn_11_no_channel_l2)
   mdn11_l1 = mdn_11_max.join(mdn_11_min).join(mdn_11_no_channel)
   mdn11_l1.output('MDN.11', 'MDN.11 : Min/Max MVSD overlap channel COMP
@@ -304,9 +304,9 @@ GF180_DRC_REGISTRY.register(
   # Rule MDN.12: Min MVSD enclose NCOMP in the LDNMOS drain
   ## and in the direction along the transistor width.
   logger.info('Executing rule MDN.12')
-  mdn12_a1 = mvsd_mdn.covering(ncomp_mdn.not_interacting(poly2))
-  mdn12_a = ncomp_mdn.enclosed(mdn12_a1, 0.5.um, transparent).polygons(0.001.um).outside(poly2)
-  mdn12_b = mvsd_mdn.not_covering(ncomp.not_interacting(poly2))
+  mdn12_a1 = mvsd_mdn.covering(ncomp_mdn.not_interacting(poly2_drawn))
+  mdn12_a = ncomp_mdn.enclosed(mdn12_a1, 0.5.um, transparent).polygons(0.001.um).outside(poly2_drawn)
+  mdn12_b = mvsd_mdn.not_covering(ncomp.not_interacting(poly2_drawn))
   mdn12_l1 = mdn12_a.join(mdn12_b)
   mdn12_l1.output('MDN.12', 'MDN.12 : Min MVSD enclose NCOMP in the LDNMOS drain
                    and in the direction along the transistor width.')
@@ -326,7 +326,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule MDN.13b: Layout shall have alternative source & drain.
   logger.info('Executing rule MDN.13b')
-  mdn_source = ncomp.interacting(poly2.and(dualgate).and(ldmos_xtor).and(mvsd)).not(poly2)
+  mdn_source = ncomp.interacting(poly2_drawn.and(dualgate).and(ldmos_xtor).and(mvsd)).not(poly2_drawn)
   mdn_ldnmos = poly_mdn.not(mvsd)
   mdn13b_l1 = mdn_ldnmos.not_interacting(mdn_source, 1, 1)
   mdn13b_l2 = mdn_ldnmos.not_interacting(mvsd, 1, 1)
@@ -343,7 +343,8 @@ GF180_DRC_REGISTRY.register(
   mdn_13c_source_side_l1 = mdn_source.interacting(mdn_ldnmos, 2, 2)
   mdn_13c_source_side_l2 = mdn_source.interacting(pcomp.interacting(mdn_source, 2, 2))
   mdn_13c_source_side = mdn_ldnmos.interacting(mdn_13c_source_side_l1.join(mdn_13c_source_side_l2))
-  mdn13c_l1 = mvsd.covering(ncomp.not_interacting(poly2)).interacting(ncomp, 2, 2).interacting(mdn_13c_source_side)
+  mdn13c_l1 = mvsd.covering(ncomp.not_interacting(poly2_drawn)).interacting(ncomp, 2,
+                                                                            2).interacting(mdn_13c_source_side)
   mdn13c_l1.output('MDN.13c', 'MDN.13c : Both sides of the transistor shall be terminated by source.')
   mdn13c_l1.forget
   mdn_13c_source_side_l1.forget
@@ -353,8 +354,8 @@ GF180_DRC_REGISTRY.register(
   # Rule MDN.13d: Every two poly fingers shall be surrounded by a P-sub guard ring.
   ## (Exclude the case when each LDNMOS transistor have full width butting to well tap).
   logger.info('Executing rule MDN.13d')
-  mdn_13d_single      = mvsd_mdn.covering(ncomp.not_interacting(poly2)).interacting(ncomp, 2, 2)
-  mdn_13d_multi       = mvsd_mdn.covering(ncomp.not_interacting(poly2)).interacting(ncomp, 3, 3)
+  mdn_13d_single      = mvsd_mdn.covering(ncomp.not_interacting(poly2_drawn)).interacting(ncomp, 2, 2)
+  mdn_13d_multi       = mvsd_mdn.covering(ncomp.not_interacting(poly2_drawn)).interacting(ncomp, 3, 3)
   mdn_13d_butted_well = mdn_source.sized(1.um).sized(-1.um).extents.not(pcomp).interacting(mdn_ldnmos, 2, 2)
   mdn13d_l1 = pcomp_holes.covering(mdn_13d_single, 2)
   mdn13d_l2 = pcomp_holes.covering(mdn_13d_single).covering(mdn_13d_multi)

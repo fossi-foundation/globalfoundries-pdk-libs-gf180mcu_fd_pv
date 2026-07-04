@@ -59,8 +59,8 @@ GF180_DRC_REGISTRY.register(id: 'CO.3_poly2_overlap', path: __FILE__, priority: 
   logger.info('Executing rule CO.3')
 
   main_contact = contact.not(sramcore)
-  co3_l1 = main_contact.enclosed(poly2, 0.07.um, euclidian).polygons(0.001.um)
-  co3_l2 = main_contact.not_outside(poly2).not(poly2)
+  co3_l1 = main_contact.enclosed(poly2_drawn, 0.07.um, euclidian).polygons(0.001.um)
+  co3_l2 = main_contact.not_outside(poly2_drawn).not(poly2_drawn)
   co3_l = co3_l1.or(co3_l2)
 
   co3_l.output('CO.3', 'CO.3 : Poly2 overlap of contact. : 0.07µm')
@@ -200,7 +200,7 @@ end
 GF180_DRC_REGISTRY.register(id: 'CO.8_poly_to_comp_spacing', path: __FILE__, priority: 0, tags: %w[all feol contact]) do
   logger.info('Executing rule CO.8')
 
-  co8_l1 = contact.and(poly2).separation(comp, 0.17.um, euclidian)
+  co8_l1 = contact.and(poly2_drawn).separation(comp, 0.17.um, euclidian)
 
   co8_l1.output('CO.8', 'CO.8 : Space from Poly2 contact to COMP : 0.17µm')
   co8_l1.forget
@@ -230,7 +230,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.11_no_contact_on_field_oxide', path: __FILE_
                             tags: %w[all feol contact]) do
   logger.info('Executing rule CO.11')
 
-  co11_l1 = contact.not(poly2).not(comp)
+  co11_l1 = contact.not(poly2_drawn).not(comp)
 
   co11_l1.output('CO.11', 'CO.11 : Contact on field oxide is forbidden')
   co11_l1.forget

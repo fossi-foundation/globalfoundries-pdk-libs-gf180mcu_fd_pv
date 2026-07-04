@@ -121,7 +121,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule NP.4b: Within 0.32um of channel, space to P-channel gate extension perpendicular
   ## to the direction of Poly2.
-  np_4b_poly = poly2.edges.interacting(pgate.edges.not(pcomp_edges)).centers(0, 0.99).and(pgate.sized(0.32.um))
+  np_4b_poly = poly2_drawn.edges.interacting(pgate.edges.not(pcomp_edges)).centers(0, 0.99).and(pgate.sized(0.32.um))
   logger.info('Executing rule NP.4b')
   np4b_l1 = nplus.interacting(nplus_edges.separation(np_4b_poly, 0.22.um, projection).polygons(0.001.um))
   np4b_l1.output('NP.4b', 'NP.4b : Within 0.32um of channel, space to P-channel gate extension perpendicular
@@ -212,7 +212,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule NP.7: Space to unrelated unsalicided Poly2. is 0.18µm
   logger.info('Executing rule NP.7')
-  np7_l1 = nplus.separation(poly2.and(sab), 0.18.um, euclidian)
+  np7_l1 = nplus.separation(poly2_drawn.and(sab), 0.18.um, euclidian)
   np7_l1.output('NP.7', 'NP.7 : Space to unrelated unsalicided Poly2. : 0.18µm')
   np7_l1.forget
 
@@ -230,8 +230,8 @@ GF180_DRC_REGISTRY.register(
 
   # Rule NP.9: Overlap of unsalicided Poly2. is 0.18µm
   logger.info('Executing rule NP.9')
-  np9_l1 = nplus.enclosing(poly2.and(sab), 0.18.um, euclidian).polygons(0.001.um)
-  np9_l2 = poly2.and(sab).not_outside(nplus).not(nplus)
+  np9_l1 = nplus.enclosing(poly2_drawn.and(sab), 0.18.um, euclidian).polygons(0.001.um)
+  np9_l2 = poly2_drawn.and(sab).not_outside(nplus).not(nplus)
   np9_l  = np9_l1.or(np9_l2)
   np9_l.output('NP.9', 'NP.9 : Overlap of unsalicided Poly2. : 0.18µm')
   np9_l1.forget
@@ -267,7 +267,7 @@ GF180_DRC_REGISTRY.register(
   # Rule NP.12: Overlap with P-channel poly2 gate extension is forbidden
   ## within 0.32um of P-channel gate.
   logger.info('Executing rule NP.12')
-  np12_l1 = nplus.interacting(pgate.sized(0.32.um - 1.dbu, size_inside(poly2), steps(3)))
+  np12_l1 = nplus.interacting(pgate.sized(0.32.um - 1.dbu, size_inside(poly2_drawn), steps(3)))
   np12_l1.output('NP.12', 'NP.12 : Overlap with P-channel poly2 gate extension is forbidden
                   within 0.32um of P-channel gate.')
   np12_l1.forget

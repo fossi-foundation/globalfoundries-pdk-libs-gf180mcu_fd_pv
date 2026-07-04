@@ -53,12 +53,12 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
 
   logger.info('Executing rule ANT.1')
-  antenna_check(tgate, perimeter_only(poly2, 0.2.um), 200)
+  antenna_check(tgate, perimeter_only(poly2_drawn, 0.2.um), 200)
     .output('ANT.1',
             'ANT.1: Maximum ratio of Poly2 perimeter area to related gate oxide area: 200')
 end
@@ -75,10 +75,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -102,10 +102,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -136,10 +136,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -169,10 +169,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -205,10 +205,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -251,10 +251,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -301,10 +301,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -352,10 +352,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -407,10 +407,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -460,10 +460,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -517,10 +517,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)
@@ -572,10 +572,10 @@ GF180_DRC_REGISTRY.register(
   clear_connections
 
   # Set up the connections for the antenna check
-  connect(poly2, tgate)
-  connect(poly2, nom_gate)
-  connect(poly2, thick_gate)
-  connect(poly2, contact)
+  connect(poly2_drawn, tgate)
+  connect(poly2_drawn, nom_gate)
+  connect(poly2_drawn, thick_gate)
+  connect(poly2_drawn, contact)
   connect(contact, n_diode) # N-diode
   connect(contact, p_diode) # P-diode
   connect(contact, ntap)

@@ -27,7 +27,7 @@ GF180_DRC_REGISTRY.register(
   #================================================
 
   logger.info('Starting PRES derivations')
-  pres_poly = poly2.and(pplus).interacting(sab).interacting(res_mk).not_interacting(resistor)
+  pres_poly = poly2_drawn.and(pplus).interacting(sab).interacting(res_mk).not_interacting(resistor)
 
   # Rule PRES.1: Minimum width of Poly2 resistor is 0.8µm.
   logger.info('Executing rule PRES.1')
@@ -53,7 +53,7 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PRES.4: Minimum space from Poly2 resistor to unrelated Poly2 is 0.6µm.
   logger.info('Executing rule PRES.4')
-  pres4_l1 = pres_poly.separation(poly2.not_interacting(sab), 0.6.um, euclidian)
+  pres4_l1 = pres_poly.separation(poly2_drawn.not_interacting(sab), 0.6.um, euclidian)
   pres4_l1.output('PRES.4', 'PRES.4 : Minimum space from Poly2 resistor to unrelated Poly2: 0.6µm')
   pres4_l1.forget
 
@@ -89,7 +89,7 @@ GF180_DRC_REGISTRY.register(
   ## RES_MK length shall be coincide with resistor length (Defined by SAB length)
   ## and width covering the width of Poly2.
   logger.info('Executing rule PRES.9a')
-  mk_pres9a = res_mk.edges.not(poly2.and(pplus).and(sab).edges).inside_part(poly2)
+  mk_pres9a = res_mk.edges.not(poly2_drawn.and(pplus).and(sab).edges).inside_part(poly2_drawn)
   pres9a_l1 = res_mk.interacting(pres_poly).interacting(mk_pres9a)
   pres9a_l1.output('PRES.9a',
                    'PRES.9a : Pplus Poly2 resistor shall be covered by RES_MK marking.

@@ -54,9 +54,6 @@ GF180_DRC_REGISTRY.register(
   gr2_l1 = poly2.separation(guard_ring_mk, 10.um)
   gr2_l1.output('GR.2', 'GR.2 : Min GUARD_RING_MK space to prime die Poly2: 10')
   gr2_l1.forget
-  gr2_l1 = poly2_dummy.separation(guard_ring_mk, 10.um)
-  gr2_l1.output('GR.2', 'GR.2 : Min GUARD_RING_MK space to prime die Poly2: 10')
-  gr2_l1.forget
 
   (1..6).each do |lvl|
     next unless ctx.metal_level_numerical >= lvl

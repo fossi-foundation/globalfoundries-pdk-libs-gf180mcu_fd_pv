@@ -30,7 +30,7 @@ GF180_DRC_REGISTRY.register(
 
   sram_lv = sramcore.not_interacting(v5_xtor).not_interacting(dualgate)
   nw_n_dn_sram = nwell_n_dn.and(sram_lv)
-  poly_sram = poly2.and(sram_lv)
+  poly_sram = poly2_drawn.and(sram_lv)
   comp_sram = comp.and(sram_lv)
   contact_sram = contact.and(sram_lv)
   metal1_sram = metal1.and(sram_lv)
