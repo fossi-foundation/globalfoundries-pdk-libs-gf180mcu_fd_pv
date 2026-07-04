@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for density</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/clyde/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>MT30_7_pass</top-cell>
  <tags>
  </tags>
  <categories>
+  <category>
+   <name>DCF.1b</name>
+   <description>DCF.1b : Global density for active layers (COMP+ Dummy COMP) shall be &gt;= 25%</description>
+   <categories>
+   </categories>
+  </category>
   <category>
    <name>PL.8</name>
    <description>PL.8 : Poly2 coverage over the entire die shall be 14%.
@@ -65,6 +71,18 @@
   </cell>
  </cells>
  <items>
+  <item>
+   <tags/>
+   <category>'DCF.1b'</category>
+   <cell>MT30_7_pass</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-100,0;-100,100;0,100;0,0)</value>
+   </values>
+  </item>
   <item>
    <tags/>
    <category>'PL.8'</category>
