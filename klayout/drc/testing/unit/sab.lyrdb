@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for sab</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>7_10_SB</top-cell>
  <tags>
  </tags>
@@ -132,7 +132,6 @@
   <cell>
    <name>7_10_SB</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -144,7 +143,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-56.895,1119.528;-56.675,1119.748)|(-56.475,1119.748;-56.475,1119.354)</value>
@@ -156,7 +154,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-56.501,1119.328;-56.895,1119.328)|(-56.895,1119.528;-56.675,1119.748)</value>
@@ -168,7 +165,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-356.9,1119.528;-356.68,1119.748)|(-356.48,1119.748;-356.48,1119.354)</value>
@@ -180,7 +176,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-356.506,1119.328;-356.9,1119.328)|(-356.9,1119.528;-356.68,1119.748)</value>
@@ -192,7 +187,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.012,493.73;-327.592,493.73)|(-327.172,493.73;-327.592,493.73)</value>
@@ -204,7 +198,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-327.592,493.73;-327.592,493.31)|(-327.592,493.73;-327.592,494.15)</value>
@@ -216,7 +209,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-393.173,493.755;-393.173,493.755)|(-393.173,494.175;-393.173,493.755)</value>
@@ -228,7 +220,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-393.173,493.755;-393.173,493.335)|(-393.173,493.755;-393.173,493.755)</value>
@@ -240,7 +231,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.012,545.74;-327.592,545.74)|(-327.172,545.74;-327.592,545.74)</value>
@@ -252,7 +242,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-327.592,545.74;-327.592,545.32)|(-327.592,545.74;-327.592,546.16)</value>
@@ -264,7 +253,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-393.173,545.765;-393.173,545.765)|(-393.173,546.185;-393.173,545.765)</value>
@@ -276,7 +264,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-393.173,545.765;-393.173,545.345)|(-393.173,545.765;-393.173,545.765)</value>
@@ -288,7 +275,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-360.963,25.664;-361.054,25.664)|(-361.054,26.074;-361.044,26.084)</value>
@@ -300,7 +286,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.245,26.009;-382.542,26.306)|(-382.839,26.603;-382.542,26.306)</value>
@@ -312,7 +297,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.542,26.306;-382.839,26.009)|(-382.542,26.306;-382.245,26.603)</value>
@@ -324,7 +308,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-403.897,25.664;-403.897,26.924)|(-403.482,26.924;-403.482,25.664)</value>
@@ -336,7 +319,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-371.314,26.297;-371.314,26.307)|(-371.022,26.609;-371.022,26.599)</value>
@@ -348,7 +330,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-371.314,26.307;-371.324,26.307)|(-371.022,26.599;-371.012,26.599)</value>
@@ -360,7 +341,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-394.297,25.899;-394.41,26.012)|(-394.062,26.258;-394.062,26.247)</value>
@@ -372,7 +352,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-394.134,25.736;-394.41,26.012)|(-394.062,26.247;-393.899,26.084)</value>
@@ -384,7 +363,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-394.134,25.736;-394.247,25.849)|(-393.899,26.084;-393.888,26.084)</value>
@@ -396,7 +374,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-350.609,25.737;-350.722,25.85)|(-350.374,26.096;-350.374,26.085)</value>
@@ -408,7 +385,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-350.609,25.737;-350.722,25.85)|(-350.374,26.085;-350.363,26.085)</value>
@@ -420,7 +396,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-115.285,78.909;-115.285,79.769)|(-114.885,79.769;-114.885,78.909)</value>
@@ -432,7 +407,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-337.432,494.11;-337.432,494.595)|(-337.847,494.595;-337.847,494.175)</value>
@@ -444,7 +418,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.073,493.745;-382.083,493.755)|(-382.493,493.846;-382.493,493.664)</value>
@@ -456,7 +429,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.083,493.755;-382.073,493.765)|(-382.493,493.846;-382.493,493.664)</value>
@@ -468,7 +440,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.753,493.335;-393.173,493.755)|(-393.173,493.755;-393.173,493.335)</value>
@@ -480,7 +451,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.57,494.101;-348.437,494.234)|(-348.793,494.472;-348.793,494.457)</value>
@@ -492,7 +462,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.611,494.045;-348.611,494.06)|(-348.834,494.416;-348.967,494.283)</value>
@@ -504,7 +473,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-327.592,493.73;-327.592,493.31)|(-327.592,493.73;-327.592,494.15)</value>
@@ -516,7 +484,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.563,493.977;-370.573,493.967)|(-370.153,493.977;-370.143,493.987)</value>
@@ -528,7 +495,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.245,26.009;-382.542,26.306)|(-382.839,26.603;-382.542,26.306)</value>
@@ -540,7 +506,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.542,26.306;-382.839,26.009)|(-382.542,26.306;-382.245,26.603)</value>
@@ -552,7 +517,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.012,493.73;-327.592,493.73)|(-327.172,493.73;-327.592,493.73)</value>
@@ -564,7 +528,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.89,1303.931;-107.164,1303.931)|(-107.515,1304.162;-108.241,1304.162)</value>
@@ -576,7 +539,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-425.003,493.755;-425.003,494.175)|(-425.418,494.24;-425.418,493.69)</value>
@@ -588,7 +550,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.143,493.967;-370.153,493.977)|(-370.573,493.987;-370.563,493.977)</value>
@@ -600,7 +561,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-393.173,493.755;-392.753,494.175)|(-393.173,494.349;-393.173,493.755)</value>
@@ -612,7 +572,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-393.173,493.755;-393.173,493.755)|(-393.173,493.755;-392.876,494.052)</value>
@@ -624,7 +583,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.611,494.06;-348.437,494.234)|(-348.793,494.457;-348.967,494.283)</value>
@@ -636,7 +594,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.876,493.458;-393.173,493.755)|(-393.173,493.755;-393.173,493.755)</value>
@@ -648,7 +605,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-113.628,129.685;-113.628,130.105)/(-113.628,130.325;-113.628,129.465)</value>
@@ -660,7 +616,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.063,597.75;-328.063,597.53)/(-328.063,597.75;-328.063,597.97)</value>
@@ -672,7 +627,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-79.866,1309.99;-79.866,1308.952)/(-79.741,1309.133;-79.741,1309.809)</value>
@@ -684,7 +638,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.923,598.35;-348.923,598.336)/(-348.821,598.141;-348.728,598.234)</value>
@@ -696,7 +649,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.223,597.841;-382.223,597.709)/(-382.003,597.765;-382.013,597.775)</value>
@@ -708,7 +660,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-123.337,1309.99;-123.337,1308.952)/(-123.212,1309.133;-123.212,1309.809)</value>
@@ -720,7 +671,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.493,597.997;-370.503,597.987)/(-370.283,597.997;-370.273,598.007)</value>
@@ -732,7 +682,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-424.948,598.242;-424.948,597.728)/(-424.733,597.775;-424.733,598.195)</value>
@@ -744,7 +693,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-91.287,1309.951;-91.287,1308.991)/(-91.119,1309.133;-91.119,1309.809)</value>
@@ -756,7 +704,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.923,598.336;-349.077,598.182)/(-348.882,598.08;-348.728,598.234)</value>
@@ -768,7 +715,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.984,598.275;-349.077,598.182)/(-348.882,598.066;-348.882,598.08)</value>
@@ -780,7 +726,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.223,597.841;-382.223,597.709)/(-382.013,597.775;-382.003,597.785)</value>
@@ -792,7 +737,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.053,598.415;-414.053,597.555)/(-414.053,597.775;-414.053,598.195)</value>
@@ -804,7 +748,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.503,598.007;-370.493,597.997)/(-370.273,597.987;-370.283,597.997)</value>
@@ -816,7 +759,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.903,598.086;-392.903,597.775)/(-392.903,597.775;-392.683,597.995)</value>
@@ -828,7 +770,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.283,597.75;-328.063,597.75)/(-327.843,597.75;-328.063,597.75)</value>
@@ -840,7 +781,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.903,597.775;-392.903,597.464)/(-392.683,597.555;-392.903,597.775)</value>
@@ -852,7 +792,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-382.398,701.485;-382.398,701.705;-382.288,701.705;-382.288,701.485)</value>
@@ -864,7 +803,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-372.668,701.485;-372.668,701.705;-372.448,701.705;-372.448,701.485)</value>
@@ -876,7 +814,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-401.567,701.446;-401.714,701.484;-401.714,701.706;-401.567,701.744)</value>
@@ -888,7 +825,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-352.439,701.692;-352.439,701.704;-352.451,701.704;-352.391,701.758;-352.337,701.818;-352.337,701.806;-352.325,701.806;-352.385,701.752)</value>
@@ -900,7 +836,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-391.929,701.334;-391.929,701.856;-391.927,701.706;-391.927,701.484)</value>
@@ -912,7 +847,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-362.917,701.554;-362.919,701.704;-363.069,701.706;-362.919,701.706;-362.919,701.856;-362.917,701.706;-362.767,701.704;-362.917,701.704)</value>
@@ -924,7 +858,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-401.567,1170.284;-401.567,1170.944;-401.347,1170.944;-401.347,1170.284)</value>
@@ -936,7 +869,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.161,858.545;-414.161,857.525)/(-414.161,857.825;-414.161,858.245)</value>
@@ -948,7 +880,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-425.136,858.3;-425.136,857.77)/(-424.841,857.825;-424.841,858.245)</value>
@@ -960,7 +891,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-117.141,1310.263;-117.277,1310.263)/(-117.253,1309.964;-117.117,1309.964)</value>
@@ -972,7 +902,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-113.628,234.425;-113.628,233.405)/(-113.628,233.705;-113.628,234.125)</value>
@@ -984,7 +913,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-129.076,1310.262;-129.076,1310.04)/(-129.044,1309.809;-129.044,1309.964)</value>
@@ -996,7 +924,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.331,857.902;-382.331,857.748)/(-382.041,857.825;-382.031,857.835)</value>
@@ -1008,7 +935,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.922,858.391;-349.035,858.278)/(-348.774,858.115;-348.774,858.13)</value>
@@ -1020,7 +946,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.521,858.047;-370.531,858.037)/(-370.231,858.047;-370.221,858.057)</value>
@@ -1032,7 +957,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-327.875,857.8;-327.875,857.5)/(-327.875,857.8;-327.875,858.1)</value>
@@ -1044,7 +968,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.331,857.902;-382.331,857.748)/(-382.031,857.815;-382.041,857.825)</value>
@@ -1056,7 +979,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.531,858.057;-370.521,858.047)/(-370.221,858.037;-370.231,858.047)</value>
@@ -1068,7 +990,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-113.628,286.435;-113.628,285.415)/(-113.628,285.715;-113.628,286.135)</value>
@@ -1080,7 +1001,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-393.011,858.249;-393.011,857.825)/(-393.011,857.825;-392.711,858.125)</value>
@@ -1092,7 +1012,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.871,858.442;-349.035,858.278)/(-348.774,858.13;-348.61,858.294)</value>
@@ -1104,7 +1023,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.175,857.8;-327.875,857.8)/(-327.575,857.8;-327.875,857.8)</value>
@@ -1116,7 +1034,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-393.011,857.825;-393.011,857.405)/(-392.711,857.525;-393.011,857.825)</value>
@@ -1128,7 +1045,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-129.076,1310.04;-129.334,1310.04)/(-129.044,1309.964;-128.844,1309.964)</value>
@@ -1140,7 +1056,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-73.67,1310.263;-73.806,1310.263)/(-73.782,1309.964;-73.646,1309.964)</value>
@@ -1152,7 +1067,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.871,858.457;-348.871,858.442)/(-348.723,858.181;-348.61,858.294)</value>
@@ -1164,7 +1078,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.984,961.845;-392.984,961.449)/(-392.704,961.565;-392.984,961.845)</value>
@@ -1176,7 +1089,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.984,962.241;-392.984,961.845)/(-392.984,961.845;-392.704,962.125)</value>
@@ -1188,7 +1100,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.304,961.919;-382.304,961.771)/(-382.034,961.845;-382.024,961.855)</value>
@@ -1200,7 +1111,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.304,961.919;-382.304,961.771)/(-382.024,961.835;-382.034,961.845)</value>
@@ -1212,7 +1122,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.134,962.545;-414.134,961.565)/(-414.134,961.845;-414.134,962.265)</value>
@@ -1224,7 +1133,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.938,962.394;-349.045,962.287)/(-348.801,962.135;-348.801,962.15)</value>
@@ -1236,7 +1144,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.884,962.463;-348.884,962.448)/(-348.747,962.204;-348.64,962.311)</value>
@@ -1248,7 +1155,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-425.089,962.318;-425.089,961.792)/(-424.814,961.845;-424.814,962.265)</value>
@@ -1260,7 +1166,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.884,962.448;-349.045,962.287)/(-348.801,962.15;-348.64,962.311)</value>
@@ -1272,7 +1177,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.514,962.067;-370.524,962.057)/(-370.244,962.067;-370.234,962.077)</value>
@@ -1284,7 +1188,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-129.076,1310.087;-129.076,1310.04)/(-129.044,1309.762;-129.044,1309.809)</value>
@@ -1296,7 +1199,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.524,962.077;-370.514,962.067)/(-370.234,962.057;-370.244,962.067)</value>
@@ -1308,7 +1210,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-327.922,961.82;-327.922,961.54)/(-327.922,961.82;-327.922,962.1)</value>
@@ -1320,7 +1221,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.202,961.82;-327.922,961.82)/(-327.642,961.82;-327.922,961.82)</value>
@@ -1332,7 +1232,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-129.076,1310.04;-129.202,1310.04)/(-129.044,1309.809;-128.918,1309.809)</value>
@@ -1344,7 +1243,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-396.32,1067.319;-396.32,1067.739)/(-396.32,1067.099;-396.32,1067.959)</value>
@@ -1356,7 +1254,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-395.9,1067.739;-395.9,1067.319)/(-395.9,1067.959;-395.9,1067.099)</value>
@@ -1368,7 +1265,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-415.595,1067.319;-415.595,1067.739)/(-415.81,1067.272;-415.81,1067.786)</value>
@@ -1380,7 +1276,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-386.68,1067.725;-386.68,1067.739)/(-386.875,1067.841;-386.782,1067.934)</value>
@@ -1392,7 +1287,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-119.264,1341.038;-120.333,1341.038)/(-119.435,1340.9;-120.162,1340.9)</value>
@@ -1404,7 +1298,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-137.57,1344.038;-136.455,1344.038)/(-137.38,1344.134;-136.653,1344.134)</value>
@@ -1416,7 +1309,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-388.128,1344.038;-387.013,1344.038)/(-387.938,1344.134;-387.211,1344.134)</value>
@@ -1428,7 +1320,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-387.04,1341.038;-388.109,1341.038)/(-387.211,1340.9;-387.938,1340.9)</value>
@@ -1440,7 +1331,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-376.976,1119.593;-376.82,1119.749)/(-376.82,1119.749;-376.82,1119.749)</value>
@@ -1452,7 +1342,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.895,1119.969;-95.895,1119.109)/(-95.895,1119.749;-95.895,1119.329)</value>
@@ -1464,7 +1353,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-129.708,1344.038;-128.622,1344.038)/(-129.547,1344.134;-128.82,1344.134)</value>
@@ -1476,7 +1364,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-386.68,1067.739;-386.666,1067.739)/(-386.875,1067.841;-386.782,1067.934)</value>
@@ -1488,7 +1375,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-128.649,1341.038;-129.708,1341.038)/(-128.82,1340.9;-129.547,1340.9)</value>
@@ -1500,7 +1386,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-376.82,1067.428;-376.82,1067.739)/(-377.04,1067.519;-376.82,1067.739)</value>
@@ -1512,7 +1397,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-396.425,1341.038;-397.484,1341.038)/(-396.596,1340.9;-397.323,1340.9)</value>
@@ -1524,7 +1408,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-145.867,1341.038;-146.926,1341.038)/(-146.038,1340.9;-146.765,1340.9)</value>
@@ -1536,7 +1419,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-136.482,1341.038;-137.551,1341.038)/(-136.653,1340.9;-137.38,1340.9)</value>
@@ -1548,7 +1430,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.596,1344.038;-110.51,1344.038)/(-111.435,1344.134;-110.708,1344.134)</value>
@@ -1560,7 +1441,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.537,1341.038;-111.596,1341.038)/(-110.708,1340.9;-111.435,1340.9)</value>
@@ -1572,7 +1452,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.152,1341.038;-102.221,1341.038)/(-101.323,1340.9;-102.05,1340.9)</value>
@@ -1584,7 +1463,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-376.82,1067.739;-376.509,1067.739)/(-376.82,1067.739;-376.6,1067.959)</value>
@@ -1596,7 +1474,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-356.68,1067.738;-356.666,1067.738)/(-356.875,1067.84;-356.782,1067.933)</value>
@@ -1608,7 +1485,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-134.967,1309.725;-134.967,1309.865)/(-135.074,1309.917;-135.074,1310.057)</value>
@@ -1620,7 +1496,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-96.315,1119.109;-96.315,1119.969)/(-96.315,1119.329;-96.315,1119.749)</value>
@@ -1632,7 +1507,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-415.175,1067.739;-415.175,1067.319)/(-414.96,1067.786;-414.96,1067.272)</value>
@@ -1644,7 +1518,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-356.9,1067.518;-356.68,1067.738)/(-357.095,1067.62;-356.782,1067.933)</value>
@@ -1656,7 +1529,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-376.82,1119.749;-376.664,1119.905)/(-376.82,1119.749;-376.82,1119.749)</value>
@@ -1668,7 +1540,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-134.024,1309.865;-133.945,1309.865)/(-133.81,1309.917;-133.731,1309.917)</value>
@@ -1680,7 +1551,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-356.9,1067.504;-356.9,1067.518)/(-357.095,1067.62;-357.002,1067.713)</value>
@@ -1692,7 +1562,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-397.484,1344.038;-396.398,1344.038)/(-397.323,1344.134;-396.596,1344.134)</value>
@@ -1704,7 +1573,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-146.926,1344.038;-145.84,1344.038)/(-146.765,1344.134;-146.038,1344.134)</value>
@@ -1716,7 +1584,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-440.724,1344.038;-439.609,1344.038)/(-440.534,1344.134;-439.807,1344.134)</value>
@@ -1728,7 +1595,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-102.24,1344.038;-101.125,1344.038)/(-102.05,1344.134;-101.323,1344.134)</value>
@@ -1740,7 +1606,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-134.967,1309.865;-134.86,1309.865)/(-135.181,1309.917;-135.074,1309.917)</value>
@@ -1752,7 +1617,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-439.636,1341.038;-440.705,1341.038)/(-439.807,1340.9;-440.534,1340.9)</value>
@@ -1764,7 +1628,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-120.352,1344.038;-119.237,1344.038)/(-120.162,1344.134;-119.435,1344.134)</value>
@@ -1776,7 +1639,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-133.945,1309.865;-133.945,1309.743)/(-133.81,1310.039;-133.81,1309.917)</value>
@@ -1788,7 +1650,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-449.021,1341.038;-450.08,1341.038)/(-449.192,1340.9;-449.919,1340.9)</value>
@@ -1800,7 +1661,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-450.08,1344.038;-448.994,1344.038)/(-449.919,1344.134;-449.192,1344.134)</value>
@@ -1812,7 +1672,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-449.919,1340.9;-450.08,1341.038;-450.08,1344.038;-449.919,1344.134)</value>
@@ -1824,7 +1683,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-356.68,1119.748;-356.875,1119.85;-356.782,1119.943;-356.666,1119.748)</value>
@@ -1836,7 +1694,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-376.82,1119.749;-376.6,1119.969;-376.509,1119.749)</value>
@@ -1848,7 +1705,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-386.68,1119.735;-386.875,1119.851;-386.782,1119.944;-386.68,1119.749)</value>
@@ -1860,7 +1716,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-386.68,1119.749;-386.875,1119.851;-386.782,1119.944;-386.666,1119.749)</value>
@@ -1872,7 +1727,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-356.9,1119.514;-357.095,1119.63;-357.002,1119.723;-356.9,1119.528)</value>
@@ -1884,7 +1738,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-414.96,1119.282;-415.175,1119.329;-415.175,1119.749;-414.96,1119.796)</value>
@@ -1896,7 +1749,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-120.162,1340.927;-120.352,1341.038;-120.352,1344.038;-120.162,1344.134)</value>
@@ -1908,7 +1760,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-102.05,1340.927;-102.24,1341.038;-102.24,1344.038;-102.05,1344.134)</value>
@@ -1920,7 +1771,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-111.435,1340.9;-111.596,1341.038;-111.596,1344.038;-111.435,1344.134)</value>
@@ -1932,7 +1782,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.528,129.605;-424.528,130.185;-424.323,130.105;-424.323,129.685)</value>
@@ -1944,7 +1793,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-440.534,1340.927;-440.724,1341.038;-440.724,1344.038;-440.534,1344.134)</value>
@@ -1956,7 +1804,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-376.82,1119.438;-377.04,1119.529;-376.82,1119.749)</value>
@@ -1968,7 +1815,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-146.765,1340.9;-146.926,1341.038;-146.926,1344.038;-146.765,1344.134)</value>
@@ -1980,7 +1826,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-356.9,1119.528;-357.095,1119.63;-356.782,1119.943;-356.68,1119.748)</value>
@@ -1992,7 +1837,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-415.81,1119.282;-415.81,1119.796;-415.595,1119.749;-415.595,1119.329)</value>
@@ -2004,7 +1848,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.508,181.603;-124.508,182.207;-124.308,182.115;-124.308,181.695)</value>
@@ -2016,7 +1859,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.528,181.615;-424.528,182.195;-424.323,182.115;-424.323,181.695)</value>
@@ -2028,7 +1870,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-397.323,1340.9;-397.484,1341.038;-397.484,1344.038;-397.323,1344.134)</value>
@@ -2040,7 +1881,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-387.938,1340.927;-388.128,1341.038;-388.128,1344.038;-387.938,1344.134)</value>
@@ -2052,7 +1892,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-137.38,1340.927;-137.57,1341.038;-137.57,1344.038;-137.38,1344.134)</value>
@@ -2064,7 +1903,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.508,129.593;-124.508,130.197;-124.308,130.105;-124.308,129.685)</value>
@@ -2076,7 +1914,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-129.547,1340.9;-129.708,1341.038;-129.708,1344.038;-129.547,1344.134)</value>
@@ -2088,7 +1925,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-382.398,701.485;-382.398,701.705;-382.288,701.705;-382.288,701.485)</value>
@@ -2100,7 +1936,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-372.668,701.485;-372.668,701.705;-372.448,701.705;-372.448,701.485)</value>
@@ -2112,7 +1947,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-401.567,1170.284;-401.567,1170.944;-401.347,1170.944;-401.347,1170.284)</value>
@@ -2124,7 +1958,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-75.38,1305.491;-75.567,1305.607;-74.993,1305.607;-75.18,1305.491)</value>
@@ -2136,7 +1969,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-85.807,1304.378;-85.911,1304.49;-85.911,1305.49;-85.807,1305.607)</value>
@@ -2148,7 +1980,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.909,1304.162;-109.003,1304.274;-107.818,1304.274;-107.629,1304.162)</value>
@@ -2160,7 +1991,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.528,285.635;-424.528,286.215;-424.323,286.135;-424.323,285.715)</value>
@@ -2172,7 +2002,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.528,233.625;-424.528,234.205;-424.323,234.125;-424.323,233.705)</value>
@@ -2184,7 +2013,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.508,285.623;-124.508,286.227;-124.308,286.135;-124.308,285.715)</value>
@@ -2196,7 +2024,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.17,1303.014;-103.17,1304.243;-103.066,1304.131;-103.066,1303.131)</value>
@@ -2208,7 +2035,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-101.881,1303.931;-101.881,1304.131;-101.776,1304.243;-101.776,1303.931)</value>
@@ -2220,7 +2046,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.17,1303.014;-103.066,1303.131;-102.866,1303.131;-102.68,1303.014)</value>
@@ -2232,7 +2057,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.508,233.613;-124.508,234.217;-124.308,234.125;-124.308,233.705)</value>
@@ -2244,7 +2068,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-81.938,1304.378;-81.938,1304.884;-81.833,1304.691;-81.833,1304.491)</value>
@@ -2256,7 +2079,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-76.27,1304.378;-76.365,1304.491;-75.18,1304.491;-74.991,1304.378)</value>
@@ -2268,7 +2090,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-81.938,1304.378;-81.833,1304.491;-80.648,1304.491;-80.544,1304.378)</value>
@@ -2280,7 +2101,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-87.201,1304.378;-87.096,1304.49;-85.911,1304.49;-85.807,1304.378)</value>
@@ -2292,7 +2112,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-102.409,1311.369;-102.596,1311.485;-102.105,1311.485;-102.209,1311.369)</value>
@@ -2304,7 +2123,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.499,1310.256;-103.394,1310.369;-102.209,1310.369;-102.105,1310.256)</value>
@@ -2316,7 +2134,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-80.544,1304.378;-80.648,1304.491;-80.648,1305.491;-80.544,1305.607)</value>
@@ -2328,7 +2145,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.499,1310.256;-103.499,1310.762;-103.394,1310.569;-103.394,1310.369)</value>
@@ -2340,7 +2156,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-85.595,1310.264;-85.402,1310.369;-85.202,1310.369;-85.09,1310.264)</value>
@@ -2352,7 +2167,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-117.646,1310.263;-117.453,1310.368;-117.253,1310.368;-117.141,1310.263)</value>
@@ -2364,7 +2178,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-69.831,1303.931;-69.831,1304.131;-69.726,1304.243;-69.726,1303.931)</value>
@@ -2376,7 +2189,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-97.831,1310.256;-97.926,1310.369;-96.741,1310.369;-96.552,1310.256)</value>
@@ -2388,7 +2200,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-65.291,1310.256;-65.186,1310.368;-64.001,1310.368;-63.897,1310.256)</value>
@@ -2400,7 +2211,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.762,1310.256;-108.762,1310.761;-108.657,1310.568;-108.657,1310.368)</value>
@@ -2412,7 +2222,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-86.319,1311.168;-86.319,1311.658;-86.202,1311.554;-86.202,1311.354)</value>
@@ -2424,7 +2233,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-102.105,1310.256;-102.209,1310.369;-102.209,1311.369;-102.105,1311.485)</value>
@@ -2436,7 +2244,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-69.241,1311.368;-69.427,1311.485;-68.855,1311.485;-69.041,1311.368)</value>
@@ -2448,7 +2255,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-74.899,1311.167;-74.899,1311.657;-74.782,1311.553;-74.782,1311.353)</value>
@@ -2460,7 +2266,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-87.201,1304.378;-87.201,1304.883;-87.096,1304.69;-87.096,1304.49)</value>
@@ -2472,7 +2277,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-79.866,1309.616;-79.971,1309.809;-79.971,1310.009;-79.866,1310.121)</value>
@@ -2484,7 +2288,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-85.09,1310.264;-85.202,1310.369;-85.202,1311.554;-85.09,1311.658)</value>
@@ -2496,7 +2299,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-118.37,1311.167;-118.37,1311.657;-118.253,1311.553;-118.253,1311.353)</value>
@@ -2508,7 +2310,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-65.291,1310.256;-65.291,1310.761;-65.186,1310.568;-65.186,1310.368)</value>
@@ -2520,7 +2321,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-107.368,1310.256;-107.472,1310.368;-107.472,1311.368;-107.368,1311.485)</value>
@@ -2532,7 +2332,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-123.337,1309.616;-123.442,1309.809;-123.442,1310.009;-123.337,1310.121)</value>
@@ -2544,7 +2343,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-112.712,1311.368;-112.898,1311.485;-112.326,1311.485;-112.512,1311.368)</value>
@@ -2556,7 +2354,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-117.141,1310.263;-117.253,1310.368;-117.253,1311.553;-117.141,1311.657)</value>
@@ -2568,7 +2365,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-86.202,1311.554;-86.319,1311.658;-85.09,1311.658;-85.202,1311.554)</value>
@@ -2580,7 +2376,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-80.848,1305.491;-81.035,1305.607;-80.544,1305.607;-80.648,1305.491)</value>
@@ -2592,7 +2387,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.627,1310.009;-124.731,1310.121;-123.337,1310.121;-123.442,1310.009)</value>
@@ -2604,7 +2398,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-64.201,1311.368;-64.387,1311.485;-63.897,1311.485;-64.001,1311.368)</value>
@@ -2616,7 +2409,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-113.603,1310.256;-113.697,1310.368;-112.512,1310.368;-112.323,1310.256)</value>
@@ -2628,7 +2420,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-73.67,1310.263;-73.782,1310.368;-73.782,1311.553;-73.67,1311.657)</value>
@@ -2640,7 +2431,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.042,1304.378;-92.136,1304.49;-90.951,1304.49;-90.762,1304.378)</value>
@@ -2652,7 +2442,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-415.295,1223.283;-415.505,1223.349;-415.505,1223.769;-415.295,1223.835)</value>
@@ -2664,7 +2453,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.692,1305.675;-96.809,1305.779;-95.58,1305.779;-95.692,1305.675)</value>
@@ -2676,7 +2464,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-74.782,1311.553;-74.899,1311.657;-73.67,1311.657;-73.782,1311.553)</value>
@@ -2688,7 +2475,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-86.111,1305.49;-86.297,1305.607;-85.807,1305.607;-85.911,1305.49)</value>
@@ -2700,7 +2486,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-118.253,1311.553;-118.37,1311.657;-117.141,1311.657;-117.253,1311.553)</value>
@@ -2712,7 +2497,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-71.12,1303.014;-71.016,1303.131;-70.816,1303.131;-70.63,1303.014)</value>
@@ -2724,7 +2508,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-107.672,1311.368;-107.858,1311.485;-107.368,1311.485;-107.472,1311.368)</value>
@@ -2736,7 +2519,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.941,1311.369;-97.128,1311.485;-96.554,1311.485;-96.741,1311.369)</value>
@@ -2748,7 +2530,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-81.156,1310.009;-81.26,1310.121;-79.866,1310.121;-79.971,1310.009)</value>
@@ -2760,7 +2541,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-74.175,1310.263;-73.982,1310.368;-73.782,1310.368;-73.67,1310.263)</value>
@@ -2772,7 +2552,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-81.26,1308.892;-81.26,1310.121;-81.156,1310.009;-81.156,1309.009)</value>
@@ -2784,7 +2563,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.085,1304.385;-95.892,1304.49;-95.692,1304.49;-95.58,1304.385)</value>
@@ -2796,7 +2574,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.681,1308.892;-92.577,1309.009;-92.377,1309.009;-92.191,1308.892)</value>
@@ -2808,7 +2585,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-129.579,1311.152;-129.765,1311.269;-129.193,1311.269;-129.379,1311.152)</value>
@@ -2820,7 +2596,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-91.287,1309.616;-91.392,1309.809;-91.392,1310.009;-91.287,1310.121)</value>
@@ -2832,7 +2607,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.577,1310.009;-92.681,1310.121;-91.287,1310.121;-91.392,1310.009)</value>
@@ -2844,7 +2618,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.762,1310.256;-108.657,1310.368;-107.472,1310.368;-107.368,1310.256)</value>
@@ -2856,7 +2629,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.681,1308.892;-92.681,1310.121;-92.577,1310.009;-92.577,1309.009)</value>
@@ -2868,7 +2640,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-63.897,1310.256;-64.001,1310.368;-64.001,1311.368;-63.897,1311.485)</value>
@@ -2880,7 +2651,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.731,1308.892;-124.731,1310.121;-124.627,1310.009;-124.627,1309.009)</value>
@@ -2892,7 +2662,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.066,1304.131;-103.17,1304.243;-101.776,1304.243;-101.881,1304.131)</value>
@@ -2904,7 +2673,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.731,1308.892;-124.627,1309.009;-124.427,1309.009;-124.241,1308.892)</value>
@@ -2916,7 +2684,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-130.47,1310.04;-130.564,1310.152;-129.379,1310.152;-129.19,1310.04)</value>
@@ -2928,7 +2695,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-71.12,1303.014;-71.12,1304.243;-71.016,1304.131;-71.016,1303.131)</value>
@@ -2940,7 +2706,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.809,1305.289;-96.809,1305.779;-96.692,1305.675;-96.692,1305.475)</value>
@@ -2952,7 +2717,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-81.26,1308.892;-81.156,1309.009;-80.956,1309.009;-80.77,1308.892)</value>
@@ -2964,7 +2728,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-134.762,1308.877;-134.56,1308.964;-134.36,1308.964;-134.158,1308.877)</value>
@@ -2976,7 +2739,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.018,1305.274;-108.204,1305.391;-107.632,1305.391;-107.818,1305.274)</value>
@@ -2988,7 +2750,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-64.034,1304.386;-63.841,1304.491;-63.641,1304.491;-63.529,1304.386)</value>
@@ -3000,7 +2761,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-63.529,1304.386;-63.641,1304.491;-63.641,1305.676;-63.529,1305.78)</value>
@@ -3012,7 +2772,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-64.641,1305.676;-64.758,1305.78;-63.529,1305.78;-63.641,1305.676)</value>
@@ -3024,7 +2783,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-414.875,1223.283;-414.875,1223.835;-414.665,1223.769;-414.665,1223.349)</value>
@@ -3036,7 +2794,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-64.758,1305.29;-64.758,1305.78;-64.641,1305.676;-64.641,1305.476)</value>
@@ -3048,7 +2805,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-71.016,1304.131;-71.12,1304.243;-69.726,1304.243;-69.831,1304.131)</value>
@@ -3060,7 +2816,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-95.58,1304.385;-95.692,1304.49;-95.692,1305.675;-95.58,1305.779)</value>
@@ -3072,7 +2827,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-70.132,1310.256;-70.226,1310.368;-69.041,1310.368;-68.852,1310.256)</value>
@@ -3084,7 +2838,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-91.151,1305.49;-91.337,1305.607;-90.765,1305.607;-90.951,1305.49)</value>
@@ -3096,7 +2849,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.548,1303.931;-90.036,1303.931)/(-90.392,1304.086;-90.192,1304.086)</value>
@@ -3108,7 +2860,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.051,1303.255;-90.533,1303.255)/(-90.192,1303.086;-90.392,1303.086)</value>
@@ -3120,7 +2871,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-100.981,1303.255;-101.463,1303.255)/(-101.122,1303.086;-101.322,1303.086)</value>
@@ -3132,7 +2882,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.825,1275.359;-95.825,1275.779)/(-95.825,1275.139;-95.825,1275.999)</value>
@@ -3144,7 +2893,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-94.985,1275.779;-94.985,1275.359)/(-94.985,1275.999;-94.985,1275.139)</value>
@@ -3156,7 +2904,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.825,1223.349;-95.825,1223.769)/(-95.825,1223.129;-95.825,1223.989)</value>
@@ -3168,7 +2915,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.639,1303.931;-107.127,1303.931)/(-107.483,1304.086;-107.283,1304.086)</value>
@@ -3180,7 +2926,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-85.707,1303.931;-85.195,1303.931)/(-85.551,1304.086;-85.351,1304.086)</value>
@@ -3192,7 +2937,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-85.21,1303.255;-85.692,1303.255)/(-85.351,1303.086;-85.551,1303.086)</value>
@@ -3204,7 +2948,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-70.132,1310.256;-70.132,1310.767)/(-70.226,1310.368;-70.226,1310.568)</value>
@@ -3216,7 +2959,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-394.975,79.769;-394.975,78.909)/(-394.975,79.549;-394.975,79.129)</value>
@@ -3228,7 +2970,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.909,1304.162;-108.909,1304.673)/(-109.003,1304.274;-109.003,1304.474)</value>
@@ -3240,7 +2981,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-130.47,1310.04;-130.47,1310.551)/(-130.564,1310.152;-130.564,1310.352)</value>
@@ -3252,7 +2992,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-123.209,1329.278;-124.013,1329.278)/(-123.311,1329.083;-123.911,1329.083)</value>
@@ -3264,7 +3003,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-129.418,1344.134;-128.82,1344.134)/(-129.208,1344.198;-128.61,1344.198)</value>
@@ -3276,7 +3014,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.478,1303.931;-100.966,1303.931)/(-101.322,1304.086;-101.122,1304.086)</value>
@@ -3288,7 +3025,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-449.192,1340.9;-449.799,1340.9)/(-448.98,1340.878;-449.58,1340.878)</value>
@@ -3300,7 +3036,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.323,1344.134;-101.323,1340.9)/(-101.14,1344.198;-101.14,1340.878)</value>
@@ -3312,7 +3047,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-439.807,1344.134;-439.807,1340.9)/(-439.624,1344.198;-439.624,1340.878)</value>
@@ -3324,7 +3058,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-439.807,1340.9;-440.443,1340.9)/(-439.624,1340.878;-440.224,1340.878)</value>
@@ -3336,7 +3069,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-97.831,1310.256;-97.831,1310.767)/(-97.926,1310.369;-97.926,1310.569)</value>
@@ -3348,7 +3080,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-136.653,1344.134;-136.653,1340.9)/(-136.47,1344.198;-136.47,1340.878)</value>
@@ -3360,7 +3091,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-396.596,1340.9;-397.203,1340.9)/(-396.384,1340.878;-396.984,1340.878)</value>
@@ -3372,7 +3102,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-396.596,1344.134;-396.596,1340.9)/(-396.384,1344.193;-396.384,1340.878)</value>
@@ -3384,7 +3113,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-69.427,1303.931;-68.915,1303.931)/(-69.271,1304.086;-69.071,1304.086)</value>
@@ -3396,7 +3124,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-137.28,1344.134;-136.653,1344.134)/(-137.07,1344.198;-136.47,1344.198)</value>
@@ -3408,7 +3135,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-387.211,1344.134;-387.211,1340.9)/(-387.028,1344.198;-387.028,1340.878)</value>
@@ -3420,7 +3146,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.323,1340.9;-101.959,1340.9)/(-101.14,1340.878;-101.74,1340.878)</value>
@@ -3432,7 +3157,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-449.192,1344.134;-449.192,1340.9)/(-448.98,1344.193;-448.98,1340.878)</value>
@@ -3444,7 +3168,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-420.842,1329.278;-421.646,1329.278)/(-420.944,1329.083;-421.544,1329.083)</value>
@@ -3456,7 +3179,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-139.205,1310.368;-139.589,1310.368)/(-139.297,1310.168;-139.497,1310.168)</value>
@@ -3468,7 +3190,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-387.838,1344.134;-387.211,1344.134)/(-387.628,1344.198;-387.028,1344.198)</value>
@@ -3480,7 +3201,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-136.368,1329.278;-137.172,1329.278)/(-136.47,1329.083;-137.07,1329.083)</value>
@@ -3492,7 +3212,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.848,1303.931;-95.336,1303.931)/(-95.692,1304.086;-95.492,1304.086)</value>
@@ -3504,7 +3223,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.95,1344.134;-101.323,1344.134)/(-101.74,1344.198;-101.14,1344.198)</value>
@@ -3516,7 +3234,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-74.279,1303.255;-74.761,1303.255)/(-74.42,1303.086;-74.62,1303.086)</value>
@@ -3528,7 +3245,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-119.435,1344.134;-119.435,1340.9)/(-119.252,1344.198;-119.252,1340.878)</value>
@@ -3540,7 +3256,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.708,1340.9;-111.315,1340.9)/(-110.496,1340.878;-111.096,1340.878)</value>
@@ -3552,7 +3267,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.306,1344.134;-110.708,1344.134)/(-111.096,1344.198;-110.498,1344.198)</value>
@@ -3564,7 +3278,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-146.038,1344.134;-146.038,1340.9)/(-145.826,1344.193;-145.826,1340.878)</value>
@@ -3576,7 +3289,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-63.3,1303.255;-63.782,1303.255)/(-63.441,1303.086;-63.641,1303.086)</value>
@@ -3588,7 +3300,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-449.79,1344.134;-449.192,1344.134)/(-449.58,1344.198;-448.982,1344.198)</value>
@@ -3600,7 +3311,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-387.211,1340.9;-387.847,1340.9)/(-387.028,1340.878;-387.628,1340.878)</value>
@@ -3612,7 +3322,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.708,1344.134;-110.708,1340.9)/(-110.496,1344.193;-110.496,1340.878)</value>
@@ -3624,7 +3333,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-397.194,1344.134;-396.596,1344.134)/(-396.984,1344.198;-396.386,1344.198)</value>
@@ -3636,7 +3344,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-139.593,1310.97;-139.201,1310.97)/(-139.497,1311.168;-139.297,1311.168)</value>
@@ -3648,7 +3355,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-119.435,1340.9;-120.071,1340.9)/(-119.252,1340.878;-119.852,1340.878)</value>
@@ -3660,7 +3366,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-136.653,1340.9;-137.289,1340.9)/(-136.47,1340.878;-137.07,1340.878)</value>
@@ -3672,7 +3377,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-146.038,1340.9;-146.645,1340.9)/(-145.826,1340.878;-146.426,1340.878)</value>
@@ -3684,7 +3388,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-68.93,1303.255;-69.412,1303.255)/(-69.071,1303.086;-69.271,1303.086)</value>
@@ -3696,7 +3399,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-432.027,1329.278;-432.831,1329.278)/(-432.129,1329.083;-432.729,1329.083)</value>
@@ -3708,7 +3410,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-440.434,1344.134;-439.807,1344.134)/(-440.224,1344.198;-439.624,1344.198)</value>
@@ -3720,7 +3421,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-397.496,1329.278;-398.3,1329.278)/(-397.598,1329.083;-398.198,1329.083)</value>
@@ -3732,7 +3432,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-94.985,1223.769;-94.985,1223.349)/(-94.985,1223.989;-94.985,1223.129)</value>
@@ -3744,7 +3443,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-119.102,1303.255;-119.584,1303.255)/(-119.243,1303.086;-119.443,1303.086)</value>
@@ -3756,7 +3454,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-395.815,78.909;-395.815,79.769)/(-395.815,79.129;-395.815,79.549)</value>
@@ -3768,7 +3465,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-409.418,1329.278;-410.222,1329.278)/(-409.52,1329.083;-410.12,1329.083)</value>
@@ -3780,7 +3476,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-128.82,1344.134;-128.82,1340.9)/(-128.608,1344.193;-128.608,1340.878)</value>
@@ -3792,7 +3487,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-396.506,1317.13;-397.31,1317.13)/(-396.608,1316.935;-397.208,1316.935)</value>
@@ -3804,7 +3498,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-120.062,1344.134;-119.435,1344.134)/(-119.852,1344.198;-119.252,1344.198)</value>
@@ -3816,7 +3509,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-74.776,1303.931;-74.264,1303.931)/(-74.62,1304.086;-74.42,1304.086)</value>
@@ -3828,7 +3520,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-148.136,1317.13;-148.94,1317.13)/(-148.238,1316.935;-148.838,1316.935)</value>
@@ -3840,7 +3531,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-420.842,1317.13;-421.646,1317.13)/(-420.944,1316.935;-421.544,1316.935)</value>
@@ -3852,7 +3542,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-435.375,1317.13;-436.179,1317.13)/(-435.477,1316.935;-436.077,1316.935)</value>
@@ -3864,7 +3553,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.142,1303.255;-107.624,1303.255)/(-107.283,1303.086;-107.483,1303.086)</value>
@@ -3876,7 +3564,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-113.603,1310.256;-113.603,1310.767)/(-113.697,1310.368;-113.697,1310.568)</value>
@@ -3888,7 +3575,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-408.428,1317.13;-409.232,1317.13)/(-408.53,1316.935;-409.13,1316.935)</value>
@@ -3900,7 +3586,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-76.27,1304.378;-76.27,1304.889)/(-76.365,1304.491;-76.365,1304.691)</value>
@@ -3912,7 +3597,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-92.042,1304.378;-92.042,1304.889)/(-92.136,1304.49;-92.136,1304.69)</value>
@@ -3924,7 +3608,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-63.797,1303.931;-63.285,1303.931)/(-63.641,1304.086;-63.441,1304.086)</value>
@@ -3936,7 +3619,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-79.947,1303.255;-80.429,1303.255)/(-80.088,1303.086;-80.288,1303.086)</value>
@@ -3948,7 +3630,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-146.636,1344.134;-146.038,1344.134)/(-146.426,1344.198;-145.828,1344.198)</value>
@@ -3960,7 +3641,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.351,1303.255;-95.833,1303.255)/(-95.492,1303.086;-95.692,1303.086)</value>
@@ -3972,7 +3652,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-80.444,1303.931;-79.932,1303.931)/(-80.288,1304.086;-80.088,1304.086)</value>
@@ -3984,7 +3663,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-136.368,1317.13;-137.172,1317.13)/(-136.47,1316.935;-137.07,1316.935)</value>
@@ -3996,7 +3674,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-128.82,1340.9;-129.427,1340.9)/(-128.608,1340.878;-129.208,1340.878)</value>
@@ -4008,7 +3685,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.658,1303.255;-113.14,1303.255)/(-112.799,1303.086;-112.999,1303.086)</value>
@@ -4020,7 +3696,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-148.136,1329.278;-148.94,1329.278)/(-148.238,1329.083;-148.838,1329.083)</value>
@@ -4032,7 +3707,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-123.209,1317.13;-124.013,1317.13)/(-123.311,1316.935;-123.911,1316.935)</value>
@@ -4044,7 +3718,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.875,79.615;-414.875,79.063)/(-414.665,79.549;-414.665,79.129)</value>
@@ -4056,7 +3729,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-415.295,79.063;-415.295,79.615)/(-415.505,79.129;-415.505,79.549)</value>
@@ -4068,7 +3740,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.108,129.638;-424.323,129.685;-424.323,130.105;-424.108,130.152)</value>
@@ -4080,7 +3751,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.108,233.658;-424.323,233.705;-424.323,234.125;-424.108,234.172)</value>
@@ -4092,7 +3762,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-86.319,1310.264;-86.319,1311.658;-85.09,1311.658;-85.09,1310.264)</value>
@@ -4104,7 +3773,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-74.899,1310.263;-74.899,1311.657;-73.67,1311.657;-73.67,1310.263)</value>
@@ -4116,7 +3784,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-118.37,1310.263;-118.37,1311.657;-117.141,1311.657;-117.141,1310.263)</value>
@@ -4128,7 +3795,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-97.831,1310.256;-97.831,1311.485;-96.437,1311.485;-96.437,1310.256)</value>
@@ -4140,7 +3806,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-95.825,1223.349;-95.825,1223.769;-94.985,1223.769;-94.985,1223.349)</value>
@@ -4152,7 +3817,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-76.27,1304.378;-76.27,1305.607;-74.876,1305.607;-74.876,1304.378)</value>
@@ -4164,7 +3828,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-71.779,961.647;-71.779,962.487;-70.939,962.487;-70.519,962.067;-70.939,961.647)</value>
@@ -4176,7 +3839,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-130.47,1310.04;-130.47,1311.269;-129.076,1311.269;-129.076,1310.04)</value>
@@ -4188,7 +3850,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-139.825,1310.368;-139.825,1310.97;-138.987,1310.97;-138.987,1310.368)</value>
@@ -4200,7 +3861,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.681,1308.892;-92.681,1310.121;-91.287,1310.121;-91.287,1308.892)</value>
@@ -4212,7 +3872,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-57.115,1067.098;-57.115,1067.619;-56.776,1067.958;-56.255,1067.958;-56.255,1067.098)</value>
@@ -4224,7 +3883,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.762,1310.256;-108.762,1311.485;-107.368,1311.485;-107.368,1310.256)</value>
@@ -4236,7 +3894,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-90.799,1303.255;-90.799,1303.931;-89.777,1303.931;-89.777,1303.255)</value>
@@ -4248,7 +3905,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-50.126,858.237;-50.126,859.077;-48.866,859.077;-48.866,858.457;-49.086,858.237)</value>
@@ -4260,7 +3916,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-119.85,1303.255;-119.85,1303.927;-118.828,1303.927;-118.828,1303.255)</value>
@@ -4272,7 +3927,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-70.132,1310.256;-70.132,1311.485;-68.738,1311.485;-68.738,1310.256)</value>
@@ -4284,7 +3938,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.042,1304.378;-92.042,1305.607;-90.648,1305.607;-90.648,1304.378)</value>
@@ -4296,7 +3949,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-113.406,1303.255;-113.406,1304.942;-112.384,1304.942;-112.384,1303.255)</value>
@@ -4308,7 +3960,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.499,1310.256;-103.499,1311.485;-102.105,1311.485;-102.105,1310.256)</value>
@@ -4320,7 +3971,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-80.695,1303.255;-80.695,1303.931;-79.673,1303.931;-79.673,1303.255)</value>
@@ -4332,7 +3982,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-81.26,1308.892;-81.26,1310.121;-79.866,1310.121;-79.866,1308.892)</value>
@@ -4344,7 +3993,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-65.291,1310.256;-65.291,1311.485;-63.897,1311.485;-63.897,1310.256)</value>
@@ -4356,7 +4004,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.731,1308.892;-124.731,1310.121;-123.337,1310.121;-123.337,1308.892)</value>
@@ -4368,7 +4015,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.809,1304.385;-96.809,1305.779;-95.58,1305.779;-95.58,1304.385)</value>
@@ -4380,7 +4026,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-64.758,1304.386;-64.758,1305.78;-63.529,1305.78;-63.529,1304.386)</value>
@@ -4392,7 +4037,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-81.938,1304.378;-81.938,1305.607;-80.544,1305.607;-80.544,1304.378)</value>
@@ -4404,7 +4048,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-115.505,1223.349;-115.505,1223.769;-114.665,1223.769;-114.665,1223.349)</value>
@@ -4416,7 +4059,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-87.201,1304.378;-87.201,1305.607;-85.807,1305.607;-85.807,1304.378)</value>
@@ -4428,7 +4070,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-113.603,1310.256;-113.603,1311.485;-112.209,1311.485;-112.209,1310.256)</value>
@@ -4440,7 +4081,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.909,1304.162;-108.909,1305.391;-107.515,1305.391;-107.515,1304.162)</value>
@@ -4452,7 +4092,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-119.85,1304.486;-119.85,1305.158;-118.828,1305.158;-118.828,1304.486)</value>
@@ -4464,7 +4103,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-64.048,1303.255;-64.048,1303.931;-63.026,1303.931;-63.026,1303.255)</value>
@@ -4476,7 +4114,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-75.027,1303.255;-75.027,1303.931;-74.005,1303.931;-74.005,1303.255)</value>
@@ -4488,7 +4125,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-82.766,857.405;-82.766,858.665;-82.346,858.665;-82.346,857.405)</value>
@@ -4500,7 +4136,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-85.958,1303.255;-85.958,1303.931;-84.936,1303.931;-84.936,1303.255)</value>
@@ -4512,7 +4147,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.099,1303.255;-96.099,1303.931;-95.077,1303.931;-95.077,1303.255)</value>
@@ -4524,7 +4158,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-107.89,1303.255;-107.89,1303.931;-106.868,1303.931;-106.868,1303.255)</value>
@@ -4536,7 +4169,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-82.739,961.425;-82.739,962.685;-82.319,962.685;-82.319,961.425)</value>
@@ -4548,7 +4180,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-125.576,857.405;-125.576,858.665;-125.156,858.665;-125.156,857.405)</value>
@@ -4560,7 +4191,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-115.815,1067.099;-115.815,1067.959;-114.955,1067.959;-114.955,1067.099)</value>
@@ -4572,7 +4202,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-125.529,961.425;-125.529,962.685;-125.109,962.685;-125.109,961.425)</value>
@@ -4584,7 +4213,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-71.786,857.627;-71.786,858.467;-70.946,858.467;-70.526,858.047;-70.946,857.627)</value>
@@ -4596,7 +4224,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-101.569,701.265;-101.569,702.525;-101.149,702.525;-101.149,701.265)</value>
@@ -4608,7 +4235,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-86.675,1119.329;-86.675,1119.749;-86.255,1119.749;-86.255,1119.329)</value>
@@ -4620,7 +4246,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-52.332,701.812;-52.332,702.232;-51.072,702.232;-51.072,701.812)</value>
@@ -4632,7 +4257,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-50.139,962.243;-50.139,963.083;-48.879,963.083;-48.879,962.453;-49.089,962.243)</value>
@@ -4644,7 +4268,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-86.895,1067.099;-86.895,1067.84;-86.776,1067.959;-86.035,1067.959;-86.035,1067.099)</value>
@@ -4656,7 +4279,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-56.895,1119.328;-56.895,1119.528;-56.675,1119.748;-56.475,1119.748;-56.475,1119.328)</value>
@@ -4668,7 +4290,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-115.595,1119.329;-115.595,1119.749;-115.175,1119.749;-115.175,1119.329)</value>
@@ -4680,7 +4301,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.315,1119.329;-96.315,1119.749;-95.895,1119.749;-95.895,1119.329)</value>
@@ -4692,7 +4312,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-431,1373.05;-431,1374.05;-429.005,1374.05;-429.005,1373.05)</value>
@@ -4704,7 +4323,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-371.781,857.627;-371.781,858.467;-370.941,858.467;-370.521,858.047;-370.941,857.627)</value>
@@ -4716,7 +4334,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-350.144,962.238;-350.144,963.078;-348.884,963.078;-348.884,962.448;-349.094,962.238)</value>
@@ -4728,7 +4345,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-376.82,1119.329;-376.82,1119.749;-376.4,1119.749;-376.4,1119.329)</value>
@@ -4740,7 +4356,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-415.81,1067.099;-415.81,1067.959;-414.96,1067.959;-414.96,1067.099)</value>
@@ -4752,7 +4367,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-386.68,1119.329;-386.68,1119.749;-386.26,1119.749;-386.26,1119.329)</value>
@@ -4764,7 +4378,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-393.431,857.405;-393.431,858.665;-393.011,858.665;-393.011,857.405)</value>
@@ -4776,7 +4389,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-393.404,961.425;-393.404,962.685;-392.984,962.685;-392.984,961.425)</value>
@@ -4788,7 +4400,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-425.509,961.425;-425.509,962.685;-425.089,962.685;-425.089,961.425)</value>
@@ -4800,7 +4411,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-371.774,961.647;-371.774,962.487;-370.934,962.487;-370.514,962.067;-370.934,961.647)</value>
@@ -4812,7 +4422,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-328.342,961.4;-328.342,961.82;-327.922,961.82;-327.922,961.4)</value>
@@ -4824,7 +4433,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-401.568,701.265;-401.568,702.525;-401.148,702.525;-401.148,701.265)</value>
@@ -4836,7 +4444,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-382.398,701.265;-382.398,702.525;-381.978,702.525;-381.978,701.265)</value>
@@ -4848,7 +4455,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-350.131,858.232;-350.131,859.072;-348.871,859.072;-348.871,858.442;-349.081,858.232)</value>
@@ -4860,7 +4466,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-362.918,701.705;-362.918,702.125;-361.658,702.125;-361.658,701.705)</value>
@@ -4872,7 +4477,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-356.9,1119.328;-356.9,1119.528;-356.68,1119.748;-356.48,1119.748;-356.48,1119.328)</value>
@@ -4884,7 +4488,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-425.556,857.405;-425.556,858.665;-425.136,858.665;-425.136,857.405)</value>
@@ -4896,7 +4499,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-328.295,857.38;-328.295,857.8;-327.875,857.8;-327.875,857.38)</value>
@@ -4908,7 +4510,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-382.724,961.425;-382.724,962.685;-382.304,962.685;-382.304,961.425)</value>
@@ -4920,7 +4521,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-377.04,1067.099;-377.04,1067.519;-376.6,1067.959;-376.18,1067.959;-376.18,1067.099)</value>
@@ -4932,7 +4532,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-386.9,1067.099;-386.9,1067.816;-386.757,1067.959;-386.04,1067.959;-386.04,1067.099)</value>
@@ -4944,7 +4543,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-415.505,1223.349;-415.505,1223.769;-414.665,1223.769;-414.665,1223.349)</value>
@@ -4956,7 +4554,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-352.338,701.805;-352.338,702.225;-351.078,702.225;-351.078,701.805)</value>
@@ -4968,7 +4565,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-357.12,1067.098;-357.12,1067.595;-356.757,1067.958;-356.26,1067.958;-356.26,1067.098)</value>
@@ -4980,7 +4576,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-415.595,1119.329;-415.595,1119.749;-415.175,1119.749;-415.175,1119.329)</value>
@@ -4992,7 +4587,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-414.554,961.425;-414.554,962.685;-414.134,962.685;-414.134,961.425)</value>
@@ -5004,7 +4598,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-382.751,857.405;-382.751,858.665;-382.331,858.665;-382.331,857.405)</value>
@@ -5016,7 +4609,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-414.581,857.405;-414.581,858.665;-414.161,858.665;-414.161,857.405)</value>
@@ -5028,7 +4620,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-396.32,1067.099;-396.32,1067.959;-395.9,1067.959;-395.9,1067.099)</value>
@@ -5040,7 +4631,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-391.928,701.265;-391.928,702.525;-391.508,702.525;-391.508,701.265)</value>
@@ -5052,7 +4642,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-338.351,493.335;-338.351,494.595;-337.847,494.595;-337.847,494.175;-337.931,494.175;-337.931,493.755;-337.432,493.755;-337.432,494.595;-337.012,494.595;-337.012,493.335)</value>
@@ -5064,7 +4653,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-393.323,597.355;-393.323,598.615;-392.903,598.615;-392.903,597.355)</value>
@@ -5076,7 +4664,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.528,233.285;-424.528,234.545;-424.108,234.545;-424.108,233.285)</value>
@@ -5088,7 +4675,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-425.368,597.355;-425.368,598.615;-424.948,598.615;-424.948,597.355)</value>
@@ -5100,7 +4686,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-403.897,25.664;-403.897,26.924;-403.482,26.924;-403.482,25.664)</value>
@@ -5112,7 +4697,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-394.062,25.664;-394.482,26.084;-394.482,27.344;-394.062,27.344;-394.062,26.247;-393.899,26.084;-392.802,26.084;-392.802,25.664)</value>
@@ -5124,7 +4708,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-395.815,78.909;-395.815,79.769;-394.975,79.769;-394.975,78.909)</value>
@@ -5136,7 +4719,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-361.054,25.664;-361.054,26.074;-360.624,26.504;-359.794,26.504;-359.794,25.664)</value>
@@ -5148,7 +4730,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-371.823,493.557;-371.823,494.397;-370.983,494.397;-370.563,493.977;-370.983,493.557)</value>
@@ -5160,7 +4741,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.528,285.295;-424.528,286.555;-424.108,286.555;-424.108,285.295)</value>
@@ -5172,7 +4752,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-371.753,597.577;-371.753,598.417;-370.913,598.417;-370.493,597.997;-370.913,597.577)</value>
@@ -5184,7 +4763,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-424.323,129.685;-424.323,130.105;-423.063,130.105;-423.063,129.685)</value>
@@ -5196,7 +4774,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-425.003,493.755;-425.003,494.175;-423.743,494.175;-423.743,493.755)</value>
@@ -5208,7 +4785,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-415.295,78.909;-415.295,79.769;-414.875,79.769;-414.875,78.909)</value>
@@ -5220,7 +4796,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-350.537,25.665;-350.794,25.922;-350.794,27.345;-350.374,27.345;-350.374,26.085;-349.114,26.085;-349.114,25.665)</value>
@@ -5232,7 +4807,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-350.183,598.126;-350.183,598.966;-348.923,598.966;-348.923,598.336;-349.133,598.126)</value>
@@ -5244,7 +4818,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-382.913,493.335;-382.913,494.595;-382.493,494.595;-382.493,493.335)</value>
@@ -5256,7 +4829,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-381.663,493.335;-382.083,493.755;-381.663,494.175;-380.823,494.175;-380.823,493.335)</value>
@@ -5268,7 +4840,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-393.593,493.335;-393.593,494.595;-393.173,494.595;-393.173,493.755;-392.753,494.175;-391.913,494.175;-391.913,493.335;-392.753,493.335;-393.173,493.755;-393.173,493.335)</value>
@@ -5280,7 +4851,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-425.838,493.335;-425.838,494.595;-425.418,494.595;-425.418,493.335)</value>
@@ -5292,7 +4862,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-369.733,493.557;-370.153,493.977;-369.733,494.397;-368.893,494.397;-368.893,493.557)</value>
@@ -5304,7 +4873,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-328.012,493.31;-328.012,493.73;-327.592,493.73;-327.592,494.15;-327.172,494.15;-327.172,493.73;-327.592,493.73;-327.592,493.31)</value>
@@ -5316,7 +4884,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-350.053,494.247;-350.053,495.087;-348.793,495.087;-348.793,494.457;-349.003,494.247)</value>
@@ -5328,7 +4895,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-383.802,25.886;-383.802,26.726;-382.962,26.726;-382.542,26.306;-382.122,26.726;-381.282,26.726;-381.282,25.886;-382.122,25.886;-382.542,26.306;-382.962,25.886)</value>
@@ -5340,7 +4906,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-414.473,597.355;-414.473,598.615;-414.053,598.615;-414.053,597.355)</value>
@@ -5352,7 +4917,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-382.643,597.355;-382.643,598.615;-382.223,598.615;-382.223,597.355)</value>
@@ -5364,7 +4928,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-328.483,597.33;-328.483,597.75;-328.063,597.75;-328.063,597.33)</value>
@@ -5376,7 +4939,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-348.611,493.43;-348.611,494.06;-348.401,494.27;-347.351,494.27;-347.351,493.43)</value>
@@ -5388,7 +4950,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-115.285,78.909;-115.285,79.769;-114.885,79.769;-114.885,78.909)</value>
@@ -5400,7 +4961,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-125.388,597.355;-125.388,598.615;-124.968,598.615;-124.968,597.355)</value>
@@ -5412,7 +4972,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-61.054,25.664;-61.054,26.084;-60.634,26.504;-59.794,26.504;-59.794,25.664)</value>
@@ -5424,7 +4983,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-94.067,25.664;-94.477,26.074;-94.477,27.344;-94.057,27.344;-94.057,26.257;-93.884,26.084;-92.797,26.084;-92.797,25.664)</value>
@@ -5436,7 +4994,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-114.048,233.285;-114.048,234.545;-113.628,234.545;-113.628,233.285)</value>
@@ -5448,7 +5005,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.897,25.664;-103.897,26.924;-103.477,26.924;-103.477,25.664)</value>
@@ -5460,7 +5016,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-113.628,129.685;-113.628,130.105;-112.368,130.105;-112.368,129.685)</value>
@@ -5472,7 +5027,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-82.658,597.355;-82.658,598.615;-82.238,598.615;-82.238,597.355)</value>
@@ -5484,7 +5038,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-71.758,597.577;-71.758,598.417;-70.918,598.417;-70.498,597.997;-70.918,597.577)</value>
@@ -5496,7 +5049,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-50.048,494.252;-50.048,495.092;-48.788,495.092;-48.788,494.462;-48.998,494.252)</value>
@@ -5508,7 +5060,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-69.728,493.557;-70.148,493.977;-69.728,494.397;-68.888,494.397;-68.888,493.557)</value>
@@ -5520,7 +5071,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-71.828,493.557;-71.828,494.397;-70.988,494.397;-70.568,493.977;-70.988,493.557)</value>
@@ -5532,7 +5082,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.308,129.685;-124.308,130.105;-123.048,130.105;-123.048,129.685)</value>
@@ -5544,7 +5093,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-50.178,598.131;-50.178,598.971;-48.918,598.971;-48.918,598.341;-49.128,598.131)</value>
@@ -5556,7 +5104,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-125.858,493.335;-125.858,494.595;-125.438,494.595;-125.438,493.335)</value>
@@ -5568,7 +5115,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-81.668,493.335;-82.088,493.755;-81.668,494.175;-80.828,494.175;-80.828,493.335)</value>
@@ -5580,7 +5126,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.508,285.295;-124.508,286.555;-124.088,286.555;-124.088,285.295)</value>
@@ -5592,7 +5137,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-125.018,493.755;-125.018,494.175;-123.758,494.175;-123.758,493.755)</value>
@@ -5604,7 +5148,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-48.596,493.43;-48.596,494.06;-48.386,494.27;-47.336,494.27;-47.336,493.43)</value>
@@ -5616,7 +5159,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-114.048,285.295;-114.048,286.555;-113.628,286.555;-113.628,285.295)</value>
@@ -5628,7 +5170,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-50.557,25.665;-50.794,25.902;-50.794,27.345;-50.374,27.345;-50.374,26.085;-49.114,26.085;-49.114,25.665)</value>
@@ -5640,7 +5181,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-82.928,493.335;-82.928,494.595;-82.508,494.595;-82.508,493.335)</value>
@@ -5652,7 +5192,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-124.508,233.285;-124.508,234.545;-124.088,234.545;-124.088,233.285)</value>
@@ -5664,7 +5203,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-38.336,493.335;-38.336,494.595;-37.832,494.595;-37.832,494.175;-37.916,494.175;-37.916,493.755;-37.412,493.755;-37.412,494.595;-36.992,494.595;-36.992,493.335)</value>
@@ -5676,7 +5214,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-90.391,1303.929;-90.392,1303.93;-90.393,1303.93;-90.672,1304.21;-90.952,1304.489;-90.952,1304.49;-90.953,1304.491;-90.952,1304.491;-90.952,1304.492;-90.951,1304.491;-90.95,1304.491;-90.671,1304.211;-90.391,1303.932;-90.391,1303.931;-90.39,1303.93;-90.391,1303.93)</value>
@@ -5688,7 +5225,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-107.482,1303.713;-107.688,1304.056;-108.044,1304.275;-107.819,1304.275;-107.819,1304.492;-107.607,1304.139;-107.282,1303.93;-107.482,1303.93)</value>
@@ -5700,7 +5236,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-85.552,1303.93;-86.112,1304.491;-85.91,1304.491;-85.35,1303.93)</value>
@@ -5712,7 +5247,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-95.693,1303.93;-95.893,1304.491;-95.691,1304.491;-95.491,1303.93)</value>
@@ -5724,7 +5258,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-119.444,1303.926;-119.444,1304.487;-119.242,1304.487;-119.242,1303.926)</value>
@@ -5736,7 +5269,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-101.321,1303.37;-101.882,1303.93;-101.882,1304.132;-101.321,1303.932)</value>
@@ -5748,7 +5280,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-123.442,1310.009;-123.442,1309.809)/(-122.883,1309.249;-122.883,1309.809)</value>
@@ -5760,7 +5291,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-129.379,1310.369;-129.379,1310.152)/(-129.044,1309.592;-129.044,1309.809)</value>
@@ -5772,7 +5302,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-129.379,1310.152;-129.604,1310.152)/(-129.044,1309.809;-128.844,1309.809)</value>
@@ -5784,7 +5313,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.512,1310.369;-112.512,1310.368)/(-111.953,1309.808;-111.953,1309.809)</value>
@@ -5796,7 +5324,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.512,1310.368;-112.513,1310.368)/(-111.953,1309.809;-111.952,1309.809)</value>
@@ -5808,7 +5335,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.472,1310.369;-107.472,1310.368)/(-107.112,1309.808;-107.112,1309.809)</value>
@@ -5820,7 +5346,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.472,1310.368;-107.672,1310.368)/(-107.112,1309.809;-106.912,1309.809)</value>
@@ -5832,7 +5357,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-139.297,1310.368;-139.497,1310.368)/(-139.497,1309.809;-139.297,1309.809)</value>
@@ -5844,7 +5368,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-117.253,1310.368;-117.453,1310.368)/(-117.253,1309.809;-117.053,1309.809)</value>
@@ -5856,7 +5379,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.948,390.283;-348.948,390.267)/(-348.872,390.104;-348.785,390.191)</value>
@@ -5868,7 +5390,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.488,441.977;-370.478,441.967)/(-370.298,441.957;-370.308,441.967)</value>
@@ -5880,7 +5401,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.478,441.967;-370.488,441.957)/(-370.308,441.967;-370.298,441.977)</value>
@@ -5892,7 +5412,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.168,441.804;-382.168,441.686)/(-381.988,441.735;-381.998,441.745)</value>
@@ -5904,7 +5423,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.168,441.804;-382.168,441.686)/(-381.998,441.745;-381.988,441.755)</value>
@@ -5916,7 +5434,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-148.838,1331.596;-148.238,1331.596)/(-148.058,1331.596;-149.018,1331.596)</value>
@@ -5928,7 +5445,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-349.012,390.203;-349.099,390.116)/(-348.936,390.024;-348.936,390.04)</value>
@@ -5940,7 +5456,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-148.838,1319.448;-148.238,1319.448)/(-148.058,1319.448;-149.018,1319.448)</value>
@@ -5952,7 +5467,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-424.853,442.207;-424.853,441.703)/(-424.678,441.745;-424.678,442.165)</value>
@@ -5964,7 +5478,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-91.392,1309.921;-91.392,1309.809)/(-91.221,1309.753;-91.221,1309.865)</value>
@@ -5976,7 +5489,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-349.012,442.213;-349.099,442.126)/(-348.936,442.034;-348.936,442.05)</value>
@@ -5988,7 +5500,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.848,389.99;-392.848,389.735)/(-392.848,389.735;-392.668,389.915)</value>
@@ -6000,7 +5511,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.948,390.267;-349.099,390.116)/(-348.936,390.04;-348.785,390.191)</value>
@@ -6012,7 +5522,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.848,389.735;-392.848,389.48)/(-392.668,389.555;-392.848,389.735)</value>
@@ -6024,7 +5533,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.948,442.293;-348.948,442.277)/(-348.872,442.114;-348.785,442.201)</value>
@@ -6036,7 +5544,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.337,441.72;-328.157,441.72)/(-327.977,441.72;-328.157,441.72)</value>
@@ -6048,7 +5555,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.157,441.72;-328.157,441.54)/(-328.157,441.72;-328.157,441.9)</value>
@@ -6060,7 +5566,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.168,389.794;-382.168,389.676)/(-381.998,389.735;-381.988,389.745)</value>
@@ -6072,7 +5577,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-382.168,389.794;-382.168,389.676)/(-381.988,389.725;-381.998,389.735)</value>
@@ -6084,7 +5588,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-348.948,442.277;-349.099,442.126)/(-348.936,442.05;-348.785,442.201)</value>
@@ -6096,7 +5599,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-424.853,390.197;-424.853,389.693)/(-424.678,389.735;-424.678,390.155)</value>
@@ -6108,7 +5610,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.337,389.71;-328.157,389.71)/(-327.977,389.71;-328.157,389.71)</value>
@@ -6120,7 +5621,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-328.157,389.71;-328.157,389.53)/(-328.157,389.71;-328.157,389.89)</value>
@@ -6132,7 +5632,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.848,441.745;-392.848,441.49)/(-392.668,441.565;-392.848,441.745)</value>
@@ -6144,7 +5643,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-392.848,442;-392.848,441.745)/(-392.848,441.745;-392.668,441.925)</value>
@@ -6156,7 +5654,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.478,389.957;-370.488,389.947)/(-370.308,389.957;-370.298,389.967)</value>
@@ -6168,7 +5665,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-370.488,389.967;-370.478,389.957)/(-370.298,389.947;-370.308,389.957)</value>
@@ -6180,7 +5676,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-148.838,1319.448;-148.238,1319.448)/(-147.918,1319.448;-149.158,1319.448)</value>
@@ -6192,7 +5687,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-137.07,1319.448;-136.72,1319.448)/(-136.745,1319.767;-137.095,1319.767)</value>
@@ -6204,7 +5698,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-148.838,1331.596;-148.238,1331.596)/(-147.918,1331.596;-149.158,1331.596)</value>
@@ -6216,7 +5709,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-137.07,1331.596;-136.72,1331.596)/(-136.745,1331.915;-137.095,1331.915)</value>
@@ -6228,7 +5720,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-414.554,961.425;-414.554,962.685;-414.134,962.685;-414.134,961.425)</value>
@@ -6240,7 +5731,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-137.38,1340.9;-137.38,1344.134;-136.653,1344.134;-136.653,1340.9)</value>
@@ -6252,7 +5742,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-328.342,961.4;-328.342,961.82;-327.922,961.82;-327.922,961.4)</value>
@@ -6264,7 +5753,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-393.404,961.425;-393.404,962.685;-392.984,962.685;-392.984,961.425)</value>
@@ -6276,7 +5764,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-135.466,1308.877;-135.466,1309.917;-135.074,1309.917;-135.074,1311.005;-133.81,1311.005;-133.81,1309.917;-133.626,1309.917;-133.626,1308.877)</value>
@@ -6288,7 +5775,6 @@
    <cell>7_10_SB</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-146.765,1340.9;-146.765,1344.134;-146.038,1344.134;-146.038,1340.9)</value>

@@ -2,7 +2,7 @@
 <report-database>
  <description/>
  <original-file/>
- <generator>drc: script='../gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>10_5_NAT</top-cell>
  <tags>
  </tags>
@@ -39,57 +39,11 @@
    <categories>
    </categories>
   </category>
-  <category>
-   <name>NAT.6</name>
-   <description>NAT.6 : Two or more COMPs if connected to different potential
-                      are not allowed under same NAT layer.</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>NAT.7</name>
-   <description>NAT.7 : Minimum NAT to NAT spacing. : 0.74µm</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>NAT.8</name>
-   <description>NAT.8 : Min. Dualgate overlap of NAT (for 5V/6V) native VT NMOS only: 0um</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>NAT.9</name>
-   <description>NAT.9 : Poly interconnect under NAT layer is not allowed,
-                    minimum spacing of un-related poly from the NAT layer: 0.3um</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>NAT.10</name>
-   <description>NAT.10 : Nwell inside NAT layer are not allowed.</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>NAT.11</name>
-   <description>NAT.11 : NCOMP not intersecting to Poly2, is not allowed inside NAT layer.</description>
-   <categories>
-   </categories>
-  </category>
-  <category>
-   <name>NAT.12</name>
-   <description>NAT.12 : Poly2 not intersecting with COMP is not allowed inside NAT
-                     (Poly2 resistor is not allowed inside NAT).</description>
-   <categories>
-   </categories>
-  </category>
  </categories>
  <cells>
   <cell>
    <name>10_5_NAT</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -101,7 +55,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (27.851,241.686;34.051,241.686)/(27.71,243.681;34.192,243.681)</value>
@@ -113,7 +66,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (9.42,241.686;15.62,241.686)/(9.279,243.681;15.761,243.681)</value>
@@ -125,19 +77,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (15.89,235.096;14.92,235.096)/(14.975,234.801;15.835,234.801)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.2'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (10.045,235.096;9.075,235.096)/(9.13,234.801;9.99,234.801)</value>
@@ -149,10 +88,9 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
-    <value>edge-pair: (34.321,235.096;33.351,235.096)/(33.406,234.801;34.266,234.801)</value>
+    <value>edge-pair: (15.89,235.096;14.92,235.096)/(14.975,234.801;15.835,234.801)</value>
    </values>
   </item>
   <item>
@@ -161,10 +99,20 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (28.476,235.096;27.506,235.096)/(27.561,234.801;28.421,234.801)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'NAT.2'</category>
+   <cell>10_5_NAT</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (34.321,235.096;33.351,235.096)/(33.406,234.801;34.266,234.801)</value>
    </values>
   </item>
   <item>
@@ -173,7 +121,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (106.195,57.93;106.195,61.567)/(105.925,61.146;105.925,58.351)</value>
@@ -185,7 +132,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (7.06,240.075;7.06,241.162)/(6.565,241.091;6.565,240.146)</value>
@@ -197,7 +143,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (25.491,240.075;25.491,241.162)/(24.996,241.091;24.996,240.146)</value>
@@ -209,7 +154,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (17.31,84.141;17.31,85.141)/(18.31,85.141;18.31,84.141)</value>
@@ -221,7 +165,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (21.535,84.141;21.535,85.141)/(22.535,85.141;22.535,84.141)</value>
@@ -233,7 +176,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (73.835,185.296;73.835,189.886)/(74.835,189.886;74.835,185.296)</value>
@@ -245,7 +187,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (84.525,185.296;84.525,189.886)/(85.525,189.886;85.525,185.296)</value>
@@ -257,7 +198,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (6.265,187.141;6.265,188.141)/(7.265,188.141;7.265,187.141)</value>
@@ -269,7 +209,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (10.49,187.141;10.49,188.141)/(11.49,188.141;11.49,187.141)</value>
@@ -281,7 +220,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (22.51,187.141;22.51,188.141)/(23.51,188.141;23.51,187.141)</value>
@@ -293,7 +231,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (26.735,187.141;26.735,188.141)/(27.735,188.141;27.735,187.141)</value>
@@ -305,7 +242,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (45.04,187.141;45.04,188.141)/(46.04,188.141;46.04,187.141)</value>
@@ -317,7 +253,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (49.265,187.141;49.265,188.141)/(50.265,188.141;50.265,187.141)</value>
@@ -329,7 +264,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (12.02,237.096;12.02,241.686)/(13.815,241.686;13.815,237.096)</value>
@@ -341,7 +275,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (81.127,237.096;81.127,241.686)/(82.922,241.686;82.922,237.096)</value>
@@ -353,7 +286,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (82.162,82.852;82.162,83.926)/(83.957,83.792;83.957,82.852)</value>
@@ -365,7 +297,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (97.952,82.852;97.952,83.926)/(99.747,83.792;99.747,82.852)</value>
@@ -377,7 +308,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (59.46,212.911;59.46,213.911)/(60.46,213.911;60.46,212.911)</value>
@@ -389,7 +319,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (30.451,237.096;30.451,241.686)/(32.246,241.686;32.246,237.096)</value>
@@ -401,7 +330,6 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (47.607,237.096;47.607,238.17)/(49.402,238.036;49.402,237.096)</value>
@@ -413,382 +341,9 @@
    <cell>10_5_NAT</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (97.826,239.388;97.826,239.509)/(99.625,239.449;99.625,239.448)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.6'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (63.64,111.051;63.64,167.511;104.14,167.511;104.14,111.051/64.09,111.501;103.69,111.501;103.69,167.061;64.09,167.061)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.6'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (22.03,187.141;22.03,188.141;23.99,188.141;23.99,187.141)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.6'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (26.255,187.141;26.255,188.141;28.215,188.141;28.215,187.141)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.6'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (44.56,187.141;44.56,188.141;46.52,188.141;46.52,187.141)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.6'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (66.39,113.801;66.39,164.761;101.39,164.761;101.39,113.801)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.6'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (48.785,187.141;48.785,188.141;50.745,188.141;50.745,187.141)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.6'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (71.235,185.296;71.235,189.886;77.435,189.886;77.435,185.296)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.6'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (81.925,185.296;81.925,189.886;88.125,189.886;88.125,185.296)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.7'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (33.685,275.896;33.685,279.286)|(32.95,279.286;32.95,275.81)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.7'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (44.614,210.016;44.62,210.016)|(45.146,210.536;45.14,210.536)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.7'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (44.62,210.016;44.62,210.01)|(45.14,210.536;45.14,210.542)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.8'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (104.557,80.852;104.557,89.442;104.562,89.442;104.562,80.852)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.8'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (3.455,108.801;3.455,169.761;48.455,169.761;48.455,108.801/6.455,111.801;45.455,111.801;45.455,166.761;6.455,166.761)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.8'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (61.39,108.801;61.39,169.761;106.39,169.761;106.39,108.801/64.39,111.801;103.39,111.801;103.39,166.761;64.39,166.761)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.8'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (45.14,210.536;45.14,216.596;50.211,216.596;50.211,210.536)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.8'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (54.212,235.096;54.212,243.686;54.217,243.686;54.217,235.096)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (17.31,85.141;17.31,86.676;22.535,86.676;22.535,85.141;21.535,85.141;21.535,85.676;18.31,85.676;18.31,85.141)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (85.911,12.545;85.909,12.845;85.909,13.532;85.911,13.832)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (85.909,14.441;85.909,15.636;86.071,15.382;86.071,14.695)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (62.749,79.91;62.694,80.207;65.421,80.207;65.366,79.91)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (61.099,86.265;61.399,86.267;61.701,86.267;61.401,86.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (66.595,86.265;66.799,86.487;66.805,86.487;66.601,86.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (12.019,243.68;11.719,243.682;14.116,243.682;13.816,243.68)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (20.791,14.395;20.789,14.695;20.789,15.382;20.791,15.682)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (61.399,85.965;61.399,86.267;61.401,86.567;61.401,86.265)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (66.599,86.261;66.599,86.267;66.801,86.491;66.801,86.485)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.9'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (30.45,243.68;30.15,243.682;32.547,243.682;32.247,243.68)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.10'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (36.515,58.351;36.515,61.146;39.015,61.146;39.015,58.351)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.11'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (16.83,36.756;16.83,37.756;18.79,37.756;18.79,36.756)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.12'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (19.64,14.696;19.64,15.381;20.79,15.381;20.79,14.696)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'NAT.12'</category>
-   <cell>10_5_NAT</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (14.83,12.846;14.83,13.531;16.025,13.531;16.025,12.846)</value>
    </values>
   </item>
  </items>

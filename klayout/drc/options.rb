@@ -247,8 +247,10 @@ module GF180DRC
     end
 
     def variant_config_for(variant)
-      GF180DRC::Config::VARIANTS.fetch(variant)
-    end
+  # Normalize short-hand variants (e.g., 'E' -> 'gf180mcuE')
+  normalized = variant.start_with?('gf180mcu') ? variant : "gf180mcu#{variant}"
+  GF180DRC::Config::VARIANTS.fetch(normalized) { GF180DRC::Config::VARIANTS.fetch(variant) }
+end
 
     def build_params(base:, registry:, variant_config:)
       metal_level = base[:metal_level] || variant_config[:metal_level]

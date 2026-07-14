@@ -2,7 +2,7 @@
 <report-database>
  <description/>
  <original-file/>
- <generator>drc: script='../gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>metal1</top-cell>
  <tags>
  </tags>
@@ -36,7 +36,6 @@
   <cell>
    <name>metal1</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -48,7 +47,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-374.005,981.534;-374.005,982.534)|(-373.856,982.534;-373.856,981.534)</value>
@@ -60,7 +58,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-74.005,981.534;-74.005,982.534)|(-73.866,982.534;-73.866,981.534)</value>
@@ -72,7 +69,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-85.078,1575.02;-85.126,1575.02)|(-85.083,1575.25;-85.078,1575.245)</value>
@@ -84,7 +80,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-72.994,1575.087;-73.157,1575.25)|(-73.32,1575.413;-73.157,1575.25)</value>
@@ -96,7 +91,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-73.157,1575.25;-73.32,1575.087)|(-73.157,1575.25;-72.994,1575.413)</value>
@@ -108,7 +102,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-61.543,1575.02;-61.543,1575.71)|(-61.318,1575.71;-61.318,1575.02)</value>
@@ -120,7 +113,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-79.362,1575.331;-79.388,1575.331)|(-79.563,1575.48;-79.537,1575.48)</value>
@@ -132,7 +124,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-79.388,1575.331;-79.388,1575.305)|(-79.537,1575.48;-79.537,1575.506)</value>
@@ -144,7 +135,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.785,1575.167;-90.915,1575.037)|(-91.026,1575.251;-90.999,1575.251)</value>
@@ -156,7 +146,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.785,1575.167;-90.915,1575.037)|(-90.999,1575.251;-90.999,1575.278)</value>
@@ -168,7 +157,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-66.627,1575.167;-66.757,1575.037)|(-66.868,1575.251;-66.841,1575.251)</value>
@@ -180,7 +168,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-66.56,1575.234;-66.757,1575.037)|(-66.841,1575.251;-66.774,1575.318)</value>
@@ -192,7 +179,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-66.56,1575.234;-66.69,1575.104)|(-66.774,1575.318;-66.774,1575.345)</value>
@@ -204,7 +190,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2664.445,47.767;-2664.445,47.967)|(-2664.405,47.967;-2664.405,47.767)</value>
@@ -216,7 +201,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2664.405,47.767;-2664.445,47.767)|(-2664.445,47.967;-2664.405,47.967)</value>
@@ -228,7 +212,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2599.135,47.767;-2599.155,47.767)|(-2599.329,47.917;-2599.175,47.917)</value>
@@ -240,7 +223,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2599.175,47.917;-2599.175,47.967)|(-2599.135,47.967;-2599.135,47.767)</value>
@@ -252,7 +234,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2599.155,47.767;-2599.155,47.688)|(-2599.175,47.917;-2599.175,47.967)</value>
@@ -264,7 +245,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2599.135,47.767;-2599.155,47.767)|(-2599.175,47.967;-2599.135,47.967)</value>
@@ -276,7 +256,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2577.598,47.767;-2577.638,47.767)|(-2577.812,47.917;-2577.638,47.917)</value>
@@ -288,7 +267,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2577.638,47.917;-2577.638,47.967)|(-2577.598,47.967;-2577.598,47.767)</value>
@@ -300,7 +278,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2577.598,47.767;-2577.638,47.767)|(-2577.638,47.967;-2577.598,47.967)</value>
@@ -312,7 +289,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2318.774,47.767;-2318.774,47.967)|(-2318.734,47.967;-2318.734,47.767)</value>
@@ -324,7 +300,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2318.734,47.767;-2318.774,47.767)|(-2318.774,47.967;-2318.734,47.967)</value>
@@ -336,7 +311,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2498.058,47.877;-2498.058,48.077)|(-2498.018,48.077;-2498.018,47.877)</value>
@@ -348,7 +322,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2498.018,47.877;-2498.058,47.877)|(-2498.058,48.077;-2498.018,48.077)</value>
@@ -360,7 +333,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2472.442,47.877;-2472.442,48.077)|(-2472.402,48.077;-2472.402,47.877)</value>
@@ -372,7 +344,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2472.402,47.877;-2472.442,47.877)|(-2472.442,48.077;-2472.402,48.077)</value>
@@ -384,7 +355,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2550.762,47.877;-2550.762,48.177)|(-2550.722,48.177;-2550.722,47.877)</value>
@@ -396,7 +366,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2525.146,47.877;-2525.146,48.177)|(-2525.106,48.177;-2525.106,47.877)</value>
@@ -408,7 +377,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2642.469,48.13;-2642.469,48.33)|(-2642.429,48.33;-2642.429,48.13)</value>
@@ -420,7 +388,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2642.429,48.13;-2642.469,48.13)|(-2642.469,48.33;-2642.429,48.33)</value>
@@ -432,7 +399,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2342.614,52.792;-2342.614,52.992)|(-2342.574,52.992;-2342.574,52.792)</value>
@@ -444,7 +410,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2342.574,52.792;-2342.614,52.792)|(-2342.614,52.992;-2342.574,52.992)</value>
@@ -456,7 +421,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2366.454,52.792;-2366.454,53.092)|(-2366.414,53.092;-2366.414,52.792)</value>
@@ -468,7 +432,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2682.919,37.877;-2683.061,38.019)|(-2683.032,38.048;-2682.89,37.906)</value>
@@ -480,7 +443,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2682.89,37.906;-2682.919,37.877)|(-2683.061,38.019;-2683.032,38.048)</value>
@@ -492,7 +454,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2445.054,47.877;-2445.354,47.877)|(-2445.354,47.917;-2445.054,47.917)</value>
@@ -504,7 +465,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2414.453,47.877;-2414.453,47.917)|(-2414.253,47.917;-2414.253,47.877)</value>
@@ -516,7 +476,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2414.253,47.877;-2414.453,47.877)|(-2414.453,47.917;-2414.253,47.917)</value>
@@ -528,7 +487,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2388.677,47.877;-2388.677,47.917)|(-2388.477,47.917;-2388.477,47.877)</value>
@@ -540,7 +498,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2388.477,47.877;-2388.677,47.877)|(-2388.677,47.917;-2388.477,47.917)</value>
@@ -552,7 +509,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-104.581,641.377;-104.881,641.377)|(-104.881,641.437;-104.581,641.437)</value>
@@ -564,7 +520,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-103.273,641.377;-103.273,641.437)|(-103.073,641.437;-103.073,641.377)</value>
@@ -576,7 +531,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-103.073,641.377;-103.273,641.377)|(-103.273,641.437;-103.073,641.437)</value>
@@ -588,7 +542,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.536,641.377;-101.836,641.377)|(-101.836,641.437;-101.536,641.437)</value>
@@ -600,7 +553,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-100.228,641.377;-100.228,641.437)|(-100.028,641.437;-100.028,641.377)</value>
@@ -612,7 +564,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-100.028,641.377;-100.228,641.377)|(-100.228,641.437;-100.028,641.437)</value>
@@ -624,7 +575,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-98.491,641.377;-98.791,641.377)|(-98.791,641.437;-98.491,641.437)</value>
@@ -636,7 +586,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-97.966,641.397;-98.266,641.397)|(-98.266,641.437;-97.966,641.437)</value>
@@ -648,7 +597,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-96.623,641.377;-96.923,641.377)|(-96.923,641.437;-96.623,641.437)</value>
@@ -660,7 +608,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-96.398,641.397;-96.398,641.437)|(-96.198,641.437;-96.198,641.397)</value>
@@ -672,7 +619,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-96.198,641.397;-96.398,641.397)|(-96.398,641.437;-96.198,641.437)</value>
@@ -684,7 +630,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.155,641.377;-95.155,641.437)|(-94.955,641.437;-94.955,641.377)</value>
@@ -696,7 +641,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-94.955,641.377;-95.155,641.377)|(-95.155,641.437;-94.955,641.437)</value>
@@ -708,7 +652,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-94.73,641.397;-94.73,641.437)|(-94.53,641.437;-94.53,641.397)</value>
@@ -720,7 +663,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-94.53,641.397;-94.73,641.397)|(-94.73,641.437;-94.53,641.437)</value>
@@ -732,7 +674,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.719,641.387;-110.861,641.529)|(-110.832,641.558;-110.69,641.416)</value>
@@ -744,7 +685,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.69,641.416;-110.719,641.387)|(-110.861,641.529;-110.832,641.558)</value>
@@ -756,7 +696,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.642,641.377;-108.642,641.577)|(-108.582,641.577;-108.582,641.377)</value>
@@ -768,7 +707,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.582,641.377;-108.642,641.377)|(-108.642,641.577;-108.582,641.577)</value>
@@ -780,7 +718,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.992,641.377;-90.992,641.577)|(-90.932,641.577;-90.932,641.377)</value>
@@ -792,7 +729,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.932,641.377;-90.992,641.377)|(-90.992,641.577;-90.932,641.577)</value>
@@ -804,7 +740,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.311,641.397;-101.311,641.597)|(-101.271,641.597;-101.271,641.397)</value>
@@ -816,7 +751,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.271,641.397;-101.311,641.397)|(-101.311,641.597;-101.271,641.597)</value>
@@ -828,7 +762,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-99.803,641.397;-99.803,641.597)|(-99.763,641.597;-99.763,641.397)</value>
@@ -840,7 +773,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-99.763,641.397;-99.803,641.397)|(-99.803,641.597;-99.763,641.597)</value>
@@ -852,7 +784,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.604,641.462;-109.604,641.662)|(-109.564,641.662;-109.564,641.462)</value>
@@ -864,7 +795,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.564,641.462;-109.604,641.462)|(-109.604,641.662;-109.564,641.662)</value>
@@ -876,7 +806,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.707,641.462;-90.707,641.662)|(-90.667,641.662;-90.667,641.462)</value>
@@ -888,7 +817,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.667,641.462;-90.707,641.462)|(-90.707,641.662;-90.667,641.662)</value>
@@ -900,7 +828,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-93.558,641.377;-93.558,641.677)|(-93.498,641.677;-93.498,641.377)</value>
@@ -912,7 +839,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-92.275,641.377;-92.275,641.677)|(-92.215,641.677;-92.215,641.377)</value>
@@ -924,7 +850,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-104.356,641.397;-104.356,641.697)|(-104.316,641.697;-104.316,641.397)</value>
@@ -936,7 +861,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-102.848,641.397;-102.848,641.697)|(-102.808,641.697;-102.808,641.397)</value>
@@ -948,7 +872,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.844,641.377;-111.844,641.762)|(-111.804,641.762;-111.804,641.417)</value>
@@ -960,7 +883,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.531,641.377;-111.844,641.377)|(-111.804,641.417;-111.571,641.417)</value>
@@ -972,7 +894,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.571,641.417;-111.571,641.647)|(-111.531,641.762;-111.531,641.377)</value>
@@ -984,7 +905,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.571,641.647;-111.579,641.647)|(-111.579,641.762;-111.531,641.762)</value>
@@ -996,7 +916,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.579,641.647;-111.579,641.762)|(-111.531,641.762;-111.531,641.422)</value>
@@ -1008,7 +927,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-91.99,641.562;-91.99,641.762)|(-91.95,641.762;-91.95,641.562)</value>
@@ -1020,7 +938,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-91.95,641.562;-91.99,641.562)|(-91.99,641.762;-91.95,641.762)</value>
@@ -1032,7 +949,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.471,641.377;-107.471,641.577)|(-107.371,641.777;-107.371,641.577)</value>
@@ -1044,7 +960,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.471,641.377;-107.471,641.577)|(-107.411,641.577;-107.411,641.377)</value>
@@ -1056,7 +971,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.471,641.577;-107.411,641.577)|(-107.371,641.577;-107.411,641.577)</value>
@@ -1068,7 +982,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.411,641.377;-107.471,641.377)|(-107.471,641.577;-107.411,641.577)</value>
@@ -1080,7 +993,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.411,641.577;-107.411,641.777)|(-107.371,641.777;-107.371,641.577)</value>
@@ -1092,7 +1004,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.411,641.577;-107.411,641.377)|(-107.411,641.577;-107.411,641.777)</value>
@@ -1104,7 +1015,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.371,641.577;-107.411,641.577)|(-107.411,641.777;-107.371,641.777)</value>
@@ -1116,7 +1026,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.602,641.625;-110.744,641.767)|(-110.701,641.81;-110.559,641.668)</value>
@@ -1128,7 +1037,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.559,641.668;-110.602,641.625)|(-110.744,641.767;-110.701,641.81)</value>
@@ -1140,7 +1048,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-93.273,641.562;-93.273,641.862)|(-93.233,641.862;-93.233,641.562)</value>
@@ -1152,7 +1059,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.433,641.726;-108.433,641.926)|(-108.393,641.926;-108.393,641.726)</value>
@@ -1164,7 +1070,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.393,641.726;-108.433,641.726)|(-108.433,641.926;-108.393,641.926)</value>
@@ -1176,7 +1081,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.345,641.744;-109.487,641.886)|(-109.444,641.929;-109.302,641.787)</value>
@@ -1188,7 +1092,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.302,641.787;-109.345,641.744)|(-109.487,641.886;-109.444,641.929)</value>
@@ -1200,7 +1103,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.661,641.364;-506.661,641.564)|(-506.601,641.449;-506.601,641.364)</value>
@@ -1212,7 +1114,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.581,641.449;-506.601,641.449)|(-506.661,641.564;-506.621,641.564)</value>
@@ -1224,7 +1125,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.601,641.364;-506.661,641.364)|(-506.661,641.564;-506.621,641.564)</value>
@@ -1236,7 +1136,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.621,641.564;-506.621,641.649)|(-506.581,641.649;-506.581,641.449)</value>
@@ -1248,7 +1147,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.601,641.449;-506.601,641.364)|(-506.621,641.564;-506.621,641.649)</value>
@@ -1260,7 +1158,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.581,641.449;-506.601,641.449)|(-506.621,641.649;-506.581,641.649)</value>
@@ -1272,7 +1169,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-505.821,641.364;-505.821,641.564)|(-505.721,641.649;-505.721,641.449)</value>
@@ -1284,7 +1180,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-505.821,641.364;-505.821,641.564)|(-505.761,641.449;-505.761,641.364)</value>
@@ -1296,7 +1191,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-505.721,641.449;-505.761,641.449)|(-505.821,641.564;-505.761,641.564)</value>
@@ -1308,7 +1202,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-505.761,641.364;-505.821,641.364)|(-505.821,641.564;-505.761,641.564)</value>
@@ -1320,7 +1213,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-505.761,641.564;-505.761,641.649)|(-505.721,641.649;-505.721,641.449)</value>
@@ -1332,7 +1224,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-505.721,641.449;-505.761,641.449)|(-505.761,641.649;-505.721,641.649)</value>
@@ -1344,7 +1235,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-490.587,641.449;-490.587,641.649)|(-490.547,641.649;-490.547,641.449)</value>
@@ -1356,7 +1246,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-490.547,641.449;-490.587,641.449)|(-490.587,641.649;-490.547,641.649)</value>
@@ -1368,7 +1257,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-496.158,641.384;-496.358,641.384)|(-496.358,641.424;-496.158,641.424)</value>
@@ -1380,7 +1268,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-495.1,641.364;-495.1,641.424)|(-494.9,641.424;-494.9,641.364)</value>
@@ -1392,7 +1279,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-494.9,641.364;-495.1,641.364)|(-495.1,641.424;-494.9,641.424)</value>
@@ -1404,7 +1290,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-494.67,641.384;-494.67,641.424)|(-494.47,641.424;-494.47,641.384)</value>
@@ -1416,7 +1301,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-493.483,641.364;-493.483,641.664)|(-493.423,641.664;-493.423,641.364)</value>
@@ -1428,7 +1312,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-492.18,641.364;-492.18,641.664)|(-492.12,641.664;-492.12,641.364)</value>
@@ -1440,7 +1323,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-494.47,641.384;-494.67,641.384)|(-494.67,641.424;-494.47,641.424)</value>
@@ -1452,7 +1334,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-510.849,641.374;-510.991,641.516)|(-510.962,641.545;-510.82,641.403)</value>
@@ -1464,7 +1345,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-504.416,641.384;-504.416,641.684)|(-504.376,641.684;-504.376,641.384)</value>
@@ -1476,7 +1356,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-502.888,641.384;-502.888,641.684)|(-502.848,641.684;-502.848,641.384)</value>
@@ -1488,7 +1367,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-510.82,641.403;-510.849,641.374)|(-510.991,641.516;-510.962,641.545)</value>
@@ -1500,7 +1378,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-504.646,641.364;-504.946,641.364)|(-504.946,641.424;-504.646,641.424)</value>
@@ -1512,7 +1389,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-511.979,641.364;-511.979,641.749)|(-511.939,641.749;-511.939,641.404)</value>
@@ -1524,7 +1400,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-511.661,641.364;-511.979,641.364)|(-511.939,641.404;-511.701,641.404)</value>
@@ -1536,7 +1411,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-511.701,641.404;-511.701,641.634)|(-511.661,641.749;-511.661,641.364)</value>
@@ -1548,7 +1422,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-511.701,641.634;-511.709,641.634)|(-511.709,641.749;-511.661,641.749)</value>
@@ -1560,7 +1433,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-511.709,641.634;-511.709,641.749)|(-511.661,641.749;-511.661,641.409)</value>
@@ -1572,7 +1444,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-491.89,641.549;-491.89,641.749)|(-491.85,641.749;-491.85,641.549)</value>
@@ -1584,7 +1455,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-491.85,641.549;-491.89,641.549)|(-491.89,641.749;-491.85,641.749)</value>
@@ -1596,7 +1466,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-503.318,641.364;-503.318,641.424)|(-503.118,641.424;-503.118,641.364)</value>
@@ -1608,7 +1477,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-508.737,641.364;-508.737,641.564)|(-508.677,641.564;-508.677,641.364)</value>
@@ -1620,7 +1488,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-508.677,641.364;-508.737,641.364)|(-508.737,641.564;-508.677,641.564)</value>
@@ -1632,7 +1499,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-490.877,641.364;-490.877,641.564)|(-490.817,641.564;-490.817,641.364)</value>
@@ -1644,7 +1510,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-490.817,641.364;-490.877,641.364)|(-490.877,641.564;-490.817,641.564)</value>
@@ -1656,7 +1521,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-503.118,641.364;-503.318,641.364)|(-503.318,641.424;-503.118,641.424)</value>
@@ -1668,7 +1532,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-501.561,641.364;-501.861,641.364)|(-501.861,641.424;-501.561,641.424)</value>
@@ -1680,7 +1543,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-500.233,641.364;-500.233,641.424)|(-500.033,641.424;-500.033,641.364)</value>
@@ -1692,7 +1554,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-500.033,641.364;-500.233,641.364)|(-500.233,641.424;-500.033,641.424)</value>
@@ -1704,7 +1565,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-501.331,641.384;-501.331,641.584)|(-501.291,641.584;-501.291,641.384)</value>
@@ -1716,7 +1576,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-501.291,641.384;-501.331,641.384)|(-501.331,641.584;-501.291,641.584)</value>
@@ -1728,7 +1587,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-499.803,641.384;-499.803,641.584)|(-499.763,641.584;-499.763,641.384)</value>
@@ -1740,7 +1598,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-499.763,641.384;-499.803,641.384)|(-499.803,641.584;-499.763,641.584)</value>
@@ -1752,7 +1609,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-498.476,641.364;-498.776,641.364)|(-498.776,641.424;-498.476,641.424)</value>
@@ -1764,7 +1620,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-497.946,641.384;-498.246,641.384)|(-498.246,641.424;-497.946,641.424)</value>
@@ -1776,7 +1631,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-496.588,641.364;-496.888,641.364)|(-496.888,641.424;-496.588,641.424)</value>
@@ -1788,7 +1642,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-510.717,641.627;-510.859,641.769)|(-510.816,641.812;-510.674,641.67)</value>
@@ -1800,7 +1653,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-510.674,641.67;-510.717,641.627)|(-510.859,641.769;-510.816,641.812)</value>
@@ -1812,7 +1664,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-493.193,641.549;-493.193,641.849)|(-493.153,641.849;-493.153,641.549)</value>
@@ -1824,7 +1675,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-496.358,641.384;-496.358,641.424)|(-496.158,641.424;-496.158,641.384)</value>
@@ -1836,7 +1686,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-509.44,641.741;-509.582,641.883)|(-509.539,641.926;-509.397,641.784)</value>
@@ -1848,7 +1697,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-509.397,641.784;-509.44,641.741)|(-509.582,641.883;-509.539,641.926)</value>
@@ -1860,7 +1708,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-512.739,641.364;-512.739,641.624)|(-512.639,641.624;-512.639,641.364)</value>
@@ -1872,7 +1719,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-509.714,641.449;-509.714,641.649)|(-509.674,641.649;-509.674,641.449)</value>
@@ -1884,7 +1730,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-508.513,641.728;-508.513,641.928)|(-508.473,641.928;-508.473,641.728)</value>
@@ -1896,7 +1741,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-508.473,641.728;-508.513,641.728)|(-508.513,641.928;-508.473,641.928)</value>
@@ -1908,7 +1752,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-509.674,641.449;-509.714,641.449)|(-509.714,641.649;-509.674,641.649)</value>
@@ -1920,7 +1763,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.661,641.364;-506.661,641.564)|(-506.581,641.649;-506.581,641.449)</value>
@@ -1932,7 +1774,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-682.76,37.911;-682.789,37.882)|(-682.931,38.024;-682.902,38.053)</value>
@@ -1944,7 +1785,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-366.534,52.797;-366.534,53.097)|(-366.494,53.097;-366.494,52.797)</value>
@@ -1956,7 +1796,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.493,47.882;-414.493,47.922)|(-414.293,47.922;-414.293,47.882)</value>
@@ -1968,7 +1807,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.293,47.882;-414.493,47.882)|(-414.493,47.922;-414.293,47.922)</value>
@@ -1980,7 +1818,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-388.737,47.882;-388.737,47.922)|(-388.537,47.922;-388.537,47.882)</value>
@@ -1992,7 +1829,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-388.537,47.882;-388.737,47.882)|(-388.737,47.922;-388.537,47.922)</value>
@@ -2004,7 +1840,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-342.714,52.797;-342.714,52.997)|(-342.674,52.997;-342.674,52.797)</value>
@@ -2016,7 +1851,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-342.674,52.797;-342.714,52.797)|(-342.714,52.997;-342.674,52.997)</value>
@@ -2028,7 +1862,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-682.789,37.882;-682.931,38.024)|(-682.902,38.053;-682.76,37.911)</value>
@@ -2040,7 +1873,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-664.335,47.772;-664.335,47.972)|(-664.295,47.972;-664.295,47.772)</value>
@@ -2052,7 +1884,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-664.295,47.772;-664.335,47.772)|(-664.335,47.972;-664.295,47.972)</value>
@@ -2064,7 +1895,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-318.894,47.772;-318.894,47.972)|(-318.854,47.972;-318.854,47.772)</value>
@@ -2076,7 +1906,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-318.854,47.772;-318.894,47.772)|(-318.894,47.972;-318.854,47.972)</value>
@@ -2088,7 +1917,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-498.038,47.882;-498.038,48.082)|(-497.998,48.082;-497.998,47.882)</value>
@@ -2100,7 +1928,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-497.998,47.882;-498.038,47.882)|(-498.038,48.082;-497.998,48.082)</value>
@@ -2112,7 +1939,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-472.442,47.882;-472.442,48.082)|(-472.402,48.082;-472.402,47.882)</value>
@@ -2124,7 +1950,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-472.402,47.882;-472.442,47.882)|(-472.442,48.082;-472.402,48.082)</value>
@@ -2136,7 +1961,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-445.074,47.882;-445.374,47.882)|(-445.374,47.922;-445.074,47.922)</value>
@@ -2148,7 +1972,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-550.702,47.882;-550.702,48.182)|(-550.662,48.182;-550.662,47.882)</value>
@@ -2160,7 +1983,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-525.106,47.882;-525.106,48.182)|(-525.066,48.182;-525.066,47.882)</value>
@@ -2172,7 +1994,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-642.389,48.12;-642.389,48.32)|(-642.349,48.32;-642.349,48.12)</value>
@@ -2184,7 +2005,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-642.349,48.12;-642.389,48.12)|(-642.389,48.32;-642.349,48.32)</value>
@@ -2196,7 +2016,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-73.157,1575.25;-73.32,1575.087)|(-73.157,1575.25;-72.994,1575.413)</value>
@@ -2208,7 +2027,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-98.266,641.397;-98.266,641.437)|(-98.491,641.437;-98.491,641.377)</value>
@@ -2220,7 +2038,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-96.398,641.397;-96.398,641.437)|(-96.623,641.437;-96.623,641.377)</value>
@@ -2232,7 +2049,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.311,641.397;-101.311,641.485)|(-101.536,641.437;-101.536,641.377)</value>
@@ -2244,7 +2060,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.608,641.577;-108.582,641.577)|(-108.407,641.726;-108.433,641.726)</value>
@@ -2256,7 +2071,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-102.848,641.397;-102.848,641.485)|(-103.073,641.437;-103.073,641.377)</value>
@@ -2268,7 +2082,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-104.356,641.397;-104.356,641.485)|(-104.581,641.437;-104.581,641.377)</value>
@@ -2280,7 +2093,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.707,641.462;-90.707,641.625)|(-90.932,641.577;-90.932,641.414)</value>
@@ -2292,7 +2104,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.582,641.577;-108.582,641.551)|(-108.433,641.726;-108.433,641.752)</value>
@@ -2304,7 +2115,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-72.994,1575.087;-73.157,1575.25)|(-73.32,1575.413;-73.157,1575.25)</value>
@@ -2316,7 +2126,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-93.273,641.562;-93.273,641.725)|(-93.498,641.677;-93.498,641.514)</value>
@@ -2328,7 +2137,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.832,641.558;-110.69,641.416)|(-110.602,641.625;-110.744,641.767)</value>
@@ -2340,7 +2148,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-94.73,641.397;-94.73,641.437)|(-94.955,641.437;-94.955,641.377)</value>
@@ -2352,7 +2159,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.564,641.662;-109.564,641.638)|(-109.352,641.751;-109.475,641.874)</value>
@@ -2364,7 +2170,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.471,641.577;-107.411,641.577)|(-107.371,641.577;-107.411,641.577)</value>
@@ -2376,7 +2181,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.588,641.662;-109.564,641.662)|(-109.352,641.751;-109.475,641.874)</value>
@@ -2388,7 +2192,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-107.411,641.577;-107.411,641.377)|(-107.411,641.577;-107.411,641.777)</value>
@@ -2400,7 +2203,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-91.99,641.562;-91.99,641.725)|(-92.215,641.677;-92.215,641.514)</value>
@@ -2412,7 +2214,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-99.803,641.397;-99.803,641.485)|(-100.028,641.437;-100.028,641.377)</value>
@@ -2424,7 +2225,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.579,641.647;-111.579,641.762)|(-111.804,641.762;-111.804,641.599)</value>
@@ -2436,7 +2236,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-366.534,52.797;-366.534,53.002)/(-366.829,52.947;-366.829,52.742)</value>
@@ -2448,7 +2247,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-342.714,52.797;-342.714,52.997)/(-343.009,52.947;-343.009,52.742)</value>
@@ -2460,7 +2258,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-498.038,47.882;-498.038,47.977)/(-498.333,47.922;-498.333,47.827)</value>
@@ -2472,7 +2269,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-318.894,47.772;-318.894,47.972)/(-319.189,47.922;-319.189,47.717)</value>
@@ -2484,7 +2280,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-388.737,47.882;-388.737,47.922)/(-389.032,47.922;-389.032,47.827)</value>
@@ -2496,7 +2291,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-472.442,47.882;-472.442,47.977)/(-472.737,47.922;-472.737,47.827)</value>
@@ -2508,7 +2302,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.493,47.882;-414.493,47.922)/(-414.788,47.922;-414.788,47.827)</value>
@@ -2520,7 +2313,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-445.374,47.882;-445.374,47.922)/(-445.669,47.922;-445.669,47.827)</value>
@@ -2532,7 +2324,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-550.702,47.882;-550.702,47.977)/(-550.997,47.922;-550.997,47.827)</value>
@@ -2544,7 +2335,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-525.106,47.882;-525.106,47.977)/(-525.401,47.922;-525.401,47.827)</value>
@@ -2556,7 +2346,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-642.389,48.12;-642.389,48.147)/(-642.587,47.922;-642.587,47.895)</value>
@@ -2568,7 +2357,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-642.362,48.12;-642.389,48.12)/(-642.614,47.922;-642.587,47.922)</value>
@@ -2580,7 +2368,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-74.005,981.534;-74.005,982.534;-73.866,982.534;-73.866,981.534)</value>
@@ -2592,7 +2379,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2664.445,47.767;-2664.445,47.967;-2664.405,47.967;-2664.405,47.767)</value>
@@ -2604,7 +2390,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2318.774,47.767;-2318.774,47.967;-2318.734,47.967;-2318.734,47.767)</value>
@@ -2616,7 +2401,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2498.058,47.877;-2498.058,48.077;-2498.018,48.077;-2498.018,47.877)</value>
@@ -2628,7 +2412,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2472.442,47.877;-2472.442,48.077;-2472.402,48.077;-2472.402,47.877)</value>
@@ -2640,7 +2423,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2550.762,47.877;-2550.762,48.177;-2550.722,48.177;-2550.722,47.877)</value>
@@ -2652,7 +2434,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2525.146,47.877;-2525.146,48.177;-2525.106,48.177;-2525.106,47.877)</value>
@@ -2664,7 +2445,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2642.469,48.13;-2642.469,48.33;-2642.429,48.33;-2642.429,48.13)</value>
@@ -2676,7 +2456,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2342.614,52.792;-2342.614,52.992;-2342.574,52.992;-2342.574,52.792)</value>
@@ -2688,7 +2467,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2366.454,52.792;-2366.454,53.092;-2366.414,53.092;-2366.414,52.792)</value>
@@ -2700,7 +2478,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2682.919,37.877;-2683.061,38.019;-2683.032,38.048;-2682.89,37.906)</value>
@@ -2712,7 +2489,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2445.354,47.877;-2445.354,47.917;-2445.054,47.917;-2445.054,47.877)</value>
@@ -2724,7 +2500,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2414.453,47.877;-2414.453,47.917;-2414.253,47.917;-2414.253,47.877)</value>
@@ -2736,7 +2511,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2388.677,47.877;-2388.677,47.917;-2388.477,47.917;-2388.477,47.877)</value>
@@ -2748,7 +2522,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-414.493,47.882;-414.493,47.922;-414.293,47.922;-414.293,47.882)</value>
@@ -2760,7 +2533,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-388.737,47.882;-388.737,47.922;-388.537,47.922;-388.537,47.882)</value>
@@ -2772,7 +2544,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-342.714,52.797;-342.714,52.997;-342.674,52.997;-342.674,52.797)</value>
@@ -2784,7 +2555,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-682.789,37.882;-682.931,38.024;-682.902,38.053;-682.76,37.911)</value>
@@ -2796,7 +2566,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-366.534,52.797;-366.534,53.097;-366.494,53.097;-366.494,52.797)</value>
@@ -2808,7 +2577,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-504.946,641.364;-504.946,641.424;-504.646,641.424;-504.646,641.364)</value>
@@ -2820,7 +2588,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-503.318,641.364;-503.318,641.424;-503.118,641.424;-503.118,641.364)</value>
@@ -2832,7 +2599,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-501.861,641.364;-501.861,641.424;-501.561,641.424;-501.561,641.364)</value>
@@ -2844,7 +2610,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-500.233,641.364;-500.233,641.424;-500.033,641.424;-500.033,641.364)</value>
@@ -2856,7 +2621,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-498.776,641.364;-498.776,641.424;-498.476,641.424;-498.476,641.364)</value>
@@ -2868,7 +2632,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-498.246,641.384;-498.246,641.424;-497.946,641.424;-497.946,641.384)</value>
@@ -2880,7 +2643,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-496.888,641.364;-496.888,641.424;-496.588,641.424;-496.588,641.364)</value>
@@ -2892,7 +2654,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-496.358,641.384;-496.358,641.424;-496.158,641.424;-496.158,641.384)</value>
@@ -2904,7 +2665,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-495.1,641.364;-495.1,641.424;-494.9,641.424;-494.9,641.364)</value>
@@ -2916,7 +2676,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-494.67,641.384;-494.67,641.424;-494.47,641.424;-494.47,641.384)</value>
@@ -2928,7 +2687,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-104.881,641.377;-104.881,641.437;-104.581,641.437;-104.581,641.377)</value>
@@ -2940,7 +2698,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.273,641.377;-103.273,641.437;-103.073,641.437;-103.073,641.377)</value>
@@ -2952,7 +2709,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-101.836,641.377;-101.836,641.437;-101.536,641.437;-101.536,641.377)</value>
@@ -2964,7 +2720,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-100.228,641.377;-100.228,641.437;-100.028,641.437;-100.028,641.377)</value>
@@ -2976,7 +2731,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-98.791,641.377;-98.791,641.437;-98.491,641.437;-98.491,641.377)</value>
@@ -2988,7 +2742,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-98.266,641.397;-98.266,641.437;-97.966,641.437;-97.966,641.397)</value>
@@ -3000,7 +2753,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.923,641.377;-96.923,641.437;-96.623,641.437;-96.623,641.377)</value>
@@ -3012,7 +2764,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.398,641.397;-96.398,641.437;-96.198,641.437;-96.198,641.397)</value>
@@ -3024,7 +2775,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-95.155,641.377;-95.155,641.437;-94.955,641.437;-94.955,641.377)</value>
@@ -3036,7 +2786,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-94.73,641.397;-94.73,641.437;-94.53,641.437;-94.53,641.397)</value>
@@ -3048,7 +2797,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-510.849,641.374;-510.991,641.516;-510.962,641.545;-510.82,641.403)</value>
@@ -3060,7 +2808,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-110.719,641.387;-110.861,641.529;-110.832,641.558;-110.69,641.416)</value>
@@ -3072,7 +2819,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-508.737,641.364;-508.737,641.564;-508.677,641.564;-508.677,641.364)</value>
@@ -3084,7 +2830,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-490.877,641.364;-490.877,641.564;-490.817,641.564;-490.817,641.364)</value>
@@ -3096,7 +2841,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.642,641.377;-108.642,641.577;-108.582,641.577;-108.582,641.377)</value>
@@ -3108,7 +2852,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-90.992,641.377;-90.992,641.577;-90.932,641.577;-90.932,641.377)</value>
@@ -3120,7 +2863,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-501.331,641.384;-501.331,641.584;-501.291,641.584;-501.291,641.384)</value>
@@ -3132,7 +2874,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-499.803,641.384;-499.803,641.584;-499.763,641.584;-499.763,641.384)</value>
@@ -3144,7 +2885,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-101.311,641.397;-101.311,641.597;-101.271,641.597;-101.271,641.397)</value>
@@ -3156,7 +2896,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-99.803,641.397;-99.803,641.597;-99.763,641.597;-99.763,641.397)</value>
@@ -3168,7 +2907,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-512.739,641.364;-512.739,641.624;-512.639,641.624;-512.639,641.364)</value>
@@ -3180,7 +2918,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-509.714,641.449;-509.714,641.649;-509.674,641.649;-509.674,641.449)</value>
@@ -3192,7 +2929,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-506.661,641.364;-506.661,641.564;-506.621,641.564;-506.621,641.649;-506.581,641.649;-506.581,641.449;-506.601,641.449;-506.601,641.364)</value>
@@ -3204,7 +2940,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-505.821,641.364;-505.821,641.564;-505.761,641.564;-505.761,641.649;-505.721,641.649;-505.721,641.449;-505.761,641.449;-505.761,641.364)</value>
@@ -3216,7 +2951,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-490.587,641.449;-490.587,641.649;-490.547,641.649;-490.547,641.449)</value>
@@ -3228,7 +2962,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-109.604,641.462;-109.604,641.662;-109.564,641.662;-109.564,641.462)</value>
@@ -3240,7 +2973,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-90.707,641.462;-90.707,641.662;-90.667,641.662;-90.667,641.462)</value>
@@ -3252,7 +2984,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-493.483,641.364;-493.483,641.664;-493.423,641.664;-493.423,641.364)</value>
@@ -3264,7 +2995,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-492.18,641.364;-492.18,641.664;-492.12,641.664;-492.12,641.364)</value>
@@ -3276,7 +3006,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-93.558,641.377;-93.558,641.677;-93.498,641.677;-93.498,641.377)</value>
@@ -3288,7 +3017,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.275,641.377;-92.275,641.677;-92.215,641.677;-92.215,641.377)</value>
@@ -3300,7 +3028,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-504.416,641.384;-504.416,641.684;-504.376,641.684;-504.376,641.384)</value>
@@ -3312,7 +3039,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-502.888,641.384;-502.888,641.684;-502.848,641.684;-502.848,641.384)</value>
@@ -3324,7 +3050,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-104.356,641.397;-104.356,641.697;-104.316,641.697;-104.316,641.397)</value>
@@ -3336,7 +3061,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-102.848,641.397;-102.848,641.697;-102.808,641.697;-102.808,641.397)</value>
@@ -3348,7 +3072,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-511.979,641.364;-511.979,641.749;-511.939,641.749;-511.939,641.404;-511.701,641.404;-511.701,641.634;-511.709,641.634;-511.709,641.749;-511.661,641.749;-511.661,641.364)</value>
@@ -3360,7 +3083,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-491.89,641.549;-491.89,641.749;-491.85,641.749;-491.85,641.549)</value>
@@ -3372,7 +3094,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-111.844,641.377;-111.844,641.762;-111.804,641.762;-111.804,641.417;-111.571,641.417;-111.571,641.647;-111.579,641.647;-111.579,641.762;-111.531,641.762;-111.531,641.377)</value>
@@ -3384,7 +3105,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-91.99,641.562;-91.99,641.762;-91.95,641.762;-91.95,641.562)</value>
@@ -3396,7 +3116,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-107.471,641.377;-107.471,641.577;-107.411,641.577;-107.411,641.777;-107.371,641.777;-107.371,641.577;-107.411,641.577;-107.411,641.377)</value>
@@ -3408,7 +3127,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-110.602,641.625;-110.744,641.767;-110.701,641.81;-110.559,641.668)</value>
@@ -3420,7 +3138,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-510.717,641.627;-510.859,641.769;-510.816,641.812;-510.674,641.67)</value>
@@ -3432,7 +3149,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-493.193,641.549;-493.193,641.849;-493.153,641.849;-493.153,641.549)</value>
@@ -3444,7 +3160,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-93.273,641.562;-93.273,641.862;-93.233,641.862;-93.233,641.562)</value>
@@ -3456,7 +3171,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-509.44,641.741;-509.582,641.883;-509.539,641.926;-509.397,641.784)</value>
@@ -3468,7 +3182,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.433,641.726;-108.433,641.926;-108.393,641.926;-108.393,641.726)</value>
@@ -3480,7 +3193,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-508.513,641.728;-508.513,641.928;-508.473,641.928;-508.473,641.728)</value>
@@ -3492,7 +3204,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-109.345,641.744;-109.487,641.886;-109.444,641.929;-109.302,641.787)</value>
@@ -3504,7 +3215,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-664.335,47.772;-664.335,47.972;-664.295,47.972;-664.295,47.772)</value>
@@ -3516,7 +3226,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-318.894,47.772;-318.894,47.972;-318.854,47.972;-318.854,47.772)</value>
@@ -3528,7 +3237,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-498.038,47.882;-498.038,48.082;-497.998,48.082;-497.998,47.882)</value>
@@ -3540,7 +3248,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-472.442,47.882;-472.442,48.082;-472.402,48.082;-472.402,47.882)</value>
@@ -3552,7 +3259,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-445.374,47.882;-445.374,47.922;-445.074,47.922;-445.074,47.882)</value>
@@ -3564,7 +3270,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-550.702,47.882;-550.702,48.182;-550.662,48.182;-550.662,47.882)</value>
@@ -3576,7 +3281,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-525.106,47.882;-525.106,48.182;-525.066,48.182;-525.066,47.882)</value>
@@ -3588,7 +3292,6 @@
    <cell>metal1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-642.389,48.12;-642.389,48.32;-642.349,48.32;-642.349,48.12)</value>

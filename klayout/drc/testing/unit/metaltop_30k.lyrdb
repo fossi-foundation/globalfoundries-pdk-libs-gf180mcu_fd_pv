@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for metaltop_30k</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>7_16_METAL_30KA_6LM</top-cell>
  <tags>
  </tags>
@@ -64,7 +64,6 @@
   <cell>
    <name>7_16_METAL_30KA_6LM</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -76,7 +75,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5184.414,5196.306;5183.141,5197.579)|(5181.868,5198.852;5183.141,5197.579)</value>
@@ -88,7 +86,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5183.141,5197.579;5181.868,5196.306)|(5183.141,5197.579;5184.414,5198.852)</value>
@@ -100,7 +97,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5208.216,5195.779;5208.082,5195.779)|(5208.082,5197.574;5208.087,5197.579)</value>
@@ -112,7 +108,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5158.742,5195.779;5158.742,5201.179)|(5160.537,5201.179;5160.537,5195.779)</value>
@@ -124,7 +119,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5197.682,5198.093;5197.682,5198.12)|(5198.941,5199.406;5198.941,5199.379)</value>
@@ -136,7 +130,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5197.682,5198.12;5197.655,5198.12)|(5198.941,5199.379;5198.968,5199.379)</value>
@@ -148,7 +141,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5166.266,5196.851;5165.892,5197.225)|(5167.338,5198.325;5167.338,5198.297)</value>
@@ -160,7 +152,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5166.983,5196.134;5165.892,5197.225)|(5167.338,5198.297;5168.055,5197.58)</value>
@@ -172,7 +163,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5166.983,5196.134;5166.609,5196.508)|(5168.055,5197.58;5168.083,5197.58)</value>
@@ -184,7 +174,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5219.211,5196.134;5218.837,5196.508)|(5220.283,5197.608;5220.283,5197.58)</value>
@@ -196,7 +185,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5219.211,5196.134;5218.837,5196.508)|(5220.283,5197.58;5220.311,5197.58)</value>
@@ -208,7 +196,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5769.59,6368.594;5769.561,6368.623)|(5769.703,6368.765;5769.732,6368.736)</value>
@@ -220,7 +207,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5769.561,6368.623;5769.703,6368.765)|(5769.732,6368.736;5769.59,6368.594)</value>
@@ -232,7 +218,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5369.552,6368.607;5369.523,6368.636)|(5369.665,6368.778;5369.694,6368.749)</value>
@@ -244,7 +229,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5369.523,6368.636;5369.665,6368.778)|(5369.694,6368.749;5369.552,6368.607)</value>
@@ -256,7 +240,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5744.187,6368.584;5744.187,6368.784)|(5744.247,6368.784;5744.247,6368.584)</value>
@@ -268,7 +251,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5744.247,6368.584;5744.187,6368.584)|(5744.187,6368.784;5744.247,6368.784)</value>
@@ -280,7 +262,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5759.158,6368.584;5759.158,6368.784)|(5759.218,6368.784;5759.218,6368.584)</value>
@@ -292,7 +273,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5759.218,6368.584;5759.158,6368.584)|(5759.158,6368.784;5759.218,6368.784)</value>
@@ -304,7 +284,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5344.214,6368.597;5344.214,6368.797)|(5344.274,6368.797;5344.274,6368.597)</value>
@@ -316,7 +295,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5344.274,6368.597;5344.214,6368.597)|(5344.214,6368.797;5344.274,6368.797)</value>
@@ -328,7 +306,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5359.155,6368.597;5359.155,6368.797)|(5359.215,6368.797;5359.215,6368.597)</value>
@@ -340,7 +317,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5359.215,6368.597;5359.155,6368.597)|(5359.155,6368.797;5359.215,6368.797)</value>
@@ -352,7 +328,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5777.43,6368.584;5777.43,6368.844)|(5777.53,6368.844;5777.53,6368.584)</value>
@@ -364,7 +339,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5777.53,6368.584;5777.43,6368.584)|(5777.43,6368.844;5777.53,6368.844)</value>
@@ -376,7 +350,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5742.347,6368.684;5742.347,6368.884)|(5742.387,6368.884;5742.387,6368.684)</value>
@@ -388,7 +361,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5742.387,6368.684;5742.347,6368.684)|(5742.347,6368.884;5742.387,6368.884)</value>
@@ -400,7 +372,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5747.302,6368.584;5747.302,6368.684)|(5747.362,6368.784;5747.362,6368.584)</value>
@@ -412,7 +383,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5747.302,6368.684;5747.262,6368.684)|(5747.262,6368.884;5747.302,6368.884)</value>
@@ -424,7 +394,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5747.302,6368.684;5747.262,6368.684)|(5747.302,6368.784;5747.362,6368.784)</value>
@@ -436,7 +405,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5747.262,6368.684;5747.262,6368.884)|(5747.302,6368.884;5747.302,6368.784)</value>
@@ -448,7 +416,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5747.262,6368.684;5747.262,6368.884)|(5747.362,6368.784;5747.362,6368.584)</value>
@@ -460,7 +427,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5747.362,6368.584;5747.302,6368.584)|(5747.262,6368.884;5747.302,6368.884)</value>
@@ -472,7 +438,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5747.362,6368.584;5747.302,6368.584)|(5747.302,6368.784;5747.362,6368.784)</value>
@@ -484,7 +449,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5750.382,6368.584;5750.382,6368.684)|(5750.402,6368.884;5750.402,6368.784)</value>
@@ -496,7 +460,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5750.382,6368.584;5750.382,6368.684)|(5750.442,6368.784;5750.442,6368.584)</value>
@@ -508,7 +471,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5750.382,6368.684;5750.362,6368.684)|(5750.362,6368.884;5750.402,6368.884)</value>
@@ -520,7 +482,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5750.382,6368.684;5750.362,6368.684)|(5750.402,6368.784;5750.442,6368.784)</value>
@@ -532,7 +493,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5750.362,6368.684;5750.362,6368.884)|(5750.402,6368.884;5750.402,6368.784)</value>
@@ -544,7 +504,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5750.362,6368.684;5750.362,6368.884)|(5750.442,6368.784;5750.442,6368.584)</value>
@@ -556,7 +515,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5750.442,6368.584;5750.382,6368.584)|(5750.362,6368.884;5750.402,6368.884)</value>
@@ -568,7 +526,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5750.442,6368.584;5750.382,6368.584)|(5750.402,6368.784;5750.442,6368.784)</value>
@@ -580,7 +537,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5763.505,6368.684;5763.505,6368.884)|(5763.545,6368.884;5763.545,6368.684)</value>
@@ -592,7 +548,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5763.545,6368.684;5763.505,6368.684)|(5763.505,6368.884;5763.545,6368.884)</value>
@@ -604,7 +559,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5342.379,6368.697;5342.379,6368.897)|(5342.419,6368.897;5342.419,6368.697)</value>
@@ -616,7 +570,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5342.419,6368.697;5342.379,6368.697)|(5342.379,6368.897;5342.419,6368.897)</value>
@@ -628,7 +581,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5363.487,6368.697;5363.487,6368.897)|(5363.527,6368.897;5363.527,6368.697)</value>
@@ -640,7 +592,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5363.527,6368.697;5363.487,6368.697)|(5363.487,6368.897;5363.527,6368.897)</value>
@@ -652,7 +603,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.597;5353.524,6368.797)|(5353.524,6368.997;5353.524,6368.797)</value>
@@ -664,7 +614,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.597;5353.524,6368.797)|(5353.584,6368.797;5353.584,6368.597)</value>
@@ -676,7 +625,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.797;5353.484,6368.797)|(5353.484,6368.997;5353.524,6368.997)</value>
@@ -688,7 +636,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.797;5353.484,6368.797)|(5353.524,6368.797;5353.584,6368.797)</value>
@@ -700,7 +647,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.484,6368.797;5353.484,6368.997)|(5353.524,6368.997;5353.524,6368.797)</value>
@@ -712,7 +658,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.484,6368.797;5353.484,6368.997)|(5353.584,6368.797;5353.584,6368.597)</value>
@@ -724,7 +669,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.584,6368.597;5353.524,6368.597)|(5353.484,6368.997;5353.524,6368.997)</value>
@@ -736,7 +680,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.584,6368.597;5353.524,6368.597)|(5353.524,6368.797;5353.584,6368.797)</value>
@@ -748,7 +691,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5368.335,6369.966;5368.292,6370.009)|(5368.434,6370.151;5368.477,6370.108)</value>
@@ -760,7 +702,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5368.292,6370.009;5368.434,6370.151)|(5368.477,6370.108;5368.335,6369.966)</value>
@@ -772,7 +713,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5768.358,6369.968;5768.315,6370.011)|(5768.457,6370.153;5768.5,6370.11)</value>
@@ -784,7 +724,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5768.315,6370.011;5768.457,6370.153)|(5768.5,6370.11;5768.358,6369.968)</value>
@@ -796,7 +735,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5357.856,6370.056;5357.856,6370.256)|(5357.896,6370.256;5357.896,6370.056)</value>
@@ -808,7 +746,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5357.896,6370.056;5357.856,6370.056)|(5357.856,6370.256;5357.896,6370.256)</value>
@@ -820,7 +757,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5757.844,6370.058;5757.844,6370.258)|(5757.884,6370.258;5757.884,6370.058)</value>
@@ -832,7 +768,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5757.884,6370.058;5757.844,6370.058)|(5757.844,6370.258;5757.884,6370.258)</value>
@@ -844,7 +779,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5762.161,6370.086;5762.118,6370.129)|(5762.26,6370.271;5762.303,6370.228)</value>
@@ -856,7 +790,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5762.118,6370.129;5762.26,6370.271)|(5762.303,6370.228;5762.161,6370.086)</value>
@@ -868,7 +801,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5362.158,6370.089;5362.115,6370.132)|(5362.257,6370.274;5362.3,6370.231)</value>
@@ -880,7 +812,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5362.115,6370.132;5362.257,6370.274)|(5362.3,6370.231;5362.158,6370.089)</value>
@@ -892,7 +823,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5772.642,6368.625;5772.642,6370.524)|(5772.69,6370.524;5772.69,6370.424)</value>
@@ -904,7 +834,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5772.642,6368.584;5772.642,6370.524)|(5772.682,6370.424;5772.682,6368.624)</value>
@@ -916,7 +845,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5772.69,6370.424;5772.682,6370.424)|(5772.642,6370.524;5772.69,6370.524)</value>
@@ -928,7 +856,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5774.53,6368.584;5772.642,6368.584)|(5772.682,6368.624;5774.49,6368.624)</value>
@@ -940,7 +867,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5774.49,6368.624;5774.49,6370.524)|(5774.53,6370.524;5774.53,6368.584)</value>
@@ -952,7 +878,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5372.604,6368.633;5372.604,6370.532)|(5372.652,6370.532;5372.652,6370.432)</value>
@@ -964,7 +889,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5372.604,6368.597;5372.604,6370.532)|(5372.644,6370.432;5372.644,6368.637)</value>
@@ -976,7 +900,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5372.652,6370.432;5372.644,6370.432)|(5372.604,6370.532;5372.652,6370.532)</value>
@@ -988,7 +911,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5374.482,6368.597;5372.604,6368.597)|(5372.644,6368.637;5374.442,6368.637)</value>
@@ -1000,7 +922,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5374.442,6368.637;5374.442,6370.532)|(5374.482,6370.532;5374.482,6368.597)</value>
@@ -1012,7 +933,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5358.68,6421.834;5358.68,6423.714)|(5359.56,6423.714;5359.56,6421.834)</value>
@@ -1024,7 +944,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5308.93,6421.834;5308.93,6424.064)|(5310.16,6424.064;5310.16,6421.834)</value>
@@ -1036,7 +955,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5751.635,6421.828;5751.635,6423.878)|(5752.875,6424.068;5752.875,6421.828)</value>
@@ -1048,7 +966,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5751.635,6423.878;5751.825,6424.068)|(5752.875,6424.068;5752.875,6422.573)</value>
@@ -1060,7 +977,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5714.355,6421.829;5714.355,6424.069)|(5715.595,6424.069;5715.595,6421.829)</value>
@@ -1072,7 +988,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5732.715,6421.829;5732.715,6423.999)|(5733.955,6424.069;5733.955,6421.829)</value>
@@ -1084,7 +999,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5732.715,6423.999;5732.785,6424.069)|(5733.955,6424.069;5733.955,6422.694)</value>
@@ -1096,7 +1010,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5346.2,6421.833;5346.2,6423.869)|(5347.44,6424.073;5347.44,6421.833)</value>
@@ -1108,7 +1021,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5346.2,6423.869;5346.404,6424.073)|(5347.44,6424.073;5347.44,6422.564)</value>
@@ -1120,7 +1032,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5315.16,6421.834;5315.16,6424.074)|(5316.28,6424.074;5316.28,6421.834)</value>
@@ -1132,7 +1043,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5321.28,6421.834;5321.28,6424.074)|(5322.28,6424.074;5322.28,6421.834)</value>
@@ -1144,7 +1054,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5327.28,6421.834;5327.28,6423.99)|(5328.52,6424.074;5328.52,6421.834)</value>
@@ -1156,7 +1065,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5327.28,6423.99;5327.364,6424.074)|(5328.52,6424.074;5328.52,6422.685)</value>
@@ -1168,7 +1076,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5333.52,6421.834;5333.52,6423.834)|(5334.76,6424.074;5334.76,6421.834)</value>
@@ -1180,7 +1087,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5333.52,6423.834;5333.76,6424.074)|(5334.76,6424.074;5334.76,6422.529)</value>
@@ -1192,7 +1098,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5186.07,5340.113;5186.07,6341.108)|(5188.265,6341.108;5188.265,5340.113)</value>
@@ -1204,7 +1109,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.797;5353.484,6368.797)|(5353.524,6368.797;5353.584,6368.797)</value>
@@ -1216,7 +1120,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.597;5353.524,6368.797)|(5353.524,6368.997;5353.524,6368.797)</value>
@@ -1228,7 +1131,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5344.214,6368.597;5344.214,6368.797)|(5342.419,6368.897;5342.419,6368.697)</value>
@@ -1240,7 +1142,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5183.141,5197.579;5181.868,5196.306)|(5183.141,5197.579;5184.414,5198.852)</value>
@@ -1252,7 +1153,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5184.414,5196.306;5183.141,5197.579)|(5181.868,5198.852;5183.141,5197.579)</value>
@@ -1264,7 +1164,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5359.155,6368.797;5359.182,6368.797)|(5357.896,6370.056;5357.869,6370.056)</value>
@@ -1276,7 +1175,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5359.155,6368.77;5359.155,6368.797)|(5357.896,6370.083;5357.896,6370.056)</value>
@@ -1288,7 +1186,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5363.487,6368.872;5363.487,6368.897)|(5362.3,6370.231;5362.158,6370.089)</value>
@@ -1300,7 +1197,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5363.487,6368.897;5363.512,6368.897)|(5362.3,6370.231;5362.158,6370.089)</value>
@@ -1312,7 +1208,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5374.442,6368.637;5374.442,6370.517)|(5372.644,6370.432;5372.644,6368.637)</value>
@@ -1324,7 +1219,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5372.644,6368.637;5372.786,6368.637)|(5372.652,6370.432;5372.644,6370.432)</value>
@@ -1336,7 +1230,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5369.523,6368.636;5369.665,6368.778)|(5368.477,6370.108;5368.335,6369.966)</value>
@@ -1348,7 +1241,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5374.442,6370.243;5374.442,6370.532)|(5372.652,6370.532;5372.652,6370.432)</value>
@@ -1360,7 +1252,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.797;5353.484,6368.797)|(5353.524,6368.797;5353.584,6368.797)</value>
@@ -1372,7 +1263,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.597;5353.524,6368.797)|(5353.524,6368.997;5353.524,6368.797)</value>
@@ -1384,7 +1274,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5344.214,6368.597;5344.214,6368.797)|(5342.419,6368.897;5342.419,6368.697)</value>
@@ -1396,7 +1285,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5183.141,5197.579;5181.868,5196.306)|(5183.141,5197.579;5184.414,5198.852)</value>
@@ -1408,7 +1296,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5184.414,5196.306;5183.141,5197.579)|(5181.868,5198.852;5183.141,5197.579)</value>
@@ -1420,7 +1307,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5359.155,6368.797;5359.182,6368.797)|(5357.896,6370.056;5357.869,6370.056)</value>
@@ -1432,7 +1318,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5359.155,6368.77;5359.155,6368.797)|(5357.896,6370.083;5357.896,6370.056)</value>
@@ -1444,7 +1329,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5363.487,6368.872;5363.487,6368.897)|(5362.3,6370.231;5362.158,6370.089)</value>
@@ -1456,7 +1340,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5363.487,6368.897;5363.512,6368.897)|(5362.3,6370.231;5362.158,6370.089)</value>
@@ -1468,7 +1351,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5374.442,6368.637;5374.442,6370.517)|(5372.644,6370.432;5372.644,6368.637)</value>
@@ -1480,7 +1362,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5372.644,6368.637;5372.786,6368.637)|(5372.652,6370.432;5372.644,6370.432)</value>
@@ -1492,7 +1373,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5369.523,6368.636;5369.665,6368.778)|(5368.477,6370.108;5368.335,6369.966)</value>
@@ -1504,7 +1384,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5374.442,6370.243;5374.442,6370.532)|(5372.652,6370.532;5372.652,6370.432)</value>
@@ -1516,7 +1395,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.797;5353.484,6368.797)|(5353.524,6368.797;5353.584,6368.797)</value>
@@ -1528,7 +1406,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5353.524,6368.597;5353.524,6368.797)|(5353.524,6368.997;5353.524,6368.797)</value>
@@ -1540,7 +1417,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5344.214,6368.597;5344.214,6368.797)|(5342.419,6368.897;5342.419,6368.697)</value>
@@ -1552,7 +1428,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5183.141,5197.579;5181.868,5196.306)|(5183.141,5197.579;5184.414,5198.852)</value>
@@ -1564,7 +1439,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5184.414,5196.306;5183.141,5197.579)|(5181.868,5198.852;5183.141,5197.579)</value>
@@ -1576,7 +1450,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5359.155,6368.797;5359.182,6368.797)|(5357.896,6370.056;5357.869,6370.056)</value>
@@ -1588,7 +1461,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5359.155,6368.77;5359.155,6368.797)|(5357.896,6370.083;5357.896,6370.056)</value>
@@ -1600,7 +1472,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5363.487,6368.872;5363.487,6368.897)|(5362.3,6370.231;5362.158,6370.089)</value>
@@ -1612,7 +1483,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5363.487,6368.897;5363.512,6368.897)|(5362.3,6370.231;5362.158,6370.089)</value>
@@ -1624,7 +1494,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5374.442,6368.637;5374.442,6370.517)|(5372.644,6370.432;5372.644,6368.637)</value>
@@ -1636,7 +1505,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5372.644,6368.637;5372.786,6368.637)|(5372.652,6370.432;5372.644,6370.432)</value>
@@ -1648,7 +1516,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5369.523,6368.636;5369.665,6368.778)|(5368.477,6370.108;5368.335,6369.966)</value>
@@ -1660,7 +1527,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5374.442,6370.243;5374.442,6370.532)|(5372.652,6370.532;5372.652,6370.432)</value>
@@ -1672,7 +1538,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5308.929,6421.914;5308.929,6423.984;5309.046,6423.95;5309.046,6421.948)</value>
@@ -1684,7 +1549,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5309.044,6423.948;5309.01,6424.065;5310.08,6424.065;5310.046,6423.948)</value>
@@ -1696,7 +1560,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5333.016,6477.333;5333.016,6477.334;5333.137,6477.455;5333.188,6477.333)</value>
@@ -1708,7 +1571,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5333.018,6477.163;5332.896,6477.214;5333.017,6477.335;5333.018,6477.335)</value>
@@ -1720,7 +1582,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5309.01,6421.833;5309.044,6421.95;5310.046,6421.95;5310.08,6421.833)</value>
@@ -1732,7 +1593,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5346.439,6423.952;5346.328,6423.998;5346.395,6424.065;5346.455,6423.952)</value>
@@ -1744,7 +1604,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5327.399,6423.953;5327.288,6423.999;5327.355,6424.066;5327.415,6423.953)</value>
@@ -1756,7 +1615,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5346.32,6423.832;5346.208,6423.878;5346.395,6424.065;5346.441,6423.953)</value>
@@ -1768,7 +1626,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5333.641,6423.783;5333.519,6423.834;5333.64,6423.955;5333.641,6423.955)</value>
@@ -1780,7 +1637,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5333.639,6423.953;5333.639,6423.954;5333.76,6424.075;5333.811,6423.953)</value>
@@ -1792,7 +1648,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5322.281,6421.833;5322.279,6421.953;5322.279,6423.955;5322.281,6424.075)</value>
@@ -1804,7 +1659,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5346.321,6423.818;5346.208,6423.878;5346.275,6423.945;5346.321,6423.834)</value>
@@ -1816,7 +1670,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5327.401,6423.939;5327.288,6423.999;5327.355,6424.066;5327.401,6423.955)</value>
@@ -1828,7 +1681,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5310.161,6421.914;5310.044,6421.948;5310.044,6423.95;5310.161,6423.984)</value>
@@ -1840,7 +1692,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5321.279,6421.833;5321.279,6424.075;5321.281,6423.955;5321.281,6421.953)</value>
@@ -1852,7 +1703,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5315.1,6421.954;5315.1,6423.954;5316.1,6423.954;5316.1,6421.954)</value>
@@ -1864,7 +1714,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5358.62,6421.774;5358.62,6423.774;5359.62,6423.774;5359.62,6421.774)</value>
@@ -1876,7 +1725,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5352.56,6421.954;5352.56,6423.954;5353.56,6423.954;5353.56,6421.954)</value>
@@ -1888,7 +1736,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5305.652,6472.214;5303.397,6472.214)/(5305.652,6472.459;5303.397,6472.459)</value>
@@ -1900,7 +1747,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5327.777,6472.214;5325.522,6472.214)/(5327.777,6472.334;5325.522,6472.334)</value>
@@ -1912,7 +1758,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5335.272,6472.214;5333.017,6472.214)/(5335.272,6472.334;5333.017,6472.334)</value>
@@ -1924,7 +1769,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5350.462,6472.213;5348.207,6472.213)/(5350.462,6472.333;5348.207,6472.333)</value>
@@ -1936,7 +1780,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5303.397,6477.704;5305.652,6477.704)/(5303.397,6477.459;5305.652,6477.459)</value>
@@ -1948,7 +1791,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5325.522,6477.454;5327.777,6477.454)/(5325.522,6477.334;5327.777,6477.334)</value>
@@ -1960,7 +1802,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5333.137,6477.454;5335.272,6477.454)/(5333.137,6477.334;5335.272,6477.334)</value>
@@ -1972,7 +1813,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (5348.327,6477.453;5350.462,6477.453)/(5348.327,6477.333;5350.462,6477.333)</value>
@@ -1984,7 +1824,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5263.97,6606.597;5263.97,6609.05;5266.236,6609.05;5266.236,6606.597)</value>
@@ -1996,7 +1835,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5261.865,6606.523;5261.865,6608.895;5263.652,6608.895;5263.652,6606.523)</value>
@@ -2008,7 +1846,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5259.752,6606.217;5259.752,6609.389;5261.392,6609.389;5261.392,6606.217)</value>
@@ -2020,7 +1857,6 @@
    <cell>7_16_METAL_30KA_6LM</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (5266.604,6606.399;5266.604,6608.962;5268.055,6608.962;5268.055,6606.399)</value>

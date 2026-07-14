@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for dualgate</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>7_6_Dualgate</top-cell>
  <tags>
  </tags>
@@ -60,7 +60,6 @@
   <cell>
    <name>7_6_Dualgate</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -72,7 +71,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-245.957,118.12;-245.957,120.035;-245.792,120.035;-245.792,118.12)</value>
@@ -84,7 +82,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-237.838,118.048;-237.838,120.107;-237.341,120.036;-237.341,118.119)</value>
@@ -96,7 +93,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-254.661,117.619;-254.663,118.119;-254.663,120.036;-254.661,120.536)</value>
@@ -108,7 +104,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-227.301,120.682;-227.703,120.99;-227.602,121.091;-227.294,120.689;-227.301,120.689)</value>
@@ -120,7 +115,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-217.771,120.482;-218.173,120.79;-217.872,121.091;-217.564,120.689;-217.572,120.689;-217.771,120.49)</value>
@@ -132,7 +126,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-243.497,100.525;-243.497,101.425)|(-243.932,101.425;-243.932,100.525)</value>
@@ -144,7 +137,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-248.032,103.804;-248.032,105.525)|(-248.467,105.591;-248.467,103.87)</value>
@@ -156,7 +148,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-237.182,105.525;-237.182,105.52)|(-236.847,105.805;-236.847,105.81)</value>
@@ -168,7 +159,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-237.186,105.525;-237.182,105.525)|(-236.843,105.805;-236.847,105.805)</value>
@@ -180,7 +170,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-225.372,88.035;-225.372,87.795)/(-225.372,88.035;-225.372,88.275)</value>
@@ -192,7 +181,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-225.612,88.035;-225.372,88.035)/(-225.132,88.035;-225.372,88.035)</value>
@@ -204,7 +192,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-246.907,90.99;-246.907,88.14)/(-246.907,88.38;-246.907,91.23)</value>
@@ -216,7 +203,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-225.372,84.325;-225.372,81.135)/(-225.372,80.895;-225.372,84.085)</value>
@@ -228,7 +214,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-246.907,85.99;-247.716,85.99)/(-247.667,85.755;-246.858,85.755)</value>
@@ -240,7 +225,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-346.395,10.93;-346.395,12.53)|(-345.795,12.53;-345.795,10.93)</value>
@@ -252,7 +236,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-366.995,10.939;-366.995,13.919)|(-366.495,13.429;-366.495,11.429)</value>
@@ -264,7 +247,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-365.495,13.429;-366.495,13.429)|(-366.985,13.929;-365.005,13.929)</value>
@@ -276,7 +258,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-365.495,11.429;-365.495,13.429)|(-364.995,13.919;-364.995,10.939)</value>
@@ -288,7 +269,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-365.005,10.929;-366.985,10.929)|(-366.495,11.429;-365.495,11.429)</value>
@@ -300,7 +280,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-241.067,70.51;-241.067,73.425)|(-240.372,73.425;-240.372,70.51)</value>
@@ -312,7 +291,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-234.942,71.175;-235.082,71.035)|(-235.512,71.595;-235.502,71.595)</value>
@@ -324,7 +302,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-234.942,71.175;-235.082,71.035)|(-235.502,71.595;-235.502,71.605)</value>
@@ -336,7 +313,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-250.782,59.67;-250.782,61.585;-250.702,61.585;-250.702,59.67)</value>
@@ -348,7 +324,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-257.529,59.429;-257.531,59.669;-257.531,61.586;-257.529,61.826)</value>
@@ -360,7 +335,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-231.821,62.23;-232.028,62.365;-231.947,62.446;-231.812,62.239;-231.821,62.239)</value>
@@ -372,7 +346,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-222.291,62.03;-222.498,62.165;-222.217,62.446;-222.082,62.239;-222.092,62.239;-222.291,62.04)</value>
@@ -384,7 +357,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-205.588,59.27;-205.83,59.37;-205.63,59.57;-205.63,62.371;-205.588,62.608)</value>
@@ -396,7 +368,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-250.702,59.17;-250.702,62.085;-247.912,62.085;-247.912,59.17)</value>
@@ -408,7 +379,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-346.595,10.73;-346.595,12.73;-345.595,12.73;-345.595,10.73/-346.395,10.93;-345.795,10.93;-345.795,12.53;-346.395,12.53)</value>
@@ -420,7 +390,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-393.195,11.33;-393.195,13.33;-392.995,13.33;-392.995,11.33)</value>
@@ -432,7 +401,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-366.495,11.429;-366.495,13.429;-365.495,13.429;-365.495,11.429)</value>
@@ -444,7 +412,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-359.594,12.914;-359.934,13.143;-359.409,13.668;-359.18,13.328;-359.195,13.328;-359.594,12.929)</value>
@@ -456,7 +423,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-380.194,13.315;-380.534,13.544;-380.409,13.669;-380.18,13.329;-380.194,13.329)</value>
@@ -468,7 +434,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-399.454,10.929;-399.391,11.324;-399.786,11.261;-399.786,13.389;-399.391,13.326;-399.454,13.721;-398.326,13.721;-398.389,13.326;-397.994,13.389;-397.994,11.261;-398.389,11.324;-398.326,10.929/-399.389,11.326;-398.391,11.326;-398.391,13.324;-399.389,13.324)</value>
@@ -480,7 +445,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-386.594,10.929;-386.596,11.329;-386.596,13.331;-386.594,13.731)</value>
@@ -492,7 +456,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-385.596,10.929;-385.596,13.731;-385.594,13.331;-385.594,11.329)</value>
@@ -504,7 +467,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-373.394,12.763;-373.796,12.93;-372.995,13.731;-372.828,13.329;-373.394,13.329)</value>
@@ -516,7 +478,6 @@
    <cell>7_6_Dualgate</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-231.422,46.65;-231.422,48.75;-221.152,48.75;-221.152,46.65)</value>

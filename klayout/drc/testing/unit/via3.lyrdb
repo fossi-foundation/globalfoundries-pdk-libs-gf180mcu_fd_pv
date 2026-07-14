@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for via3</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>7_14_VIA</top-cell>
  <tags>
  </tags>
  <categories>
   <category>
    <name>V3.1</name>
-   <description>V3.1 : Min/max Via3 size . : 0.26µm</description>
+   <description>V3.1 : Min/max via3 size . : 0.26µm</description>
    <categories>
    </categories>
   </category>
@@ -21,7 +21,7 @@
   </category>
   <category>
    <name>V3.2b</name>
-   <description>V3.2b : via3 Space in 4x4 or larger via3 array : 0.36µm</description>
+   <description>V3.2b : Space in 4x4 or larger via3 array : 0.36µm</description>
    <categories>
    </categories>
   </category>
@@ -33,8 +33,7 @@
   </category>
   <category>
    <name>V3.3c</name>
-   <description>V3.3c : metal3 (&lt; 0.34um) end-of-line overlap. (Applies to all &lt; 0.34µm wide Metal lines,
-                  excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <description>V3.3c : metal3 (&lt; 0.34um) end-of-line overlap of via3: 0.06µm</description>
    <categories>
    </categories>
   </category>
@@ -46,14 +45,13 @@
   </category>
   <category>
    <name>V3.4a</name>
-   <description>V3.4a : metal4 overlap of via3 &gt;= 0.01 um</description>
+   <description>V3.4a : metal4 overlap of via3 &gt;= 0.01 upper_metal</description>
    <categories>
    </categories>
   </category>
   <category>
    <name>V3.4b</name>
-   <description>V3.4p : metal4 (&lt; 0.34um) end-of-line overlap. (Applies to all &lt; 0.34µm wide Metal lines,
-                  excluding Metal branches shorter than 0.28µm.) : 0.06µm</description>
+   <description>V3.4b : metal4 (&lt; 0.34um) end-of-line overlap of via3 : 0.06µm</description>
    <categories>
    </categories>
   </category>
@@ -68,7 +66,6 @@
   <cell>
    <name>7_14_VIA</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -80,7 +77,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-308.57,61.81;-308.315,61.81)</value>
@@ -92,7 +88,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-308.315,61.55;-308.57,61.55)</value>
@@ -104,7 +99,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-306.87,61.81;-306.525,61.81)</value>
@@ -116,7 +110,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-306.525,61.55;-306.87,61.55)</value>
@@ -128,7 +121,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-306.185,51.257;-306.185,51.265)|(-306.365,51.453;-306.365,51.445)</value>
@@ -140,7 +132,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-306.185,51.265;-306.177,51.265)|(-306.365,51.445;-306.373,51.445)</value>
@@ -152,7 +143,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-303.355,51.445;-303.615,51.445)|(-303.355,51.445;-303.095,51.445)</value>
@@ -164,7 +154,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-303.355,51.185;-303.355,51.445)|(-303.355,51.705;-303.355,51.445)</value>
@@ -176,7 +165,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-306.09,52.68;-306.09,52.94)|(-306.345,52.94;-306.345,52.68)</value>
@@ -188,7 +176,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-444.501,112.099;-444.501,112.359)|(-444.851,112.359;-444.851,112.099)</value>
@@ -200,7 +187,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-444.501,111.479;-444.501,111.739)|(-444.851,111.739;-444.851,111.479)</value>
@@ -212,7 +198,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-444.501,113.339;-444.501,113.599)|(-444.851,113.599;-444.851,113.339)</value>
@@ -224,7 +209,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-444.501,110.859;-444.501,111.119)|(-444.851,111.119;-444.851,110.859)</value>
@@ -236,7 +220,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-451.471,111.119;-451.211,111.119)|(-451.211,111.469;-451.471,111.469)</value>
@@ -248,7 +231,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-462.951,112.099;-462.951,112.359)|(-463.301,112.359;-463.301,112.099)</value>
@@ -260,7 +242,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-458.451,110.859;-458.451,111.119)|(-458.801,111.119;-458.801,110.859)</value>
@@ -272,7 +253,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-462.951,110.859;-462.951,111.119)|(-463.301,111.119;-463.301,110.859)</value>
@@ -284,7 +264,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-458.451,111.479;-458.451,111.739)|(-458.801,111.739;-458.801,111.479)</value>
@@ -296,7 +275,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-458.451,112.099;-458.451,112.359)|(-458.801,112.359;-458.801,112.099)</value>
@@ -308,7 +286,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-462.951,112.719;-462.951,112.979)|(-463.301,112.979;-463.301,112.719)</value>
@@ -320,7 +297,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-453.951,111.119;-453.691,111.119)|(-453.691,111.469;-453.951,111.469)</value>
@@ -332,7 +308,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-458.451,112.719;-458.451,112.979)|(-458.801,112.979;-458.801,112.719)</value>
@@ -344,7 +319,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-462.951,111.479;-462.951,111.739)|(-463.301,111.739;-463.301,111.479)</value>
@@ -356,7 +330,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-452.091,111.119;-451.831,111.119)|(-451.831,111.469;-452.091,111.469)</value>
@@ -368,7 +341,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-410.949,112.719;-410.949,112.979)|(-411.209,112.979;-411.209,112.719)</value>
@@ -380,7 +352,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-453.331,111.119;-453.071,111.119)|(-453.071,111.469;-453.331,111.469)</value>
@@ -392,7 +363,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-444.501,112.719;-444.501,112.979)|(-444.851,112.979;-444.851,112.719)</value>
@@ -404,7 +374,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-444.501,113.959;-444.501,114.219)|(-444.851,114.219;-444.851,113.959)</value>
@@ -416,7 +385,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-452.711,111.119;-452.451,111.119)|(-452.451,111.469;-452.711,111.469)</value>
@@ -428,7 +396,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-450.851,111.119;-450.591,111.119)|(-450.591,111.469;-450.851,111.469)</value>
@@ -440,7 +407,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-295.54,33.355;-295.54,33.615;-295.28,33.615;-295.28,33.355)</value>
@@ -452,7 +418,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-293.95,33.51;-293.95,33.615;-293.69,33.615;-293.69,33.51)</value>
@@ -464,7 +429,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-291.636,33.49;-291.636,33.506;-291.744,33.614;-291.896,33.614;-291.906,33.616;-291.744,33.616;-291.739,33.615;-291.635,33.615;-291.635,33.506;-291.624,33.495)</value>
@@ -476,7 +440,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-289.426,33.455;-289.426,33.614;-289.686,33.614;-289.696,33.616;-289.419,33.616;-289.419,33.464)</value>
@@ -488,7 +451,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-287.906,33.6;-287.906,33.614;-288.166,33.614;-288.176,33.616;-287.904,33.616;-287.904,33.615;-287.894,33.605)</value>
@@ -500,7 +462,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-291.935,29.13;-292.195,29.13)/(-291.935,29.075;-292.195,29.075)</value>
@@ -512,7 +473,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-292.635,29.785;-292.895,29.785)/(-292.635,29.73;-292.895,29.73)</value>
@@ -524,7 +484,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-292.195,29.075;-292.195,29.13;-291.935,29.13;-291.935,29.075)</value>
@@ -536,7 +495,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-287.835,29.165;-287.835,29.22;-287.815,29.22;-287.815,29.165)</value>
@@ -548,7 +506,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-286.285,29.115;-286.285,29.375;-286.23,29.375;-286.23,29.115)</value>
@@ -560,7 +517,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-291.41,29.345;-291.41,29.4;-291.15,29.4;-291.15,29.345)</value>
@@ -572,7 +528,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-288.97,29.465;-288.97,29.515;-288.945,29.515;-288.945,29.465)</value>
@@ -584,7 +539,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-290.585,29.69;-290.585,29.745;-290.325,29.745;-290.325,29.69)</value>
@@ -596,7 +550,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-296.155,29.735;-296.155,29.775;-295.895,29.775;-295.895,29.735)</value>
@@ -608,7 +561,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-292.895,29.73;-292.895,29.785;-292.635,29.785;-292.635,29.73)</value>
@@ -620,7 +572,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-295.515,29.745;-295.515,30.005;-295.46,30.005;-295.46,29.745)</value>
@@ -632,7 +583,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-294.725,29.745;-294.725,30.005;-294.67,30.005;-294.67,29.745)</value>
@@ -644,7 +594,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-289.72,29.745;-289.72,30.005;-289.46,30.005;-289.46,29.745)</value>
@@ -656,7 +605,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-286.735,33.345;-286.735,33.605;-286.475,33.605;-286.475,33.345)</value>
@@ -668,7 +616,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-291.895,33.355;-291.895,33.615;-291.635,33.615;-291.635,33.355)</value>
@@ -680,7 +627,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-289.685,33.355;-289.685,33.615;-289.425,33.615;-289.425,33.355)</value>
@@ -692,7 +638,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-288.165,33.355;-288.165,33.615;-287.905,33.615;-287.905,33.355)</value>
@@ -704,7 +649,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-295.54,9.685;-295.54,9.945;-295.28,9.945;-295.28,9.685)</value>
@@ -716,7 +660,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-293.95,9.84;-293.95,9.945;-293.69,9.945;-293.69,9.84)</value>
@@ -728,7 +671,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-291.636,9.82;-291.636,9.836;-291.744,9.944;-291.896,9.944;-291.906,9.946;-291.744,9.946;-291.739,9.945;-291.635,9.945;-291.635,9.836;-291.624,9.825)</value>
@@ -740,7 +682,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-289.426,9.785;-289.426,9.944;-289.686,9.944;-289.696,9.946;-289.419,9.946;-289.419,9.794)</value>
@@ -752,7 +693,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-287.906,9.93;-287.906,9.944;-288.166,9.944;-288.176,9.946;-287.904,9.946;-287.904,9.945;-287.894,9.935)</value>
@@ -764,7 +704,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-291.935,5.46;-292.195,5.46)/(-291.935,5.405;-292.195,5.405)</value>
@@ -776,7 +715,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-292.635,6.115;-292.895,6.115)/(-292.635,6.06;-292.895,6.06)</value>
@@ -788,7 +726,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-292.195,5.405;-292.195,5.46;-291.935,5.46;-291.935,5.405)</value>
@@ -800,7 +737,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-287.835,5.495;-287.835,5.55;-287.815,5.55;-287.815,5.495)</value>
@@ -812,7 +748,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-286.285,5.445;-286.285,5.705;-286.23,5.705;-286.23,5.445)</value>
@@ -824,7 +759,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-291.41,5.675;-291.41,5.73;-291.15,5.73;-291.15,5.675)</value>
@@ -836,7 +770,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-288.97,5.795;-288.97,5.845;-288.945,5.845;-288.945,5.795)</value>
@@ -848,7 +781,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-290.585,6.02;-290.585,6.075;-290.325,6.075;-290.325,6.02)</value>
@@ -860,7 +792,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-296.155,6.065;-296.155,6.105;-295.895,6.105;-295.895,6.065)</value>
@@ -872,7 +803,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-292.895,6.06;-292.895,6.115;-292.635,6.115;-292.635,6.06)</value>
@@ -884,7 +814,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-295.515,6.075;-295.515,6.335;-295.46,6.335;-295.46,6.075)</value>
@@ -896,7 +825,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-294.725,6.075;-294.725,6.335;-294.67,6.335;-294.67,6.075)</value>
@@ -908,7 +836,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-289.72,6.075;-289.72,6.335;-289.46,6.335;-289.46,6.075)</value>
@@ -920,7 +847,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-286.885,9.675;-286.885,9.935;-286.625,9.935;-286.625,9.675)</value>
@@ -932,7 +858,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-291.895,9.685;-291.895,9.945;-291.635,9.945;-291.635,9.685)</value>
@@ -944,7 +869,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-289.685,9.685;-289.685,9.945;-289.425,9.945;-289.425,9.685)</value>
@@ -956,7 +880,6 @@
    <cell>7_14_VIA</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-288.165,9.685;-288.165,9.945;-287.905,9.945;-287.905,9.685)</value>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for dummy_exclude</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>10_8_DE</top-cell>
  <tags>
  </tags>
@@ -31,7 +31,6 @@
   <cell>
    <name>10_8_DE</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -43,7 +42,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.886,260.134;-112.975,260.134)|(-112.891,260.934;-112.886,260.929)</value>
@@ -55,7 +53,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-145.046,260.134;-145.046,265.129)|(-144.251,265.129;-144.251,260.134)</value>
@@ -67,7 +64,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-195.081,113.248;-195.081,193.253)</value>
@@ -79,7 +75,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-195.081,193.253;-7.581,193.253)</value>
@@ -91,7 +86,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-7.581,193.253;-7.581,113.248)</value>
@@ -103,7 +97,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-7.581,113.248;-195.081,113.248)</value>
@@ -115,7 +108,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-195.081,113.248;-195.081,193.253)</value>
@@ -127,7 +119,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-195.081,193.253;-7.581,193.253)</value>
@@ -139,7 +130,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-7.581,193.253;-7.581,113.248)</value>
@@ -151,7 +141,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge: (-7.581,113.248;-195.081,113.248)</value>
@@ -163,7 +152,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-169.621,221.859;-169.621,221.849)|(-154.171,234.549;-154.171,234.559)</value>
@@ -175,7 +163,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-169.629,221.859;-169.621,221.859)|(-154.163,234.549;-154.171,234.549)</value>
@@ -187,7 +174,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-135.396,220.049;-134.671,220.774)|(-149.171,234.558;-149.171,234.549)</value>
@@ -199,7 +185,6 @@
    <cell>10_8_DE</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-135.396,220.049;-134.671,220.774)|(-149.171,234.549;-149.18,234.549)</value>

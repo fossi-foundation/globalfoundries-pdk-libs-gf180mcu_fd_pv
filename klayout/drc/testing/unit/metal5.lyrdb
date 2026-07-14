@@ -2,7 +2,7 @@
 <report-database>
  <description/>
  <original-file/>
- <generator>drc: script='../gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>metal5</top-cell>
  <tags>
  </tags>
@@ -36,7 +36,6 @@
   <cell>
    <name>metal5</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -48,7 +47,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-374.01,1389.574;-374.01,1390.574)|(-373.861,1390.574;-373.861,1389.574)</value>
@@ -60,7 +58,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-74.005,1389.574;-74.005,1390.574)|(-73.866,1390.574;-73.866,1389.574)</value>
@@ -72,7 +69,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-85.31,1782.96;-85.363,1782.96)|(-85.315,1783.24;-85.31,1783.235)</value>
@@ -84,7 +80,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-72.776,1783.042;-72.974,1783.24)|(-73.172,1783.438;-72.974,1783.24)</value>
@@ -96,7 +91,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-72.974,1783.24;-73.172,1783.042)|(-72.974,1783.24;-72.776,1783.438)</value>
@@ -108,7 +102,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-61.01,1782.96;-61.01,1783.8)|(-60.735,1783.8;-60.735,1782.96)</value>
@@ -120,7 +113,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-79.443,1783.336;-79.47,1783.336)|(-79.681,1783.52;-79.654,1783.52)</value>
@@ -132,7 +124,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-79.47,1783.336;-79.47,1783.309)|(-79.654,1783.52;-79.654,1783.547)</value>
@@ -144,7 +135,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-91.174,1783.13;-91.32,1782.984)|(-91.459,1783.241;-91.431,1783.241)</value>
@@ -156,7 +146,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-91.174,1783.13;-91.32,1782.984)|(-91.431,1783.241;-91.431,1783.269)</value>
@@ -168,7 +157,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-66.121,1783.13;-66.267,1782.984)|(-66.406,1783.241;-66.378,1783.241)</value>
@@ -180,7 +168,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-66.034,1783.217;-66.267,1782.984)|(-66.378,1783.241;-66.291,1783.328)</value>
@@ -192,7 +179,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-66.034,1783.217;-66.18,1783.071)|(-66.291,1783.328;-66.291,1783.356)</value>
@@ -204,7 +190,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2664.445,455.807;-2664.445,456.007)|(-2664.405,456.007;-2664.405,455.807)</value>
@@ -216,7 +201,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2664.405,455.807;-2664.445,455.807)|(-2664.445,456.007;-2664.405,456.007)</value>
@@ -228,7 +212,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2599.135,455.807;-2599.155,455.807)|(-2599.391,455.957;-2599.175,455.957)</value>
@@ -240,7 +223,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2599.175,455.957;-2599.175,456.007)|(-2599.135,456.007;-2599.135,455.807)</value>
@@ -252,7 +234,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2599.155,455.807;-2599.155,455.678)|(-2599.175,455.957;-2599.175,456.007)</value>
@@ -264,7 +245,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2599.135,455.807;-2599.155,455.807)|(-2599.175,456.007;-2599.135,456.007)</value>
@@ -276,7 +256,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2577.598,455.807;-2577.638,455.807)|(-2577.874,455.957;-2577.638,455.957)</value>
@@ -288,7 +267,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2577.638,455.957;-2577.638,456.007)|(-2577.598,456.007;-2577.598,455.807)</value>
@@ -300,7 +278,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2577.598,455.807;-2577.638,455.807)|(-2577.638,456.007;-2577.598,456.007)</value>
@@ -312,7 +289,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2318.774,455.807;-2318.774,456.007)|(-2318.734,456.007;-2318.734,455.807)</value>
@@ -324,7 +300,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2318.734,455.807;-2318.774,455.807)|(-2318.774,456.007;-2318.734,456.007)</value>
@@ -336,7 +311,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2498.058,455.917;-2498.058,456.117)|(-2498.018,456.117;-2498.018,455.917)</value>
@@ -348,7 +322,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2498.018,455.917;-2498.058,455.917)|(-2498.058,456.117;-2498.018,456.117)</value>
@@ -360,7 +333,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2472.442,455.917;-2472.442,456.117)|(-2472.402,456.117;-2472.402,455.917)</value>
@@ -372,7 +344,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2472.402,455.917;-2472.442,455.917)|(-2472.442,456.117;-2472.402,456.117)</value>
@@ -384,7 +355,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2550.762,455.917;-2550.762,456.217)|(-2550.722,456.217;-2550.722,455.917)</value>
@@ -396,7 +366,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2525.146,455.917;-2525.146,456.217)|(-2525.106,456.217;-2525.106,455.917)</value>
@@ -408,7 +377,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2642.469,456.17;-2642.469,456.37)|(-2642.429,456.37;-2642.429,456.17)</value>
@@ -420,7 +388,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2642.429,456.17;-2642.469,456.17)|(-2642.469,456.37;-2642.429,456.37)</value>
@@ -432,7 +399,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2342.614,460.832;-2342.614,461.032)|(-2342.574,461.032;-2342.574,460.832)</value>
@@ -444,7 +410,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2342.574,460.832;-2342.614,460.832)|(-2342.614,461.032;-2342.574,461.032)</value>
@@ -456,7 +421,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2366.454,460.832;-2366.454,461.132)|(-2366.414,461.132;-2366.414,460.832)</value>
@@ -468,7 +432,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2682.919,445.917;-2683.061,446.059)|(-2683.032,446.088;-2682.89,445.946)</value>
@@ -480,7 +443,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2682.89,445.946;-2682.919,445.917)|(-2683.061,446.059;-2683.032,446.088)</value>
@@ -492,7 +454,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2445.054,455.917;-2445.354,455.917)|(-2445.354,455.957;-2445.054,455.957)</value>
@@ -504,7 +465,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2414.453,455.917;-2414.453,455.957)|(-2414.253,455.957;-2414.253,455.917)</value>
@@ -516,7 +476,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2414.253,455.917;-2414.453,455.917)|(-2414.453,455.957;-2414.253,455.957)</value>
@@ -528,7 +487,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2388.677,455.917;-2388.677,455.957)|(-2388.477,455.957;-2388.477,455.917)</value>
@@ -540,7 +498,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-2388.477,455.917;-2388.677,455.917)|(-2388.677,455.957;-2388.477,455.957)</value>
@@ -552,7 +509,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-504.992,849.369;-505.292,849.369)|(-505.292,849.429;-504.992,849.429)</value>
@@ -564,7 +520,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-503.479,849.369;-503.479,849.429)|(-503.279,849.429;-503.279,849.369)</value>
@@ -576,7 +531,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-503.279,849.369;-503.479,849.369)|(-503.479,849.429;-503.279,849.429)</value>
@@ -588,7 +542,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-501.537,849.369;-501.837,849.369)|(-501.837,849.429;-501.537,849.429)</value>
@@ -600,7 +553,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-500.024,849.369;-500.024,849.429)|(-499.824,849.429;-499.824,849.369)</value>
@@ -612,7 +564,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-499.824,849.369;-500.024,849.369)|(-500.024,849.429;-499.824,849.429)</value>
@@ -624,7 +575,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-498.082,849.369;-498.382,849.369)|(-498.382,849.429;-498.082,849.429)</value>
@@ -636,7 +586,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-497.502,849.389;-497.802,849.389)|(-497.802,849.429;-497.502,849.429)</value>
@@ -648,7 +597,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-496.009,849.369;-496.309,849.369)|(-496.309,849.429;-496.009,849.429)</value>
@@ -660,7 +608,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-495.729,849.389;-495.729,849.429)|(-495.529,849.429;-495.529,849.389)</value>
@@ -672,7 +619,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-495.529,849.389;-495.729,849.389)|(-495.729,849.429;-495.529,849.429)</value>
@@ -684,7 +630,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-494.336,849.369;-494.336,849.429)|(-494.136,849.429;-494.136,849.369)</value>
@@ -696,7 +641,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-494.136,849.369;-494.336,849.369)|(-494.336,849.429;-494.136,849.429)</value>
@@ -708,7 +652,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-493.856,849.389;-493.856,849.429)|(-493.656,849.429;-493.656,849.389)</value>
@@ -720,7 +663,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-493.656,849.389;-493.856,849.389)|(-493.856,849.429;-493.656,849.429)</value>
@@ -732,7 +674,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-512.005,849.379;-512.147,849.521)|(-512.118,849.55;-511.976,849.408)</value>
@@ -744,7 +685,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-511.976,849.408;-512.005,849.379)|(-512.147,849.521;-512.118,849.55)</value>
@@ -756,7 +696,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-509.554,849.369;-509.554,849.569)|(-509.494,849.569;-509.494,849.369)</value>
@@ -768,7 +707,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-509.494,849.369;-509.554,849.369)|(-509.554,849.569;-509.494,849.569)</value>
@@ -780,7 +718,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-489.558,849.369;-489.558,849.569)|(-489.498,849.569;-489.498,849.369)</value>
@@ -792,7 +729,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-489.498,849.369;-489.558,849.369)|(-489.558,849.569;-489.498,849.569)</value>
@@ -804,7 +740,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-501.257,849.389;-501.257,849.589)|(-501.217,849.589;-501.217,849.389)</value>
@@ -816,7 +751,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-501.217,849.389;-501.257,849.389)|(-501.257,849.589;-501.217,849.589)</value>
@@ -828,7 +762,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-499.544,849.389;-499.544,849.589)|(-499.504,849.589;-499.504,849.389)</value>
@@ -840,7 +773,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-499.504,849.389;-499.544,849.389)|(-499.544,849.589;-499.504,849.589)</value>
@@ -852,7 +784,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-514.145,849.369;-514.145,849.629)|(-514.045,849.629;-514.045,849.369)</value>
@@ -864,7 +795,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-514.045,849.369;-514.145,849.369)|(-514.145,849.629;-514.045,849.629)</value>
@@ -876,7 +806,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-510.667,849.429;-510.667,849.629)|(-510.627,849.629;-510.627,849.429)</value>
@@ -888,7 +817,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-510.627,849.429;-510.667,849.429)|(-510.667,849.629;-510.627,849.629)</value>
@@ -900,7 +828,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-507.207,849.369;-507.207,849.569)|(-507.127,849.629;-507.127,849.429)</value>
@@ -912,7 +839,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-507.207,849.369;-507.207,849.569)|(-507.147,849.429;-507.147,849.369)</value>
@@ -924,7 +850,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-507.127,849.429;-507.147,849.429)|(-507.207,849.569;-507.167,849.569)</value>
@@ -936,7 +861,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-507.147,849.369;-507.207,849.369)|(-507.207,849.569;-507.167,849.569)</value>
@@ -948,7 +872,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-507.167,849.569;-507.167,849.629)|(-507.127,849.629;-507.127,849.429)</value>
@@ -960,7 +883,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-507.147,849.429;-507.147,849.369)|(-507.167,849.569;-507.167,849.629)</value>
@@ -972,7 +894,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-507.127,849.429;-507.147,849.429)|(-507.167,849.629;-507.127,849.629)</value>
@@ -984,7 +905,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-507.147,849.369;-507.207,849.369)|(-507.167,849.629;-507.127,849.629)</value>
@@ -996,7 +916,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.267,849.369;-506.267,849.569)|(-506.167,849.629;-506.167,849.429)</value>
@@ -1008,7 +927,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.267,849.369;-506.267,849.569)|(-506.207,849.429;-506.207,849.369)</value>
@@ -1020,7 +938,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.167,849.429;-506.207,849.429)|(-506.267,849.569;-506.207,849.569)</value>
@@ -1032,7 +949,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.207,849.369;-506.267,849.369)|(-506.267,849.569;-506.207,849.569)</value>
@@ -1044,7 +960,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.207,849.569;-506.207,849.629)|(-506.167,849.629;-506.167,849.429)</value>
@@ -1056,7 +971,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.167,849.429;-506.207,849.429)|(-506.207,849.629;-506.167,849.629)</value>
@@ -1068,7 +982,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-506.207,849.369;-506.267,849.369)|(-506.207,849.629;-506.167,849.629)</value>
@@ -1080,7 +993,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-489.218,849.429;-489.218,849.629)|(-489.178,849.629;-489.178,849.429)</value>
@@ -1092,7 +1004,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-489.178,849.429;-489.218,849.429)|(-489.218,849.629;-489.178,849.629)</value>
@@ -1104,7 +1015,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-492.534,849.369;-492.534,849.669)|(-492.474,849.669;-492.474,849.369)</value>
@@ -1116,7 +1026,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-491.046,849.369;-491.046,849.669)|(-490.986,849.669;-490.986,849.369)</value>
@@ -1128,7 +1037,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-504.712,849.389;-504.712,849.689)|(-504.672,849.689;-504.672,849.389)</value>
@@ -1140,7 +1048,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-502.999,849.389;-502.999,849.689)|(-502.959,849.689;-502.959,849.389)</value>
@@ -1152,7 +1059,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-490.706,849.529;-490.706,849.729)|(-490.666,849.729;-490.666,849.529)</value>
@@ -1164,7 +1070,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-490.666,849.529;-490.706,849.529)|(-490.706,849.729;-490.666,849.729)</value>
@@ -1176,7 +1081,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-513.285,849.369;-513.285,849.829)|(-513.245,849.829;-513.245,849.409)</value>
@@ -1188,7 +1092,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-512.917,849.369;-513.285,849.369)|(-513.245,849.409;-512.957,849.409)</value>
@@ -1200,7 +1103,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-512.957,849.409;-512.957,849.689)|(-512.917,849.829;-512.917,849.369)</value>
@@ -1212,7 +1114,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-512.957,849.689;-512.965,849.689)|(-512.965,849.829;-512.917,849.829)</value>
@@ -1224,7 +1125,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-512.965,849.689;-512.965,849.829)|(-512.917,849.829;-512.917,849.413)</value>
@@ -1236,7 +1136,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-492.194,849.529;-492.194,849.829)|(-492.154,849.829;-492.154,849.529)</value>
@@ -1248,7 +1147,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-511.82,849.65;-511.962,849.792)|(-511.919,849.835;-511.777,849.693)</value>
@@ -1260,7 +1158,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-511.777,849.693;-511.82,849.65)|(-511.962,849.792;-511.919,849.835)</value>
@@ -1272,7 +1169,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-510.357,849.757;-510.499,849.899)|(-510.456,849.942;-510.314,849.8)</value>
@@ -1284,7 +1180,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-510.314,849.8;-510.357,849.757)|(-510.499,849.899;-510.456,849.942)</value>
@@ -1296,7 +1191,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-509.295,849.768;-509.295,849.968)|(-509.255,849.968;-509.255,849.768)</value>
@@ -1308,7 +1202,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-509.255,849.768;-509.295,849.768)|(-509.295,849.968;-509.255,849.968)</value>
@@ -1320,7 +1213,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.399,849.381;-109.459,849.381)|(-109.459,849.581;-109.399,849.581)</value>
@@ -1332,7 +1224,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-89.673,849.381;-89.673,849.581)|(-89.613,849.581;-89.613,849.381)</value>
@@ -1344,7 +1235,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-89.613,849.381;-89.673,849.381)|(-89.673,849.581;-89.613,849.581)</value>
@@ -1356,7 +1246,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-98.097,849.381;-98.397,849.381)|(-98.397,849.441;-98.097,849.441)</value>
@@ -1368,7 +1257,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-97.522,849.401;-97.822,849.401)|(-97.822,849.441;-97.522,849.441)</value>
@@ -1380,7 +1268,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-96.044,849.381;-96.344,849.381)|(-96.344,849.441;-96.044,849.441)</value>
@@ -1392,7 +1279,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.769,849.401;-95.769,849.441)|(-95.569,849.441;-95.569,849.401)</value>
@@ -1404,7 +1290,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.557,849.441;-110.557,849.641)|(-110.517,849.641;-110.517,849.441)</value>
@@ -1416,7 +1301,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.517,849.441;-110.557,849.441)|(-110.557,849.641;-110.517,849.641)</value>
@@ -1428,7 +1312,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-89.338,849.441;-89.338,849.641)|(-89.298,849.641;-89.298,849.441)</value>
@@ -1440,7 +1323,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-89.298,849.441;-89.338,849.441)|(-89.338,849.641;-89.298,849.641)</value>
@@ -1452,7 +1334,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.237,849.401;-101.237,849.601)|(-101.197,849.601;-101.197,849.401)</value>
@@ -1464,7 +1345,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.197,849.401;-101.237,849.401)|(-101.237,849.601;-101.197,849.601)</value>
@@ -1476,7 +1356,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-92.609,849.381;-92.609,849.681)|(-92.549,849.681;-92.549,849.381)</value>
@@ -1488,7 +1367,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-91.141,849.381;-91.141,849.681)|(-91.081,849.681;-91.081,849.381)</value>
@@ -1500,7 +1378,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-99.544,849.401;-99.544,849.601)|(-99.504,849.601;-99.504,849.401)</value>
@@ -1512,7 +1389,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-99.504,849.401;-99.544,849.401)|(-99.544,849.601;-99.504,849.601)</value>
@@ -1524,7 +1400,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-104.652,849.401;-104.652,849.701)|(-104.612,849.701;-104.612,849.401)</value>
@@ -1536,7 +1411,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-102.959,849.401;-102.959,849.701)|(-102.919,849.701;-102.919,849.401)</value>
@@ -1548,7 +1422,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.569,849.401;-95.769,849.401)|(-95.769,849.441;-95.569,849.441)</value>
@@ -1560,7 +1433,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-94.391,849.381;-94.391,849.441)|(-94.191,849.441;-94.191,849.381)</value>
@@ -1572,7 +1444,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.806,849.541;-90.806,849.741)|(-90.766,849.741;-90.766,849.541)</value>
@@ -1584,7 +1455,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.766,849.541;-90.806,849.541)|(-90.806,849.741;-90.766,849.741)</value>
@@ -1596,7 +1466,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.117,849.381;-108.117,849.581)|(-108.017,849.781;-108.017,849.581)</value>
@@ -1608,7 +1477,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.117,849.381;-108.117,849.581)|(-108.057,849.581;-108.057,849.381)</value>
@@ -1620,7 +1488,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.117,849.581;-108.057,849.581)|(-108.017,849.581;-108.057,849.581)</value>
@@ -1632,7 +1499,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.057,849.381;-108.117,849.381)|(-108.117,849.581;-108.057,849.581)</value>
@@ -1644,7 +1510,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.057,849.581;-108.057,849.781)|(-108.017,849.781;-108.017,849.581)</value>
@@ -1656,7 +1521,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.057,849.581;-108.057,849.381)|(-108.057,849.581;-108.057,849.781)</value>
@@ -1668,7 +1532,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.017,849.581;-108.057,849.581)|(-108.057,849.781;-108.017,849.781)</value>
@@ -1680,7 +1543,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-94.191,849.381;-94.391,849.381)|(-94.391,849.441;-94.191,849.441)</value>
@@ -1692,7 +1554,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-93.916,849.401;-93.916,849.441)|(-93.716,849.441;-93.716,849.401)</value>
@@ -1704,7 +1565,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-93.716,849.401;-93.916,849.401)|(-93.916,849.441;-93.716,849.441)</value>
@@ -1716,7 +1576,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-104.927,849.381;-105.227,849.381)|(-105.227,849.441;-104.927,849.441)</value>
@@ -1728,7 +1587,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-103.434,849.381;-103.434,849.441)|(-103.234,849.441;-103.234,849.381)</value>
@@ -1740,7 +1598,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.875,849.391;-112.017,849.533)|(-111.988,849.562;-111.846,849.42)</value>
@@ -1752,7 +1609,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.705,849.647;-111.847,849.789)|(-111.804,849.832;-111.662,849.69)</value>
@@ -1764,7 +1620,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.662,849.69;-111.705,849.647)|(-111.847,849.789;-111.804,849.832)</value>
@@ -1776,7 +1631,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.846,849.42;-111.875,849.391)|(-112.017,849.533;-111.988,849.562)</value>
@@ -1788,7 +1642,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-103.234,849.381;-103.434,849.381)|(-103.434,849.441;-103.234,849.441)</value>
@@ -1800,7 +1653,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-113.15,849.381;-113.15,849.841)|(-113.11,849.841;-113.11,849.421)</value>
@@ -1812,7 +1664,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.787,849.381;-113.15,849.381)|(-113.11,849.421;-112.827,849.421)</value>
@@ -1824,7 +1675,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.827,849.421;-112.827,849.701)|(-112.787,849.841;-112.787,849.381)</value>
@@ -1836,7 +1686,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.827,849.701;-112.835,849.701)|(-112.835,849.841;-112.787,849.841)</value>
@@ -1848,7 +1697,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.835,849.701;-112.835,849.841)|(-112.787,849.841;-112.787,849.425)</value>
@@ -1860,7 +1708,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-92.274,849.541;-92.274,849.841)|(-92.234,849.841;-92.234,849.541)</value>
@@ -1872,7 +1719,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.512,849.381;-101.812,849.381)|(-101.812,849.441;-101.512,849.441)</value>
@@ -1884,7 +1730,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-100.019,849.381;-100.019,849.441)|(-99.819,849.441;-99.819,849.381)</value>
@@ -1896,7 +1741,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.262,849.759;-110.404,849.901)|(-110.361,849.944;-110.219,849.802)</value>
@@ -1908,7 +1752,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.219,849.802;-110.262,849.759)|(-110.404,849.901;-110.361,849.944)</value>
@@ -1920,7 +1763,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.215,849.765;-109.215,849.965)|(-109.175,849.965;-109.175,849.765)</value>
@@ -1932,7 +1774,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.175,849.765;-109.215,849.765)|(-109.215,849.965;-109.175,849.965)</value>
@@ -1944,7 +1785,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-99.819,849.381;-100.019,849.381)|(-100.019,849.441;-99.819,849.441)</value>
@@ -1956,7 +1796,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.459,849.381;-109.459,849.581)|(-109.399,849.581;-109.399,849.381)</value>
@@ -1968,7 +1807,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.293,455.922;-414.493,455.922)|(-414.493,455.962;-414.293,455.962)</value>
@@ -1980,7 +1818,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-388.737,455.922;-388.737,455.962)|(-388.537,455.962;-388.537,455.922)</value>
@@ -1992,7 +1829,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-388.537,455.922;-388.737,455.922)|(-388.737,455.962;-388.537,455.962)</value>
@@ -2004,7 +1840,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-342.714,460.837;-342.714,461.037)|(-342.674,461.037;-342.674,460.837)</value>
@@ -2016,7 +1851,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-342.674,460.837;-342.714,460.837)|(-342.714,461.037;-342.674,461.037)</value>
@@ -2028,7 +1862,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-682.789,445.922;-682.931,446.064)|(-682.902,446.093;-682.76,445.951)</value>
@@ -2040,7 +1873,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-682.76,445.951;-682.789,445.922)|(-682.931,446.064;-682.902,446.093)</value>
@@ -2052,7 +1884,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-366.534,460.837;-366.534,461.137)|(-366.494,461.137;-366.494,460.837)</value>
@@ -2064,7 +1895,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.493,455.922;-414.493,455.962)|(-414.293,455.962;-414.293,455.922)</value>
@@ -2076,7 +1906,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-664.335,455.812;-664.335,456.012)|(-664.295,456.012;-664.295,455.812)</value>
@@ -2088,7 +1917,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-664.295,455.812;-664.335,455.812)|(-664.335,456.012;-664.295,456.012)</value>
@@ -2100,7 +1928,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-318.894,455.812;-318.894,456.012)|(-318.854,456.012;-318.854,455.812)</value>
@@ -2112,7 +1939,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-318.854,455.812;-318.894,455.812)|(-318.894,456.012;-318.854,456.012)</value>
@@ -2124,7 +1950,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-498.038,455.922;-498.038,456.122)|(-497.998,456.122;-497.998,455.922)</value>
@@ -2136,7 +1961,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-497.998,455.922;-498.038,455.922)|(-498.038,456.122;-497.998,456.122)</value>
@@ -2148,7 +1972,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-472.442,455.922;-472.442,456.122)|(-472.402,456.122;-472.402,455.922)</value>
@@ -2160,7 +1983,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-472.402,455.922;-472.442,455.922)|(-472.442,456.122;-472.402,456.122)</value>
@@ -2172,7 +1994,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-445.074,455.922;-445.374,455.922)|(-445.374,455.962;-445.074,455.962)</value>
@@ -2184,7 +2005,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-550.702,455.922;-550.702,456.222)|(-550.662,456.222;-550.662,455.922)</value>
@@ -2196,7 +2016,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-525.106,455.922;-525.106,456.222)|(-525.066,456.222;-525.066,455.922)</value>
@@ -2208,7 +2027,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-642.389,456.16;-642.389,456.36)|(-642.349,456.36;-642.349,456.16)</value>
@@ -2220,7 +2038,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-642.349,456.16;-642.389,456.16)|(-642.389,456.36;-642.349,456.36)</value>
@@ -2232,7 +2049,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-72.974,1783.24;-73.172,1783.042)|(-72.974,1783.24;-72.776,1783.438)</value>
@@ -2244,7 +2060,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-101.237,849.401;-101.237,849.494)|(-101.512,849.441;-101.512,849.381)</value>
@@ -2256,7 +2071,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-93.916,849.401;-93.916,849.441)|(-94.191,849.441;-94.191,849.381)</value>
@@ -2268,7 +2082,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-99.544,849.401;-99.544,849.494)|(-99.819,849.441;-99.819,849.381)</value>
@@ -2280,7 +2093,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-97.822,849.401;-97.822,849.441)|(-98.097,849.441;-98.097,849.381)</value>
@@ -2292,7 +2104,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.426,849.581;-109.399,849.581)|(-109.188,849.765;-109.215,849.765)</value>
@@ -2304,7 +2115,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.517,849.641;-110.517,849.618)|(-110.264,849.761;-110.397,849.894)</value>
@@ -2316,7 +2126,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.117,849.581;-108.057,849.581)|(-108.017,849.581;-108.057,849.581)</value>
@@ -2328,7 +2137,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-92.274,849.541;-92.274,849.734)|(-92.549,849.681;-92.549,849.488)</value>
@@ -2340,7 +2148,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-112.835,849.701;-112.835,849.841)|(-113.11,849.841;-113.11,849.648)</value>
@@ -2352,7 +2159,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-102.959,849.401;-102.959,849.494)|(-103.234,849.441;-103.234,849.381)</value>
@@ -2364,7 +2170,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-72.776,1783.042;-72.974,1783.24)|(-73.172,1783.438;-72.974,1783.24)</value>
@@ -2376,7 +2181,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-89.338,849.441;-89.338,849.634)|(-89.613,849.581;-89.613,849.388)</value>
@@ -2388,7 +2192,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-109.399,849.581;-109.399,849.554)|(-109.215,849.765;-109.215,849.792)</value>
@@ -2400,7 +2203,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-111.988,849.562;-111.846,849.42)|(-111.705,849.647;-111.847,849.789)</value>
@@ -2412,7 +2214,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-108.057,849.581;-108.057,849.381)|(-108.057,849.581;-108.057,849.781)</value>
@@ -2424,7 +2225,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-90.806,849.541;-90.806,849.734)|(-91.081,849.681;-91.081,849.488)</value>
@@ -2436,7 +2236,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-95.769,849.401;-95.769,849.441)|(-96.044,849.441;-96.044,849.381)</value>
@@ -2448,7 +2247,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-110.54,849.641;-110.517,849.641)|(-110.264,849.761;-110.397,849.894)</value>
@@ -2460,7 +2258,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-104.652,849.401;-104.652,849.494)|(-104.927,849.441;-104.927,849.381)</value>
@@ -2472,7 +2269,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-318.894,455.812;-318.894,456.012)/(-319.189,455.962;-319.189,455.757)</value>
@@ -2484,7 +2280,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-342.714,460.837;-342.714,461.037)/(-343.009,460.987;-343.009,460.782)</value>
@@ -2496,7 +2291,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-388.737,455.922;-388.737,455.962)/(-389.032,455.962;-389.032,455.867)</value>
@@ -2508,7 +2302,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-366.534,460.837;-366.534,461.042)/(-366.829,460.987;-366.829,460.782)</value>
@@ -2520,7 +2313,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-414.493,455.922;-414.493,455.962)/(-414.788,455.962;-414.788,455.867)</value>
@@ -2532,7 +2324,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-472.442,455.922;-472.442,456.017)/(-472.737,455.962;-472.737,455.867)</value>
@@ -2544,7 +2335,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-445.374,455.922;-445.374,455.962)/(-445.669,455.962;-445.669,455.867)</value>
@@ -2556,7 +2346,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-525.106,455.922;-525.106,456.017)/(-525.401,455.962;-525.401,455.867)</value>
@@ -2568,7 +2357,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-498.038,455.922;-498.038,456.017)/(-498.333,455.962;-498.333,455.867)</value>
@@ -2580,7 +2368,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-550.702,455.922;-550.702,456.017)/(-550.997,455.962;-550.997,455.867)</value>
@@ -2592,7 +2379,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-642.389,456.16;-642.389,456.187)/(-642.587,455.962;-642.587,455.935)</value>
@@ -2604,7 +2390,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-642.362,456.16;-642.389,456.16)/(-642.614,455.962;-642.587,455.962)</value>
@@ -2616,7 +2401,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-74.005,1389.574;-74.005,1390.574;-73.866,1390.574;-73.866,1389.574)</value>
@@ -2628,7 +2412,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2664.445,455.807;-2664.445,456.007;-2664.405,456.007;-2664.405,455.807)</value>
@@ -2640,7 +2423,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2318.774,455.807;-2318.774,456.007;-2318.734,456.007;-2318.734,455.807)</value>
@@ -2652,7 +2434,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2498.058,455.917;-2498.058,456.117;-2498.018,456.117;-2498.018,455.917)</value>
@@ -2664,7 +2445,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2472.442,455.917;-2472.442,456.117;-2472.402,456.117;-2472.402,455.917)</value>
@@ -2676,7 +2456,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2550.762,455.917;-2550.762,456.217;-2550.722,456.217;-2550.722,455.917)</value>
@@ -2688,7 +2467,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2525.146,455.917;-2525.146,456.217;-2525.106,456.217;-2525.106,455.917)</value>
@@ -2700,7 +2478,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2642.469,456.17;-2642.469,456.37;-2642.429,456.37;-2642.429,456.17)</value>
@@ -2712,7 +2489,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2342.614,460.832;-2342.614,461.032;-2342.574,461.032;-2342.574,460.832)</value>
@@ -2724,7 +2500,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2366.454,460.832;-2366.454,461.132;-2366.414,461.132;-2366.414,460.832)</value>
@@ -2736,7 +2511,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2682.919,445.917;-2683.061,446.059;-2683.032,446.088;-2682.89,445.946)</value>
@@ -2748,7 +2522,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2445.354,455.917;-2445.354,455.957;-2445.054,455.957;-2445.054,455.917)</value>
@@ -2760,7 +2533,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2414.453,455.917;-2414.453,455.957;-2414.253,455.957;-2414.253,455.917)</value>
@@ -2772,7 +2544,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-2388.677,455.917;-2388.677,455.957;-2388.477,455.957;-2388.477,455.917)</value>
@@ -2784,7 +2555,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-414.493,455.922;-414.493,455.962;-414.293,455.962;-414.293,455.922)</value>
@@ -2796,7 +2566,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-388.737,455.922;-388.737,455.962;-388.537,455.962;-388.537,455.922)</value>
@@ -2808,7 +2577,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-342.714,460.837;-342.714,461.037;-342.674,461.037;-342.674,460.837)</value>
@@ -2820,7 +2588,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-682.789,445.922;-682.931,446.064;-682.902,446.093;-682.76,445.951)</value>
@@ -2832,7 +2599,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-366.534,460.837;-366.534,461.137;-366.494,461.137;-366.494,460.837)</value>
@@ -2844,7 +2610,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-505.292,849.369;-505.292,849.429;-504.992,849.429;-504.992,849.369)</value>
@@ -2856,7 +2621,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-503.479,849.369;-503.479,849.429;-503.279,849.429;-503.279,849.369)</value>
@@ -2868,7 +2632,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-501.837,849.369;-501.837,849.429;-501.537,849.429;-501.537,849.369)</value>
@@ -2880,7 +2643,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-500.024,849.369;-500.024,849.429;-499.824,849.429;-499.824,849.369)</value>
@@ -2892,7 +2654,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-498.382,849.369;-498.382,849.429;-498.082,849.429;-498.082,849.369)</value>
@@ -2904,7 +2665,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-497.802,849.389;-497.802,849.429;-497.502,849.429;-497.502,849.389)</value>
@@ -2916,7 +2676,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-496.309,849.369;-496.309,849.429;-496.009,849.429;-496.009,849.369)</value>
@@ -2928,7 +2687,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-495.729,849.389;-495.729,849.429;-495.529,849.429;-495.529,849.389)</value>
@@ -2940,7 +2698,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-494.336,849.369;-494.336,849.429;-494.136,849.429;-494.136,849.369)</value>
@@ -2952,7 +2709,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-493.856,849.389;-493.856,849.429;-493.656,849.429;-493.656,849.389)</value>
@@ -2964,7 +2720,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-105.227,849.381;-105.227,849.441;-104.927,849.441;-104.927,849.381)</value>
@@ -2976,7 +2731,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-103.434,849.381;-103.434,849.441;-103.234,849.441;-103.234,849.381)</value>
@@ -2988,7 +2742,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-101.812,849.381;-101.812,849.441;-101.512,849.441;-101.512,849.381)</value>
@@ -3000,7 +2753,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-100.019,849.381;-100.019,849.441;-99.819,849.441;-99.819,849.381)</value>
@@ -3012,7 +2764,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-98.397,849.381;-98.397,849.441;-98.097,849.441;-98.097,849.381)</value>
@@ -3024,7 +2775,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-97.822,849.401;-97.822,849.441;-97.522,849.441;-97.522,849.401)</value>
@@ -3036,7 +2786,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-96.344,849.381;-96.344,849.441;-96.044,849.441;-96.044,849.381)</value>
@@ -3048,7 +2797,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-95.769,849.401;-95.769,849.441;-95.569,849.441;-95.569,849.401)</value>
@@ -3060,7 +2808,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-94.391,849.381;-94.391,849.441;-94.191,849.441;-94.191,849.381)</value>
@@ -3072,7 +2819,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-93.916,849.401;-93.916,849.441;-93.716,849.441;-93.716,849.401)</value>
@@ -3084,7 +2830,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-512.005,849.379;-512.147,849.521;-512.118,849.55;-511.976,849.408)</value>
@@ -3096,7 +2841,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-111.875,849.391;-112.017,849.533;-111.988,849.562;-111.846,849.42)</value>
@@ -3108,7 +2852,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-509.554,849.369;-509.554,849.569;-509.494,849.569;-509.494,849.369)</value>
@@ -3120,7 +2863,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-489.558,849.369;-489.558,849.569;-489.498,849.569;-489.498,849.369)</value>
@@ -3132,7 +2874,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-109.459,849.381;-109.459,849.581;-109.399,849.581;-109.399,849.381)</value>
@@ -3144,7 +2885,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-89.673,849.381;-89.673,849.581;-89.613,849.581;-89.613,849.381)</value>
@@ -3156,7 +2896,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-501.257,849.389;-501.257,849.589;-501.217,849.589;-501.217,849.389)</value>
@@ -3168,7 +2907,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-499.544,849.389;-499.544,849.589;-499.504,849.589;-499.504,849.389)</value>
@@ -3180,7 +2918,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-101.237,849.401;-101.237,849.601;-101.197,849.601;-101.197,849.401)</value>
@@ -3192,7 +2929,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-99.544,849.401;-99.544,849.601;-99.504,849.601;-99.504,849.401)</value>
@@ -3204,7 +2940,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-514.145,849.369;-514.145,849.629;-514.045,849.629;-514.045,849.369)</value>
@@ -3216,7 +2951,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-510.667,849.429;-510.667,849.629;-510.627,849.629;-510.627,849.429)</value>
@@ -3228,7 +2962,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-507.207,849.369;-507.207,849.569;-507.167,849.569;-507.167,849.629;-507.127,849.629;-507.127,849.429;-507.147,849.429;-507.147,849.369)</value>
@@ -3240,7 +2973,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-506.267,849.369;-506.267,849.569;-506.207,849.569;-506.207,849.629;-506.167,849.629;-506.167,849.429;-506.207,849.429;-506.207,849.369)</value>
@@ -3252,7 +2984,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-489.218,849.429;-489.218,849.629;-489.178,849.629;-489.178,849.429)</value>
@@ -3264,7 +2995,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-110.557,849.441;-110.557,849.641;-110.517,849.641;-110.517,849.441)</value>
@@ -3276,7 +3006,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-89.338,849.441;-89.338,849.641;-89.298,849.641;-89.298,849.441)</value>
@@ -3288,7 +3017,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-492.534,849.369;-492.534,849.669;-492.474,849.669;-492.474,849.369)</value>
@@ -3300,7 +3028,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-491.046,849.369;-491.046,849.669;-490.986,849.669;-490.986,849.369)</value>
@@ -3312,7 +3039,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.609,849.381;-92.609,849.681;-92.549,849.681;-92.549,849.381)</value>
@@ -3324,7 +3050,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-91.141,849.381;-91.141,849.681;-91.081,849.681;-91.081,849.381)</value>
@@ -3336,7 +3061,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-504.712,849.389;-504.712,849.689;-504.672,849.689;-504.672,849.389)</value>
@@ -3348,7 +3072,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-502.999,849.389;-502.999,849.689;-502.959,849.689;-502.959,849.389)</value>
@@ -3360,7 +3083,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-104.652,849.401;-104.652,849.701;-104.612,849.701;-104.612,849.401)</value>
@@ -3372,7 +3094,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-102.959,849.401;-102.959,849.701;-102.919,849.701;-102.919,849.401)</value>
@@ -3384,7 +3105,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-490.706,849.529;-490.706,849.729;-490.666,849.729;-490.666,849.529)</value>
@@ -3396,7 +3116,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-90.806,849.541;-90.806,849.741;-90.766,849.741;-90.766,849.541)</value>
@@ -3408,7 +3127,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-108.117,849.381;-108.117,849.581;-108.057,849.581;-108.057,849.781;-108.017,849.781;-108.017,849.581;-108.057,849.581;-108.057,849.381)</value>
@@ -3420,7 +3138,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-513.285,849.369;-513.285,849.829;-513.245,849.829;-513.245,849.409;-512.957,849.409;-512.957,849.689;-512.965,849.689;-512.965,849.829;-512.917,849.829;-512.917,849.369)</value>
@@ -3432,7 +3149,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-492.194,849.529;-492.194,849.829;-492.154,849.829;-492.154,849.529)</value>
@@ -3444,7 +3160,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-111.705,849.647;-111.847,849.789;-111.804,849.832;-111.662,849.69)</value>
@@ -3456,7 +3171,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-511.82,849.65;-511.962,849.792;-511.919,849.835;-511.777,849.693)</value>
@@ -3468,7 +3182,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-113.15,849.381;-113.15,849.841;-113.11,849.841;-113.11,849.421;-112.827,849.421;-112.827,849.701;-112.835,849.701;-112.835,849.841;-112.787,849.841;-112.787,849.381)</value>
@@ -3480,7 +3193,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-92.274,849.541;-92.274,849.841;-92.234,849.841;-92.234,849.541)</value>
@@ -3492,7 +3204,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-510.357,849.757;-510.499,849.899;-510.456,849.942;-510.314,849.8)</value>
@@ -3504,7 +3215,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-110.262,849.759;-110.404,849.901;-110.361,849.944;-110.219,849.802)</value>
@@ -3516,7 +3226,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-109.215,849.765;-109.215,849.965;-109.175,849.965;-109.175,849.765)</value>
@@ -3528,7 +3237,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-509.295,849.768;-509.295,849.968;-509.255,849.968;-509.255,849.768)</value>
@@ -3540,7 +3248,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-664.335,455.812;-664.335,456.012;-664.295,456.012;-664.295,455.812)</value>
@@ -3552,7 +3259,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-318.894,455.812;-318.894,456.012;-318.854,456.012;-318.854,455.812)</value>
@@ -3564,7 +3270,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-498.038,455.922;-498.038,456.122;-497.998,456.122;-497.998,455.922)</value>
@@ -3576,7 +3281,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-472.442,455.922;-472.442,456.122;-472.402,456.122;-472.402,455.922)</value>
@@ -3588,7 +3292,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-445.374,455.922;-445.374,455.962;-445.074,455.962;-445.074,455.922)</value>
@@ -3600,7 +3303,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-550.702,455.922;-550.702,456.222;-550.662,456.222;-550.662,455.922)</value>
@@ -3612,7 +3314,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-525.106,455.922;-525.106,456.222;-525.066,456.222;-525.066,455.922)</value>
@@ -3624,7 +3325,6 @@
    <cell>metal5</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-642.389,456.16;-642.389,456.36;-642.349,456.36;-642.349,456.16)</value>

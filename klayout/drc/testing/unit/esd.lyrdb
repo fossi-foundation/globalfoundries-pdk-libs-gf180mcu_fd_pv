@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for esd</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='klayout/drc/gf180mcu.drc'</generator>
  <top-cell>7_11_ESD</top-cell>
  <tags>
  </tags>
@@ -98,7 +98,6 @@
   <cell>
    <name>7_11_ESD</name>
    <variant/>
-   <layout-name/>
    <references>
    </references>
   </cell>
@@ -110,7 +109,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-50.852,263;-51.452,263)|(-51.452,263.59;-50.852,263.59)</value>
@@ -122,7 +120,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-56.522,263.155;-56.522,264.035)|(-57.112,264.035;-57.112,263.155)</value>
@@ -134,7 +131,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-53.692,262.555;-53.692,264.035)|(-54.282,264.035;-54.282,262.555)</value>
@@ -146,7 +142,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-41.927,200.145;-41.927,201.625)/(-42.217,201.385;-42.217,200.385)</value>
@@ -158,7 +153,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-47.207,13.61;-47.207,14.31;-46.357,14.31;-46.357,15.16;-44.387,15.16;-44.387,13.61)</value>
@@ -170,7 +164,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-49.302,225.375;-49.302,226.075;-48.452,226.075;-48.452,226.925;-46.482,226.925;-46.482,225.375)</value>
@@ -182,7 +175,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-59.617,88.63;-59.617,89.55;-58.777,89.55;-58.777,90.6;-56.797,90.6;-56.797,88.63)</value>
@@ -194,7 +186,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-52.667,173.005;-52.667,173.705;-51.817,173.705;-51.817,174.555;-49.847,174.555;-49.847,173.005)</value>
@@ -206,7 +197,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-51.737,85.965;-51.737,86.875;-50.887,86.875;-50.887,87.25;-50.447,87.25;-50.447,87.335;-50.392,87.335;-50.392,87.935;-48.927,87.935;-48.927,85.965)</value>
@@ -218,7 +208,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-47.207,113.42;-47.207,114.12;-46.357,114.12;-46.357,114.97;-44.387,114.97;-44.387,113.42)</value>
@@ -230,7 +219,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-54.807,225.165;-54.807,226.065;-53.947,226.065;-53.947,227.135;-51.977,227.135;-51.977,225.165)</value>
@@ -242,7 +230,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-47.337,173.245;-47.337,174.245)/(-47.337,173.005;-47.337,174.485)</value>
@@ -254,7 +241,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-41.687,173.245;-41.687,174.245)/(-41.917,173.176;-41.917,174.314)</value>
@@ -266,7 +252,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-39.927,173.245;-39.936,173.245)/(-39.722,173.12;-39.802,173.04)</value>
@@ -278,7 +263,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-39.927,173.254;-39.927,173.245)/(-39.722,173.12;-39.802,173.04)</value>
@@ -290,7 +274,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-52.521,173.705;-51.817,173.705)/(-51.723,173.265;-52.427,173.265)</value>
@@ -302,7 +285,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-60.266,173.685;-59.062,173.685)/(-58.968,173.245;-60.172,173.245)</value>
@@ -314,7 +296,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-40.647,143.875;-40.647,144.475;-39.832,144.475;-39.832,143.875)</value>
@@ -326,7 +307,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-28.692,143.775;-28.692,144.475;-27.997,144.475;-27.997,143.775)</value>
@@ -338,7 +318,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-46.792,143.875;-46.792,144.475;-45.977,144.475;-45.977,143.875)</value>
@@ -350,7 +329,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-34.837,143.775;-34.837,144.475;-34.142,144.475;-34.142,143.775)</value>
@@ -362,7 +340,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-50.887,86.875;-50.887,87.25)/(-50.447,86.875;-50.447,87.25)</value>
@@ -374,7 +351,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-50.447,87.25;-50.447,87.335)/(-50.447,87.25;-50.447,87.335)</value>
@@ -386,7 +362,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-47.207,13.61;-47.207,14.31;-46.357,14.31;-46.357,15.16;-44.387,15.16;-44.387,13.61)</value>
@@ -398,7 +373,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-49.302,225.375;-49.302,226.075;-48.452,226.075;-48.452,226.925;-46.482,226.925;-46.482,225.375)</value>
@@ -410,7 +384,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-59.617,88.63;-59.617,89.55;-58.777,89.55;-58.777,90.6;-56.797,90.6;-56.797,88.63)</value>
@@ -422,7 +395,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-52.667,173.005;-52.667,173.705;-51.817,173.705;-51.817,174.555;-49.847,174.555;-49.847,173.005)</value>
@@ -434,7 +406,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-51.737,85.965;-51.737,86.875;-50.887,86.875;-50.887,87.25;-50.447,87.25;-50.447,87.335;-50.392,87.335;-50.392,87.935;-48.927,87.935;-48.927,85.965)</value>
@@ -446,7 +417,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-47.207,113.42;-47.207,114.12;-46.357,114.12;-46.357,114.97;-44.387,114.97;-44.387,113.42)</value>
@@ -458,7 +428,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-54.807,225.165;-54.807,226.065;-53.947,226.065;-53.947,227.135;-51.977,227.135;-51.977,225.165)</value>
@@ -470,7 +439,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-44.677,59.05;-44.812,59.275;-42.252,59.275;-42.367,59.05)</value>
@@ -482,7 +450,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-44.812,60.375;-44.812,60.675;-44.517,60.73;-44.517,60.43)</value>
@@ -494,7 +461,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-52.842,13.385;-52.677,13.62;-50.417,13.62;-50.532,13.385)</value>
@@ -506,7 +472,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-61.287,13.175;-61.102,13.41;-58.321,13.41;-58.507,13.175)</value>
@@ -518,7 +483,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>edge-pair: (-51.732,59.515;-51.732,60.515)/(-51.137,60.515;-51.137,59.515)</value>
@@ -530,7 +494,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-38.147,30.57;-38.147,34.54;-33.192,34.54;-33.192,30.57)</value>
@@ -542,7 +505,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-46.967,13.85;-46.967,14.31;-46.357,14.31;-46.357,14.92;-45.907,14.92;-45.907,13.85)</value>
@@ -554,7 +516,6 @@
    <cell>7_11_ESD</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
-   <comment/>
    <image/>
    <values>
     <value>polygon: (-45.107,13.85;-45.107,14.92;-44.627,14.92;-44.627,13.85)</value>
