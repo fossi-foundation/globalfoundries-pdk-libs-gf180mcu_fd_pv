@@ -1,4 +1,13 @@
-.SUBCKT ppolyf_u_nwell MINUS PLUS SUB
-R1 MINUS PLUS W ppolyf_u l=272.9u w=0.8u
+.SUBCKT ppolyf_u_nwell MINUS PLUS W
+
+R1 MINUS $1 W ppolyf_u L=35.7U W=0.8U
+R2 $1 $2 W ppolyf_u L=35.7U W=0.8U
+R3 $2 $3 W ppolyf_u L=35.7U W=0.8U
+R4 $3 $4 W ppolyf_u L=35.7U W=0.8U
+R5 $4 $5 W ppolyf_u L=35.7U W=0.8U
+R6 $5 $6 W ppolyf_u L=35.7U W=0.8U
+R7 $6 $7 W ppolyf_u L=35.7U W=0.8U
+R8 $7 PLUS W ppolyf_u L=23U W=0.8U
+
 .ENDS
 
