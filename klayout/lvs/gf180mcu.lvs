@@ -313,7 +313,7 @@ logger.info('Starting base layers derivations')
 # ----- DIODE DERIVATIONS -------
 #================================
 
-# %include rule_decks/diode_derivations.lvs
+# Done in diode extraction (avoids spreading logic over multiple files)
 
 #================================
 # ---- RESISTOR DERIVATIONS -----
