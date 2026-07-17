@@ -51,8 +51,6 @@ test_switches:
     implicit_connect: true
   ppolyf_u:
     combine: true
-  ppolyf_u_nwell:
-    combine: true
   ppolyf_u_dw:
     combine: true
     consider_dn_dw_features: true
