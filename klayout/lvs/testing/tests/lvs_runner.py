@@ -16,7 +16,8 @@ from typing import Optional, Dict, List
 import yaml
 
 default_switches = {
-    "combine": "true",
+    "combine": "false",
+    "check_ports": "true",
     "top_lvl_pins": "true",
     "run_mode": "deep",
 }
