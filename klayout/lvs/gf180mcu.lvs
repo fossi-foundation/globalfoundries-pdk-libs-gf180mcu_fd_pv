@@ -456,7 +456,7 @@ min_caps(1e-16)
 
 result = compare
 
-result &&= flag_missing_ports if CHECK_PORTS
+result &= flag_missing_ports if CHECK_PORTS
 
 exec_end_time = Time.now
 run_time = exec_end_time - exec_start_time
