@@ -81,8 +81,8 @@ else
   logger.error("Unknown metal stack #{METAL_LEVEL}")
   raise
 end
-connect(top_via, top_metal_con)
-connect(top_metal, top_metal_label)
+connect(top_via_n_cap, top_metal_con)
+connect(top_metal_con, top_metal_label)
 
 # Attaching labels
 connect(poly2_con, poly2_label)

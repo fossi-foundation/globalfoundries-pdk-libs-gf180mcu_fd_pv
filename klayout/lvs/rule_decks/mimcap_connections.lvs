@@ -26,8 +26,9 @@ case MIM_OPTION
 when 'A'
 
   # mim option A
-  connect(metal2, mim_virtual)
+  connect(metal2_con, mim_virtual)
   connect(fuse_cap, via2_cap)
+  connect(via2_cap, metal3_con)
 
 when 'B'
 
