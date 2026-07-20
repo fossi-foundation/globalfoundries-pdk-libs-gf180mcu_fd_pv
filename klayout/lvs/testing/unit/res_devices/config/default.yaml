@@ -1,71 +1,106 @@
 # SPDX-FileCopyrightText: Copyright 2026 GlobalFoundries PDK Authors
 # SPDX-License-Identifier: Apache License 2.0
 test_switches:
+  nplus_s:
+    combine: true
   nplus_s_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
+  nplus_u:
+    combine: true
   nplus_u_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
+  npolyf_s:
+    combine: true
   npolyf_s_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
+  npolyf_u:
+    combine: true
   npolyf_u_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
   pplus_s:
+    combine: true
     implicit_connect: true
   pplus_u:
+    combine: true
     implicit_connect: true
   pplus_u_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
+  nwell:
+    combine: true
+  pwell:
+    combine: true
   pplus_s_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
+  ppolyf_s:
+    combine: true
   ppolyf_s_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
+  ppolyf_u:
+    combine: true
   ppolyf_u_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
 
   ppolyf_u_1k:
+    combine: true
     poly_res: "1k"
   ppolyf_u_1k_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
   ppolyf_u_1k_6p0:
+    combine: true
     poly_res: "1k"
   ppolyf_u_1k_6p0_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "1k"
   ppolyf_u_2k:
+    combine: true
     poly_res: "2k"
   ppolyf_u_2k_dw:
+    poly_res: "2k"
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
   ppolyf_u_2k_6p0:
+    combine: true
     implicit_connect: true
     poly_res: "2k"
   ppolyf_u_2k_6p0_dw:
-    consider_dn_dw_features: true
-    implicit_connect: true
-    poly_res: "2k"
-  ppolyf_u_2k_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "2k"
   ppolyf_u_3k:
+    combine: true
     poly_res: "3k"
   ppolyf_u_3k_6p0:
+    combine: true
     poly_res: "3k"
   ppolyf_u_3k_6p0_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "3k"
   ppolyf_u_3k_dw:
+    combine: true
     consider_dn_dw_features: true
     implicit_connect: true
     poly_res: "3k"

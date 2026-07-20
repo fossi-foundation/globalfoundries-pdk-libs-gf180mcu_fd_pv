@@ -13,3 +13,5 @@ test_switches:
     implicit_connect: true
   diode_pw2dw_03v3:
     implicit_connect: true
+  sc_diode:
+    combine: true

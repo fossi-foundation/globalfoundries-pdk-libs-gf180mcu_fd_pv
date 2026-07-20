@@ -1,0 +1,21 @@
+test_switches:
+  gf180mcu_fd_io__asig_5p0:
+    combine: true
+  gf180mcu_fd_io__dvss:
+    combine: true
+  gf180mcu_fd_io__dvdd:
+    combine: true
+  gf180mcu_fd_io__bi_24t:
+    combine: true
+  gf180mcu_fd_io__bi_t:
+    combine: true
+  gf180mcu_fd_io__in_c:
+    combine: true
+  gf180mcu_fd_io__fill10:
+    combine: true
+  gf180mcu_fd_io__fill5:
+    combine: true
+  gf180mcu_fd_io__cor:
+    combine: true
+  gf180mcu_fd_io__in_s:
+    combine: true
