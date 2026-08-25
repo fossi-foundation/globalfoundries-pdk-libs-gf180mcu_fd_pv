@@ -30,6 +30,32 @@ GF180_DRC_REGISTRY.register(
 
   # Dummy comp derivations
 
+  # For DCF.6abcd
+  nwell_ring    = nwell.sized(1.um)    - nwell.sized(-1.um)
+  dnwell_ring   = dnwell.sized(2.um)   - dnwell.sized(-2.um)
+  lvpwell_ring  = lvpwell.sized(1.um)  - lvpwell.sized(-1.um)
+  dualgate_ring = dualgate.sized(1.um) - dualgate.sized(-1.um)
+
+  # Rule DCF.1a: All area between active polygons (COMP) (with spacing greater than equal to this rule)
+  #              must be filled with "Dummy COMP": 20
+  #              except area marked by NDMY, RES_MK, Pad and IND_MK, as well as the region defined by
+  #              DCF.6a, 6b, 6c, 6d, 6e.
+  logger.info('Executing rule DCF.1a')
+  dcf1a_l1 = extent.sized(-10.um) # full chip area minus border
+  dcf1a_l2 = ndmy + res_mk + pad + ind_mk + nwell_ring + dnwell_ring + lvpwell_ring + dualgate_ring # keepout area
+  dcf1a_l3 = (dcf1a_l1 - (comp + comp_dummy) - dcf1a_l2).sized(-10.um).sized(10.um)
+  dcf1a_l3.output('DCF.1a',
+                  'DCF.1a : All area between active polygons (COMP) (with spacing greater than equal to this rule)' \
+                  'must be filled with "Dummy COMP" (see exceptions): 20')
+  dcf1a_l1.forget
+  dcf1a_l2.forget
+  dcf1a_l3.forget
+
+  nwell_ring.forget
+  dnwell_ring.forget
+  lvpwell_ring.forget
+  dualgate_ring.forget
+
   # Rule DCF.2b: Resulted minimum space between Dummy active in all directions: 1.9
   logger.info('Executing rule DCF.2b')
   dcf2b_l1 = comp_dummy.space(1.9.um, euclidian)

@@ -35,7 +35,7 @@ class SubcircuitModelsReader < RBA::NetlistSpiceReaderDelegate
     end
   end
 
-  # rubocop:disable Metrics/ParameterLists
+  # rubocop:disable-next Metrics/ParameterLists
   def element(circuit, ele, name, model, value, nets, params)
     case ele
     when 'C'
@@ -46,7 +46,6 @@ class SubcircuitModelsReader < RBA::NetlistSpiceReaderDelegate
       super
     end
   end
-  # rubocop:enable Metrics/ParameterLists
 
   private
 
