@@ -46,7 +46,7 @@ diode_nd2ps_exclude = nwell.join(diode_exclude)
 diode_nd2ps_03v3_terminal_n = ncomp_lv.not(dnwell).and(diode_mk)
                                       .not(diode_nd2ps_exclude)
 
-extract_devices(diode('diode_nd2ps_03v3'), { 'N' => diode_nd2ps_03v3_terminal_n, 'P' => lvpwell_con })
+extract_devices(diode('diode_nd2ps_03v3'), { 'N' => diode_nd2ps_03v3_terminal_n, 'P' => diode_nd2ps_03v3_terminal_n, 'tA' => sub })
 connect(diode_nd2ps_03v3_terminal_n, contact)
 
 # diode_nd2ps_03v3_dn diode
@@ -68,7 +68,7 @@ logger.info('Extracting diode_nd2ps_06v0 diode')
 diode_nd2ps_06v0_terminal_n = ncomp_mv.not(dnwell).and(diode_mk)
                                       .not(diode_nd2ps_exclude)
 
-extract_devices(diode('diode_nd2ps_06v0'), { 'N' => diode_nd2ps_06v0_terminal_n, 'P' => lvpwell_con })
+extract_devices(diode('diode_nd2ps_06v0'), { 'N' => diode_nd2ps_06v0_terminal_n, 'P' => diode_nd2ps_06v0_terminal_n, 'tA' => sub })
 connect(diode_nd2ps_06v0_terminal_n, contact)
 
 # diode_nd2ps_06v0_dn diode
