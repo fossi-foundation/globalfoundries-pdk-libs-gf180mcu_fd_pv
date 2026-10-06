@@ -1,0 +1,62 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 06/10/2026 09:05
+
+* cell diode_nw2ps_03v3
+* pin I1_0_0_0_0_R0_MINUS
+* pin I1_0_1_0_0_R0_MINUS
+* pin I1_0_2_0_0_R0_MINUS
+* pin I1_0_3_0_0_R0_MINUS
+* pin I1_1_0_0_0_R0_MINUS
+* pin I1_1_1_0_0_R0_MINUS
+* pin I1_1_2_0_0_R0_MINUS
+* pin I1_1_3_0_0_R0_MINUS
+* pin I1_2_0_0_0_R0_MINUS
+* pin I1_2_1_0_0_R0_MINUS
+* pin I1_2_2_0_0_R0_MINUS
+* pin I1_2_3_0_0_R0_MINUS
+* pin I1_3_0_0_0_R0_MINUS
+* pin I1_3_1_0_0_R0_MINUS
+* pin I1_3_2_0_0_R0_MINUS
+* pin I1_3_3_0_0_R0_MINUS
+* pin I1_default_MINUS
+* pin vdd!
+.SUBCKT diode_nw2ps_03v3 I1_0_0_0_0_R0_MINUS I1_0_1_0_0_R0_MINUS
++ I1_0_2_0_0_R0_MINUS I1_0_3_0_0_R0_MINUS I1_1_0_0_0_R0_MINUS
++ I1_1_1_0_0_R0_MINUS I1_1_2_0_0_R0_MINUS I1_1_3_0_0_R0_MINUS
++ I1_2_0_0_0_R0_MINUS I1_2_1_0_0_R0_MINUS I1_2_2_0_0_R0_MINUS
++ I1_2_3_0_0_R0_MINUS I1_3_0_0_0_R0_MINUS I1_3_1_0_0_R0_MINUS
++ I1_3_2_0_0_R0_MINUS I1_3_3_0_0_R0_MINUS I1_default_MINUS vdd!
+* device instance $1 r0 *1 0.54,0.54 diode_nw2ps_03v3
+D$1 vdd! I1_default_MINUS diode_nw2ps_03v3 A=1P P=4U
+* device instance $2 r0 *1 82.44,144.84 diode_nw2ps_03v3
+D$2 vdd! I1_3_3_0_0_R0_MINUS diode_nw2ps_03v3 A=10000P P=400U
+* device instance $3 r0 *1 8.255,144.84 diode_nw2ps_03v3
+D$3 vdd! I1_3_1_0_0_R0_MINUS diode_nw2ps_03v3 A=123P P=202.46U
+* device instance $4 r0 *1 20.69,144.84 diode_nw2ps_03v3
+D$4 vdd! I1_3_2_0_0_R0_MINUS diode_nw2ps_03v3 A=1210P P=224.2U
+* device instance $5 r0 *1 1.27,144.84 diode_nw2ps_03v3
+D$5 vdd! I1_3_0_0_0_R0_MINUS diode_nw2ps_03v3 A=86P P=201.72U
+* device instance $6 r0 *1 82.44,24.49 diode_nw2ps_03v3
+D$6 vdd! I1_2_3_0_0_R0_MINUS diode_nw2ps_03v3 A=1210P P=224.2U
+* device instance $7 r0 *1 8.255,24.49 diode_nw2ps_03v3
+D$7 vdd! I1_2_1_0_0_R0_MINUS diode_nw2ps_03v3 A=14.883P P=26.66U
+* device instance $8 r0 *1 20.69,24.49 diode_nw2ps_03v3
+D$8 vdd! I1_2_2_0_0_R0_MINUS diode_nw2ps_03v3 A=146.41P P=48.4U
+* device instance $9 r0 *1 82.44,12.655 diode_nw2ps_03v3
+D$9 vdd! I1_1_3_0_0_R0_MINUS diode_nw2ps_03v3 A=123P P=202.46U
+* device instance $10 r0 *1 20.69,12.655 diode_nw2ps_03v3
+D$10 vdd! I1_1_2_0_0_R0_MINUS diode_nw2ps_03v3 A=14.883P P=26.66U
+* device instance $11 r0 *1 1.27,24.49 diode_nw2ps_03v3
+D$11 vdd! I1_2_0_0_0_R0_MINUS diode_nw2ps_03v3 A=10.406P P=25.92U
+* device instance $12 r0 *1 1.27,12.655 diode_nw2ps_03v3
+D$12 vdd! I1_1_0_0_0_R0_MINUS diode_nw2ps_03v3 A=1.0578P P=4.18U
+* device instance $13 r0 *1 8.255,12.655 diode_nw2ps_03v3
+D$13 vdd! I1_1_1_0_0_R0_MINUS diode_nw2ps_03v3 A=1.5129P P=4.92U
+* device instance $14 r0 *1 82.44,6.47 diode_nw2ps_03v3
+D$14 vdd! I1_0_3_0_0_R0_MINUS diode_nw2ps_03v3 A=86P P=201.72U
+* device instance $15 r0 *1 8.255,6.47 diode_nw2ps_03v3
+D$15 vdd! I1_0_1_0_0_R0_MINUS diode_nw2ps_03v3 A=1.0578P P=4.18U
+* device instance $16 r0 *1 20.69,6.47 diode_nw2ps_03v3
+D$16 vdd! I1_0_2_0_0_R0_MINUS diode_nw2ps_03v3 A=10.406P P=25.92U
+* device instance $17 r0 *1 1.27,6.47 diode_nw2ps_03v3
+D$17 vdd! I1_0_0_0_0_R0_MINUS diode_nw2ps_03v3 A=0.7396P P=3.44U
+.ENDS diode_nw2ps_03v3
