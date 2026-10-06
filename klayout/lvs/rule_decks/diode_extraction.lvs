@@ -206,19 +206,23 @@ diode_dw2ps_06v0_terminal_p = ptap_extent.not_interacting(lvpwell)
 extract_devices(diode('diode_dw2ps_06v0'), { 'N' => dnwell, 'P' => diode_dw2ps_06v0_terminal_p })
 connect(diode_dw2ps_06v0_terminal_p, ptap)
 
-# sc_diode diode
-
 logger.info('Extracting sc_diode diode')
 
 sc_diode_exclude = dualgate.join(pplus).join(diode_mk)
                            .join(esd_mk).join(lvs_source).join(diode_exclude)
 
-sc_diode_terminal_n = ncomp.and(dnwell).and(schottky_diode).not(sc_diode_exclude)
-sc_diode_terminal_p = comp.not(nplus).and(dnwell).and(schottky_diode).not(sc_diode_exclude)
+sc_diode_terminal_p = comp.not(nplus).not_inside(dnwell).and(schottky_diode).not(sc_diode_exclude)
 
-# As P and N are on top of each other, we need some tricks to not merge both terminals.
-# This is made slightly more difficult by the fact that sc diodes do not use pcomp, simply comp.
 extract_devices(diode('sc_diode'),
-                { 'N' => sc_diode_terminal_n, 'P' => schottky_diode, 'tA' => schottky_diode, 'tC' => ntap })
-connect(schottky_diode, sc_diode_terminal_p)
+                { 'N' => sc_diode_terminal_p, 'P' => sc_diode_terminal_p, 'tC' => sub })
+connect(sc_diode_terminal_p, contact)
+
+# sc_diode diode (deep nwell)
+
+logger.info('Extracting sc_diode diode (in deep nwell)')
+
+sc_diode_terminal_p = comp.not(nplus).inside(dnwell).and(schottky_diode).not(sc_diode_exclude)
+
+extract_devices(diode('sc_diode'),
+                { 'N' => dnwell, 'P' => sc_diode_terminal_p })
 connect(sc_diode_terminal_p, contact)
