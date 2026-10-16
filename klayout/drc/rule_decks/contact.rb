@@ -92,7 +92,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.5a_nplus_overlap_butted', path: __FILE__, pr
   co_5a_ncomp_butted = ncomp.interacting(pcomp).not_overlapping(pcomp)
   co_ncomp_check = contact.interacting(co_5a_ncomp_butted)
 
-  co5a_l1 = co_ncomp_check.enclosed(co_5a_ncomp_butted, 0.1.um, euclidian)
+  co5a_l1 = co_ncomp_check.enclosed(nplus, 0.1.um, euclidian)
   co5a_l1.output('CO.5a', 'CO.5a : Nplus overlap of contact on COMP (butted N+/P+) : 0.1µm')
 
   co5a_l1.forget
@@ -107,7 +107,7 @@ GF180_DRC_REGISTRY.register(id: 'CO.5b_pplus_overlap_butted', path: __FILE__, pr
   co_5b_pcomp_butted = pcomp.interacting(ncomp).not_overlapping(ncomp)
   co_pcomp_check = contact.interacting(co_5b_pcomp_butted)
 
-  co5b_l1 = co_pcomp_check.enclosed(co_5b_pcomp_butted, 0.1.um, euclidian)
+  co5b_l1 = co_pcomp_check.enclosed(pplus, 0.1.um, euclidian)
   co5b_l1.output('CO.5b', 'CO.5b : Pplus overlap of contact on COMP (butted N+/P+) : 0.1µm')
 
   co5b_l1.forget
