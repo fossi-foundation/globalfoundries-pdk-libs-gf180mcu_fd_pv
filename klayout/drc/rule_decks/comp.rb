@@ -533,12 +533,11 @@ GF180_DRC_REGISTRY.register(
   priority: 0,
   tags: %w[all feol comp]
 ) do
-  ncomp_butted = ncomp.interacting(pcomp)
   logger.info('Executing rule DF.11')
-  df11_l1 = comp.interacting(ncomp_butted).width(0.3.um)
+  # TODO: total length of two touching edges at 90° is not considered
+  df11_l1 = (ncomp.edges & pcomp.edges).with_length(nil, 0.3.um)
   df11_l1.output('DF.11', 'DF.11 : Min. Length of butting COMP edge. : 0.3µm')
   df11_l1.forget
-  ncomp_butted.forget
 end
 
 # Rule DF.12: COMP not covered by Nplus or Pplus is forbidden (except those COMP under marking).
