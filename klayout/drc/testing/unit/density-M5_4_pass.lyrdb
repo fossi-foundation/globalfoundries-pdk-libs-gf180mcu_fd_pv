@@ -8,6 +8,12 @@
  </tags>
  <categories>
   <category>
+   <name>DCF.1a</name>
+   <description>DCF.1a : All area between active polygons (COMP) (with spacing greater than equal to this rule)must be filled with "Dummy COMP" (see exceptions): 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
    <name>DCF.1b</name>
    <description>DCF.1b : Global density for active layers (COMP+ Dummy COMP) shall be &gt;= 25%</description>
    <categories>
@@ -63,6 +69,18 @@
   </cell>
  </cells>
  <items>
+  <item>
+   <tags/>
+   <category>'DCF.1a'</category>
+   <cell>Mn_4_pass</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-100,0;-100,100;0,100;0,0)</value>
+   </values>
+  </item>
   <item>
    <tags/>
    <category>'DCF.1b'</category>
