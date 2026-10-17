@@ -22,6 +22,30 @@ GF180_DRC_REGISTRY.register(
 ) do
   chip_area = extent.sized(0.0).area
 
+  # Rule DCF.1a: All area between active polygons (COMP) (with spacing greater than equal to this rule)
+  #              must be filled with "Dummy COMP": 20
+  #              except area marked by NDMY, RES_MK, Pad and IND_MK, as well as the region defined by
+  #              DCF.6a, 6b, 6c, 6d, 6e.
+  logger.info('Executing rule DCF.1a')
+  
+  nwell_ring    = nwell.sized(1.um)    - nwell.sized(-1.um)
+  dnwell_ring   = dnwell.sized(2.um)   - dnwell.sized(-2.um)
+  lvpwell_ring  = lvpwell.sized(1.um)  - lvpwell.sized(-1.um)
+  dualgate_ring = dualgate.sized(1.um) - dualgate.sized(-1.um)
+  
+  dcf1a_l1 = ndmy + res_mk + pad + ind_mk + nwell_ring + dnwell_ring + lvpwell_ring + dualgate_ring # keepout area
+  dcf1a_l2 = (extent - (comp + comp_dummy) - dcf1a_l2).sized(-10.um).sized(10.um)
+  dcf1a_l2.output('DCF.1a',
+                  'DCF.1a : All area between active polygons (COMP) (with spacing greater than equal to this rule)' \
+                  'must be filled with "Dummy COMP" (see exceptions): 20')
+  dcf1a_l1.forget
+  dcf1a_l2.forget
+
+  nwell_ring.forget
+  dnwell_ring.forget
+  lvpwell_ring.forget
+  dualgate_ring.forget
+
   # Rule DCF.1b: Minimum global density for active layers (COMP+ Dummy COMP) shall be 25%.
   logger.info('Executing rule DCF.1b')
   comp_ratio = (comp + comp_dummy).area / chip_area
