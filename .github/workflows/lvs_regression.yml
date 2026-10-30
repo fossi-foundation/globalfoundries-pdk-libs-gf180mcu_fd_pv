@@ -29,7 +29,7 @@ on:
 
 jobs:
   build_lvs-matrix:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       lvs_categories: ${{ steps.set-matrix.outputs.lvs_categories }}
     steps:
@@ -42,7 +42,7 @@ jobs:
           echo "Found categories: $lvs_categories"
 
   setup_klayout:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: 💾 Restore KLayout .deb from cache
         id: cache-klayout
@@ -61,7 +61,7 @@ jobs:
 
   lvs_regression:
     needs: [build_lvs-matrix, setup_klayout]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:

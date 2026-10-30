@@ -29,7 +29,7 @@ on:
 
 jobs:
   build_drc-matrix:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       drc_table: ${{ steps.set-matrix.outputs.drc_table }}
     steps:
@@ -45,7 +45,7 @@ jobs:
           echo "drc_table=$drc_table" >>$GITHUB_OUTPUT
 
   setup_klayout:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: 💾 Restore KLayout .deb from cache
         id: cache-klayout
@@ -63,7 +63,7 @@ jobs:
 
   drc_regression:
     needs: [build_drc-matrix, setup_klayout]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
