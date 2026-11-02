@@ -30,8 +30,8 @@ GF180_DRC_REGISTRY.register(
 
   poly2_lv = poly2_drawn.not_interacting(v5_xtor).not_interacting(dualgate)
   poly2_mv = poly2_drawn.overlapping(dualgate)
-  poly_pl_lv = poly2_lv.not(otp_mk).not(ymtp_mk).not(mvsd).not(mvpsd)
-  poly_pl_mv = poly2_mv.not(otp_mk).not(ymtp_mk).not(mvsd).not(mvpsd)
+  poly_pl_lv = poly2_lv.not_interacting(otp_mk).not_interacting(ymtp_mk)
+  poly_pl_mv = poly2_mv.not_interacting(otp_mk).not_interacting(ymtp_mk)
 
   # Rule PL.1_LV: Interconnect Width (outside PLFUSE) is 0.18µm.
   logger.info('Executing rule PL.1_LV')
@@ -95,27 +95,29 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PL.4_LV: Extension beyond COMP to form Poly2 end cap. is 0.22µm
   logger.info('Executing rule PL.4_LV')
-  comp_pl = comp.not(otp_mk).not(ymtp_mk).not(mvsd).not(mvpsd)
+  comp_pl = comp.not_interacting(otp_mk).not_interacting(ymtp_mk)
   pl4_l1 = comp_pl.enclosed(poly_pl_lv, 0.22.um, euclidian)
   pl4_l1.output('PL.4_LV', 'PL.4_LV : Extension beyond COMP to form Poly2 end cap. : 0.22µm')
   pl4_l1.forget
 
   # Rule PL.4_MV: Extension beyond COMP to form Poly2 end cap. is 0.22µm
   logger.info('Executing rule PL.4_MV')
-  pl4_l1 = comp_pl.enclosed(poly_pl_mv, 0.22.um, euclidian)
+  # ignore edges inside mvsd/mvpsd
+  pl4_l1 = comp_pl.enclosed(poly_pl_mv, 0.22.um, euclidian).outside(mvsd).outside(mvpsd)
   pl4_l1.output('PL.4_MV', 'PL.4_MV : Extension beyond COMP to form Poly2 end cap. : 0.22µm')
   pl4_l1.forget
 
-  # Rule PL.5a_LV: Space from field Poly2 to unrelated COMP Spacer from field Poly2 to Guard-ring. is 0.1µm
+  # Rule PL.5a_LV: Space from field Poly2 to unrelated COMP, Space from field Poly2 to Guard-ring. is 0.1µm
   logger.info('Executing rule PL.5a_LV')
   pl5a_l1 = poly_pl_lv.separation(comp_pl, 0.1.um, euclidian)
   pl5a_l1.output('PL.5a_LV',
-                 'PL.5a_LV : Space from field Poly2 to unrelated COMP Spacer from field Poly2 to Guard-ring. : 0.1µm')
+                 'PL.5a_LV : Space from field Poly2 to unrelated COMP, Space from field Poly2 to Guard-ring. : 0.1µm')
   pl5a_l1.forget
 
   # Rule PL.5a_MV: Space from field Poly2 to unrelated COMP Spacer from field Poly2 to Guard-ring. is 0.3µm
   logger.info('Executing rule PL.5a_MV')
-  pl5a_l1 = poly_pl_mv.outside(sramcore).separation(comp_pl, 0.3.um, euclidian)
+  # ignore edges inside mvsd/mvpsd
+  pl5a_l1 = poly_pl_mv.outside(sramcore).separation(comp_pl, 0.3.um, euclidian).outside(mvsd).outside(mvpsd)
   pl5a_l1.output('PL.5a_MV',
                  'PL.5a_MV : Space from field Poly2 to unrelated COMP Spacer from field Poly2 to Guard-ring. : 0.3µm')
   pl5a_l1.forget
@@ -128,7 +130,8 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PL.5b_MV: Space from field Poly2 to related COMP. is 0.3µm
   logger.info('Executing rule PL.5b_MV')
-  pl5b_l1 = poly_pl_mv.outside(sramcore).separation(comp_pl, 0.3.um, euclidian)
+  # ignore edges inside mvsd/mvpsd
+  pl5b_l1 = poly_pl_mv.outside(sramcore).separation(comp_pl, 0.3.um, euclidian).outside(mvsd).outside(mvpsd)
   pl5b_l1.output('PL.5b_MV', 'PL.5b_MV : Space from field Poly2 to related COMP. : 0.3µm')
   pl5b_l1.forget
   poly_pl_lv.forget

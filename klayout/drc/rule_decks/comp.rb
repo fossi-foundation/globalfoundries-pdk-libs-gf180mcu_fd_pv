@@ -428,10 +428,11 @@ GF180_DRC_REGISTRY.register(
 ) do
   comp_56v = comp.overlapping(dualgate)
   logger.info('Executing rule DF.6_MV')
-  df6_exclude = otp_mk.or(ymtp_mk).or(sramcore).or(mvsd).or(mvpsd)
-  df6_comp = comp.interacting(tgate).not(df6_exclude)
-  df6_poly = poly2_drawn.not(df6_exclude)
-  df6_l1 = comp_56v.and(df6_comp).enclosing(df6_poly, 0.4.um, euclidian)
+  df6_exclude = otp_mk.or(ymtp_mk).or(sramcore)
+  df6_comp = comp.interacting(tgate).not_interacting(df6_exclude)
+  df6_poly = poly2_drawn.not_interacting(df6_exclude)
+  # ignore edges inside mvsd/mvpsd
+  df6_l1 = comp_56v.and(df6_comp).enclosing(df6_poly, 0.4.um, euclidian).outside(mvsd).outside(mvpsd)
   df6_l1.output('DF.6_MV', 'DF.6_MV : Min. COMP extend beyond gate (it also means source/drain overhang). : 0.4µm')
   df6_l1.forget
   df6_poly.forget
