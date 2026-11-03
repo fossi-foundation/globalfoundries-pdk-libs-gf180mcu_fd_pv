@@ -28,7 +28,7 @@ logger.info('Starting MOSFET EXTRACTION')
 logger.info('Starting PMOS EXTRACTION')
 
 # 3.3V PMOS transistor outside DNWELL
-logger.info('Extracting 3.3V PMOS transistor outside DNWEL')
+logger.info('Extracting 3.3V PMOS transistor outside DNWELL')
 extract_devices(mos4('pfet_03v3'),
                 { 'SD' => psd, 'G' => pgate_3p3v, 'tS' => psd, 'tD' => psd, 'tG' => poly2_con, 'W' => nwell_con })
 
