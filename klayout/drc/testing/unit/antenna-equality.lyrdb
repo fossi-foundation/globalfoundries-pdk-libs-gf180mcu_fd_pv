@@ -1,0 +1,1834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description/>
+ <original-file/>
+ <generator>drc: script='../gf180mcu.drc'</generator>
+ <top-cell>antenna_equality</top-cell>
+ <tags>
+  <tag>
+   <name>DIODES_AREA</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>GATE_AREA</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>RATIO</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>ANT_PERIMETER</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>ANT_AREA</name>
+   <description/>
+  </tag>
+ </tags>
+ <categories>
+  <category>
+   <name>ANT.8</name>
+   <description>ANT.8: Maximum ratio of contact area to related gate oxide area: 10</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.2</name>
+   <description>ANT.16_i_ANT.2: Maximum ratio of Metal1 perimeter area to related thin gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.2</name>
+   <description>ANT.16_ii_ANT.2: Maximum ratio of Metal1 perimeter area to related thick gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.3</name>
+   <description>ANT.16_i_ANT.3: Maximum ratio of Metal2 perimeter area to related gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.3</name>
+   <description>ANT.16_ii_ANT.3: Maximum ratio of Metal2 perimeter area to related gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.4</name>
+   <description>ANT.16_i_ANT.4: Maximum ratio of Metal3 perimeter area to related thin gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.4</name>
+   <description>ANT.16_ii_ANT.4: Maximum ratio of Metal3 perimeter area to related thick gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.5</name>
+   <description>ANT.16_i_ANT.5: Maximum ratio of Metal4 perimeter area to related gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.5</name>
+   <description>ANT.16_ii_ANT.5: Maximum ratio of Metal4 perimeter area to related gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_iii_ANT.14_M4_MIMB</name>
+   <description>ANT.16_iii_ANT.14_M4_MIMB: Maximum ratio of Metal4 perimeter area to related MIM area is 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.6</name>
+   <description>ANT.16_i_ANT.6: Maximum ratio of Metal5 perimeter area to related thin gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.6</name>
+   <description>ANT.16_ii_ANT.6: Maximum ratio of Metal5 perimeter area to related thick gate oxide area 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_iii_ANT.14_M5_MIMB</name>
+   <description>ANT.16_iii_ANT.14_M5_MIMB: Maximum ratio of Metal5 perimeter area to related MIM area is 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.1</name>
+   <description>ANT.1: Maximum ratio of Poly2 perimeter area to related gate oxide area: 200</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.9</name>
+   <description>ANT.16_i_ANT.9: Maximum ratio of Via1 area to related thin gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.9</name>
+   <description>ANT.16_ii_ANT.9: Maximum ratio of Via1 area to related thick gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.10</name>
+   <description>ANT.16_i_ANT.10: Maximum ratio of Via2 area to related thin gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.10</name>
+   <description>ANT.16_ii_ANT.10: Maximum ratio of Via2 area to related thick gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.11</name>
+   <description>ANT.16_i_ANT.11: Maximum ratio of Via3 area to related thin gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.11</name>
+   <description>ANT.16_ii_ANT.11: Maximum ratio of Via3 area to related thick gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_iii_ANT.15_V3_MIMB</name>
+   <description>ANT.16_iii_ANT.15_V3_MIMB: Maximum ratio of Via3 area to related MIM area is 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.12</name>
+   <description>ANT.16_i_ANT.12: Maximum ratio of Via4 area to related thin gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.12</name>
+   <description>ANT.16_ii_ANT.12: Maximum ratio of Via4 area to related thick gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_iii_ANT.15_V4_MIMB</name>
+   <description>ANT.16_iii_ANT.15_V4_MIMB: Maximum ratio of Via4 area to related MIM area is 20</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>antenna_equality</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.2'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (41,0;41,1.8;41.3,1.8;41.3,0)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.54</value>
+    <value>[#RATIO] float: 400.01</value>
+    <value>[#ANT_PERIMETER] float: 216.0054</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.2'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (40.9,2.4;40.9,201.805;41.5,201.805;41.5,2.4)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.54</value>
+    <value>[#RATIO] float: 400.01</value>
+    <value>[#ANT_PERIMETER] float: 216.0054</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,3.86;100.4,4.12;100.66,4.12;100.66,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,3.86;101.02,4.12;101.28,4.12;101.28,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,3.86;101.64,4.12;101.9,4.12;101.9,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,3.86;102.26,4.12;102.52,4.12;102.52,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,3.86;102.88,4.12;103.14,4.12;103.14,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,3.86;103.5,4.12;103.76,4.12;103.76,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,3.86;104.12,4.12;104.38,4.12;104.38,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,3.86;104.74,4.12;105,4.12;105,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,3.86;105.36,4.12;105.62,4.12;105.62,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,3.86;105.98,4.12;106.24,4.12;106.24,3.86)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,4.48;103.5,4.74;103.76,4.74;103.76,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,4.48;104.12,4.74;104.38,4.74;104.38,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,4.48;104.74,4.74;105,4.74;105,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,4.48;105.36,4.74;105.62,4.74;105.62,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,4.48;105.98,4.74;106.24,4.74;106.24,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,5.1;103.5,5.36;103.76,5.36;103.76,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,5.1;104.12,5.36;104.38,5.36;104.38,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,5.1;104.74,5.36;105,5.36;105,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,5.1;105.36,5.36;105.62,5.36;105.62,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,5.1;105.98,5.36;106.24,5.36;106.24,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,5.72;103.5,5.98;103.76,5.98;103.76,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,5.72;104.12,5.98;104.38,5.98;104.38,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,5.72;104.74,5.98;105,5.98;105,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,5.72;105.36,5.98;105.62,5.98;105.62,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,5.72;105.98,5.98;106.24,5.98;106.24,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,6.34;103.5,6.6;103.76,6.6;103.76,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,6.34;104.12,6.6;104.38,6.6;104.38,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,6.34;104.74,6.6;105,6.6;105,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,6.34;105.36,6.6;105.62,6.6;105.62,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,6.34;105.98,6.6;106.24,6.6;106.24,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,6.96;103.5,7.22;103.76,7.22;103.76,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,6.96;104.12,7.22;104.38,7.22;104.38,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,6.96;104.74,7.22;105,7.22;105,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,6.96;105.36,7.22;105.62,7.22;105.62,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,6.96;105.98,7.22;106.24,7.22;106.24,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,7.58;103.5,7.84;103.76,7.84;103.76,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,7.58;104.12,7.84;104.38,7.84;104.38,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,7.58;104.74,7.84;105,7.84;105,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,7.58;105.36,7.84;105.62,7.84;105.62,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,7.58;105.98,7.84;106.24,7.84;106.24,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,6.34;100.4,6.6;100.66,6.6;100.66,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,6.34;101.02,6.6;101.28,6.6;101.28,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,6.34;101.64,6.6;101.9,6.6;101.9,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,6.34;102.26,6.6;102.52,6.6;102.52,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,6.34;102.88,6.6;103.14,6.6;103.14,6.34)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,4.48;100.4,4.74;100.66,4.74;100.66,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,4.48;101.02,4.74;101.28,4.74;101.28,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,4.48;101.64,4.74;101.9,4.74;101.9,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,4.48;102.26,4.74;102.52,4.74;102.52,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,4.48;102.88,4.74;103.14,4.74;103.14,4.48)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,6.96;100.4,7.22;100.66,7.22;100.66,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,6.96;101.02,7.22;101.28,7.22;101.28,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,6.96;101.64,7.22;101.9,7.22;101.9,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,6.96;102.26,7.22;102.52,7.22;102.52,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,6.96;102.88,7.22;103.14,7.22;103.14,6.96)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,5.72;100.4,5.98;100.66,5.98;100.66,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,5.72;101.02,5.98;101.28,5.98;101.28,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,5.72;101.64,5.98;101.9,5.98;101.9,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,5.72;102.26,5.98;102.52,5.98;102.52,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,5.72;102.88,5.98;103.14,5.98;103.14,5.72)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,7.58;100.4,7.84;100.66,7.84;100.66,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,7.58;101.02,7.84;101.28,7.84;101.28,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,7.58;101.64,7.84;101.9,7.84;101.9,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,7.58;102.26,7.84;102.52,7.84;102.52,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,7.58;102.88,7.84;103.14,7.84;103.14,7.58)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,5.1;100.4,5.36;100.66,5.36;100.66,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,5.1;101.02,5.36;101.28,5.36;101.28,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,5.1;101.64,5.36;101.9,5.36;101.9,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,5.1;102.26,5.36;102.52,5.36;102.52,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,5.1;102.88,5.36;103.14,5.36;103.14,5.1)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,2.62;100.4,2.88;100.66,2.88;100.66,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,2.62;101.02,2.88;101.28,2.88;101.28,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,2.62;101.64,2.88;101.9,2.88;101.9,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,2.62;102.26,2.88;102.52,2.88;102.52,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,2.62;102.88,2.88;103.14,2.88;103.14,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,3.24;100.4,3.5;100.66,3.5;100.66,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,3.24;101.02,3.5;101.28,3.5;101.28,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,3.24;101.64,3.5;101.9,3.5;101.9,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,3.24;102.26,3.5;102.52,3.5;102.52,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,3.24;102.88,3.5;103.14,3.5;103.14,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101,0;101,1.035;101.325,1.035;101.325,0)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (100.4,2;100.4,2.26;100.66,2.26;100.66,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.02,2;101.02,2.26;101.28,2.26;101.28,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (101.64,2;101.64,2.26;101.9,2.26;101.9,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.26,2;102.26,2.26;102.52,2.26;102.52,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (102.88,2;102.88,2.26;103.14,2.26;103.14,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,3.24;103.5,3.5;103.76,3.5;103.76,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,3.24;104.12,3.5;104.38,3.5;104.38,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,3.24;104.74,3.5;105,3.5;105,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,3.24;105.36,3.5;105.62,3.5;105.62,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,3.24;105.98,3.5;106.24,3.5;106.24,3.24)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,2.62;103.5,2.88;103.76,2.88;103.76,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,2.62;104.12,2.88;104.38,2.88;104.38,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,2.62;104.74,2.88;105,2.88;105,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,2.62;105.36,2.88;105.62,2.88;105.62,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,2.62;105.98,2.88;106.24,2.88;106.24,2.62)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (103.5,2;103.5,2.26;103.76,2.26;103.76,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.12,2;104.12,2.26;104.38,2.26;104.38,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (104.74,2;104.74,2.26;105,2.26;105,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.36,2;105.36,2.26;105.62,2.26;105.62,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'ANT.16_i_ANT.9'</category>
+   <cell>antenna_equality</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (105.98,2;105.98,2.26;106.24,2.26;106.24,2)</value>
+    <value>[#DIODES_AREA] float: 0</value>
+    <value>[#GATE_AREA] float: 0.336375</value>
+    <value>[#RATIO] float: 20.0966183575</value>
+    <value>[#ANT_AREA] float: 6.76</value>
+   </values>
+  </item>
+ </items>
+</report-database>

@@ -23,8 +23,8 @@
 # ANTENNADIFFSIDEAREARATIO-like antenna check
 def antenna_check_gf180mcu(gate, antenna_layer, thickness, limit, n_diode, p_diode, nwell, mf)
   expression = 'var garea = area; var darea = area(n_diode) + area(p_diode) + area(nwell); var per = perimeter(antenna_layer) * thickness; ' \
-               'var ar = per / (garea + mf * darea); skip(ar < limit); ' \
-               "put('GATE_AREA', garea); put('DIODES_AREA', darea); put('ANT_PERIMETER', per); put('RATIO', ar); copy(ar >= limit, limit=1000);"
+               'var ar = per / (garea + mf * darea); skip(ar <= limit); ' \
+               "put('GATE_AREA', garea); put('DIODES_AREA', darea); put('ANT_PERIMETER', per); put('RATIO', ar); copy(ar > limit, limit=1000);"
   variables = { 'thickness' => thickness, 'mf' => mf, 'limit' => limit }
   evaluate_nets(gate,
                 { 'antenna_layer' => antenna_layer, 'n_diode' => n_diode, 'p_diode' => p_diode, 'nwell' => nwell }, expression, variables)
@@ -33,8 +33,8 @@ end
 # ANTENNADIFFAREARATIO-like antenna check
 def antenna_check_gf180mcu_area(gate, antenna_layer, limit, n_diode, p_diode, nwell, mf)
   expression = 'var garea = area; var darea = area(n_diode) + area(p_diode) + area(nwell); var aarea = area(antenna_layer); ' \
-               'var ar = aarea / (garea + mf * darea); skip(ar < limit); ' \
-               "put('GATE_AREA', garea); put('DIODES_AREA', darea); put('ANT_AREA', aarea); put('RATIO', ar); copy(ar >= limit, limit=1000);"
+               'var ar = aarea / (garea + mf * darea); skip(ar <= limit); ' \
+               "put('GATE_AREA', garea); put('DIODES_AREA', darea); put('ANT_AREA', aarea); put('RATIO', ar); copy(ar > limit, limit=1000);"
   variables = { 'mf' => mf, 'limit' => limit }
   evaluate_nets(gate,
                 { 'antenna_layer' => antenna_layer, 'n_diode' => n_diode, 'p_diode' => p_diode, 'nwell' => nwell }, expression, variables)
