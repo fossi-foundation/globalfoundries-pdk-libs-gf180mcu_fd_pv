@@ -96,7 +96,8 @@ def via_rule_3c(idx:)
   lower_metal = ctx[lower_metal_name]
 
   cond = lower_metal.width(0.34.um + 1.dbu).with_length(0.28.um, nil, both)
-  eol_allowed = lower_metal.edges.with_length(nil, 0.34.um)
+  # don't consider 45° edges as end caps, since this confuses later checks
+  eol_allowed = (lower_metal.edges.with_angle(0) + lower_metal.edges.with_angle(90)).with_length(nil, 0.34.um)
   e1 = cond.first_edges
   e2 = cond.second_edges
   eol = eol_allowed.interacting(e1).interacting(e2).not(e1).not(e2)
