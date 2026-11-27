@@ -96,16 +96,26 @@ GF180_DRC_REGISTRY.register(
   # Rule PL.4_LV: Extension beyond COMP to form Poly2 end cap. is 0.22µm
   logger.info('Executing rule PL.4_LV')
   comp_pl = comp.not_interacting(otp_mk).not_interacting(ymtp_mk)
-  pl4_l1 = comp_pl.enclosed(poly_pl_lv, 0.22.um, euclidian)
+  pl4_gate_exit_edges = comp_pl.edges & poly_pl_lv
+  # We need the octagon_limit around the corners, thus "and" the extended edges with sized
+  pl4_must_be_covered = pl4_gate_exit_edges.extended(out: 0.22, joined: true) & comp_pl.sized(0.22, octagon_limit)
+  pl4_l1 = pl4_must_be_covered.not(poly_pl_lv)
   pl4_l1.output('PL.4_LV', 'PL.4_LV : Extension beyond COMP to form Poly2 end cap. : 0.22µm')
   pl4_l1.forget
+  pl4_must_be_covered.forget
+  pl4_gate_exit_edges.forget
 
   # Rule PL.4_MV: Extension beyond COMP to form Poly2 end cap. is 0.22µm
   logger.info('Executing rule PL.4_MV')
   # ignore edges inside mvsd/mvpsd
-  pl4_l1 = comp_pl.enclosed(poly_pl_mv, 0.22.um, euclidian).outside(mvsd).outside(mvpsd)
+  pl4_gate_exit_edges = comp_pl.edges.outside(mvsd).outside(mvpsd) & poly_pl_mv
+  # We need the octagon_limit around the corners, thus "and" the extended edges with sized
+  pl4_must_be_covered = pl4_gate_exit_edges.extended(out: 0.22, joined: true) & comp_pl.sized(0.22, octagon_limit)
+  pl4_l1 = pl4_must_be_covered.not(poly_pl_mv)
   pl4_l1.output('PL.4_MV', 'PL.4_MV : Extension beyond COMP to form Poly2 end cap. : 0.22µm')
   pl4_l1.forget
+  pl4_must_be_covered.forget
+  pl4_gate_exit_edges.forget
 
   # Rule PL.5a_LV: Space from field Poly2 to unrelated COMP, Space from field Poly2 to Guard-ring. is 0.1µm
   logger.info('Executing rule PL.5a_LV')

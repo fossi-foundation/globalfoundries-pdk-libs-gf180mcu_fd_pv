@@ -229,8 +229,10 @@ class DRCRunner:
             "-r", str(self.drc_script_path),
             "-rd", f"input={testcase.layout_file}",
             "-rd", f"report={report_file}",
-            "-rd", f"decks={testcase.deck_name}",
-        ] + testcase.get_switches_list()
+        ]
+        if "decks" not in testcase.switches:
+            cmd += ["-rd", f"decks={testcase.deck_name}"]
+        cmd += testcase.get_switches_list()
 
         logging.info("Running: %s", " ".join(cmd))
 

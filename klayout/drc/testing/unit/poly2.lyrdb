@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>Report for poly2</description>
+ <description/>
  <original-file/>
- <generator>drc: script='/home/claforge/Documents/globalfoundries-pdk-libs-gf180mcu_fd_pv/klayout/drc/gf180mcu.drc'</generator>
+ <generator>drc: script='../gf180mcu.drc'</generator>
  <top-cell>7_7_Poly2</top-cell>
  <tags>
  </tags>
@@ -63,7 +63,7 @@
   </category>
   <category>
    <name>PL.5a_LV</name>
-   <description>PL.5a_LV : Space from field Poly2 to unrelated COMP Spacer from field Poly2 to Guard-ring. : 0.1µm</description>
+   <description>PL.5a_LV : Space from field Poly2 to unrelated COMP, Space from field Poly2 to Guard-ring. : 0.1µm</description>
    <categories>
    </categories>
   </category>
@@ -4054,7 +4054,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3909.263,1085.633;-3909.263,1085.339)/(-3909.048,1085.586;-3909.048,1085.386)</value>
+    <value>polygon: (-3909.048,1085.386;-3909.048,1085.586;-3909.043,1085.586;-3909.043,1085.386)</value>
    </values>
   </item>
   <item>
@@ -4066,7 +4066,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3887.686,1085.786;-3887.672,1085.786)/(-3887.57,1085.981;-3887.477,1085.888)</value>
+    <value>polygon: (-3866.081,1085.386;-3866.081,1085.586;-3865.861,1085.586;-3865.861,1085.386)</value>
    </values>
   </item>
   <item>
@@ -4078,7 +4078,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3880.475,1085.786;-3880.475,1085.76)/(-3880.333,1085.954;-3880.333,1085.928)</value>
+    <value>polygon: (-3901.851,1085.09;-3901.851,1085.882;-3901.846,1085.877;-3901.846,1085.095)</value>
    </values>
   </item>
   <item>
@@ -4090,7 +4090,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3873.448,1085.786;-3873.435,1085.786)/(-3873.331,1085.98;-3873.241,1085.89)</value>
+    <value>polygon: (-3880.333,1085.928;-3880.333,1085.955;-3880.306,1085.928)</value>
    </values>
   </item>
   <item>
@@ -4102,7 +4102,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3873.435,1085.786;-3873.278,1085.629)/(-3873.331,1085.98;-3873.084,1085.733)</value>
+    <value>polygon: (-3887.452,1085.863;-3887.595,1086.006;-3887.581,1086.006;-3887.452,1085.877)</value>
    </values>
   </item>
   <item>
@@ -4114,55 +4114,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3902.066,1085.786;-3902.066,1085.186)/(-3901.851,1085.833;-3901.851,1085.139)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.4_LV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3887.672,1085.786;-3887.672,1085.772)/(-3887.57,1085.981;-3887.477,1085.888)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.4_LV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3880.501,1085.786;-3880.475,1085.786)/(-3880.333,1085.928;-3880.307,1085.928)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.4_LV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3873.278,1085.629;-3873.278,1085.616)/(-3873.174,1085.823;-3873.084,1085.733)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.4_LV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3866.081,1085.786;-3866.081,1085.186)/(-3866.081,1085.586;-3866.081,1085.386)</value>
+    <value>polygon: (-3873.058,1085.707;-3873.357,1086.006;-3873.343,1086.006;-3873.058,1085.721)</value>
    </values>
   </item>
   <item>
@@ -4174,7 +4126,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3869.881,1187.796;-3869.881,1187.196)/(-3869.881,1187.596;-3869.881,1187.396)</value>
+    <value>polygon: (-3912.848,1187.396;-3912.848,1187.596;-3912.843,1187.596;-3912.843,1187.396)</value>
    </values>
   </item>
   <item>
@@ -4186,7 +4138,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3877.248,1187.796;-3877.235,1187.796)/(-3877.131,1187.99;-3877.041,1187.9)</value>
+    <value>polygon: (-3869.881,1187.396;-3869.881,1187.596;-3869.661,1187.596;-3869.661,1187.396)</value>
    </values>
   </item>
   <item>
@@ -4198,7 +4150,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3877.078,1187.639;-3877.078,1187.626)/(-3876.974,1187.833;-3876.884,1187.743)</value>
+    <value>polygon: (-3905.651,1187.1;-3905.651,1187.892;-3905.646,1187.887;-3905.646,1187.105)</value>
    </values>
   </item>
   <item>
@@ -4210,7 +4162,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3877.235,1187.796;-3877.078,1187.639)/(-3877.131,1187.99;-3876.884,1187.743)</value>
+    <value>polygon: (-3884.133,1187.938;-3884.133,1187.965;-3884.106,1187.938)</value>
    </values>
   </item>
   <item>
@@ -4222,7 +4174,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3884.301,1187.796;-3884.275,1187.796)/(-3884.133,1187.938;-3884.107,1187.938)</value>
+    <value>polygon: (-3891.252,1187.873;-3891.395,1188.016;-3891.381,1188.016;-3891.252,1187.887)</value>
    </values>
   </item>
   <item>
@@ -4234,55 +4186,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3884.275,1187.796;-3884.275,1187.77)/(-3884.133,1187.964;-3884.133,1187.938)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.4_MV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3891.486,1187.796;-3891.472,1187.796)/(-3891.37,1187.991;-3891.277,1187.898)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.4_MV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3891.472,1187.796;-3891.472,1187.782)/(-3891.37,1187.991;-3891.277,1187.898)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.4_MV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3905.866,1187.796;-3905.866,1187.196)/(-3905.651,1187.843;-3905.651,1187.149)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.4_MV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3913.063,1187.643;-3913.063,1187.349)/(-3912.848,1187.596;-3912.848,1187.396)</value>
+    <value>polygon: (-3876.858,1187.717;-3877.157,1188.016;-3877.143,1188.016;-3876.858,1187.731)</value>
    </values>
   </item>
   <item>
@@ -4618,18 +4522,6 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3434.859,-230.231;-3434.859,-230.419)/(-3434.574,-230.325;-3434.559,-230.31)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.5a_MV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
     <value>edge-pair: (-3444.859,-229.901;-3444.859,-230.325)/(-3444.859,-230.325;-3444.559,-230.025)</value>
    </values>
   </item>
@@ -4666,6 +4558,18 @@
    <comment/>
    <image/>
    <values>
+    <value>edge-pair: (-3383.896,-229.35;-3383.896,-229.65)/(-3383.896,-229.35;-3383.896,-229.05)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'PL.5a_MV'</category>
+   <cell>7_7_Poly2</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
     <value>edge-pair: (-3434.859,-230.231;-3434.859,-230.419)/(-3434.559,-230.34;-3434.574,-230.325)</value>
    </values>
   </item>
@@ -4678,7 +4582,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3383.896,-229.35;-3383.896,-229.65)/(-3383.896,-229.35;-3383.896,-229.05)</value>
+    <value>edge-pair: (-3434.859,-230.231;-3434.859,-230.419)/(-3434.574,-230.325;-3434.559,-230.31)</value>
    </values>
   </item>
   <item>
@@ -4786,7 +4690,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3403.789,-229.532;-3403.816,-229.532)/(-3403.591,-229.73;-3403.515,-229.654)</value>
+    <value>edge-pair: (-3483.154,-227.27;-3483.154,-229.38)/(-3482.859,-229.325;-3482.859,-227.325)</value>
    </values>
   </item>
   <item>
@@ -4798,7 +4702,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3483.154,-227.27;-3483.154,-229.38)/(-3482.859,-229.325;-3482.859,-227.325)</value>
+    <value>edge-pair: (-3403.789,-229.532;-3403.816,-229.532)/(-3403.591,-229.73;-3403.515,-229.654)</value>
    </values>
   </item>
   <item>
@@ -5266,18 +5170,6 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3434.859,-230.231;-3434.859,-230.419)/(-3434.574,-230.325;-3434.559,-230.31)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'PL.5b_MV'</category>
-   <cell>7_7_Poly2</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
     <value>edge-pair: (-3444.859,-229.901;-3444.859,-230.325)/(-3444.859,-230.325;-3444.559,-230.025)</value>
    </values>
   </item>
@@ -5314,6 +5206,18 @@
    <comment/>
    <image/>
    <values>
+    <value>edge-pair: (-3383.896,-229.35;-3383.896,-229.65)/(-3383.896,-229.35;-3383.896,-229.05)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'PL.5b_MV'</category>
+   <cell>7_7_Poly2</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
     <value>edge-pair: (-3434.859,-230.231;-3434.859,-230.419)/(-3434.559,-230.34;-3434.574,-230.325)</value>
    </values>
   </item>
@@ -5326,7 +5230,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3383.896,-229.35;-3383.896,-229.65)/(-3383.896,-229.35;-3383.896,-229.05)</value>
+    <value>edge-pair: (-3434.859,-230.231;-3434.859,-230.419)/(-3434.574,-230.325;-3434.559,-230.31)</value>
    </values>
   </item>
   <item>
@@ -5434,7 +5338,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3403.789,-229.532;-3403.816,-229.532)/(-3403.591,-229.73;-3403.515,-229.654)</value>
+    <value>edge-pair: (-3483.154,-227.27;-3483.154,-229.38)/(-3482.859,-229.325;-3482.859,-227.325)</value>
    </values>
   </item>
   <item>
@@ -5446,7 +5350,7 @@
    <comment/>
    <image/>
    <values>
-    <value>edge-pair: (-3483.154,-227.27;-3483.154,-229.38)/(-3482.859,-229.325;-3482.859,-227.325)</value>
+    <value>edge-pair: (-3403.789,-229.532;-3403.816,-229.532)/(-3403.591,-229.73;-3403.515,-229.654)</value>
    </values>
   </item>
   <item>
