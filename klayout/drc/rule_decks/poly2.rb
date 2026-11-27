@@ -107,7 +107,8 @@ GF180_DRC_REGISTRY.register(
 
   # Rule PL.4_MV: Extension beyond COMP to form Poly2 end cap. is 0.22µm
   logger.info('Executing rule PL.4_MV')
-  pl4_gate_exit_edges = comp_pl.edges & poly_pl_mv
+  # ignore edges inside mvsd/mvpsd
+  pl4_gate_exit_edges = comp_pl.edges.outside(mvsd).outside(mvpsd) & poly_pl_mv
   # We need the octagon_limit around the corners, thus "and" the extended edges with sized
   pl4_must_be_covered = pl4_gate_exit_edges.extended(out: 0.22, joined: true) & comp_pl.sized(0.22, octagon_limit)
   pl4_l1 = pl4_must_be_covered.not(poly_pl_mv)
