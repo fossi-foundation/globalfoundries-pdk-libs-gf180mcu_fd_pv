@@ -46,7 +46,8 @@ diode_nd2ps_exclude = nwell.join(diode_exclude)
 diode_nd2ps_03v3_terminal_n = ncomp_lv.not(dnwell).and(diode_mk)
                                       .not(diode_nd2ps_exclude)
 
-extract_devices(diode('diode_nd2ps_03v3'), { 'N' => diode_nd2ps_03v3_terminal_n, 'P' => lvpwell_con })
+extract_devices(diode('diode_nd2ps_03v3'),
+                { 'N' => diode_nd2ps_03v3_terminal_n, 'P' => diode_nd2ps_03v3_terminal_n, 'tA' => sub })
 connect(diode_nd2ps_03v3_terminal_n, contact)
 
 # diode_nd2ps_03v3_dn diode
@@ -68,7 +69,8 @@ logger.info('Extracting diode_nd2ps_06v0 diode')
 diode_nd2ps_06v0_terminal_n = ncomp_mv.not(dnwell).and(diode_mk)
                                       .not(diode_nd2ps_exclude)
 
-extract_devices(diode('diode_nd2ps_06v0'), { 'N' => diode_nd2ps_06v0_terminal_n, 'P' => lvpwell_con })
+extract_devices(diode('diode_nd2ps_06v0'),
+                { 'N' => diode_nd2ps_06v0_terminal_n, 'P' => diode_nd2ps_06v0_terminal_n, 'tA' => sub })
 connect(diode_nd2ps_06v0_terminal_n, contact)
 
 # diode_nd2ps_06v0_dn diode
@@ -152,22 +154,20 @@ connect(diode_pd2nw_06v0_dn_terminal_n, ntap)
 
 # diode_nw2ps_03v3 diode
 logger.info('Extracting diode_nw2ps_03v3 diode')
-diode_nw2ps_03v3_terminal_p = pcomp_lv.and(well_diode_mk).not(diode_exclude)
-diode_nw2ps_03v3_terminal_n = well_diode_mk.covering(nwell_lv.covering(ncomp))
-                                           .not(diode_exclude)
+diode_nw2ps_03v3_terminal_n = nwell_lv.covering(ncomp).inside(well_diode_mk)
+                                      .not(diode_exclude)
 
-extract_devices(diode('diode_nw2ps_03v3'), { 'N' => diode_nw2ps_03v3_terminal_n, 'P' => diode_nw2ps_03v3_terminal_p })
-connect(diode_nw2ps_03v3_terminal_p, contact)
+extract_devices(diode('diode_nw2ps_03v3'),
+                { 'N' => diode_nw2ps_03v3_terminal_n, 'P' => diode_nw2ps_03v3_terminal_n, 'tA' => sub })
 connect(diode_nw2ps_03v3_terminal_n, nwell_con)
 
 # diode_nw2ps_06v0 diode
 logger.info('Extracting diode_nw2ps_06v0 diode')
-diode_nw2ps_06v0_terminal_p = pcomp_mv.and(well_diode_mk).not(diode_exclude)
-diode_nw2ps_06v0_terminal_n = well_diode_mk.covering(nwell_mv.covering(ncomp))
-                                           .not(diode_exclude)
+diode_nw2ps_06v0_terminal_n = nwell_mv.covering(ncomp).inside(well_diode_mk)
+                                      .not(diode_exclude)
 
-extract_devices(diode('diode_nw2ps_06v0'), { 'N' => diode_nw2ps_06v0_terminal_n, 'P' => diode_nw2ps_06v0_terminal_p })
-connect(diode_nw2ps_06v0_terminal_p, contact)
+extract_devices(diode('diode_nw2ps_06v0'),
+                { 'N' => diode_nw2ps_06v0_terminal_n, 'P' => diode_nw2ps_06v0_terminal_n, 'tA' => sub })
 connect(diode_nw2ps_06v0_terminal_n, nwell_con)
 
 # diode_pw2dw_03v3 diode
@@ -206,19 +206,23 @@ diode_dw2ps_06v0_terminal_p = ptap_extent.not_interacting(lvpwell)
 extract_devices(diode('diode_dw2ps_06v0'), { 'N' => dnwell, 'P' => diode_dw2ps_06v0_terminal_p })
 connect(diode_dw2ps_06v0_terminal_p, ptap)
 
-# sc_diode diode
-
 logger.info('Extracting sc_diode diode')
 
 sc_diode_exclude = dualgate.join(pplus).join(diode_mk)
                            .join(esd_mk).join(lvs_source).join(diode_exclude)
 
-sc_diode_terminal_n = ncomp.and(dnwell).and(schottky_diode).not(sc_diode_exclude)
-sc_diode_terminal_p = comp.not(nplus).and(dnwell).and(schottky_diode).not(sc_diode_exclude)
+sc_diode_terminal_p = comp.not(nplus).not_inside(dnwell).and(schottky_diode).not(sc_diode_exclude)
 
-# As P and N are on top of each other, we need some tricks to not merge both terminals.
-# This is made slightly more difficult by the fact that sc diodes do not use pcomp, simply comp.
 extract_devices(diode('sc_diode'),
-                { 'N' => sc_diode_terminal_n, 'P' => schottky_diode, 'tA' => schottky_diode, 'tC' => ntap })
-connect(schottky_diode, sc_diode_terminal_p)
+                { 'N' => sc_diode_terminal_p, 'P' => sc_diode_terminal_p, 'tC' => sub })
+connect(sc_diode_terminal_p, contact)
+
+# sc_diode diode (deep nwell)
+
+logger.info('Extracting sc_diode diode (in deep nwell)')
+
+sc_diode_terminal_p = comp.not(nplus).inside(dnwell).and(schottky_diode).not(sc_diode_exclude)
+
+extract_devices(diode('sc_diode'),
+                { 'N' => dnwell, 'P' => sc_diode_terminal_p })
 connect(sc_diode_terminal_p, contact)
